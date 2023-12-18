@@ -97,7 +97,7 @@ page {
                 where = ({#tx_mask_main} = 1)
                 orderBy = tx_mask_name
                 pidInList = 7
-                as = gfaddressesmain
+                as = gfaddresses
             }
             70 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
             70 {
