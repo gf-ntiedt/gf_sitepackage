@@ -97,30 +97,44 @@
 <p>Used for company related content (logo, address, ...)<br>Accessible via fluid.</p>
 <h4>Usage:</h4>
 <pre><code>
-    company name {gfaddressesmain.0.data.tx_mask_name}
-</code></pre><br>
-<pre><code>
-    company zip {gfaddressesmain.0.data.tx_mask_zip}
+
 </code></pre>
-<p>If you use tx_mask_phone or tx_mask_fax there is a neat small viewhelper which perform the work for you.<br>
-    This means it converts<br>
-    +49 (0) 7152 42041 to &lt;a href="tel:+49715242041"&gt;+49 (0) 7152 42041&lt;/a&gt;</p>
+<p>Directly if you habe only 1 address</p>
+<p>Company name</p>
+<pre><code>
+{gfaddresses.0.data.tx_mask_name}
+</code></pre>
+<p>Company zip</p>
+<pre><code>
+{gfaddresses.0.data.tx_mask_zip}
+</code></pre>
+<p>If you use tx_mask_phone or tx_mask_fax there is a neat <a href="viewhelper">small viewhelper</a> which perform the work for you.
+
+<h3 id="viewhelper">
+    Viewhelper
+</h3>
+<h4>gf:link.urlscheme()</h4>
+<p> Converts<br>
+    +49 (0) 7777 789789 to </p>
+<pre><code>
+&lt;a href="tel:+497777789789"&gt;+49 (0) 7777 789789&lt;/a&gt;
+</code></pre>
 <h4>Usage:</h4>
 <pre><code>
-    &lt;gf:link.urlscheme
-        number="{gfaddressesmain.0.data.tx_mask_phone}"
-        class="" />
-</code></pre><br>
+&lt;gf:link.urlscheme
+    number="+49 (0) 7777 789789"
+    class="" />
+</code></pre>
 <pre><code>
-    &lt;gf:link.urlscheme
-        number="{gfaddressesmain.0.data.tx_mask_fax}"
-        scheme="fax:"
-        class="" />
+&lt;gf:link.urlscheme
+    number="+49 (0) 7777 789788"
+    scheme="fax:"
+    class="" />
 </code></pre>
 <h4>Hint:</h4>
 <p>If you got an error missing namespace include:</p>
 <pre><code>
-    {namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
 </code></pre>
 
 <h3 id="license">
