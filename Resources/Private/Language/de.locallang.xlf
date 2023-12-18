@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-03-10UTC20:04:420">
+        <header>
+            <authorName>Niels Tiedt</authorName>
+            <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="siteConfiguration.site.feLogo">
+                <target>Pfad zum Frontend-Logo</target>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site.companyName">
+                <target>Firmenname</target>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site.slogan">
+                <target>Slogan</target>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site_language.feLogo">
+                <target>Pfad zum Frontend-Logo (überschreibt allgemeine Einstellung)</target>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site_language.companyName">
+                <target>Firmenname (überschreibt allgemeine Einstellung)</target>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site_language.slogan">
+                <target>Slogan (überschreibt allgemeine Einstellung)</target>
+            </trans-unit>
+            <trans-unit id="fe.language">
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="fe.rightsreserved">
+                <target>Alle Rechte vorbehalten</target>
+            </trans-unit>
+            <trans-unit id="datum.format">
+                <target>d.m.Y</target>
+            </trans-unit>
+            <trans-unit id="fe.copyright">
+                <target>©|</target>
+            </trans-unit>
+            <trans-unit id="fe.weitereinfos">
+                <target>Weitere Infos</target>
+            </trans-unit>
+            <trans-unit id="fe.search">
+                <target>Suche</target>
+            </trans-unit>
+            <trans-unit id="fe.to_newsletter_subscription">
+                <target>Zum Newsletter-Abo</target>
+            </trans-unit>
+            <trans-unit id="nav.main.close">
+                <target>Menü schließen</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_karriere.detail.linktext">
+                <target>Zurück zu</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_eletter">
+                <target>Newsletter-Anmeldung</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_catalog">
+                <target>Katalog</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_sustainability">
+                <target>Nachhaltigkeit</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_app">
+                <target>App</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_shop">
+                <target>Online-Shop</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_useraccount">
+                <target>Benutzerkonto</target>
+            </trans-unit>
+            <trans-unit id="tonewsletterabo">
+                <target>Zum Newsletter-Abo</target>
+            </trans-unit>
+            <trans-unit id="totop">
+                <target>Seitenanfang</target>
+            </trans-unit>
+            <trans-unit id="fe.navLang">
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="space_class_none">
+                <target>Kein</target>
+            </trans-unit>
+            <trans-unit id="space_before_class">
+                <target>Außenabstand oben</target>
+            </trans-unit>
+            <trans-unit id="space_after_class">
+                <target>Außenabstand unten</target>
+            </trans-unit>
+            <trans-unit id="space_inner_before_class">
+                <target>Innenabstand oben</target>
+            </trans-unit>
+            <trans-unit id="space_inner_after_class">
+                <target>Innenabstand unten</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

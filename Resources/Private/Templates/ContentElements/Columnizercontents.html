@@ -1,0 +1,24 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:container="http://typo3.org/ns/B13/Container/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:render partial="Columnizercontents/{f:if(condition:data.gf_sitepackage_type,then:data.gf_sitepackage_type,else:'Default')}" arguments="{
+        content:content,
+        pid: data.pid,
+        uid: data.uid,
+        colPos: data.colPos,
+        gf_sitepackage_columnwidths: data.gf_sitepackage_columnwidths,
+        gf_sitepackage_type: data.gf_sitepackage_type,
+        space_before_class: data.space_before_class,
+        space_after_class: data.space_after_class,
+        space_inner_before_class: data.space_inner_before_class,
+        space_inner_after_class: data.space_inner_after_class,
+        defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+        defaultSpaceAfterType: settings.defaultSpaceAfterType,
+        defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+        defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+    }"></f:render>
+</html>

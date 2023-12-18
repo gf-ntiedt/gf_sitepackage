@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-03-10UTC20:04:420">
+        <header>
+            <authorName>Niels Tiedt</authorName>
+            <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.subpage">
+                <target>Unterseite</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.preface">
+                <target>Einleitung</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sticky">
+                <target>Sticky-Navigation</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <target>Normal</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer.colpos-4">
+                <target>Fuss</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer.colpos-5">
+                <target>Fuss (Navigation)</target>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.settings">
+                <target>Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.fluidtemplate">
+                <target>Fluidvorlage</target>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.menu">
+                <target>Menü</target>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.config">
+                <target>Konfiguration</target>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.tracking">
+                <target>Tracking</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.fluidtemplate.layoutRootPath">
+                <target>Pfad zu Vorlagenlayouts (FE)</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.fluidtemplate.partialRootPath">
+                <target>Pfad zu Vorlagenteilen (FE)</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.fluidtemplate.templateRootPath">
+                <target>Pfad zu Vorlagen Wurzel (FE)</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
+                <target>UID der Wurzelseite</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.basisTemplateId">
+                <target>UID der Wurzelseiten-Vorlage</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.excludeUidList">
+                <target>Liste von Seiten UIDs welche vom Seitentitel ausgeschlossen werden sollen.</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.shownews">
+                <target>News anzeigen</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.productfinder">
+                <target>Produktfinder anzeigen</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.menuHeaderLangColor">
+                <target>Menü: Kopfbereich: Nav-Lang: Farbe</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.main.value">
+                <target>Haupt: Liste von Seiten-UIDs</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.main.excludeUidList">
+                <target>Dies ist eine Liste von Seiten UIDs zum ausschließen. Komma separiert. Sie können "current" zu der Liste hinzufügen um die aktuelle Seite auszuschließen.</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.top.value">
+                <target>Oben: Liste von Seiten-UIDs</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.top.excludeUidList">
+                <target>Dies ist eine Liste von Seiten UIDs zum ausschließen. Komma separiert. Sie können "current" zu der Liste hinzufügen um die aktuelle Seite auszuschließen.</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.sector.value">
+                <target>Bereich: Liste von Seiten-UIDs (Parent>Childs)</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footercol1.value">
+                <target>Footer-Spalte 1: Liste von Seiten-UIDs</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footercol2.value">
+                <target>Footer-Spalte 2: Liste von Seiten-UIDs</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footercol3.value">
+                <target>Footer-Spalte 3: Liste von Seiten-UIDs</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.range">
+                <target>Breadcrumb: [begin-level] | [end-level]</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.config.baseURL">
+                <target>Dies schreibt einen base-tag in den header des Dokuments. Setzte dies auf den Wert welcher vorraussichtlich die URL ist und hänge einen / ans Ende des Strings.</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.config.tx_realurl_enable">
+                <target>Aktiviere Real-URL</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerification">
+                <target>Aktiviere Google Seiten Verifizierung</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerificationId">
+                <target>Google Seiten Verifizierung ID</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.analytics">
+                <target>Aktiviere Google Analytics</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.analyticsId">
+                <target>Google analytics ID</target>
+            </trans-unit>
+			<trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analytics">
+                <target>Aktiviere etracker Analytics</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analyticsId">
+                <target>etracker analytics ID</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,93 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "gf_address_list": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "header_layout",
+                        "pages"
+                    ],
+                    "columnsOverride": {
+                        "header_layout": {
+                            "config": {
+                                "fieldWizard": {
+                                    "selectIcons": {
+                                        "disabled": 1
+                                    }
+                                },
+                                "items": [],
+                                "renderType": "selectSingle"
+                            },
+                            "fullKey": "header_layout",
+                            "key": "header_layout",
+                            "type": "select"
+                        },
+                        "pages": {
+                            "config": {
+                                "behaviour": {
+                                    "allowLanguageSynchronization": 1
+                                },
+                                "fieldControl": {
+                                    "addRecord": {
+                                        "disabled": 0
+                                    },
+                                    "editPopup": {
+                                        "disabled": 0
+                                    },
+                                    "listModule": {
+                                        "disabled": 0
+                                    }
+                                }
+                            },
+                            "fullKey": "pages",
+                            "key": "pages",
+                            "type": "group"
+                        }
+                    },
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "gf_address_list",
+                    "label": "Gedankenfolger Address List",
+                    "labels": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "shortLabel": "",
+                    "sorting": 3
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "header_layout": {
+                    "coreField": 1,
+                    "fullKey": "header_layout",
+                    "key": "header_layout",
+                    "type": "select"
+                },
+                "pages": {
+                    "coreField": 1,
+                    "fullKey": "pages",
+                    "key": "pages",
+                    "type": "group"
+                }
+            }
+        }
+    }
+}

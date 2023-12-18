@@ -1,0 +1,12 @@
+lib.contentElement {
+    settings{
+        pathPublic = EXT:gf_sitepackage/Resources/Public/
+        defaultHeaderType = {$styles.content.defaultHeaderType}
+        media.additionalConfig.api = 0
+        media.additionalConfig.no-cookie = 1
+        defaultSpaceBeforeType = {$styles.content.defaultSpaceBeforeType}
+        defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
+        defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
+        defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+    }
+}

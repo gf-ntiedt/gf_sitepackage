@@ -1,0 +1,11 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:spaceless>
+    <div id="container_main" class="">
+        <f:render section="Header" arguments="{subtitle:data.subtitle}" />
+        
+        <f:render section="Main" />
+        
+        <f:render section="Footer" />
+    </div>
+</f:spaceless>

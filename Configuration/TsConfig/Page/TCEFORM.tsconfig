@@ -1,0 +1,51 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        layout.disabled = 1
+        frame_class.disabled = 1
+#        space_before_class.disabled = 1
+#        space_after_class.disabled = 1
+#        sectionIndex.disabled = 1
+        linkToTop.disabled = 1
+#        gf_sitepackage_columnwidth.disabled = 1
+#        gf_sitepackage_breakpoint.disabled = 1
+        imageorient {
+            removeItems = 0,1,8,9,17,18
+        }
+        space_before_class {
+            label = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf:space_before_class
+            removeItems = extra-small,small,medium,large,extra-large
+            addItems {
+                mt-0 = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf:space_class_none
+                mt-1 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_small
+                mt-2 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_small
+                mt-3 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_medium
+                mt-4 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large
+                mt-5 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large
+            }
+        }
+        space_after_class {
+            label = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf:space_after_class
+            removeItems = extra-small,small,medium,large,extra-large
+            addItems {
+                mb-0 = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf:space_class_none
+                mb-1 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_small
+                mb-2 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_small
+                mb-3 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_medium
+                mb-4 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large
+                mb-5 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large
+            }
+        }
+
+
+        CType{
+            # bullets,div,header,html,image,list,shortcut,table,text,textmedia,textpic,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_section,menu_section_pages,menu_recently_updated,menu_related_pages,menu_sitemap,menu_sitemap_pages
+            removeItems = bullets,div,header,html,image,list,shortcut,table,text,textmedia,textpic,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_section,menu_section_pages,menu_recently_updated,menu_related_pages,menu_sitemap,menu_sitemap_pages,form_formframework,felogin_login
+        }
+    }
+}

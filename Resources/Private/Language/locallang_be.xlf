@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-03-10UTC20:04:420">
+        <header>
+            <authorName>Niels Tiedt</authorName>
+            <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.subpage">
+                <source>Subpage</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.preface">
+                <source>Preface</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sticky">
+                <source>Sticky-Navigation</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer.colpos-4">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer.colpos-5">
+                <source>Footer (Navigation)</source>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.settings">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.fluidtemplate">
+                <source>Fluidtemplate</source>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.menu">
+                <source>Menu</source>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.config">
+                <source>Configuration</source>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.tracking">
+                <source>Tracking</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.fluidtemplate.layoutRootPath">
+                <source>Path to template layouts (FE)</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.fluidtemplate.partialRootPath">
+                <source>Path to template partials (FE)</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.fluidtemplate.templateRootPath">
+                <source>Path to template root (FE)</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
+                <source>Root page UID</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.basisTemplateId">
+                <source>UID of the root page template</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.excludeUidList">
+                <source>List of page uids which should excluded from page title</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.shownews">
+                <source>Show news</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.showproductfinder">
+                <source>Show productfinder</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.menuHeaderLangColor">
+                <source>Menu: Header: Nav-Lang: Color</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.main.value">
+                <source>Main: List of Page-UIDs</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.main.excludeUidList">
+                <source>This is a list of page uid's to exclude when the select statement is done. Comma-separated. You may add "current" to the list to exclude the current page.</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.top.value">
+                <source>Top: List of Page-UIDs</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.top.excludeUidList">
+                <source>This is a list of page uid's to exclude when the select statement is done. Comma-separated. You may add "current" to the list to exclude the current page.</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.sector.value">
+                <source>Sector: List of Page-UIDs (Parent>Child)</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footercol1.value">
+                <source>Footer-Col 1: List of Page-UIDs</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footercol2.value">
+                <source>Footer-Col 2: List of Page-UIDs</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footercol3.value">
+                <source>Footer-Col 3: List of Page-UIDs</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.range">
+                <source>Breadcrumb: [begin-level] | [end-level]</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.config.baseURL">
+                <source>This writes the base-tag in the header of the document. Set this to the value that is expected to be the URL and append a / to the end of the string.</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.config.tx_realurl_enable">
+                <source>Enable Real-URL</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerification">
+                <source>Enable Google site verification</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerificationId">
+                <source>Google site verification ID</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.analytics">
+                <source>Enable Google Analytics</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.google.analyticsId">
+                <source>Google analytics ID</source>
+            </trans-unit>
+			<trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analytics">
+                <source>Aktiviere etracker Analytics</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analyticsId">
+                <source>etracker analytics ID</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,519 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "gf_imagetext": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "header_layout",
+                        "bodytext",
+                        "header_link",
+                        "tx_mask_810830778015d",
+                        "assets",
+                        "tx_mask_85c7701882c6d",
+                        "imageorient",
+                        "tx_mask_class_button",
+                        "tx_mask_class_text",
+                        "tx_mask_class_background",
+                        "tx_mask_grid_width_image",
+                        "tx_mask_grid_width_text"
+                    ],
+                    "columnsOverride": {
+                        "assets": {
+                            "config": {
+                                "appearance": {
+                                    "elementBrowserEnabled": 1,
+                                    "enabledControls": {
+                                        "delete": 1,
+                                        "dragdrop": 1,
+                                        "hide": 1,
+                                        "info": 1,
+                                        "localize": 1,
+                                        "sort": 1
+                                    },
+                                    "fileByUrlAllowed": 1,
+                                    "fileUploadAllowed": 1,
+                                    "showAllLocalizationLink": 1,
+                                    "showPossibleLocalizationRecords": 1,
+                                    "showSynchronizationLink": 1,
+                                    "useSortable": 1
+                                },
+                                "behaviour": {
+                                    "allowLanguageSynchronization": 1
+                                },
+                                "minitems": ""
+                            },
+                            "fullKey": "assets",
+                            "key": "assets",
+                            "onlineMedia": [
+                                "youtube",
+                                "vimeo"
+                            ],
+                            "type": "media"
+                        },
+                        "bodytext": {
+                            "config": {
+                                "enableRichtext": 1
+                            },
+                            "fullKey": "bodytext",
+                            "key": "bodytext",
+                            "type": "richtext"
+                        },
+                        "header_layout": {
+                            "config": {
+                                "fieldWizard": {
+                                    "selectIcons": {
+                                        "disabled": 1
+                                    }
+                                },
+                                "items": [],
+                                "renderType": "selectSingle"
+                            },
+                            "fullKey": "header_layout",
+                            "key": "header_layout",
+                            "type": "select"
+                        },
+                        "header_link": {
+                            "config": {
+                                "allowedTypes": [
+                                    "page",
+                                    "telephone",
+                                    "url",
+                                    "file",
+                                    "email",
+                                    "folder",
+                                    "record"
+                                ],
+                                "behaviour": {
+                                    "allowLanguageSynchronization": 1
+                                }
+                            },
+                            "fullKey": "header_link",
+                            "key": "header_link",
+                            "type": "link"
+                        },
+                        "imageorient": {
+                            "config": {
+                                "behaviour": {
+                                    "allowLanguageSynchronization": 1
+                                },
+                                "fieldWizard": {
+                                    "selectIcons": {
+                                        "disabled": 1
+                                    }
+                                },
+                                "items": [],
+                                "renderType": "selectSingle"
+                            },
+                            "fullKey": "imageorient",
+                            "key": "imageorient",
+                            "type": "select"
+                        }
+                    },
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "gf_imagetext",
+                    "label": "Gedankenfolger Image\/Text",
+                    "labels": [
+                        "",
+                        "",
+                        "",
+                        "Link",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.media",
+                        "",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.layout",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:imageorient",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_grid_width_image",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_grid_width_text"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "sql": {
+                "tx_mask_class_background": {
+                    "tt_content": {
+                        "tx_mask_class_background": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_class_button": {
+                    "tt_content": {
+                        "tx_mask_class_button": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_class_text": {
+                    "tt_content": {
+                        "tx_mask_class_text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_grid_width_image": {
+                    "tt_content": {
+                        "tx_mask_grid_width_image": "float DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_grid_width_text": {
+                    "tt_content": {
+                        "tx_mask_grid_width_text": "float DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "assets": {
+                    "coreField": 1,
+                    "fullKey": "assets",
+                    "key": "assets",
+                    "type": "media"
+                },
+                "bodytext": {
+                    "bodytextTypeByElement": {
+                        "gf_imagetext": "richtext"
+                    },
+                    "coreField": 1,
+                    "fullKey": "bodytext",
+                    "key": "bodytext"
+                },
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "header_layout": {
+                    "coreField": 1,
+                    "fullKey": "header_layout",
+                    "key": "header_layout",
+                    "type": "select"
+                },
+                "header_link": {
+                    "coreField": 1,
+                    "fullKey": "header_link",
+                    "key": "header_link",
+                    "type": "link"
+                },
+                "imageorient": {
+                    "coreField": 1,
+                    "fullKey": "imageorient",
+                    "key": "imageorient",
+                    "type": "select"
+                },
+                "tx_mask_810830778015d": {
+                    "config": {
+                        "type": "tab"
+                    },
+                    "fullKey": "tx_mask_810830778015d",
+                    "key": "810830778015d",
+                    "type": "tab"
+                },
+                "tx_mask_85c7701882c6d": {
+                    "config": {
+                        "type": "tab"
+                    },
+                    "fullKey": "tx_mask_85c7701882c6d",
+                    "key": "85c7701882c6d",
+                    "type": "tab"
+                },
+                "tx_mask_class_background": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:core\/Resources\/Private\/Language\/locallang_general.xlf:LGL.default_value",
+                                "value": ""
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.primary",
+                                "value": "bg-primary"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.secondary",
+                                "value": "bg-secondary"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.success",
+                                "value": "bg-success"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.danger",
+                                "value": "bg-danger"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.warning",
+                                "value": "bg-warning"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.info",
+                                "value": "bg-info"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.light",
+                                "value": "bg-light"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background.dark",
+                                "value": "bg-dark"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_class_background",
+                    "key": "class_background",
+                    "type": "select"
+                },
+                "tx_mask_class_button": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:core\/Resources\/Private\/Language\/locallang_general.xlf:LGL.default_value",
+                                "value": ""
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.primary",
+                                "value": "btn-primary"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.secondary",
+                                "value": "btn-secondary"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.success",
+                                "value": "btn-success"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.danger",
+                                "value": "btn-danger"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.warning",
+                                "value": "btn-warning"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.info",
+                                "value": "btn-info"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.light",
+                                "value": "btn-light"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.dark",
+                                "value": "btn-dark"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button.link",
+                                "value": "btn-link"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_class_button",
+                    "key": "class_button",
+                    "type": "select"
+                },
+                "tx_mask_class_text": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:core\/Resources\/Private\/Language\/locallang_general.xlf:LGL.default_value",
+                                "value": ""
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.primary",
+                                "value": "text-primary"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.secondary",
+                                "value": "text-secondary"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.success",
+                                "value": "text-success"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.danger",
+                                "value": "text-danger"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.warning",
+                                "value": "text-warning"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.info",
+                                "value": "text-info"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.light",
+                                "value": "text-light"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.dark",
+                                "value": "text-dark"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_class_text",
+                    "key": "class_text",
+                    "type": "select"
+                },
+                "tx_mask_grid_width_image": {
+                    "config": {
+                        "autocomplete": 1,
+                        "default": "12",
+                        "format": "decimal",
+                        "nullable": 0,
+                        "range": {
+                            "lower": "1",
+                            "upper": "24"
+                        },
+                        "type": "number"
+                    },
+                    "fullKey": "tx_mask_grid_width_image",
+                    "key": "grid_width_image",
+                    "l10n_mode": "exclude",
+                    "type": "float"
+                },
+                "tx_mask_grid_width_text": {
+                    "config": {
+                        "autocomplete": 1,
+                        "default": "12",
+                        "format": "decimal",
+                        "nullable": 0,
+                        "range": {
+                            "lower": "1",
+                            "upper": "24"
+                        },
+                        "type": "number"
+                    },
+                    "fullKey": "tx_mask_grid_width_text",
+                    "key": "grid_width_text",
+                    "l10n_mode": "exclude",
+                    "type": "float"
+                }
+            }
+        }
+    }
+}

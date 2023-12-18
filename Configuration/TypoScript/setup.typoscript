@@ -1,0 +1,289 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/fluid_styled_content.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Helper/Other.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+
+####################
+#### EXTENSIONS ####
+####################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/container.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Mask/Mask.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Powermail/Powermail.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:gf_sitepackage/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:gf_sitepackage/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:gf_sitepackage/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:gf_sitepackage/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 3
+                includeSpacer = 1
+                as = navMain
+            }
+            40 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            40 {
+                languages = auto
+                as = navLang
+            }
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
+                special = directory
+                special.value = 20
+                as = navFooter
+            }
+            60 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            60 {
+                table = tx_mask_gf_addresses
+                where = ({#tx_mask_main} = 1)
+                orderBy = tx_mask_name
+                pidInList = 7
+                as = gfaddressesmain
+            }
+            70 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            70 {
+                table = tt_content
+                where = ({#sectionIndex} = 1)
+                orderBy = sorting
+#                where = deleted=0 AND hidden=0
+#                pidInList = 7
+                as = navSection
+            }
+            100 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+            100 {
+                as = site
+            }
+        }
+
+        settings{
+            rootpageId = {$page.settings.rootpageId}
+            pathPublic = EXT:gf_sitepackage/Resources/Public/
+            defaultHeaderType = {$styles.content.defaultHeaderType}
+            media.additionalConfig.api = 0
+            media.additionalConfig.no-cookie = 1
+            defaultSpaceBeforeType = {$styles.content.defaultSpaceBeforeType}
+            defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
+            defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
+            defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+        }
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+#        rte = EXT:gf_sitepackage/Resources/Public/Scss/rte.scss
+#        rte.outputfile = EXT:gf_sitepackage/Resources/Public/Css/rte.css
+        gf_sitepackage_layout = EXT:gf_sitepackage/Resources/Public/Scss/layout.scss
+        gf_sitepackage_layout.outputfile = EXT:gf_sitepackage/Resources/Public/Css/layout.css
+        gf_sitepackage_layout.defer = 1
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        bootstrap = EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/Bootstrap/bootstrap.bundle.min.js
+        bootstrap.disableCompression = 1
+        bootstrap.defer = 1
+        gf_sitepackage_scripts = EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
+        gf_sitepackage_scripts.defer = 1
+    }
+    headerData {
+#        10 = TEXT
+#        10.value = <link rel="icon" type="image/x-icon" href="https://www.cemo.de/typo3conf/ext/gf_sitepackage/Resources/Public/Icons/favicon.gif" />
+#        20 = TEXT
+#        20.value = <link rel="shortcut icon" type="image/x-icon" href="https://www.cemo.de/typo3conf/ext/gf_sitepackage/Resources/Public/Icons/favicon.gif" />
+
+#        100 = TEXT
+#        100.value(
+#            <link rel="preconnect" href="https://www.cemo.de">
+#            <link rel="preconnect" href="https://shop.cemo.de">
+#            <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
+#        )
+    }
+}
+
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = {$config.no_cache}
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = {$config.removeDefaultJS}
+    inlineStyle2TempFile = 1
+    admPanel = {$config.admPanel}
+    debug = 0
+    cache_period = 86400
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+    // Disable Image Upscaling
+    noScaleUp = 1
+
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+}
+
+[backend.user.isAdmin]
+    config{
+        no_cache = 1
+        concatenateJs = 0
+        concatenateCss = 0
+        compressJs = 0
+        compressCss = 0
+        contentObjectExceptionHandler = 0
+    }
+[global]

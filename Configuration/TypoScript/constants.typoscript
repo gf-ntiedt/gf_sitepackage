@@ -1,0 +1,75 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:gf_sitepackage/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:gf_sitepackage/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:gf_sitepackage/Resources/Private/Templates/ContentElements/
+    }
+    content{
+        defaultSpaceBeforeType =
+        defaultSpaceAfterType =
+        defaultSpaceInnerBeforeType = pt-5
+        defaultSpaceInnerAfterType = pb-5
+        defaultButtonClass = btn-primary
+        defaultTextClass =
+        defaultBackgroundClass =
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:gf_sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:gf_sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:gf_sitepackage/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    settings{
+        # cat=gf_sitepackage/settings; type=int; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.settings.rootpageId
+        rootpageId = 1
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+
+#################
+### POWERMAIL ###
+#################
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Powermail/constants.typoscript">
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 1
+    prefixLocalAnchors = all
+    headerComment = build by sitepackagebuilder.com
+    sendCacheHeaders = 1
+}

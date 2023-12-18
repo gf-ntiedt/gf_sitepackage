@@ -1,0 +1,12 @@
+<ul class="nav nav-footer flex-column mb-3">
+    <f:for each="{navFooter}" as="navitem" iteration="iterator">
+        <f:if condition="!{navitem.spacer}">
+            <li class="nav-item">
+                <f:link.page
+                    pageUid="{navitem.data.uid}"
+                    class="nav-link"
+                >{navitem.title}</f:link.page>
+            </li>
+        </f:if>
+    </f:for>
+</ul>

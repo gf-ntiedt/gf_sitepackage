@@ -1,0 +1,11 @@
+<div id="c{uid}" class="gf-columnizercolumns type-default colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+    <div class="container-fluid">
+        <div class="row justify-content-start align-items-center">
+            <f:for each="{content}" as="record">
+                <div class="col-sm-{gf_sitepackage_columnwidths} my-3">
+                    <f:format.raw>{record.renderedContent}</f:format.raw>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</div>

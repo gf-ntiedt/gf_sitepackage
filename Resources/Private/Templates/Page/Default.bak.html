@@ -1,0 +1,128 @@
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Debug">
+    <f:debug title="title: Templates\Page\Default.html: subtitle">{subtitle}</f:debug>
+</f:section>
+
+<f:section name="Header">
+    <header class="container-fluid px-0">
+        <div class="header-top row justify-content-center align-items-center px-0 py-1 bg-gray">
+            <div class="col-auto">
+                <strong>
+                    <f:format.raw>{data.tx_mask_company_slogan}</f:format.raw>
+                </strong>
+            </div>
+        </div>
+        <div class="header-bottom position-relative">
+            <div class="row align-items-start m-0 position-absolute z-index-2 d-flex w-100">
+                <div class="col-11 px-0 pt-3 offset-1">
+                    <f:link.page class="navbar-brand d-inline-block" aria="{label: '{data.tx_mask_company_name} – {data.tx_mask_company_slogan}'}">
+                        <f:image
+                            src="{data.tx_mask_company_logo}"
+                            width="199"
+                            height="67"
+                            loading="lazy"
+                        />
+                    </f:link.page>
+                </div>
+                <div class="col-11 px-0 pt-4 d-flex justify-content-end align-items-center">
+                    <f:render partial="NavSocial" section="Header" arguments="{settings:settings,lang:lang}" />
+                    <f:render partial="NavLang" section="Header" arguments="{settings:settings,navLang:navLang}" />
+                </div>
+            </div>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+        
+        </div>
+    </header>
+</f:section>
+
+<f:section name="Main">
+    <main>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '6'}" />
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+        
+        <div class="container-fluid bg-primary item-newsletter">
+            <div class="row justify-content-center align-items-center py-4">
+                <div class="col-auto">
+                    <f:link.external uri="https://www.cemo.de/kontakt/newsletter" target="_blank" class="btn btn-secondary text-uppercase"><strong><f:translate key="tonewsletterabo" extensionName="gf_sitepackage" /></strong></f:link.external>
+                </div>
+            </div>
+        </div>
+    </main>
+</f:section>
+
+<f:section name="Footer">
+    <footer id="footer" class=" text-white fs-sm-1">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center pt-5">
+                <div class="col-sm-24 col-md-22 col-lg-20">
+                    <div class="row">
+                        <div class="col-sm-18 col-md-20">
+                            <h6 class="border-bottom mb-3 pb-3 fs-sm-2 text-uppercase"><strong>{data.tx_mask_company_name}</strong></h6>
+                            <div class="row">
+                                <div class="col-sm-14 col-md-16 mb-4">
+                                    <address>
+                                        <p>{data.tx_mask_company_street} {data.tx_mask_company_street_nr}<br>
+                                            {data.tx_mask_company_zip} {data.tx_mask_company_city}<br>
+                                            {data.tx_mask_company_country}<br><br>
+                                            Telefon: <a href="tel:+49715196360">{data.tx_mask_company_phone}</a><br>
+                                            <f:link.email email="{data.tx_mask_company_email}" class="mail-link"></f:link.email><br><br>
+                                            USt-Ident. Nr.: DE 147 319 153<br>
+                                            Amtsgericht Stuttgart<br>
+                                            HRB 261479</p>
+                                    </address>
+                                </div>
+                                <div class="col-sm-10 col-md-8 mb-4">
+                                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 mb-4">
+                            <h6 class="border-bottom mb-3 pb-3 fs-sm-2 text-uppercase"><strong><f:translate key="fe.language" extensionName="gf_sitepackage" /></strong></h6>
+                            <f:render partial="NavLang" section="Footer" arguments="{settings:settings,navLang:navLang}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-24 mb-4">
+                            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '4'}" />
+                        </div>
+                    </div>
+                    <div class="d-flex border-bottom mb-4"></div>
+                    <div class="row ">
+                        <div class="col-24">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-9 mb-4">
+                                    <p class="my-1">&copy; <f:format.date format="Y" date="now"/> {data.tx_mask_company_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><f:translate key="fe.rightsreserved" extensionName="gf_sitepackage" /></span></p>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <f:render partial="NavSocial" section="Footer" arguments="{settings:settings,lang:lang}" />
+                                </div>
+                                <div class="col-md-9 mb-4">
+                                    <ul class="nav nav-footer d-flex text-white">
+                                        <li class="navitem">
+                                            <f:link.typolink
+                                                parameter="9"
+                                                class="nav-link"
+                                            ></f:link.typolink>
+                                        </li>
+                                        <li class="navitem">
+                                            <f:link.typolink
+                                                parameter="10"
+                                                class="nav-link"
+                                            ></f:link.typolink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="to-top d-flex justify-content-center align-items-center" aria-label="{f:translate(key:'totop', extensionName:'gf_sitepackage')}">
+            <f:render partial="Arrow" section="Up"></f:render>
+        </a>
+    </footer>
+</f:section>

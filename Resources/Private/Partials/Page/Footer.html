@@ -1,0 +1,35 @@
+<footer class="py-5 bg-primary">
+    <div class="container-fluid">
+        <div class="row justify-content-sm-end">
+            <div class="col-auto">
+                <f:image
+                    src="{gfaddressesmain.0.data.tx_mask_logo}"
+                    treatIdAsReference="1"
+                    loading="lazy"
+                    class="me-2 mb-3"
+                />
+            </div>
+            <div class="col-auto">
+                <h6>{gfaddressesmain.0.data.tx_mask_name}</h6>
+                <address>
+                    {gfaddressesmain.0.data.tx_mask_street} {gfaddressesmain.0.data.tx_mask_street_nr}<br>
+                    {gfaddressesmain.0.data.tx_mask_zip} {gfaddressesmain.0.data.tx_mask_city}<br>
+                    <gf:link.urlscheme
+                        number="{gfaddressesmain.0.data.tx_mask_phone}"
+                        class="" /><br>
+                    <gf:link.urlscheme
+                        number="{gfaddressesmain.0.data.tx_mask_fax}"
+                        scheme="fax:"
+                        class="" /><br>
+                    <f:link.email
+                        email="{gfaddressesmain.0.data.tx_mask_email}" />
+                </address>
+                
+                <f:render partial="NavFooter" arguments="{navFooter:navFooter}" />
+                
+                <p>© {f:format.date(date:'now',format:'Y')} {gfaddressesmain.0.data.tx_mask_name}</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<button id="to-top" class="to-top btn btn-primary shadow-sm rounded-circle"></button>

@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg flex-lg-nowrap py-3">
+    <f:link.page
+        pageUid="{settings.rootpageId}"
+        class="navbar-brand order-1"
+    >
+        <f:image
+            src="{gfaddressesmain.0.data.tx_mask_logo}"
+            treatIdAsReference="1"
+            loading="lazy"
+            class="me-2"
+        />
+    </f:link.page>
+    <span class="navbar-text order-4 order-sm-2">{gfaddressesmain.0.data.tx_mask_claim -> f:format.nl2br()}</span>
+    <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse order-5 justify-content-end" id="nav-main">
+        <ul class="navbar-nav">
+            <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
+                <f:if condition="!{navitemlvl1.spacer}">
+                    <li class="nav-item position-relative">
+                        <f:render section="ItemLink" arguments="{item:navitemlvl1}" />
+                        
+                        <f:if condition="{navitemlvl1.children}">
+                            <div class="collapse z-1 justify-content-end level-2" id="nav-main-{navitemlvl1.data.uid}">
+                                <ul class="navbar-nav flex-column">
+                                    <f:for each="{navitemlvl1.children}" as="navitemlvl2">
+                                        <li class="nav-item position-relative">
+                                            <f:render section="ItemLink" arguments="{item:navitemlvl2}" />
+                                            
+                                            <f:if condition="{navitemlvl2.children}">
+                                                <div class="collapse justify-content-end level-3" id="nav-main-{navitemlvl2.data.uid}">
+                                                    <ul class="navbar-nav flex-column">
+                                                        <f:for each="{navitemlvl2.children}" as="navitemlvl3">
+                                                            <li class="nav-item position-relative">
+                                                                <f:render section="ItemLink" arguments="{item:navitemlvl3}" />
+                                                            </li>
+                                                        </f:for>
+                                                    </ul>
+                                                </div>
+                                            </f:if>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </div>
+                        </f:if>
+                    </li>
+                </f:if>
+            </f:for>
+        </ul>
+    </div>
+</nav>
+
+<f:section name="ItemLink">
+    <f:if condition="{item.children}">
+        <f:then>
+            <f:variable name="itemclass"><f:spaceless>
+                <f:if condition="{class}">
+                    <f:then>
+                        {class} dropdown-toggle
+                    </f:then>
+                    <f:else>
+                        nav-link{f:if(condition:item.active,then:' active')} dropdown-toggle
+                    </f:else>
+                </f:if>
+            </f:spaceless></f:variable>
+            <f:link.external
+                uri="#nav-main-{item.data.uid}"
+                aria="{
+                    current:'{f:if(condition:item.active,then:\'page\')}',
+                    expanded:'false',
+                    controls:'nav-main-{item.data.uid}'
+                    }"
+                data="{bs-toggle:'collapse'}"
+                defaultScheme=""
+                class="{itemclass}"
+            >
+                {item.title}
+            </f:link.external>
+        </f:then>
+        <f:else>
+            <f:variable name="itemclass"><f:spaceless>
+                <f:if condition="{class}">
+                    <f:then>
+                        {class}
+                    </f:then>
+                    <f:else>
+                        nav-link{f:if(condition:item.active,then:' active')}
+                    </f:else>
+                </f:if>
+            </f:spaceless></f:variable>
+            <f:link.page
+                pageUid="{item.data.uid}"
+                aria="{current:'{f:if(condition:item.active,then:\'page\')}'}"
+                class="{itemclass}"
+            >
+                {item.title}
+            </f:link.page>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:comment>
+</f:comment>

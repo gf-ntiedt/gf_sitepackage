@@ -1,0 +1,49 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:container="http://typo3.org/ns/B13/Container/ViewHelpers"
+        data-namespace-typo3-fluid="true"
+>
+    <f:alias map="{
+    pid: data.pid,
+    uid: data.uid,
+    colPos: data.colPos,
+    gf_sitepackage_columnwidths: data.gf_sitepackage_columnwidths,
+    space_before_class: data.space_before_class,
+    space_after_class: data.space_after_class,
+    space_inner_before_class: data.space_inner_before_class,
+    space_inner_after_class: data.space_inner_after_class,
+    defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+    defaultSpaceAfterType: settings.defaultSpaceAfterType,
+    defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+    defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+}">
+        <div
+            id="c{uid}"
+            class="
+                gf-2cols
+                colpos-{colPos}
+                {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)}
+                {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)}
+                {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)}
+                {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}
+            "
+        >
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-12 my-3">
+                        <f:for each="{contentLeft}" as="record">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </f:for>
+                    </div>
+                    <div class="col-sm-12 my-3">
+                        <f:for each="{contentRight}" as="record">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:alias>
+</html>

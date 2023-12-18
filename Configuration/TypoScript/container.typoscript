@@ -1,0 +1,29 @@
+tt_content.gf-2cols < lib.contentElement
+tt_content.gf-2cols {
+    templateName = 2Cols
+    templateRootPaths.10 = EXT:gf_sitepackage/Resources/Private/Templates/ContentElements/
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 200
+            as = contentLeft
+        }
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
+            colPos = 201
+            as = contentRight
+        }
+    }
+}
+tt_content.gf-columnizercontents < lib.contentElement
+tt_content.gf-columnizercontents {
+    templateName = Columnizercontents
+    templateRootPaths.10 = EXT:gf_sitepackage/Resources/Private/Templates/ContentElements/
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 100
+            as = content
+        }
+    }
+}

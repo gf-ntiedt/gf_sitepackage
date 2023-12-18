@@ -1,0 +1,47 @@
+<div id="c{uid}" class="gf-columnizercolumns type-{f:if(condition:gf_sitepackage_type,then:gf_sitepackage_type) -> f:format.case(mode:'lower')} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+    <div class="container-fluid">
+        <div id="carousel-{pid}-{uid}" class="carousel slide">
+            <div class="carousel-inner">
+                
+                <f:variable name="count" value="{content -> f:count()}" />
+                <f:variable name="division" value="{v:math.division(a:24,b:gf_sitepackage_columnwidths)}" />
+                
+                <f:render section="Items" arguments="{_all}" />
+            </div>
+            <f:if condition="{count}>{division}">
+                <button class="carousel-control-prev btn btn-primary rounded-0" type="button" data-bs-target="#carousel-{pid}-{uid}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">{f:translate(extensionName:'gf_sitepackage',key:'{locallang}:fe.gf_carousel.prev')}</span>
+                </button>
+                <button class="carousel-control-next btn btn-primary rounded-0" type="button" data-bs-target="#carousel-{pid}-{uid}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">{f:translate(extensionName:'gf_sitepackage',key:'{locallang}:fe.gf_carousel.next')}</span>
+                </button>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+<f:section name="Items">
+    <div class="carousel-item d-flex active">
+        <f:for each="{content}" as="record" iteration="iterator">
+            <f:if condition="{iterator.cycle} % {division}">
+                <f:then>
+                    <div class="col-sm-{gf_sitepackage_columnwidths} d-flex">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="col-sm-{gf_sitepackage_columnwidths} d-flex">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                    <f:if condition="{iterator.isLast} != 1">
+                        <f:then>
+                        </div><div class="carousel-item d-flex">
+                        </f:then>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
+</f:section>

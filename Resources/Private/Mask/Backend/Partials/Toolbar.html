@@ -1,0 +1,15 @@
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div class="btn-toolbar mb-2" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            <f:link.typolink
+                parameter="{pid}#c{uid}"
+                target="_blank"
+                absolute="1"
+                title="Jump to the position in the frontend"
+                class="btn btn-default"
+            ><core:icon identifier="actions-eye-link" size="small" /></f:link.typolink>
+            <button type="button" class="btn btn-outline-secondary" disabled>UID: {uid}</button>
+        </div>
+    </div>
+</html>

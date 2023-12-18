@@ -1,0 +1,61 @@
+<f:switch expression="{data.imageorient}">
+    <f:case value="0">
+        <f:variable name="class_x" value="float-start" />
+        <f:variable name="row_class" value="flex-column" />
+        <f:variable name="order_y_class" value="{0:'order-1',1:'order-2'}" />
+    </f:case>
+    <f:case value="1">
+        <f:variable name="class_x" value="justify-content-end" />
+        <f:variable name="row_class" value="flex-column" />
+        <f:variable name="order_y_class" value="{0:'order-1',1:'order-2'}" />
+    </f:case>
+    <f:case value="2">
+        <f:variable name="class_x" value="justify-content-start" />
+        <f:variable name="row_class" value="flex-column" />
+        <f:variable name="order_y_class" value="{0:'order-1',1:'order-2'}" />
+    </f:case>
+    <f:case value="8">
+        <f:variable name="class_x" value="justify-content-center" />
+        <f:variable name="row_class" value="flex-column" />
+        <f:variable name="order_y_class" value="{0:'order-2',1:'order-1'}" />
+    </f:case>
+    <f:case value="9">
+        <f:variable name="class_x" value="justify-content-end" />
+        <f:variable name="row_class" value="flex-column" />
+        <f:variable name="order_y_class" value="{0:'order-2',1:'order-1'}" />
+    </f:case>
+    <f:case value="10">
+        <f:variable name="class_x" value="justify-content-start" />
+        <f:variable name="row_class" value="flex-column" />
+        <f:variable name="order_y_class" value="{0:'order-2',1:'order-1'}" />
+    </f:case>
+</f:switch>
+
+<div id="c{data.uid}" class="gf-imagetext ">
+    <div class="container-fluid">
+        <div class="d-flex {row_class}">
+            <div class="col-{data.tx_mask_grid_width_image} d-flex {class_x} {order_y_class.0}">
+                <f:if condition="{data.image}">
+                    <f:for each="{data.image}" as="file">
+                        <f:image
+                            image="{file}"
+                            class="img-fluid" />
+                    </f:for>
+                </f:if>
+            </div>
+            <div class="col-{data.tx_mask_grid_width_image} {order_y_class.1}">
+                <f:if condition="{data.image}">
+                    <f:if condition="{data.header}">
+                        {data.header}
+                    </f:if>
+                    <f:if condition="{data.bodytext}">
+                        {data.bodytext -> f:format.html()}
+                    </f:if>
+                    <f:if condition="{data.header_link}">
+                        <f:link.typolink parameter="{data.header_link}"></f:link.typolink>
+                    </f:if>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</div>

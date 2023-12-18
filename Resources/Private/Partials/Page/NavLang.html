@@ -1,0 +1,67 @@
+
+<f:section name="Header">
+    <f:if condition="{navLang}">
+        <div id="nav-lang" class="nav dropdown justify-content-end">
+            <f:for each="{navLang}" as="navitem" iteration="iterator">
+                <f:if condition="{navitem.active}">
+                    <button class="btn text-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <f:cObject typoscriptObjectPath="lib.inlineSvg" data="{src: '{settings.pathPublic}Icons/Navlang/nav_lang.svg',width: 25, height: 25}" />
+                        {navitem.twoLetterIsoCode -> f:format.case(mode:'upper')}
+                    </button>
+                </f:if>
+            </f:for>
+            <ul class="dropdown-menu">
+                <f:for each="{navLang}" as="navitem" iteration="iterator">
+                    <f:if condition="!{navitem.active}">
+                        <li>
+                            <f:link.page
+                                language="{navitem.languageId}"
+                                absolute="1"
+                                class="dropdown-item"
+                            >
+                                {navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:'upper')})
+                            </f:link.page>
+                        </li>
+                    </f:if>
+                </f:for>
+            </ul>
+        </div>
+    </f:if>
+</f:section>
+
+<f:section name="Footer">
+    <f:if condition="{navLang}">
+        <f:variable name="active" value="{navLang -> v:iterator.filter(propertyName: 'active', filter: '1')}"></f:variable>
+        <f:variable name="non_active" value="{navLang -> v:iterator.filter(propertyName: 'active', filter: '0') -> v:iterator.filter(propertyName: 'available', filter: '1')}"></f:variable>
+        
+        <div class="nav nav-lang nav-lang-footer dropdown-center">
+            <f:if condition="{active}">
+                <f:variable name="fe_navLang_active" value="{f:translate(extensionName:'gf_sitepackage',key:'fe.navLang.{active.0.languageUid}')}"/>
+                <f:variable name="fe_navLang_short_active" value="{f:translate(extensionName:'gf_sitepackage',key:'fe.navLang.short.{active.0.languageUid}')}"/>
+                
+                <button class="btn btn-light dropdown-toggle p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {fe_navLang_active}
+                    <f:render partial="Arrow" section="Down"></f:render>
+                </button>
+                
+                <f:if condition="{non_active}">
+                    <ul class="dropdown-menu">
+                        <f:for each="{navLang}" as="navitem" iteration="iterator">
+                            <f:if condition="{navitem.available}==1 && {navitem.active}==0">
+                                <f:variable name="fe_navLang" value="{f:translate(extensionName:'gf_sitepackage',key:'fe.navLang.{navitem.languageUid}')}"/>
+                                <f:variable name="fe_navLang_short" value="{f:translate(extensionName:'gf_sitepackage',key:'fe.navLang.short.{navitem.languageUid}')}"/>
+                                
+                                <li>
+                                    <f:link.page language="{navitem.languageUid}" class="dropdown-item">{fe_navLang}</f:link.page>
+                                </li>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </f:if>
+        </div>
+    </f:if>
+</f:section>
+
+<f:comment>
+</f:comment>

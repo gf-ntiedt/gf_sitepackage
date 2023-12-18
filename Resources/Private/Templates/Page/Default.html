@@ -1,0 +1,10 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Debug">
+    <f:debug title="title: Templates\Page\Default.html:">{_all}</f:debug>
+    {_all -> f:debug()}
+</f:section>

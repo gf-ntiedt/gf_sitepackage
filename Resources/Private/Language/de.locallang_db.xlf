@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-03-10UTC20:04:420">
+        <header>
+            <authorName>Niels Tiedt</authorName>
+            <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
+                <target>Wurzelseiten-ID</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_2cols">
+                <target>2 Spalten</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_2cols.contentLeft">
+                <target>Inhalt links</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_2cols.contentRight">
+                <target>Inhalt rechts</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_columnizercontents">
+                <target>Inhalte in Spalten</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_columnizercontents.content">
+                <target>Inhalte</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth">
+                <target>Rasterbreite</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span1_23">
+                <target>1/23</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span2_22">
+                <target>2/22</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span3_21">
+                <target>3/21</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span4_20">
+                <target>4/20</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span5_19">
+                <target>5/19</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span6_18">
+                <target>6/18</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span7_17">
+                <target>7/17</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span8_16">
+                <target>8/16</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span9_15">
+                <target>9/15</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span10_14">
+                <target>10/14</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span11_13">
+                <target>11/13</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span12_12">
+                <target>12/12</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span13_11">
+                <target>13/11</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span14_10">
+                <target>14/10</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span15_9">
+                <target>15/9</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span16_8">
+                <target>16/8</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span17_7">
+                <target>17/7</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span18_6">
+                <target>18/6</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span19_5">
+                <target>19/5</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span20_4">
+                <target>20/4</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span21_3">
+                <target>21/3</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span22_2">
+                <target>22/2</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidth.span23_1">
+                <target>23/1</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_columnwidths">
+                <target>Rasterbreite</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint">
+                <target>Haltepunkt</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint.all">
+                <target>Alle (≥0px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint.sm">
+                <target>Klein (≥576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint.md">
+                <target>Mittel (≥768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint.lg">
+                <target>Groß (≥992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint.xl">
+                <target>Extra groß (≥1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_breakpoint.xxl">
+                <target>Extra extra groß (≥1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_type">
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_type.carousel">
+                <target>Carousel</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

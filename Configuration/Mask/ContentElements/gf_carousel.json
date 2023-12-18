@@ -1,0 +1,170 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "gf_carousel": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "header_layout",
+                        "image",
+                        "tx_mask_b4a8ae245c0c78",
+                        "tx_mask_indicators",
+                        "tx_mask_controls",
+                        "tx_mask_captions"
+                    ],
+                    "columnsOverride": {
+                        "header_layout": {
+                            "config": {
+                                "fieldWizard": {
+                                    "selectIcons": {
+                                        "disabled": 1
+                                    }
+                                },
+                                "items": [],
+                                "renderType": "selectSingle"
+                            },
+                            "fullKey": "header_layout",
+                            "key": "header_layout",
+                            "type": "select"
+                        },
+                        "image": {
+                            "config": {
+                                "appearance": {
+                                    "elementBrowserEnabled": 1,
+                                    "enabledControls": {
+                                        "delete": 1,
+                                        "dragdrop": 1,
+                                        "hide": 1,
+                                        "info": 1,
+                                        "localize": 1,
+                                        "sort": 1
+                                    },
+                                    "fileUploadAllowed": 1,
+                                    "showAllLocalizationLink": 1,
+                                    "showPossibleLocalizationRecords": 1,
+                                    "showSynchronizationLink": 1,
+                                    "useSortable": 1
+                                },
+                                "behaviour": {
+                                    "allowLanguageSynchronization": 1
+                                },
+                                "minitems": ""
+                            },
+                            "fullKey": "image",
+                            "imageoverlayPalette": 1,
+                            "key": "image",
+                            "type": "file"
+                        }
+                    },
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "gf_carousel",
+                    "label": "Gedankenfolger Carousel",
+                    "labels": [
+                        "",
+                        "",
+                        "",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.settings",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_indicators",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_controls",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_captions"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 2
+                }
+            },
+            "sql": {
+                "tx_mask_captions": {
+                    "tt_content": {
+                        "tx_mask_captions": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_controls": {
+                    "tt_content": {
+                        "tx_mask_controls": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_indicators": {
+                    "tt_content": {
+                        "tx_mask_indicators": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header",
+                    "type": "string"
+                },
+                "header_layout": {
+                    "coreField": 1,
+                    "fullKey": "header_layout",
+                    "key": "header_layout",
+                    "type": "select"
+                },
+                "image": {
+                    "coreField": 1,
+                    "fullKey": "image",
+                    "imageoverlayPalette": 1,
+                    "key": "image",
+                    "type": "file"
+                },
+                "tx_mask_b4a8ae245c0c78": {
+                    "config": {
+                        "type": "tab"
+                    },
+                    "fullKey": "tx_mask_b4a8ae245c0c78",
+                    "key": "b4a8ae245c0c78",
+                    "type": "tab"
+                },
+                "tx_mask_captions": {
+                    "config": {
+                        "default": "0",
+                        "items": [],
+                        "renderType": "checkboxToggle",
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_captions",
+                    "key": "captions",
+                    "type": "check"
+                },
+                "tx_mask_controls": {
+                    "config": {
+                        "default": "1",
+                        "items": [],
+                        "renderType": "checkboxToggle",
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_controls",
+                    "key": "controls",
+                    "type": "check"
+                },
+                "tx_mask_indicators": {
+                    "config": {
+                        "items": [],
+                        "renderType": "checkboxToggle",
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_indicators",
+                    "key": "indicators",
+                    "type": "check"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-03-10UTC20:04:420">
+        <header>
+            <authorName>Niels Tiedt</authorName>
+            <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="siteConfiguration.site_language.testing">
+                <source>Path to frontend logo</source>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site.feLogo">
+                <source>Path to frontend logo</source>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site.companyName">
+                <source>Company name</source>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site.slogan">
+                <source>Slogan</source>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site_language.feLogo">
+                <source>Path to frontend logo (overwrite general setting)</source>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site_language.companyName">
+                <source>Company name (overwrite general setting)</source>
+            </trans-unit>
+            <trans-unit id="siteConfiguration.site_language.slogan">
+                <source>Slogan (overwrite general setting)</source>
+            </trans-unit>
+            <trans-unit id="fe.language">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="fe.rightsreserved">
+                <source>All rights reserved</source>
+            </trans-unit>
+            <trans-unit id="datum.format">
+                <source>Y-m-d / H:i</source>
+            </trans-unit>
+            <trans-unit id="fe.copyright">
+                <source>©|</source>
+            </trans-unit>
+            <trans-unit id="fe.weitereinfos">
+                <source>More info</source>
+            </trans-unit>
+            <trans-unit id="fe.search">
+                <source>Search</source>
+            </trans-unit>
+            <trans-unit id="fe.to_newsletter_subscription">
+                <source>Go to newsletter subscription</source>
+            </trans-unit>
+            <trans-unit id="nav.main.close">
+                <target>Close menu</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_karriere.detail.linktext">
+                <target>Back to</target>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_eletter">
+                <source>Newsletter subscription</source>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_catalog">
+                <source>Catalog</source>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_sustainability">
+                <source>Sustainability</source>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_app">
+                <source>App</source>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_shop">
+                <source>Online shop</source>
+            </trans-unit>
+            <trans-unit id="nav_sticky.link_useraccount">
+                <source>User account</source>
+            </trans-unit>
+            <trans-unit id="tonewsletterabo">
+                <source>To newsletter subscription</source>
+            </trans-unit>
+            <trans-unit id="totop">
+                <source>To Top</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.0">
+                <source>Deutsch</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.1">
+                <source>English</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.2">
+                <source>French</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.3">
+                <source>Italian</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.4">
+                <source>Español</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.5">
+                <source>Swedish</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.short.0">
+                <source>DE</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.short.1">
+                <source>EN</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.short.2">
+                <source>FR</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.short.3">
+                <source>IT</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.short.4">
+                <source>ES</source>
+            </trans-unit>
+            <trans-unit id="fe.navLang.short.5">
+                <source>SV</source>
+            </trans-unit>
+            <trans-unit id="space_class_none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="space_before_class">
+                <source>Margin Top</source>
+            </trans-unit>
+            <trans-unit id="space_after_class">
+                <source>Margin Bottom</source>
+            </trans-unit>
+            <trans-unit id="space_inner_before_class">
+                <source>Padding Top</source>
+            </trans-unit>
+            <trans-unit id="space_inner_after_class">
+                <source>Padding Bottom</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

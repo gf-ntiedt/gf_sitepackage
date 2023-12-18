@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-03-10UTC20:04:420">
+        <header>
+            <authorName>Niels Tiedt</authorName>
+            <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="tx_mask_gf_addresses">
+                <target>Gedankenfolger Adresse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.newRecordLinkTitle">
+                <target>Neue Adresse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_name">
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_claim">
+                <target>Slogan</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_logo">
+                <target>Logo</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_street">
+                <target>Straße</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_street_nr">
+                <target>Hausnummer</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_zip">
+                <target>PLZ</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_city">
+                <target>Ort</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_country">
+                <target>Land</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_phone">
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_fax">
+                <target>Fax</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_email">
+                <target>E-Mail</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_main">
+                <target>Hauptadresse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_main.description">
+                <target>benutzt für Logo und Fussadresse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_columnizer_contents">
+                <target>Columnizer Contents</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tab.contactdata">
+                <target>Kontaktdaten</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tab.settings">
+                <target>Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_grid_width_image">
+                <target>Grid width: Image</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_grid_width_text">
+                <target>Grid width: Text</target>
+            </trans-unit>
+            <trans-unit id="imageorient">
+                <target>Bildposition</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button">
+                <target>Button: Klasse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.primary">
+                <target>Primär</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.secondary">
+                <target>Sekundär</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.success">
+                <target>Erfolgreich</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.danger">
+                <target>Gefährlich</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.warning">
+                <target>Warnung</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.info">
+                <target>Info</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.light">
+                <target>Hell</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.dark">
+                <target>Dunkel</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_button.link">
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background">
+                <target>Hintergrund: Klasse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.primary">
+                <target>Primär</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.secondary">
+                <target>Sekundär</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.success">
+                <target>Erfolgreich</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.danger">
+                <target>Gefährlich</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.warning">
+                <target>Warnung</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.info">
+                <target>Info</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.light">
+                <target>Hell</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_background.dark">
+                <target>Dunkel</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text">
+                <target>Hintergrund: Klasse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.primary">
+                <target>Primär</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.secondary">
+                <target>Sekundär</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.success">
+                <target>Erfolgreich</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.danger">
+                <target>Gefährlich</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.warning">
+                <target>Warnung</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.info">
+                <target>Info</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.light">
+                <target>Hell</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text.dark">
+                <target>Dunkel</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before">
+                <target>Abstand davor</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.0">
+                <target>0 (Default)</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.1">
+                <target>1</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.2">
+                <target>2</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.3">
+                <target>3</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.4">
+                <target>4</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.5">
+                <target>5</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_before.auto">
+                <target>Automatisch</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after">
+                <target>Abstand danach</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.0">
+                <target>0</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.1">
+                <target>1</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.2">
+                <target>2</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.3">
+                <target>3</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.4">
+                <target>4</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.5">
+                <target>5</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_space_after.auto">
+                <target>Automatisch</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_indicators">
+                <target>Indikatoren</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_controls">
+                <target>Steuerung</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_captions">
+                <target>Bildunterschrift</target>
+            </trans-unit>
+            <trans-unit id="tab.image">
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="tab.media">
+                <target>Media</target>
+            </trans-unit>
+            <trans-unit id="tab.layout">
+                <target>Darstellung</target>
+            </trans-unit>
+            <trans-unit id="tab.settings">
+                <target>Settings</target>
+            </trans-unit>
+            <trans-unit id="fe.gf_carousel.prev">
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="fe.gf_carousel.next">
+                <target>Vor</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

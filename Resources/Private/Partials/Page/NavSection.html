@@ -1,0 +1,29 @@
+<f:render section="Listgroup"
+    arguments="{navSection:navSection}" />
+
+
+<f:section name="Listgroup">
+    <div class="nav-section-group">
+        <f:comment>
+            <button class="btn btn-light">Sections</button>
+        </f:comment>
+        <div id="nav-section" class="nav-section list-group">
+            <f:for each="{navSection}" as="item" iteration="iterator">
+                <f:if condition="{item.data.colPos}==1">
+                    <f:render section="Item" arguments="{item:item}" />
+                </f:if>
+            </f:for>
+            <f:for each="{navSection}" as="item" iteration="iterator">
+                <f:if condition="{item.data.colPos}==0">
+                    <f:render section="Item" arguments="{item:item}" />
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="Item">
+    <a class="list-group-item list-group-item-action" href="#c{item.data.uid}">{item.data.header}</a>
+</f:section>
+
+
