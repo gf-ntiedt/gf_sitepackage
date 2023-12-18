@@ -6,6 +6,24 @@
     <li>
         <a href="https://www.gedankenfolger.de/" target="_blank">Gedankenfolger GmbH</a>
     </li>
+    <li>
+        <a href="https://extensions.typo3.org/extension/save" target="_blank">Armin Vieweg</a>
+    </li>
+    <li>
+        <a href="https://extensions.typo3.org/extension/content_defender" target="_blank">Nicole Cordes – biz-design</a>
+    </li>
+    <li>
+        <a href="https://extensions.typo3.org/extension/vhs" target="_blank">FluidTYPO3 Team</a>
+    </li>
+    <li>
+        <a href="https://extensions.typo3.org/extension/container" target="_blank">b13 GmbH</a>
+    </li>
+    <li>
+        <a href="https://extensions.typo3.org/extension/ws_scss" target="_blank">Sven Wappler – WapplerSystems</a>
+    </li>
+    <li>
+        <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+    </li>
 </ul>
 <h3>
     Contents of this file
@@ -17,10 +35,21 @@
     <li>
         <a href="#includedelements">Included Elements</a>
     </li>
+    <li>
+        <a href="#license">License</a>
+    </li>
 </ol>
 <h3 id="dependencies">
     Dependencies
 </h3>
+<ul>
+    <li>t3/save</li>
+    <li>ichhabrecht/content-defender</li>
+    <li>fluidtypo3/vhs</li>
+    <li>mask/mask</li>
+    <li>b13/container</li>
+    <li>wapplersystems/ws-scss</li>
+</ul>
 <h3 id="includedelements">
     Included Elements
 </h3>
@@ -67,29 +96,34 @@
 </h3>
 <p>Used for company related content (logo, address, ...)<br>Accessible via fluid.</p>
 <h4>Usage:</h4>
-<code>
+<pre><code>
     company name {gfaddressesmain.0.data.tx_mask_name}
-</code><br>
-<code>
+</code></pre><br>
+<pre><code>
     company zip {gfaddressesmain.0.data.tx_mask_zip}
-</code>
+</code></pre>
 <p>If you use tx_mask_phone or tx_mask_fax there is a neat small viewhelper which perform the work for you.<br>
     This means it converts<br>
     +49 (0) 7152 42041 to &lt;a href="tel:+49715242041"&gt;+49 (0) 7152 42041&lt;/a&gt;</p>
 <h4>Usage:</h4>
-<code>
+<pre><code>
     &lt;gf:link.urlscheme
         number="{gfaddressesmain.0.data.tx_mask_phone}"
         class="" />
-</code><br>
-<code>
+</code></pre><br>
+<pre><code>
     &lt;gf:link.urlscheme
         number="{gfaddressesmain.0.data.tx_mask_fax}"
         scheme="fax:"
         class="" />
-</code>
+</code></pre>
 <h4>Hint:</h4>
 <p>If you got an error missing namespace include:</p>
-<code>
+<pre><code>
     {namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
-</code>
+</code></pre>
+
+<h3 id="license">
+    License
+</h3>
+<p>GNU GENERAL PUBLIC LICENSE Version 2</p>
