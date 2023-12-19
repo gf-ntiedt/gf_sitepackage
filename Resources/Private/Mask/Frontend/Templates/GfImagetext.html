@@ -2,6 +2,7 @@
     <f:alias map="{
         pid: data.pid,
         uid: data.uid,
+        colPos: data.colPos,
         imageorient: data.imageorient,
         images: data.image,
         assets: data.assets,
@@ -28,7 +29,9 @@
         defaultTextClass: settings.defaultTextClass,
     }">
         <div id="c{uid}" class="gf-ce gf-imagetext imageorient-{imageorient} colpos-{colPos} {f:if(condition:class_text,then:class_text,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
-            <div class="container-fluid">
+            <f:if condition="{colPos}!=200 && {colPos}!=201">
+                <div class="container-fluid">
+            </f:if>
                 <div class="row cols">
                     <f:if condition="{assets}">
                         <div class="col-sm-{grid_width_image} col-image">
@@ -96,7 +99,9 @@
                         </div>
                     </f:if>
                 </div>
-            </div>
+            <f:if condition="{colPos}!=200 && {colPos}!=201">
+                </div>
+            </f:if>
         </div>
     </f:alias>
 
