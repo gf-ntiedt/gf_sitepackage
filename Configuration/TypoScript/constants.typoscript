@@ -47,12 +47,6 @@ page {
         # cat=gf_sitepackage/settings; type=int; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.settings.rootpageId
         rootpageId = 1
     }
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
-    }
 }
 
 
@@ -70,6 +64,6 @@ config {
     removeDefaultJS = 0
     admPanel = 1
     prefixLocalAnchors = all
-    headerComment = build by sitepackagebuilder.com
+#    headerComment = build by sitepackagebuilder.com
     sendCacheHeaders = 1
 }

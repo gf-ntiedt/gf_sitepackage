@@ -426,9 +426,3 @@ $GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 's
     '--linebreak--,space_inner_before_class, space_inner_after_class',
     'after:space_after_class'
 );
-/*\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-    'tt_content',
-    'space_inner_before_class, space_inner_after_class',
-    '',
-    'after:space_after_class'
-);*/

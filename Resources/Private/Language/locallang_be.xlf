@@ -99,27 +99,6 @@
             <trans-unit id="constants.gf_sitepackage.config.baseURL">
                 <source>This writes the base-tag in the header of the document. Set this to the value that is expected to be the URL and append a / to the end of the string.</source>
             </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.config.tx_realurl_enable">
-                <source>Enable Real-URL</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerification">
-                <source>Enable Google site verification</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerificationId">
-                <source>Google site verification ID</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.analytics">
-                <source>Enable Google Analytics</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.analyticsId">
-                <source>Google analytics ID</source>
-            </trans-unit>
-			<trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analytics">
-                <source>Aktiviere etracker Analytics</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analyticsId">
-                <source>etracker analytics ID</source>
-            </trans-unit>
         </body>
     </file>
 </xliff>

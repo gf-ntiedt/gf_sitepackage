@@ -99,27 +99,6 @@
             <trans-unit id="constants.gf_sitepackage.config.baseURL">
                 <target>Dies schreibt einen base-tag in den header des Dokuments. Setzte dies auf den Wert welcher vorraussichtlich die URL ist und hänge einen / ans Ende des Strings.</target>
             </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.config.tx_realurl_enable">
-                <target>Aktiviere Real-URL</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerification">
-                <target>Aktiviere Google Seiten Verifizierung</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.siteVerificationId">
-                <target>Google Seiten Verifizierung ID</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.analytics">
-                <target>Aktiviere Google Analytics</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.google.analyticsId">
-                <target>Google analytics ID</target>
-            </trans-unit>
-			<trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analytics">
-                <target>Aktiviere etracker Analytics</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.tracking.etracker.et_analyticsId">
-                <target>etracker analytics ID</target>
-            </trans-unit>
         </body>
     </file>
 </xliff>

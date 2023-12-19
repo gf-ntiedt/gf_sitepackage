@@ -1,5 +1,5 @@
 /*!
- * GF Sitepackage v1.0.0 (https://www.gedankenfolger.de/)
+ * GF Sitepackage v12.0.0 (https://www.gedankenfolger.de/)
  * Copyright 2017-2023 Niels Tiedt
  * Licensed under the GPL-2.0-or-later license
  */

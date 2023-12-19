@@ -104,8 +104,6 @@ page {
                 table = tt_content
                 where = ({#sectionIndex} = 1)
                 orderBy = sorting
-#                where = deleted=0 AND hidden=0
-#                pidInList = 7
                 as = navSection
             }
             100 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
@@ -226,14 +224,14 @@ page {
     }
     headerData {
 #        10 = TEXT
-#        10.value = <link rel="icon" type="image/x-icon" href="https://www.cemo.de/typo3conf/ext/gf_sitepackage/Resources/Public/Icons/favicon.gif" />
+#        10.value = <link rel="icon" type="image/x-icon" href="https://www.domain.de/typo3conf/ext/gf_sitepackage/Resources/Public/Icons/favicon.gif" />
 #        20 = TEXT
-#        20.value = <link rel="shortcut icon" type="image/x-icon" href="https://www.cemo.de/typo3conf/ext/gf_sitepackage/Resources/Public/Icons/favicon.gif" />
+#        20.value = <link rel="shortcut icon" type="image/x-icon" href="https://www.domain.de/typo3conf/ext/gf_sitepackage/Resources/Public/Icons/favicon.gif" />
 
 #        100 = TEXT
 #        100.value(
-#            <link rel="preconnect" href="https://www.cemo.de">
-#            <link rel="preconnect" href="https://shop.cemo.de">
+#            <link rel="preconnect" href="https://www.domain.de">
+#            <link rel="preconnect" href="https://shop.domain.de">
 #            <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
 #        )
     }
