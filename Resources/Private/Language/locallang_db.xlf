@@ -9,6 +9,9 @@
             <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
                 <source>Rootpage-ID</source>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.shortcutIcon">
+                <source>Favicon</source>
+            </trans-unit>
             <trans-unit id="tt_content.gf_2cols">
                 <source>2 Columns</source>
             </trans-unit>

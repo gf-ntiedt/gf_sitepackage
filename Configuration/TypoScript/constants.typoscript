@@ -47,6 +47,9 @@ page {
         # cat=gf_sitepackage/settings; type=int; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.settings.rootpageId
         rootpageId = 1
     }
+
+    # cat=gf_sitepackage/shortcutIcon; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.shortcutIcon
+    shortcutIcon = EXT:gf_sitepackage/Resources/Public/Icons/favicon.ico
 }
 
 

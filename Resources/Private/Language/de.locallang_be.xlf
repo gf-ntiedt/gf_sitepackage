@@ -54,6 +54,9 @@
             <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
                 <target>UID der Wurzelseite</target>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.shortcutIcon">
+                <target>Favicon</target>
+            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.settings.basisTemplateId">
                 <target>UID der Wurzelseiten-Vorlage</target>
             </trans-unit>

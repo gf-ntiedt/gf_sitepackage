@@ -9,6 +9,9 @@
             <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
                 <target>Wurzelseiten-ID</target>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.shortcutIcon">
+                <target>Favicon</target>
+            </trans-unit>
             <trans-unit id="tt_content.gf_2cols">
                 <target>2 Spalten</target>
             </trans-unit>
