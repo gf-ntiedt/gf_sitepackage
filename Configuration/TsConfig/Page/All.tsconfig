@@ -1,5 +1,5 @@
 #
-# PageTS for GF Sitepackage
+# PageTS for Gedankenfolger Sitepackage
 #
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TsConfig/Page/options.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TsConfig/Page/RTE.tsconfig">

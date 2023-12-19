@@ -1,7 +1,7 @@
 {
     "name": "gedankenfolger/gf-sitepackage",
     "type": "typo3-cms-extension",
-    "description": "",
+    "description": "Basic sitepackage based on bootstrap",
     "homepage": "https://www.gedankenfolger.de/",
     "license": ["GPL-2.0-or-later"],
     "keywords": ["TYPO3 CMS"],

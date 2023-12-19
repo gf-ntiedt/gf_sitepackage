@@ -4,8 +4,8 @@
  * Extension Manager/Repository config file for ext "gf_sitepackage".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'GF Sitepackage',
-    'description' => '',
+    'title' => 'Gedankenfolger Sitepackage',
+    'description' => 'Basic sitepackage based on bootstrap',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Niels Tiedt',
     'author_email' => 'niels.tiedt@gedankenfolger.de',
     'author_company' => 'Gedankenfolger',
-    'version' => '12.0.0',
+    'version' => '12.0.1',
 ];
