@@ -6,6 +6,15 @@
             <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
         </header>
         <body>
+            <trans-unit id="constants.customsubcategory.settings">
+                <target>Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.menu">
+                <target>Menü</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footer.value">
+                <target>Footer: Liste von Seiten-UIDs</target>
+            </trans-unit>
             <trans-unit id="backend_layout.default">
                 <target>Standard</target>
             </trans-unit>
@@ -62,42 +71,6 @@
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.settings.excludeUidList">
                 <target>Liste von Seiten UIDs welche vom Seitentitel ausgeschlossen werden sollen.</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.settings.shownews">
-                <target>News anzeigen</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.settings.productfinder">
-                <target>Produktfinder anzeigen</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.settings.menuHeaderLangColor">
-                <target>Menü: Kopfbereich: Nav-Lang: Farbe</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.main.value">
-                <target>Haupt: Liste von Seiten-UIDs</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.main.excludeUidList">
-                <target>Dies ist eine Liste von Seiten UIDs zum ausschließen. Komma separiert. Sie können "current" zu der Liste hinzufügen um die aktuelle Seite auszuschließen.</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.top.value">
-                <target>Oben: Liste von Seiten-UIDs</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.top.excludeUidList">
-                <target>Dies ist eine Liste von Seiten UIDs zum ausschließen. Komma separiert. Sie können "current" zu der Liste hinzufügen um die aktuelle Seite auszuschließen.</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.sector.value">
-                <target>Bereich: Liste von Seiten-UIDs (Parent>Childs)</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.footercol1.value">
-                <target>Footer-Spalte 1: Liste von Seiten-UIDs</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.footercol2.value">
-                <target>Footer-Spalte 2: Liste von Seiten-UIDs</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.footercol3.value">
-                <target>Footer-Spalte 3: Liste von Seiten-UIDs</target>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.range">
-                <target>Breadcrumb: [begin-level] | [end-level]</target>
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.config.baseURL">
                 <target>Dies schreibt einen base-tag in den header des Dokuments. Setzte dies auf den Wert welcher vorraussichtlich die URL ist und hänge einen / ans Ende des Strings.</target>

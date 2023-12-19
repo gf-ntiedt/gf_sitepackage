@@ -1,3 +1,9 @@
+###########################
+#### Custom categories ####
+###########################
+# customsubcategory=settings=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.customsubcategory.settings
+# customsubcategory=menu=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.customsubcategory.menu
+
 ######################
 #### DEPENDENCIES ####
 ######################
@@ -33,6 +39,12 @@ page {
         layoutRootPath = EXT:gf_sitepackage/Resources/Private/Layouts/Page/
         partialRootPath = EXT:gf_sitepackage/Resources/Private/Partials/Page/
         templateRootPath = EXT:gf_sitepackage/Resources/Private/Templates/Page/
+    }
+    menu{
+        footer{
+            # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.footer.value
+            value = 20
+        }
     }
     meta {
         description =

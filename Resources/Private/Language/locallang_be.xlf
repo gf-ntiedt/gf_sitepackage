@@ -6,6 +6,15 @@
             <authorEmail>niels.tiedt@gedankenfolger.de</authorEmail>
         </header>
         <body>
+            <trans-unit id="constants.customsubcategory.settings">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="constants.customsubcategory.menu">
+                <source>Menu</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.footer.value">
+                <source>Footer: List of Page-UIDs</source>
+            </trans-unit>
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
@@ -62,42 +71,6 @@
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.settings.excludeUidList">
                 <source>List of page uids which should excluded from page title</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.settings.shownews">
-                <source>Show news</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.settings.showproductfinder">
-                <source>Show productfinder</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.settings.menuHeaderLangColor">
-                <source>Menu: Header: Nav-Lang: Color</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.main.value">
-                <source>Main: List of Page-UIDs</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.main.excludeUidList">
-                <source>This is a list of page uid's to exclude when the select statement is done. Comma-separated. You may add "current" to the list to exclude the current page.</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.top.value">
-                <source>Top: List of Page-UIDs</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.top.excludeUidList">
-                <source>This is a list of page uid's to exclude when the select statement is done. Comma-separated. You may add "current" to the list to exclude the current page.</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.sector.value">
-                <source>Sector: List of Page-UIDs (Parent>Child)</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.footercol1.value">
-                <source>Footer-Col 1: List of Page-UIDs</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.footercol2.value">
-                <source>Footer-Col 2: List of Page-UIDs</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.footercol3.value">
-                <source>Footer-Col 3: List of Page-UIDs</source>
-            </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.range">
-                <source>Breadcrumb: [begin-level] | [end-level]</source>
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.config.baseURL">
                 <source>This writes the base-tag in the header of the document. Set this to the value that is expected to be the URL and append a / to the end of the string.</source>
