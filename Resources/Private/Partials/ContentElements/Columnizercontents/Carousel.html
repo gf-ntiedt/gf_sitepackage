@@ -23,25 +23,27 @@
 </div>
 
 <f:section name="Items">
-    <div class="carousel-item d-flex active">
-        <f:for each="{content}" as="record" iteration="iterator">
-            <f:if condition="{iterator.cycle} % {division}">
-                <f:then>
-                    <div class="col-sm-{gf_sitepackage_columnwidths} d-flex">
-                        <f:format.raw>{record.renderedContent}</f:format.raw>
-                    </div>
-                </f:then>
-                <f:else>
-                    <div class="col-sm-{gf_sitepackage_columnwidths} d-flex">
-                        <f:format.raw>{record.renderedContent}</f:format.raw>
-                    </div>
-                    <f:if condition="{iterator.isLast} != 1">
-                        <f:then>
-                        </div><div class="carousel-item d-flex">
-                        </f:then>
-                    </f:if>
-                </f:else>
-            </f:if>
-        </f:for>
+    <div class="carousel-item active">
+        <div class="d-flex">
+            <f:for each="{content}" as="record" iteration="iterator">
+                <f:if condition="{iterator.cycle} % {division}">
+                    <f:then>
+                        <div class="col-sm-{gf_sitepackage_columnwidths} d-flex">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="col-sm-{gf_sitepackage_columnwidths} d-flex">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </div>
+                        <f:if condition="{iterator.isLast} != 1">
+                            <f:then>
+                                </div></div><div class="carousel-item"><div class="d-flex">
+                            </f:then>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
     </div>
 </f:section>
