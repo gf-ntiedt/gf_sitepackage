@@ -1,4 +1,4 @@
-
+<h1>TYPO3 Extension Gedankenfolger Sitepackage (gf_sitepackage)</h1>
 <p>
     First of all many thanks to the hole TYPO3 community and all supporters of TYPO3. Addional thanks goes to the following extension developers and companies.
 </p>
