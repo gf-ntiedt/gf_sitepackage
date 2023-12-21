@@ -91,6 +91,7 @@
         <ul>
             <li>Special versions for preface and normal content</li>
             <li>Show/hide indicators, controls and caption</li>
+            <li>Widemode</li>
         </ul>
         <li>Addresslist (e.g. locations)</li>
         <li>Powermail</li>
