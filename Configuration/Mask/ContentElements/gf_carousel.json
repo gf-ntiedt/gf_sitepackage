@@ -14,7 +14,9 @@
                         "tx_mask_b4a8ae245c0c78",
                         "tx_mask_indicators",
                         "tx_mask_controls",
-                        "tx_mask_captions"
+                        "tx_mask_captions",
+                        "tx_mask_26a4a9560b92d8",
+                        "tx_mask_widemode"
                     ],
                     "columnsOverride": {
                         "header_layout": {
@@ -68,6 +70,8 @@
                         "",
                         "",
                         "",
+                        "",
+                        "",
                         ""
                     ],
                     "icon": "",
@@ -81,7 +85,9 @@
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.settings",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_indicators",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_controls",
-                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_captions"
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_captions",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.layout",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_widemode"
                     ],
                     "shortLabel": "",
                     "sorting": 2
@@ -101,6 +107,11 @@
                 "tx_mask_indicators": {
                     "tt_content": {
                         "tx_mask_indicators": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_widemode": {
+                    "tt_content": {
+                        "tx_mask_widemode": "int(11) DEFAULT '0' NOT NULL"
                     }
                 }
             },
@@ -123,6 +134,14 @@
                     "imageoverlayPalette": 1,
                     "key": "image",
                     "type": "file"
+                },
+                "tx_mask_26a4a9560b92d8": {
+                    "config": {
+                        "type": "tab"
+                    },
+                    "fullKey": "tx_mask_26a4a9560b92d8",
+                    "key": "26a4a9560b92d8",
+                    "type": "tab"
                 },
                 "tx_mask_b4a8ae245c0c78": {
                     "config": {
@@ -162,6 +181,20 @@
                     },
                     "fullKey": "tx_mask_indicators",
                     "key": "indicators",
+                    "type": "check"
+                },
+                "tx_mask_widemode": {
+                    "config": {
+                        "behaviour": {
+                            "allowLanguageSynchronization": 1
+                        },
+                        "default": "0",
+                        "items": [],
+                        "renderType": "checkboxToggle",
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_widemode",
+                    "key": "widemode",
                     "type": "check"
                 }
             }

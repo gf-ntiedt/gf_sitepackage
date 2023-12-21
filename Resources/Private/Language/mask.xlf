@@ -210,6 +210,9 @@
             <trans-unit id="tx_mask_captions">
                 <source>Captions</source>
             </trans-unit>
+            <trans-unit id="tx_mask_widemode">
+                <source>Widemode</source>
+            </trans-unit>
             <trans-unit id="tab.media">
                 <source>Media</source>
             </trans-unit>

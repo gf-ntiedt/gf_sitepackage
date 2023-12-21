@@ -210,6 +210,9 @@
             <trans-unit id="tx_mask_captions">
                 <target>Bildunterschrift</target>
             </trans-unit>
+            <trans-unit id="tx_mask_widemode">
+                <target>Breitbildmodus</target>
+            </trans-unit>
             <trans-unit id="tab.image">
                 <target>Bild</target>
             </trans-unit>
