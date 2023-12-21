@@ -122,6 +122,7 @@ page {
             defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
             defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
             defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+            defaultOuterPadding = {$styles.content.defaultOuterPadding}
         }
     }
 

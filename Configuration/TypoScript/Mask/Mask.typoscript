@@ -11,6 +11,7 @@ lib.maskContentElement {
         defaultButtonClass = {$styles.content.defaultButtonClass}
         defaultBackgroundClass = {$styles.content.defaultBackgroundClass}
         defaultTextClass = {$styles.content.defaultTextClass}
+        defaultOuterPadding = {$styles.content.defaultOuterPadding}
     }
 }
 
