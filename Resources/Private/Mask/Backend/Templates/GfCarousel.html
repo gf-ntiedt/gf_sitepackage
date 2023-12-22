@@ -34,37 +34,45 @@
                     <f:if condition="{indicators}">
                         <div class="carousel-indicators">
                             <f:for each="{image}" as="file" iteration="iterator">
-                                <f:variable name="ariaLabel"><f:spaceless>
-                                    <f:if condition="{file.description}" then="{file.description}" else="Slide {iterator.cycle}">
-                                    
-                                    </f:if>
-                                </f:spaceless></f:variable>
-                                <button
-                                    type="button"
-                                    data-bs-target="#carousel-{pid}-{uid}"
-                                    data-bs-slide-to="{iterator.index}"
-                                    class="{f:if(condition:iterator.isFirst,then:'active')}"
-                                    aria-current=" {f:if(condition:iterator.isFirst,then:'true')}"
-                                    aria-label="{ariaLabel}"
-                                ></button>
+                                <f:variable name="isFirst" value="1" />
+                                <f:if condition="{file.properties.hidden}==0 && {file.properties.deleted}==0">
+                                    <f:variable name="ariaLabel"><f:spaceless>
+                                        <f:if condition="{file.properties.description}" then="{file.properties.description}" else="Slide {iterator.cycle}">
+                                        
+                                        </f:if>
+                                    </f:spaceless></f:variable>
+                                    <button
+                                        type="button"
+                                        data-bs-target="#carousel-{pid}-{uid}"
+                                        data-bs-slide-to="{iterator.index}"
+                                        class="{f:if(condition:isFirst,then:'active')}"
+                                        aria-current=" {f:if(condition:isFirst,then:'true')}"
+                                        aria-label="{ariaLabel}"
+                                    ></button>
+                                    <f:variable name="isFirst" value="0" />
+                                </f:if>
                             </f:for>
                         </div>
                     </f:if>
                     <div class="carousel-inner">
                         <f:for each="{image}" as="file" iteration="iterator">
-                            <div class="carousel-item {f:if(condition:iterator.isFirst,then:'active')}">
-                                <f:image
-                                    image="{file}"
-                                    loading="lazy"
-                                    class="d-block w-100 img-fluid" />
-                                <f:if condition="{caption}">
-                                    <f:if condition="{file.description}">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p>{file.description}</p>
-                                        </div>
+                            <f:variable name="isFirst" value="1" />
+                            <f:if condition="{file.properties.hidden}==0 && {file.properties.deleted}==0">
+                                <div class="carousel-item {f:if(condition:isFirst,then:'active')}">
+                                    <f:image
+                                        image="{file}"
+                                        loading="lazy"
+                                        class="d-block w-100 img-fluid" />
+                                    <f:if condition="{caption}">
+                                        <f:if condition="{file.properties.description}">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p>{file.properties.description}</p>
+                                            </div>
+                                        </f:if>
                                     </f:if>
-                                </f:if>
-                            </div>
+                                </div>
+                                <f:variable name="isFirst" value="0" />
+                            </f:if>
                         </f:for>
                     </div>
                     <f:if condition="{controls}">
