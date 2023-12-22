@@ -98,7 +98,11 @@
         <li>Container</li>
         <ul>
             <li>Left and right column (2-Columns)</li>
-            <li>Multiple equal width columns (Columnizer Contents)</li>
+            <li>Columnizer Contents</li>
+            <ul>
+                <li>Multiple equal width columns</li>
+                <li>Gutter width x-axis</li>
+            </ul>
         </ul>
     </ul>
     <li>Footer</li>
