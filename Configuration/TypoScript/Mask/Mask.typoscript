@@ -11,7 +11,12 @@ lib.maskContentElement {
         defaultButtonClass = {$styles.content.defaultButtonClass}
         defaultBackgroundClass = {$styles.content.defaultBackgroundClass}
         defaultTextClass = {$styles.content.defaultTextClass}
-        defaultOuterPadding = {$styles.content.defaultOuterPadding}
+        defaultHeaderPaddingX = {$styles.content.defaultHeaderPaddingX}
+        defaultHeaderPaddingY = {$styles.content.defaultHeaderPaddingY}
+        defaultBodyPaddingX = {$styles.content.defaultBodyPaddingX}
+        defaultBodyPaddingY = {$styles.content.defaultBodyPaddingY}
+        defaultFooterPaddingX = {$styles.content.defaultFooterPaddingX}
+        defaultFooterPaddingY = {$styles.content.defaultFooterPaddingY}
     }
 }
 
