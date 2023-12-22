@@ -426,17 +426,17 @@ $temporaryColumn = [
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     (
-    new \B13\Container\Tca\ContainerConfiguration(
-        'gf-2cols', // CType
-        'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_2cols', // label
-        '', // description
-        [
+        new \B13\Container\Tca\ContainerConfiguration(
+            'gf-2cols', // CType
+            'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_2cols', // label
+            '', // description
             [
-                ['name' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_2cols.contentLeft', 'colPos' => 200],
-                ['name' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_2cols.contentRight', 'colPos' => 201]
-            ]
-        ] // grid configuration
-    )
+                [
+                    ['name' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_2cols.contentLeft', 'colPos' => 200],
+                    ['name' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_2cols.contentRight', 'colPos' => 201]
+                ]
+            ] // grid configuration
+        )
     )
 );
 $GLOBALS['TCA']['tt_content']['types']['gf-2cols']['showitem'] = 'sys_language_uid,CType,header,colPos,
@@ -457,6 +457,9 @@ $GLOBALS['TCA']['tt_content']['types']['gf-2cols']['showitem'] = 'sys_language_u
         ] // grid configuration
     )
     )
+        ->setBackendTemplate('EXT:gf_sitepackage/Resources/Private/Templates/Preview/Columnizercontents.html')
+        ->setGridTemplate('EXT:gf_sitepackage/Resources/Private/Templates/Preview/ColumnizercontentsGrid.html')
+        ->addGridPartialPath('EXT:gf_sitepackage/Resources/Private/Partials/Preview/')
 );
 $GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 'sys_language_uid,CType,header,colPos,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
