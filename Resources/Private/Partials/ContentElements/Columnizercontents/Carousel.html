@@ -24,7 +24,7 @@
 
 <f:section name="Items">
     <div class="carousel-item active">
-        <div class="d-flex">
+        <div class="row {f:if(condition:gf_sitepackage_gutter_x, then:gf_sitepackage_gutter_x)}">
             <f:for each="{content}" as="record" iteration="iterator">
                 <f:if condition="{iterator.cycle} % {division}">
                     <f:then>

@@ -123,6 +123,48 @@
             <trans-unit id="tt_content.gf_sitepackage_breakpoint.xxl">
                 <target>Extra extra groß (≥1400px)</target>
             </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x">
+                <target>Bundstegbreite (X-Achse)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.none">
+                <target>Kein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.sm">
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.md">
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.lg">
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.xl">
+                <target>Extra groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.xxl">
+                <target>Extra extra groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y">
+                <target>Bundstegbreite (Y-Achse)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.none">
+                <target>Kein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.sm">
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.md">
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.lg">
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.xl">
+                <target>Extra groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.xxl">
+                <target>Extra extra groß</target>
+            </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_type">
                 <target>Typ</target>
             </trans-unit>

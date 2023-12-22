@@ -314,6 +314,92 @@ $temporaryColumn = [
             ],
         ],
     ],
+    'gf_sitepackage_gutter_x' => [
+        'exclude' => 0,
+        'label' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x',
+        'config' =>[
+            'renderType' => 'selectSingle',
+            'type' => 'select',
+            'items' =>[
+                [
+                    'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
+                    ''
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x.none',
+                    'gx-0',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x.sm',
+                    'gx-1',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x.md',
+                    'gx-2',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x.lg',
+                    'gx-3',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x.xl',
+                    'gx-4',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_x.xxl',
+                    'gx-5',
+                ],
+            ],
+            'fieldWizard' => [
+                'selectIcons' => [
+                    'disabled' => false,
+                ],
+            ],
+        ],
+    ],
+    'gf_sitepackage_gutter_y' => [
+        'exclude' => 0,
+        'label' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y',
+        'config' =>[
+            'renderType' => 'selectSingle',
+            'type' => 'select',
+            'items' =>[
+                [
+                    'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
+                    ''
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y.none',
+                    'gy-0',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y.sm',
+                    'gy-1',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y.md',
+                    'gy-2',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y.lg',
+                    'gy-3',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y.xl',
+                    'gy-4',
+                ],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_gutter_y.xxl',
+                    'gy-5',
+                ],
+            ],
+            'fieldWizard' => [
+                'selectIcons' => [
+                    'disabled' => false,
+                ],
+            ],
+        ],
+    ],
     'gf_sitepackage_type' => [
         'exclude' => 0,
         'label' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_type',
@@ -374,7 +460,7 @@ $GLOBALS['TCA']['tt_content']['types']['gf-2cols']['showitem'] = 'sys_language_u
 );
 $GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 'sys_language_uid,CType,header,colPos,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-    --palette--;;frames,sectionIndex,gf_sitepackage_columnwidths,gf_sitepackage_type';
+    --palette--;;frames,sectionIndex,gf_sitepackage_columnwidths,gf_sitepackage_type,gf_sitepackage_gutter_x';
 
 
 

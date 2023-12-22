@@ -123,6 +123,48 @@
             <trans-unit id="tt_content.gf_sitepackage_breakpoint.xxl">
                 <source>Extra extra large (≥1400px)</source>
             </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x">
+                <source>Gutter (x-axis)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.sm">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.md">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.lg">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.xl">
+                <source>Extra large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_x.xxl">
+                <source>Extra extra large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y">
+                <source>Gutter (y-axis)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.sm">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.md">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.lg">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.xl">
+                <source>Extra large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_gutter_y.xxl">
+                <source>Extra extra large</source>
+            </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_type">
                 <source>Type</source>
             </trans-unit>
