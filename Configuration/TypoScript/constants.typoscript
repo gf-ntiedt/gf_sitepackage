@@ -27,11 +27,11 @@ styles {
         defaultButtonClass = btn-primary
         defaultTextClass =
         defaultBackgroundClass =
-        defaultHeaderPaddingX = 6
+        defaultHeaderPaddingX = 9
         defaultHeaderPaddingY = 3
-        defaultBodyPaddingX = 6
+        defaultBodyPaddingX = 9
         defaultBodyPaddingY = 0
-        defaultFooterPaddingX = 6
+        defaultFooterPaddingX = 9
         defaultFooterPaddingY = 5
     }
 }
@@ -47,6 +47,10 @@ page {
         templateRootPath = EXT:gf_sitepackage/Resources/Private/Templates/Page/
     }
     menu{
+        section{
+            # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.section.enable
+            enable = 0
+        }
         footer{
             # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.footer.value
             value = 20
@@ -64,6 +68,8 @@ page {
     settings{
         # cat=gf_sitepackage/settings; type=int; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.settings.rootpageId
         rootpageId = 1
+        # cat=gf_sitepackage/settings; type=int; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.settings.scrollspy
+        scrollspy = 0
     }
 
     # cat=gf_sitepackage/shortcutIcon; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.shortcutIcon
