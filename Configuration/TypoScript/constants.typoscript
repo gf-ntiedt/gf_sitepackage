@@ -27,11 +27,11 @@ styles {
         defaultButtonClass = btn-primary
         defaultTextClass =
         defaultBackgroundClass =
-        defaultHeaderPaddingX = 5
+        defaultHeaderPaddingX = 6
         defaultHeaderPaddingY = 3
-        defaultBodyPaddingX = 5
+        defaultBodyPaddingX = 6
         defaultBodyPaddingY = 0
-        defaultFooterPaddingX = 5
+        defaultFooterPaddingX = 6
         defaultFooterPaddingY = 5
     }
 }
