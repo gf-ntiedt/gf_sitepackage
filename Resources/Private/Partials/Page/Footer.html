@@ -2,12 +2,14 @@
     <div class="container-fluid px-{settings.defaultFooterPaddingX}">
         <div class="row justify-content-sm-end">
             <div class="col-auto">
-                <f:image
-                    src="{gfaddresses.0.data.tx_mask_logo}"
-                    treatIdAsReference="1"
-                    loading="lazy"
-                    class="me-2 mb-3"
-                />
+                <f:if condition="{gfaddresses.0.data.tx_mask_logo}">
+                    <f:image
+                        src="{gfaddresses.0.data.tx_mask_logo}"
+                        treatIdAsReference="1"
+                        loading="lazy"
+                        class="me-2 mb-3"
+                    />
+                </f:if>
             </div>
             <div class="col-auto">
                 <h6>{gfaddresses.0.data.tx_mask_name}</h6>

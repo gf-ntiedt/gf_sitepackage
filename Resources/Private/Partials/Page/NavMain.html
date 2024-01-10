@@ -3,12 +3,14 @@
         pageUid="{settings.rootpageId}"
         class="navbar-brand order-1"
     >
-        <f:image
-            src="{gfaddresses.0.data.tx_mask_logo}"
-            treatIdAsReference="1"
-            loading="lazy"
-            class="me-2"
-        />
+        <f:if condition="{gfaddresses.0.data.tx_mask_logo}">
+            <f:image
+                src="{gfaddresses.0.data.tx_mask_logo}"
+                treatIdAsReference="1"
+                loading="lazy"
+                class="me-2"
+            />
+        </f:if>
     </f:link.page>
     <span class="navbar-text order-4 order-sm-2">{gfaddresses.0.data.tx_mask_claim -> f:format.nl2br()}</span>
     <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
