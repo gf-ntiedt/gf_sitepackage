@@ -7,5 +7,7 @@
         </div>
         <f:render partial="NavMain" arguments="{_all}" />
     </div>
-    <f:render partial="NavSection" arguments="{navSection:navSection}" />
+    <f:if condition="{navSection}">
+        <f:render partial="NavSection" arguments="{navSection:navSection}" />
+    </f:if>
 </header>

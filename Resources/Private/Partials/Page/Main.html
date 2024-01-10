@@ -1,8 +1,18 @@
 <main id="main">
-    
-    <div data-bs-spy="scroll" data-bs-target="#nav-section" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -50% 0px" class="scrollspy bg-body-tertiary px-{settings.defaultBodyPaddingX} py-{settings.defaultBodyPaddingY} rounded-2" tabindex="0">
-        <div id="trigger" class="position-absolute"></div>
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-    </div>
+    <f:if condition="{settings.scrollspy}">
+        <f:then>
+            <div data-bs-spy="scroll" data-bs-target="#nav-section" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -50% 0px" class="scrollspy bg-body-tertiary px-{settings.defaultBodyPaddingX} py-{settings.defaultBodyPaddingY} rounded-2" tabindex="0">
+                <div id="trigger" class="position-absolute"></div>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+            </div>
+        </f:then>
+        <f:else>
+            <div class="bg-body-tertiary px-{settings.defaultBodyPaddingX} py-{settings.defaultBodyPaddingY} rounded-2" tabindex="0">
+                <div id="trigger" class="position-absolute"></div>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+            </div>
+        </f:else>
+    </f:if>
 </main>

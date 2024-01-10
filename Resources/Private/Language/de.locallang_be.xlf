@@ -12,8 +12,11 @@
             <trans-unit id="constants.customsubcategory.menu">
                 <target>Menü</target>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.section.enable">
+                <target>Sprungnavigation: Aktivieren</target>
+            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.menu.footer.value">
-                <target>Footer: Liste von Seiten-UIDs</target>
+                <target>Footernavigation: Liste von Seiten-UIDs</target>
             </trans-unit>
             <trans-unit id="backend_layout.default">
                 <target>Standard</target>
@@ -62,6 +65,9 @@
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
                 <target>UID der Wurzelseite</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.scrollspy">
+                <target>Scrollspy: Aktivieren</target>
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.shortcutIcon">
                 <target>Favicon</target>

@@ -12,8 +12,11 @@
             <trans-unit id="constants.customsubcategory.menu">
                 <source>Menu</source>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.section.enable">
+                <source>Section menu: Activate</source>
+            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.menu.footer.value">
-                <source>Footer: List of Page-UIDs</source>
+                <source>Footer menu: List of Page-UIDs</source>
             </trans-unit>
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
@@ -62,6 +65,9 @@
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
                 <source>Root page UID</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.settings.scrollspy">
+                <source>Scrollspy: Activate</source>
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.shortcutIcon">
                 <source>Favicon</source>
