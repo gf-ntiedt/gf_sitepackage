@@ -17,7 +17,8 @@
                         "tx_mask_85c7701882c6d",
                         "imageorient",
                         "tx_mask_class_button",
-                        "tx_mask_class_text",
+                        "tx_mask_class_text_color",
+                        "tx_mask_class_text_padding_x",
                         "tx_mask_class_background",
                         "tx_mask_grid_width_image",
                         "tx_mask_grid_width_text"
@@ -128,6 +129,7 @@
                         "",
                         "",
                         "",
+                        "",
                         ""
                     ],
                     "icon": "",
@@ -144,7 +146,8 @@
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.layout",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:imageorient",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_button",
-                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_background",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_grid_width_image",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_grid_width_text"
@@ -164,9 +167,14 @@
                         "tx_mask_class_button": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
-                "tx_mask_class_text": {
+                "tx_mask_class_text_color": {
                     "tt_content": {
-                        "tx_mask_class_text": "varchar(255) DEFAULT '' NOT NULL"
+                        "tx_mask_class_text_color": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_class_text_padding_x": {
+                    "tt_content": {
+                        "tx_mask_class_text_padding_x": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
                 "tx_mask_grid_width_image": {
@@ -400,7 +408,7 @@
                     "key": "class_button",
                     "type": "select"
                 },
-                "tx_mask_class_text": {
+                "tx_mask_class_text_color": {
                     "config": {
                         "fieldWizard": {
                             "selectIcons": {
@@ -419,64 +427,129 @@
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.primary",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.primary",
                                 "value": "text-primary"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.secondary",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.secondary",
                                 "value": "text-secondary"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.success",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.success",
                                 "value": "text-success"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.danger",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.danger",
                                 "value": "text-danger"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.warning",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.warning",
                                 "value": "text-warning"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.info",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.info",
                                 "value": "text-info"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.light",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.light",
                                 "value": "text-light"
                             },
                             {
                                 "description": "",
                                 "group": "",
                                 "icon": "",
-                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text.dark",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_color.dark",
                                 "value": "text-dark"
                             }
                         ],
                         "renderType": "selectSingle",
                         "type": "select"
                     },
-                    "fullKey": "tx_mask_class_text",
-                    "key": "class_text",
+                    "fullKey": "tx_mask_class_text_color",
+                    "key": "class_text_color",
+                    "type": "select"
+                },
+                "tx_mask_class_text_padding_x": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:core\/Resources\/Private\/Language\/locallang_general.xlf:LGL.default_value",
+                                "value": ""
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x.none",
+                                "value": "px-0"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x.sm",
+                                "value": "px-1"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x.md",
+                                "value": "px-2"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x.lg",
+                                "value": "px-3"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x.xl",
+                                "value": "px-4"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_class_text_padding_x.xxl",
+                                "value": "px-5"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_class_text_padding_x",
+                    "key": "class_text_padding_x",
                     "type": "select"
                 },
                 "tx_mask_grid_width_image": {

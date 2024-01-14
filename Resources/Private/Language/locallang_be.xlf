@@ -12,6 +12,9 @@
             <trans-unit id="constants.customsubcategory.menu">
                 <source>Menu</source>
             </trans-unit>
+            <trans-unit id="constants.customsubcategory.gf_google_maps">
+                <source>Gedankenfolger: Google Maps</source>
+            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.menu.section.enable">
                 <source>Section menu: Activate</source>
             </trans-unit>
@@ -33,11 +36,11 @@
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.footer.colpos-4">
-                <source>Footer</source>
+            <trans-unit id="backend_layout.column.footer.left">
+                <source>Footer: Left column</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.footer.colpos-5">
-                <source>Footer (Navigation)</source>
+            <trans-unit id="backend_layout.column.footer.right">
+                <source>Footer: Right column</source>
             </trans-unit>
             <trans-unit id="constants.customsubcategory.settings">
                 <source>Settings</source>
@@ -80,6 +83,9 @@
             </trans-unit>
             <trans-unit id="constants.gf_sitepackage.config.baseURL">
                 <source>This writes the base-tag in the header of the document. Set this to the value that is expected to be the URL and append a / to the end of the string.</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.gf_google_maps.apikey">
+                <source>Google Maps API-Key</source>
             </trans-unit>
         </body>
     </file>

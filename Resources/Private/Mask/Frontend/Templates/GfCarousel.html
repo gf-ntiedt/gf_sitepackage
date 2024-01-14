@@ -21,7 +21,7 @@
     locallang: 'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'
 }">
         <f:if condition="{image}">
-            <f:variable name="widemodeClass"><f:if condition="{settings.defaultBodyPaddingX}>0" then="mx-n{settings.defaultBodyPaddingX}" else="{f:if(condition:widemode,then:'',else:'px-{settings.defaultBodyPaddingX}')}"></f:if></f:variable>
+            <f:variable name="widemodeClass">{f:if(condition:widemode,then:'mx-n9',else:'px-9')}</f:variable>
             <div id="c{uid}" class="gf-ce gf-carousel {widemodeClass} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
                 <div class="container-fluid {f:if(condition:'{colPos}==1',then:'px-0')}">
                     <f:if condition="{colPos}!=1">

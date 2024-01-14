@@ -45,11 +45,29 @@
             <trans-unit id="tx_mask_gf_addresses.tx_mask_email">
                 <target>E-Mail</target>
             </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_web">
+                <target>Internet</target>
+            </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main">
                 <target>Hauptadresse</target>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main.description">
                 <target>benutzt für Logo und Fussadresse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_max_zoom">
+                <target>Maximale Zoomstufe der Karte</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins">
+                <target>Pins</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.newRecordLinkTitle">
+                <target>Neuer Pin</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_title">
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_text">
+                <target>Text</target>
             </trans-unit>
             <trans-unit id="tx_mask_gf_columnizer_contents">
                 <target>Columnizer Contents</target>
@@ -59,6 +77,15 @@
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tab.settings">
                 <target>Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="tab.pins">
+                <target>Pins</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tab.address">
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tab.communication">
+                <target>Kommunikation</target>
             </trans-unit>
             <trans-unit id="tx_mask_grid_width_image">
                 <target>Grid width: Image</target>
@@ -126,32 +153,53 @@
             <trans-unit id="tx_mask_class_background.dark">
                 <target>Dunkel</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text">
-                <target>Hintergrund: Klasse</target>
+            <trans-unit id="tx_mask_class_text_color">
+                <target>Text: Farben Klasse</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.primary">
+            <trans-unit id="tx_mask_class_text_color.primary">
                 <target>Primär</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.secondary">
+            <trans-unit id="tx_mask_class_text_color.secondary">
                 <target>Sekundär</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.success">
+            <trans-unit id="tx_mask_class_text_color.success">
                 <target>Erfolgreich</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.danger">
+            <trans-unit id="tx_mask_class_text_color.danger">
                 <target>Gefährlich</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.warning">
+            <trans-unit id="tx_mask_class_text_color.warning">
                 <target>Warnung</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.info">
+            <trans-unit id="tx_mask_class_text_color.info">
                 <target>Info</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.light">
+            <trans-unit id="tx_mask_class_text_color.light">
                 <target>Hell</target>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.dark">
+            <trans-unit id="tx_mask_class_text_color.dark">
                 <target>Dunkel</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x">
+                <target>Text: Innenabstand X-Achse</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.none">
+                <target>Kein</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.sm">
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.md">
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.lg">
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.xl">
+                <target>Extra groß</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.xxl">
+                <target>Extra extra groß</target>
             </trans-unit>
             <trans-unit id="tx_mask_space_before">
                 <target>Abstand davor</target>

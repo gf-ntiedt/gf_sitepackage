@@ -12,7 +12,8 @@
         bodytext: data.bodytext,
         header_link: data.header_link,
         class_button: data.tx_mask_class_button,
-        class_text: data.tx_mask_class_text,
+        class_text_color: data.tx_mask_class_text_color,
+        class_text_padding_x: data.tx_mask_class_text_padding_x,
         class_background: data.tx_mask_class_background,
         grid_width_image: data.tx_mask_grid_width_image,
         grid_width_text: data.tx_mask_grid_width_text,
@@ -28,7 +29,7 @@
         defaultBackgroundClass: settings.defaultBackgroundClass,
         defaultTextClass: settings.defaultTextClass,
     }">
-        <div id="c{uid}" class="gf-ce gf-imagetext imageorient-{imageorient} colpos-{colPos} {f:if(condition:class_text,then:class_text,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+        <div id="c{uid}" class="gf-ce gf-imagetext imageorient-{imageorient} colpos-{colPos} {f:if(condition:class_text_color,then:class_text_color,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
             <f:if condition="{colPos}!=100 && {colPos}!=200 && {colPos}!=201">
                 <div class="container-fluid">
             </f:if>
@@ -69,35 +70,7 @@
                             </f:for>
                         </div>
                     </f:if>
-                    <f:if condition="{header} || {bodytext} || {header_link}">
-                        <div class="col-sm-{grid_width_text} col-text">
-                            <f:if condition="{header}">
-                                <f:render partial="Header" arguments="{
-                            header: header,
-                            layout: header_layout,
-                            positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
-                            default: settings.defaultHeaderType}" />
-                            </f:if>
-                            <f:if condition="{bodytext}">
-                                {bodytext -> f:format.html()}
-                            </f:if>
-                            <f:if condition="{header_link}">
-                                <f:link.typolink
-                                    parameter="{header_link}"
-                                    class="btn {f:if(condition:class_button,then:class_button,else:defaultButtonClass)} stretched-link"
-                                >
-                                    <f:if condition="{typoLinkParts.title}">
-                                        <f:then>
-                                            {typoLinkParts.title}
-                                        </f:then>
-                                        <f:else>
-                                            {f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}
-                                        </f:else>
-                                    </f:if>
-                                </f:link.typolink>
-                            </f:if>
-                        </div>
-                    </f:if>
+                    <f:render section="ColText" arguments="{_all}" />
                 </div>
             <f:if condition="{colPos}!=100 && {colPos}!=200 && {colPos}!=201">
                 </div>
@@ -106,3 +79,37 @@
     </f:alias>
 
 </f:spaceless>
+
+<f:section name="ColText">
+    <f:if condition="{header} || {bodytext} || {header_link}">
+        <div class="col-sm-{grid_width_text} col-text">
+            <div class="wrap-text {class_text_padding_x}">
+                <f:if condition="{header}">
+                    <f:render partial="Header" arguments="{
+                            header: header,
+                            layout: header_layout,
+                            positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                            default: settings.defaultHeaderType}" />
+                </f:if>
+                <f:if condition="{bodytext}">
+                    {bodytext -> f:format.html()}
+                </f:if>
+                <f:if condition="{header_link}">
+                    <f:link.typolink
+                        parameter="{header_link}"
+                        class="btn {f:if(condition:class_button,then:class_button,else:defaultButtonClass)} stretched-link"
+                    >
+                        <f:if condition="{typoLinkParts.title}">
+                            <f:then>
+                                {typoLinkParts.title}
+                            </f:then>
+                            <f:else>
+                                {f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}
+                            </f:else>
+                        </f:if>
+                    </f:link.typolink>
+                </f:if>
+            </div>
+        </div>
+    </f:if>
+</f:section>

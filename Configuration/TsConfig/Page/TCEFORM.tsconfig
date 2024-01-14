@@ -41,6 +41,9 @@ TCEFORM {
                 mb-5 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large
             }
         }
+        gf_sitepackage_type{
+#            removeItems = Carousel
+        }
 
 
         CType{

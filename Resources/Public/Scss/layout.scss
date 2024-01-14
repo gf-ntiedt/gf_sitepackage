@@ -1,5 +1,15 @@
 @import "bootstrap";
 
+.ce-headline-center{
+    text-align: center;
+}
+.ce-headline-right{
+    text-align: right;
+}
+.ce-headline-left{
+    text-align: left;
+}
+
 html{
     &.attached {
         header{
@@ -166,9 +176,18 @@ svg{
 
 
 .gf-imagetext{
+    position: relative;
     .col-image,
     .col-text{
-        position: relative;
+        //position: relative;
+    }
+    .col-text{
+        h1,h2,h3,h4,h5,h6,p{
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-all;
+            hyphens: auto;
+        }
     }
     &.imageorient-0,
     &.imageorient-1,
@@ -239,9 +258,66 @@ svg{
         padding-top: nth(map-values($spacers), 5);
         padding-bottom: nth(map-values($spacers), 5);
     }
-    &.gf-carousel{
-        &.colpos-1{
+}
 
+.gf-columnizercolumns{
+    &.type-swiper{
+        position: relative;
+        .swiper{
+            position: static;
+            .swiper-slide{
+                height: auto;
+            }
+            .swiper-button-prev,
+            .swiper-button-next{
+                color: $gray-400;
+                &:hover{
+                    color: $gray-800;
+                }
+                &.swiper-button-disabled{
+                    visibility: hidden;
+                }
+            }
+            .swiper-button-prev{
+                left: 20px;
+            }
+            .swiper-button-next{
+                right: 20px;
+            }
+            .swiper-button-next{
+            }
+            .gf-ce{
+                height: 100%;
+                &:hover{
+                    background-color: $primary !important;
+                    .col-text{
+                        h1,h2,h3,h4,h5,h6,p{
+                            color: $light !important;
+                        }
+                        .btn{
+                            background-color: var(--bs-btn-hover-bg);
+                            &:hover{
+                                background-color: $info;
+                            }
+                        }
+                    }
+                }
+                .cols{
+                    height: 100%;
+                    .col-text{
+                        flex: 1 1 auto !important;
+                        .wrap-text{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: stretch;
+                            height: 100%;
+                            p{
+                                flex: 1 1 auto !important;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -255,3 +331,4 @@ svg{
         }
     }
 }
+

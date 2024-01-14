@@ -124,12 +124,6 @@ page {
             defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
             defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
             defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
-            defaultHeaderPaddingX = {$styles.content.defaultHeaderPaddingX}
-            defaultHeaderPaddingY = {$styles.content.defaultHeaderPaddingY}
-            defaultBodyPaddingX = {$styles.content.defaultBodyPaddingX}
-            defaultBodyPaddingY = {$styles.content.defaultBodyPaddingY}
-            defaultFooterPaddingX = {$styles.content.defaultFooterPaddingX}
-            defaultFooterPaddingY = {$styles.content.defaultFooterPaddingY}
         }
     }
 
@@ -204,8 +198,8 @@ page {
     }
 
     includeCSS {
-#        rte = EXT:gf_sitepackage/Resources/Public/Scss/rte.scss
-#        rte.outputfile = EXT:gf_sitepackage/Resources/Public/Css/rte.css
+        #        rte = EXT:gf_sitepackage/Resources/Public/Scss/rte.scss
+        #        rte.outputfile = EXT:gf_sitepackage/Resources/Public/Css/rte.css
         gf_sitepackage_layout = EXT:gf_sitepackage/Resources/Public/Scss/layout.scss
         gf_sitepackage_layout.outputfile = EXT:gf_sitepackage/Resources/Public/Css/layout.css
         gf_sitepackage_layout.defer = 1

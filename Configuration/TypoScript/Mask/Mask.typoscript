@@ -11,12 +11,6 @@ lib.maskContentElement {
         defaultButtonClass = {$styles.content.defaultButtonClass}
         defaultBackgroundClass = {$styles.content.defaultBackgroundClass}
         defaultTextClass = {$styles.content.defaultTextClass}
-        defaultHeaderPaddingX = {$styles.content.defaultHeaderPaddingX}
-        defaultHeaderPaddingY = {$styles.content.defaultHeaderPaddingY}
-        defaultBodyPaddingX = {$styles.content.defaultBodyPaddingX}
-        defaultBodyPaddingY = {$styles.content.defaultBodyPaddingY}
-        defaultFooterPaddingX = {$styles.content.defaultFooterPaddingX}
-        defaultFooterPaddingY = {$styles.content.defaultFooterPaddingY}
     }
 }
 
@@ -29,5 +23,11 @@ tt_content.mask_gf_address_list{
             pidInList.field = pages
             as = gfaddresses
         }
+    }
+}
+
+tt_content.mask_gf_google_maps{
+    settings{
+        apikey = {$gf_google_maps.apikey}
     }
 }

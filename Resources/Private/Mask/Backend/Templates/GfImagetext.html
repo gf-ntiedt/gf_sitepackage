@@ -11,7 +11,7 @@
     bodytext: data.bodytext,
     header_link: data.header_link,
         class_button: data.tx_mask_class_button,
-        class_text: data.tx_mask_class_text,
+        class_text_color: data.tx_mask_class_text_color,
         class_background: data.tx_mask_class_background,
     grid_width_image: data.tx_mask_grid_width_image,
     grid_width_text: data.tx_mask_grid_width_text,
@@ -29,7 +29,7 @@
 }">
     <f:asset.css identifier="gf_imagetext_{pid}" href="EXT:gf_sitepackage/Resources/Public/Css/Backend/layout.css" />
     
-    <div id="c{uid}" class="gf-ce gf-imagetext imageorient-{imageorient} {f:if(condition:class_text,then:class_text,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)}">
+    <div id="c{uid}" class="gf-ce gf-imagetext imageorient-{imageorient} {f:if(condition:class_text_color,then:class_text_color,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)}">
         <div class="container-fluid">
             <div class="row">
                 <f:render partial="Toolbar" arguments="{pid:pid,uid:uid}" />

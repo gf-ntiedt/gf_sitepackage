@@ -168,8 +168,8 @@
             <trans-unit id="tt_content.gf_sitepackage_type">
                 <target>Typ</target>
             </trans-unit>
-            <trans-unit id="tt_content.gf_sitepackage_type.carousel">
-                <target>Carousel</target>
+            <trans-unit id="tt_content.gf_sitepackage_type.swiper">
+                <target>Swiper</target>
             </trans-unit>
         </body>
     </file>

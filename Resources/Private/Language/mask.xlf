@@ -45,11 +45,29 @@
             <trans-unit id="tx_mask_gf_addresses.tx_mask_email">
                 <source>E-Mail</source>
             </trans-unit>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_web">
+                <source>Web</source>
+            </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main">
                 <source>Main address</source>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main.description">
                 <source>used for logo and footer address</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_max_zoom">
+                <source>Max zoom level of the map</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins">
+                <source>Pins</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.newRecordLinkTitle">
+                <source>New pin</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_text">
+                <source>Text</source>
             </trans-unit>
             <trans-unit id="tx_mask_gf_columnizer_contents">
                 <source>Columnizer Contents</source>
@@ -59,6 +77,15 @@
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tab.settings">
                 <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="tab.pins">
+                <source>Pins</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tab.address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_pins.tab.communication">
+                <source>Communication</source>
             </trans-unit>
             <trans-unit id="tx_mask_grid_width_image">
                 <source>Gridbreite: Bild</source>
@@ -126,32 +153,53 @@
             <trans-unit id="tx_mask_class_background.dark">
                 <source>Dark</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text">
-                <source>Text: Class</source>
+            <trans-unit id="tx_mask_class_text_color">
+                <source>Text: Color class</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.primary">
+            <trans-unit id="tx_mask_class_text_color.primary">
                 <source>Primary</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.secondary">
+            <trans-unit id="tx_mask_class_text_color.secondary">
                 <source>Secondary</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.success">
+            <trans-unit id="tx_mask_class_text_color.success">
                 <source>Success</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.danger">
+            <trans-unit id="tx_mask_class_text_color.danger">
                 <source>Danger</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.warning">
+            <trans-unit id="tx_mask_class_text_color.warning">
                 <source>Warning</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.info">
+            <trans-unit id="tx_mask_class_text_color.info">
                 <source>Info</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.light">
+            <trans-unit id="tx_mask_class_text_color.light">
                 <source>Light</source>
             </trans-unit>
-            <trans-unit id="tx_mask_class_text.dark">
+            <trans-unit id="tx_mask_class_text_color.dark">
                 <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x">
+                <source>Text: Padding x-axis</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.sm">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.md">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.lg">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.xl">
+                <source>Extra large</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_class_text_padding_x.xxl">
+                <source>Extra extra large</source>
             </trans-unit>
             <trans-unit id="tx_mask_space_before">
                 <source>Space before</source>

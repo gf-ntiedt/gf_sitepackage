@@ -28,6 +28,9 @@
     <li>
         <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
     </li>
+    <li>
+        <a href="https://swiperjs.com/" target="_blank">Swiper</a>
+    </li>
 </ul>
 
 <h3>
@@ -87,7 +90,7 @@
             <li>Predefined css color classes for Button, Text, Background</li>
             <li>Grid width for Image and Text</li>
         </ul>
-        <li>Carousel</li>
+        <li>Carousel (Swiper)</li>
         <ul>
             <li>Special versions for preface and normal content</li>
             <li>Show/hide indicators, controls and caption</li>
@@ -123,6 +126,23 @@
         </ul>
     </ul>
 </ul>
+
+<h3 id="swiper">
+    Swiper (Version 11.0.5):
+</h3>
+<p>For configuration please have a look at "<a href="https://swiperjs.com/get-started" target="_blank">Getting Started With Swiper</a>" and the following files:</p>
+<ul>
+    <li>
+        EXT:gf_sitepackage/Resources/Private/Partials/ContentElements/Columnizercontents/Swiper.html
+    </li>
+    <li>
+        EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/Swiper/*
+    </li>
+    <li>
+        EXT:gf_sitepackage/Resources/Public/Css/Swiper/*
+    </li>
+</ul>
+
 
 <h3 id="marginsandpaddings">
     Margins and paddings:

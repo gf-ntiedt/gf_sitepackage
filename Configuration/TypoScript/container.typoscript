@@ -26,4 +26,16 @@ tt_content.gf-columnizercontents {
             as = content
         }
     }
+    settings{
+        rootpageId = {$page.settings.rootpageId}
+        pathPublic = EXT:gf_sitepackage/Resources/Public/
+        defaultHeaderType = {$styles.content.defaultHeaderType}
+        media.additionalConfig.api = 0
+        media.additionalConfig.no-cookie = 1
+        scrollspy = {$page.settings.scrollspy}
+        defaultSpaceBeforeType = {$styles.content.defaultSpaceBeforeType}
+        defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
+        defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
+        defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+    }
 }
