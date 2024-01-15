@@ -81,6 +81,9 @@
             <trans-unit id="fe.navLang">
                 <source>Language</source>
             </trans-unit>
+            <trans-unit id="fe.navBreadcrumb">
+                <source>Your are here:</source>
+            </trans-unit>
             <trans-unit id="fe.navLang.0">
                 <source>Deutsch</source>
             </trans-unit>

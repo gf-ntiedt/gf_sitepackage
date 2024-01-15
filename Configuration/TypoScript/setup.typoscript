@@ -87,28 +87,34 @@ page {
             }
             50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             50 {
+                special = rootline
+                special.range =  0|5
+                as = navBreadcrumb
+            }
+            60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            60 {
                 special = directory
                 special.value = {$page.menu.footer.value}
                 as = navFooter
             }
-            60 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-            60 {
+            100 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            100 {
                 table = tx_mask_gf_addresses
                 where = ({#tx_mask_main} = 1)
                 orderBy = tx_mask_name
                 pidInList = 7
                 as = gfaddresses
             }
-            70 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-            70 {
+            110 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            110 {
                 if.isTrue.value = {$page.menu.section.enable}
                 table = tt_content
                 where = ({#sectionIndex} = 1)
                 orderBy = sorting
                 as = navSection
             }
-            100 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
-            100 {
+            200 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+            200 {
                 as = site
             }
         }

@@ -1,11 +1,14 @@
 <h1>TYPO3 Extension Gedankenfolger Sitepackage (gf_sitepackage)</h1>
 <p>
-    First of all many thanks to the hole TYPO3 community and all supporters of TYPO3.<br>
+    First of all many thanks to the hole TYPO3 community, all supporters of TYPO3 and especially to the TYPO3-Team + Gedankenfolger GmbH.<br>
     Addional thanks goes to the following extension developers and companies.
 </p>
 <ul>
     <li>
         <a href="https://www.gedankenfolger.de/" target="_blank">Gedankenfolger GmbH</a>
+    </li>
+    <li>
+        <a href="https://typo3.org/" target="_blank">TYPO3</a>
     </li>
     <li>
         <a href="https://extensions.typo3.org/extension/mask" target="_blank">WEBprofil - Gernot Ploiner e.U.</a>
@@ -250,8 +253,9 @@ This could be done at the top and bottom. </p>
     Todos:
 </h3>
     <ul>
-        <li>Breadcrumb</li>
         <li>Backend views</li>
+        <li>SEO</li>
+        <li>...</li>
     </ul>
 
 <h3 id="license">

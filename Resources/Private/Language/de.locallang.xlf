@@ -75,6 +75,9 @@
             <trans-unit id="totop">
                 <target>Seitenanfang</target>
             </trans-unit>
+            <trans-unit id="fe.navBreadcrumb">
+                <target>Sie sind hier:</target>
+            </trans-unit>
             <trans-unit id="fe.navLang">
                 <target>Sprache</target>
             </trans-unit>

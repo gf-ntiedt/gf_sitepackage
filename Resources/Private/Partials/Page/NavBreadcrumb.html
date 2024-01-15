@@ -1,0 +1,36 @@
+<nav id="nav-breadcrumb" class="nav bg-body-tertiary px-3 px-md-9 py-0" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item pretext">
+            {f:translate(extensionName:'gf_sitepackage',key:'fe.navBreadcrumb')}
+        </li>
+        <f:for each="{navBreadcrumb}" as="item" iteration="iterator">
+            <f:if condition="{item.active}">
+                <f:if condition="{item.current}">
+                    <f:then>
+                        <f:render section="ItemActive" arguments="{item:item}" />
+                    </f:then>
+                    <f:else>
+                        <f:render section="Item" arguments="{item:item}" />
+                    </f:else>
+                </f:if>
+            </f:if>
+        </f:for>
+    </ol>
+</nav>
+
+<f:section name="Item">
+    <li class="breadcrumb-item">
+        <f:link.page
+            pageUid="{item.data.uid}"
+            class=""
+        >
+            {item.title}
+        </f:link.page>
+    </li>
+</f:section>
+
+<f:section name="ItemActive">
+    <li class="breadcrumb-item active" aria-current="page">
+        {item.title}
+    </li>
+</f:section>
