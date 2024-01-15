@@ -1,0 +1,91 @@
+<f:spaceless>
+    <f:alias map="{
+    pid: data.pid,
+    uid: data.uid,
+    colPos: data.colPos,
+    header: data.header,
+    header_layout: data.header_layout,
+    image: data.image,
+    space_before_class: data.space_before_class,
+    space_after_class: data.space_after_class,
+    space_inner_before_class: data.space_inner_before_class,
+    space_inner_after_class: data.space_inner_after_class,
+    defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+    defaultSpaceAfterType: settings.defaultSpaceAfterType,
+    defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+    defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+    navigation: data.tx_mask_slider_navigation,
+    pagination: data.tx_mask_slider_pagination,
+    scrollbar: data.tx_mask_slider_scrollbar,
+    slidesperview: data.tx_mask_slider_slidesperview,
+    spacebetween: data.tx_mask_slider_spacebetween,
+    speed: data.tx_mask_slider_speed,
+    autoplay_delay: data.tx_mask_slider_autoplay_delay,
+    autoplay_pauseonmouseenter: data.tx_mask_slider_autoplay_pauseonmouseenter,
+    slider_loop: data.tx_mask_slider_loop,
+    slider_initialslide: data.tx_mask_slider_initialslide,
+    widemode: data.tx_mask_slider_widemode,
+    widemodeClass: '{f:if(condition:data.tx_mask_slider_widemode,then:\'mx-n3\',else:\'px-3\')}',
+    widemodeClassBreakpoint: '{f:if(condition:data.tx_mask_slider_widemode,then:\'mx-md-n9\',else:\'px-md-9\')}',
+    locallang: 'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'
+}">
+        <f:if condition="{image}">
+            <f:render partial="GfSliderAssets/Script" arguments="{_all}" />
+            
+            <div id="c{uid}" class="gf-ce gf-assets {f:if(condition:widemode,then:'widemode')} {widemodeClass} {widemodeClassBreakpoint} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+                <div class="container-fluid {f:if(condition:'{colPos}==1',then:'px-0')}">
+                    <f:if condition="{colPos}!=1">
+                        <f:if condition="{header}">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <f:render partial="Header" arguments="{
+                                    header: header,
+                                    layout: header_layout,
+                                    positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                                    default: settings.defaultHeaderType}" />
+                                </div>
+                            </div>
+                        </f:if>
+                    </f:if>
+                    
+                    <div id="c{uid}-swiper" class="swiper">
+                        <div class="swiper-wrapper">
+                            <f:for each="{image}" as="file" iteration="iterator">
+                                <f:if condition="{file.properties.hidden}==0">
+                                    <div class="swiper-slide">
+                                        <f:image
+                                            image="{file}"
+                                            loading="lazy"
+                                            class="{f:if(condition: widemode,else:'img-fluid')}" />
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                        <f:if condition="{file.description} || {file.title}">
+                                            <div class="swiper-caption">
+                                                <f:if condition="{file.title}">
+                                                    <h3>{file.title}</h3>
+                                                </f:if>
+                                                <f:if condition="{file.description}">
+                                                    <p>{file.description}</p>
+                                                </f:if>
+                                            </div>
+                                        </f:if>
+                                    </div>
+                                </f:if>
+                            </f:for>
+                        </div>
+                        
+                        <f:if condition="{pagination}">
+                            <div class="swiper-pagination"></div>
+                        </f:if>
+                        <f:if condition="{navigation}">
+                            <div class="swiper-button-prev ms-n3 ms-md-n9"></div>
+                            <div class="swiper-button-next me-n3 me-md-n9"></div>
+                        </f:if>
+                        <f:if condition="{scrollbar}">
+                            <div class="swiper-scrollbar"></div>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </f:if>
+    </f:alias>
+</f:spaceless>

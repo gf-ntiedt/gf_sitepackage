@@ -249,17 +249,38 @@
             <trans-unit id="tx_mask_space_after.auto">
                 <source>Auto</source>
             </trans-unit>
-            <trans-unit id="tx_mask_indicators">
-                <source>Indicators</source>
+            <trans-unit id="tx_mask_slider_pagination">
+                <source>Slider: Pagination</source>
             </trans-unit>
-            <trans-unit id="tx_mask_controls">
-                <source>Controls</source>
+            <trans-unit id="tx_mask_slider_navigation">
+                <source>Slider: Navigation</source>
             </trans-unit>
-            <trans-unit id="tx_mask_captions">
-                <source>Captions</source>
+            <trans-unit id="tx_mask_slider_scrollbar">
+                <source>Slider: Scrollbar</source>
             </trans-unit>
-            <trans-unit id="tx_mask_widemode">
-                <source>Widemode</source>
+            <trans-unit id="tx_mask_slider_slidesperview">
+                <source>Slider: Number of slides per view (slides visible at the same time on slider's container).</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_spacebetween">
+                <source>Slider: Distance between slides in px.</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_speed">
+                <source>Slider: Duration of transition between slides (in ms)</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_autoplay_delay">
+                <source>Slider: Autoplay: Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_autoplay_pauseonmouseenter">
+                <source>Slider: Autoplay: When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_loop">
+                <source>Slider: Enable continuous loop mode</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_initialslide">
+                <source>Slider: Index number of initial slide.</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_widemode">
+                <source>Slider: Widemode</source>
             </trans-unit>
             <trans-unit id="tab.media">
                 <source>Media</source>
@@ -273,10 +294,10 @@
             <trans-unit id="tab.settings">
                 <source>Settings</source>
             </trans-unit>
-            <trans-unit id="fe.gf_carousel.prev">
+            <trans-unit id="fe.slider.prev">
                 <source>Previous</source>
             </trans-unit>
-            <trans-unit id="fe.gf_carousel.next">
+            <trans-unit id="fe.slider.next">
                 <source>Next</source>
             </trans-unit>
         </body>

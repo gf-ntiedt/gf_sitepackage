@@ -258,34 +258,122 @@ svg{
         padding-top: nth(map-values($spacers), 5);
         padding-bottom: nth(map-values($spacers), 5);
     }
+    &.gf-assets{
+        position: relative;
+        &:not(.widemode){
+            .swiper{
+                .swiper-slide{
+                    &.swiper-slide-next,
+                    &.swiper-slide-active{
+                        .swiper-caption{
+                            transform: translateY(-100px);
+                        }
+                    }
+                }
+                .swiper-caption{
+                    display: block;
+                    position: absolute;
+                    bottom: -100px;
+                    left: 0;
+                    right: 0;
+                    padding: map-get($spacers, 3) map-get($spacers, 3);
+                    background-color: rgba($primary,0.85);
+                    transition: all 0.25s ease-in;
+                    *{
+                        color: $light;
+                    }
+                    h3{
+                        font-size: $h3-font-size;
+                        font-size: 2vw;
+                        line-height: $line-height-xs;
+                    }
+                    p{
+                        font-size: $font-size-base;
+                        font-size: 1dvw;
+                    }
+                }
+            }
+        }
+        &.widemode{
+            .swiper{
+                .swiper-caption{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: map-get($spacers, 5) map-get($spacers, 5);
+                    *{
+                        color: $light;
+                    }
+                    h3{
+                        font-size: $font-size-base * 8;
+                        font-size: 5.85dvw;
+                        line-height: $line-height-xs;
+                        letter-spacing: .024em;
+                    }
+                    p{
+                        font-size: $font-size-base * 3.625;
+                        font-size: 2.65dvw;
+                        letter-spacing: .028em;
+                    }
+                }
+            }
+        }
+    }
+}
+.swiper{
+    position: static !important;
+    .swiper-slide{
+        height: auto;
+        .swiper-slide-img{
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        color: $gray-400;
+        &:hover{
+            color: $gray-800;
+        }
+        &.swiper-button-disabled{
+            visibility: hidden;
+        }
+    }
+    .swiper-button-prev{
+        left: 20px;
+    }
+    .swiper-button-next{
+        right: 20px;
+    }
+    .swiper-button-next{
+    }
+    .swiper-pagination{
+        position: relative !important;
+        left: unset !important;
+        bottom: 32px !important;
+        transition: unset !important;
+        .swiper-pagination-bullet{
+            width: 13px;
+            height: 13px;
+            background-color: $light;
+            opacity: 1;
+            &.swiper-pagination-bullet-active{
+                background-color: $primary;
+            }
+        }
+    }
+    .swiper-scrollbar{
+        position: relative !important;
+        left: unset !important;
+        width: 100% !important;
+    }
+    .swiper-caption{
+    }
 }
 
 .gf-columnizercolumns{
-    &.type-swiper{
+    &.type-slidercontents{
         position: relative;
         .swiper{
-            position: static;
-            .swiper-slide{
-                height: auto;
-            }
-            .swiper-button-prev,
-            .swiper-button-next{
-                color: $gray-400;
-                &:hover{
-                    color: $gray-800;
-                }
-                &.swiper-button-disabled{
-                    visibility: hidden;
-                }
-            }
-            .swiper-button-prev{
-                left: 20px;
-            }
-            .swiper-button-next{
-                right: 20px;
-            }
-            .swiper-button-next{
-            }
             .gf-ce{
                 height: 100%;
                 &:hover{

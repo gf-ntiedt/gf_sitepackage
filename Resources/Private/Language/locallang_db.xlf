@@ -168,8 +168,8 @@
             <trans-unit id="tt_content.gf_sitepackage_type">
                 <source>Type</source>
             </trans-unit>
-            <trans-unit id="tt_content.gf_sitepackage_type.swiper">
-                <source>Swiper</source>
+            <trans-unit id="tt_content.gf_sitepackage_type.slidercontents">
+                <source>Inhalts-Slider (Swiper)</source>
             </trans-unit>
         </body>
     </file>

@@ -50,6 +50,9 @@
         <a href="#element_address">Element: Address</a>
     </li>
     <li>
+        <a href="#todos">Todos</a>
+    </li>
+    <li>
         <a href="#license">License</a>
     </li>
 </ol>
@@ -90,11 +93,26 @@
             <li>Predefined css color classes for Button, Text, Background</li>
             <li>Grid width for Image and Text</li>
         </ul>
-        <li>Carousel (Swiper)</li>
+        <li>Slider: Assets</li>
         <ul>
             <li>Special versions for preface and normal content</li>
-            <li>Show/hide indicators, controls and caption</li>
-            <li>Widemode</li>
+            <li>Settings</li>
+            <ul>
+                <li>speed</li>
+                <li>slidesPerView</li>
+                <li>Autoplay delay</li>
+                <li>Autoplay pauseOnMouseEnter</li>
+                <li>loop</li>
+                <li>initialSlide</li>
+            </ul>
+            <li>Layout</li>
+            <ul>
+                <li>Pagination</li>
+                <li>Navigation</li>
+                <li>Scrollbar</li>
+                <li>Widemode</li>
+                <li>spaceBetween</li>
+            </ul>
         </ul>
         <li>Addresslist (e.g. locations)</li>
         <li>Powermail</li>
@@ -202,7 +220,7 @@ This could be done at the top and bottom. </p>
 <p>If you use tx_mask_phone or tx_mask_fax there is a neat <a href="viewhelper">small viewhelper</a> which perform the work for you.
 
 <h3 id="viewhelper">
-    Viewhelper
+    Viewhelper:
 </h3>
 <h4>gf:link.urlscheme()</h4>
 <p> Converts<br>
@@ -228,7 +246,15 @@ This could be done at the top and bottom. </p>
 {namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
 </code></pre>
 
+<h3 id="todos">
+    Todos:
+</h3>
+    <ul>
+        <li>Breadcrumb</li>
+        <li>Backend views</li>
+    </ul>
+
 <h3 id="license">
-    License
+    License:
 </h3>
 <p>GNU GENERAL PUBLIC LICENSE Version 2</p>

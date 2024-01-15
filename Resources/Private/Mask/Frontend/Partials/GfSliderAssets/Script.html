@@ -1,0 +1,51 @@
+<f:asset.css identifier="swiper-css" href="{settings.pathPublic}Css/Swiper/swiper-bundle.min.css" />
+<f:asset.script identifier="swiper-lib" src="{settings.pathPublic}JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
+
+<f:asset.script identifier="swiper-call-{uid}" defer="1" type="text/javascript">
+    function initSwiper<f:format.raw>c{uid}</f:format.raw>(){
+        const swiper =new Swiper("<f:format.raw>#c{uid}-swiper</f:format.raw>", {
+            a11y: {
+            prevSlideMessage: '<f:translate key="{locallang}:fe.slider.prev" />',
+            nextSlideMessage: '<f:translate key="{locallang}:fe.slider.next" />',
+            },
+    slidesPerView: <f:format.raw>{slidesperview}</f:format.raw>,
+    spaceBetween: <f:format.raw>{spacebetween}</f:format.raw>,
+    speed: <f:format.raw>{speed}</f:format.raw>,
+    lazy: true,
+    
+    <f:if condition="{autoplay_delay}">
+        autoplay: {
+        delay: <f:format.raw>{autoplay_delay}</f:format.raw>,
+        <f:if condition="{autoplay_pauseonmouseenter}">
+            pauseOnMouseEnter: true,
+        </f:if>
+        },
+        
+    </f:if>
+    <f:if condition="{slider_initialslide}">
+        initialSlide: <f:format.raw>{slider_initialslide}</f:format.raw>,
+    </f:if>
+    <f:if condition="{slider_loop}">
+        loop: true,
+    </f:if>
+    <f:if condition="{pagination}">
+        pagination: {
+        el: '.swiper-pagination',
+        },
+    </f:if>
+    <f:if condition="{navigation}">
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+    </f:if>
+    <f:if condition="{scrollbar}">
+        scrollbar: {
+        el: '.swiper-scrollbar',
+        },
+    </f:if>
+        
+        });
+    }
+    window.addEventListener('DOMContentLoaded', initSwiper<f:format.raw>c{uid}</f:format.raw>);
+</f:asset.script>

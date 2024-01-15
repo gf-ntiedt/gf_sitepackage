@@ -273,7 +273,7 @@ $temporaryColumn = [
                 ],
             ],
         ],
-        'displayCond' => 'FIELD:gf_sitepackage_type:!=:Swiper',
+        'displayCond' => 'FIELD:gf_sitepackage_type:!=:SliderContents',
     ],
     'gf_sitepackage_breakpoint' => [
         'exclude' => 0,
@@ -357,7 +357,7 @@ $temporaryColumn = [
                 ],
             ],
         ],
-        'displayCond' => 'FIELD:gf_sitepackage_type:!=:Swiper',
+        'displayCond' => 'FIELD:gf_sitepackage_type:!=:SliderContents',
     ],
     'gf_sitepackage_gutter_y' => [
         'exclude' => 0,
@@ -401,7 +401,7 @@ $temporaryColumn = [
                 ],
             ],
         ],
-        'displayCond' => 'FIELD:gf_sitepackage_type:!=:Swiper',
+        'displayCond' => 'FIELD:gf_sitepackage_type:!=:SliderContents',
     ],
     'gf_sitepackage_type' => [
         'exclude' => 0,
@@ -412,8 +412,8 @@ $temporaryColumn = [
             'items' =>[
                 ['LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value', ''],
                 [
-                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_type.swiper',
-                    'Swiper',
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_type.slidercontents',
+                    'SliderContents',
                     ''
                 ],
             ],

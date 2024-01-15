@@ -249,17 +249,38 @@
             <trans-unit id="tx_mask_space_after.auto">
                 <target>Automatisch</target>
             </trans-unit>
-            <trans-unit id="tx_mask_indicators">
-                <target>Indikatoren</target>
+            <trans-unit id="tx_mask_slider_pagination">
+                <target>Slider: Nummerierung</target>
             </trans-unit>
-            <trans-unit id="tx_mask_controls">
-                <target>Steuerung</target>
+            <trans-unit id="tx_mask_slider_navigation">
+                <target>Slider: Navigation</target>
             </trans-unit>
-            <trans-unit id="tx_mask_captions">
-                <target>Bildunterschrift</target>
+            <trans-unit id="tx_mask_slider_scrollbar">
+                <target>Slider: Bildlaufleiste</target>
             </trans-unit>
-            <trans-unit id="tx_mask_widemode">
-                <target>Breitbildmodus</target>
+            <trans-unit id="tx_mask_slider_slidesperview">
+                <target>Slider: Anzahl der Folien pro Ansicht (Gleichzeitig sichtbare Folien im Slider-Container).</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_spacebetween">
+                <target>Slider: Abstand zwischen den Folien in px.</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_speed">
+                <target>Slider: Dauer des Übergangs zwischen Folien (in ms)</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_autoplay_delay">
+                <target>Slider: Automatische Wiedergabe: Verzögerung zwischen Übergängen (in ms). Wenn dieser Parameter nicht angegeben ist, wird die automatische Wiedergabe deaktiviert</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_autoplay_pauseonmouseenter">
+                <target>Slider: Automatische Wiedergabe: Wenn die automatische Wiedergabe aktiviert ist, wird sie angehalten, wenn der Zeiger (Maus) über den Swiper-Container bewegt wird.</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_loop">
+                <target>Slider: Kontinuierlichen Schleifenmodus aktivieren</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_initialslide">
+                <target>Slider: Indexnummer der ersten Folie.</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_slider_widemode">
+                <source>Slider: Breiter Modus</source>
             </trans-unit>
             <trans-unit id="tab.image">
                 <target>Bild</target>
@@ -273,10 +294,10 @@
             <trans-unit id="tab.settings">
                 <target>Settings</target>
             </trans-unit>
-            <trans-unit id="fe.gf_carousel.prev">
+            <trans-unit id="fe.slider.prev">
                 <target>Zurück</target>
             </trans-unit>
-            <trans-unit id="fe.gf_carousel.next">
+            <trans-unit id="fe.slider.next">
                 <target>Vor</target>
             </trans-unit>
         </body>
