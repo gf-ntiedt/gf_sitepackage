@@ -43,6 +43,8 @@
                                             <f:image
                                                 image="{file}"
                                                 loading="lazy"
+                                                title="{file.title}"
+                                                alt="{file.alternative}"
                                                 class="figure-img img-fluid" />
                                             <f:if condition="{file.description}">
                                                 <figcaption class="figure-caption">{file.description}</figcaption>
@@ -95,21 +97,32 @@
                     {bodytext -> f:format.html()}
                 </f:if>
                 <f:if condition="{header_link}">
-                    <f:link.typolink
-                        parameter="{header_link}"
-                        class="btn {f:if(condition:class_button,then:class_button,else:defaultButtonClass)} stretched-link"
-                    >
-                        <f:if condition="{typoLinkParts.title}">
-                            <f:then>
-                                {typoLinkParts.title}
-                            </f:then>
-                            <f:else>
-                                {f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}
-                            </f:else>
-                        </f:if>
-                    </f:link.typolink>
+                    <f:render section="Link" arguments="{_all}" />
                 </f:if>
             </div>
         </div>
+    </f:if>
+</f:section>
+
+<f:section name="Link">
+    <f:if condition="{typoLinkParts.title}">
+        <f:then>
+            <f:link.typolink
+                parameter="{header_link}"
+                class="btn {f:if(condition:class_button,then:class_button,else:defaultButtonClass)} stretched-link"
+                additionalAttributes="{aria-label:typoLinkParts.title}"
+            >
+                {typoLinkParts.title}
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:link.typolink
+                parameter="{header_link}"
+                class="btn {f:if(condition:class_button,then:class_button,else:defaultButtonClass)} stretched-link"
+                additionalAttributes="{aria-label:'{f:translate(extensionName:\'GfSitepackage\',key:\'fe.weitereinfos\')}'}"
+            >
+                {f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}
+            </f:link.typolink>
+        </f:else>
     </f:if>
 </f:section>

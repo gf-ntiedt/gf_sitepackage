@@ -1,5 +1,5 @@
-<f:asset.css identifier="swiper-css" href="{settings.pathPublic}Css/Swiper/swiper-bundle.min.css" />
-<f:asset.script identifier="swiper-lib" src="{settings.pathPublic}JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
+<f:asset.css identifier="swiper-css" href="EXT:gf_sitepackage/Resources/Public/Css/Swiper/swiper-bundle.min.css" />
+<f:asset.script identifier="swiper-lib" src="EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
 
 <f:asset.script identifier="swiper-call" defer="1" type="text/javascript">
     function initSwiper<f:format.raw>c{uid}</f:format.raw>(){
@@ -23,5 +23,5 @@
             },
         });
     }
-    window.addEventListener('DOMContentLoaded', initSwiper<f:format.raw>c{uid}</f:format.raw>);
+    document.addEventListener('DOMContentLoaded', initSwiper<f:format.raw>c{uid}</f:format.raw>);
 </f:asset.script>

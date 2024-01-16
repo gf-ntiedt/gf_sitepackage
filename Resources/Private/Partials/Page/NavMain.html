@@ -1,57 +1,75 @@
-<nav class="navbar navbar-expand-lg flex-lg-nowrap px-3 px-md-9 py-5">
-    <f:link.page
-        pageUid="{settings.rootpageId}"
-        class="navbar-brand order-1"
-    >
-        <f:if condition="{gfaddresses.0.data.tx_mask_logo}">
-            <f:image
-                src="{gfaddresses.0.data.tx_mask_logo}"
-                treatIdAsReference="1"
-                loading="lazy"
-                class="logo img-fluid me-2"
-            />
-        </f:if>
-    </f:link.page>
-    <span class="navbar-text order-4 order-sm-2">{gfaddresses.0.data.tx_mask_claim -> f:format.nl2br()}</span>
-    <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse order-5 justify-content-end" id="nav-main">
-        <ul class="navbar-nav">
-            <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
-                <f:if condition="!{navitemlvl1.spacer}">
-                    <li class="nav-item position-relative">
-                        <f:render section="ItemLink" arguments="{item:navitemlvl1}" />
-                        
-                        <f:if condition="{navitemlvl1.children}">
-                            <div class="collapse z-1 justify-content-end level-2" id="nav-main-{navitemlvl1.data.uid}">
-                                <ul class="navbar-nav flex-column">
-                                    <f:for each="{navitemlvl1.children}" as="navitemlvl2">
-                                        <li class="nav-item position-relative">
-                                            <f:render section="ItemLink" arguments="{item:navitemlvl2}" />
-                                            
-                                            <f:if condition="{navitemlvl2.children}">
-                                                <div class="collapse justify-content-end level-3" id="nav-main-{navitemlvl2.data.uid}">
-                                                    <ul class="navbar-nav flex-column">
-                                                        <f:for each="{navitemlvl2.children}" as="navitemlvl3">
-                                                            <li class="nav-item position-relative">
-                                                                <f:render section="ItemLink" arguments="{item:navitemlvl3}" />
-                                                            </li>
-                                                        </f:for>
-                                                    </ul>
-                                                </div>
-                                            </f:if>
-                                        </li>
-                                    </f:for>
-                                </ul>
-                            </div>
-                        </f:if>
-                    </li>
-                </f:if>
-            </f:for>
-        </ul>
-    </div>
-</nav>
+<f:alias map="{
+        logo:       gfaddresses.0.data.tx_mask_logo,
+        name:       gfaddresses.0.data.tx_mask_name,
+        claim:      gfaddresses.0.data.tx_mask_claim,
+        phone:      gfaddresses.0.data.tx_mask_phone,
+        fax:        gfaddresses.0.data.tx_mask_fax,
+        street:     gfaddresses.0.data.tx_mask_street,
+        street_nr:  gfaddresses.0.data.tx_mask_street_nr,
+        zip:        gfaddresses.0.data.tx_mask_zip,
+        city:       gfaddresses.0.data.tx_mask_city,
+        country:    gfaddresses.0.data.tx_mask_country,
+        main:       gfaddresses.0.data.tx_mask_main,
+        email:      gfaddresses.0.data.tx_mask_email
+}">
+    <nav class="navbar navbar-expand-lg flex-lg-nowrap px-3 px-md-9 py-5">
+        <f:link.page
+            pageUid="{settings.rootpageId}"
+            aria="{label: '{name}'}"
+            class="navbar-brand order-1"
+        >
+            <f:if condition="{logo}">
+                <f:image
+                    src="{logo}"
+                    treatIdAsReference="1"
+                    title="{name}"
+                    loading="lazy"
+                    class="logo img-fluid me-2"
+                />
+            </f:if>
+        </f:link.page>
+        <span class="navbar-text order-4 order-sm-2">{claim -> f:format.nl2br()}</span>
+        <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-5 justify-content-end" id="nav-main">
+            <ul class="navbar-nav">
+                <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
+                    <f:if condition="!{navitemlvl1.spacer}">
+                        <li class="nav-item position-relative">
+                            <f:render section="ItemLink" arguments="{item:navitemlvl1}" />
+                            
+                            <f:if condition="{navitemlvl1.children}">
+                                <div class="collapse z-1 justify-content-end level-2" id="nav-main-{navitemlvl1.data.uid}">
+                                    <ul class="navbar-nav flex-column">
+                                        <f:for each="{navitemlvl1.children}" as="navitemlvl2">
+                                            <li class="nav-item position-relative">
+                                                <f:render section="ItemLink" arguments="{item:navitemlvl2}" />
+                                                
+                                                <f:if condition="{navitemlvl2.children}">
+                                                    <div class="collapse justify-content-end level-3" id="nav-main-{navitemlvl2.data.uid}">
+                                                        <ul class="navbar-nav flex-column">
+                                                            <f:for each="{navitemlvl2.children}" as="navitemlvl3">
+                                                                <li class="nav-item position-relative">
+                                                                    <f:render section="ItemLink" arguments="{item:navitemlvl3}" />
+                                                                </li>
+                                                            </f:for>
+                                                        </ul>
+                                                    </div>
+                                                </f:if>
+                                            </li>
+                                        </f:for>
+                                    </ul>
+                                </div>
+                            </f:if>
+                        </li>
+                    </f:if>
+                </f:for>
+            </ul>
+        </div>
+    </nav>
+</f:alias>
+
 
 <f:section name="ItemLink">
     <f:if condition="{item.children}">
@@ -71,7 +89,8 @@
                 aria="{
                     current:'{f:if(condition:item.active,then:\'page\')}',
                     expanded:'false',
-                    controls:'nav-main-{item.data.uid}'
+                    controls:'nav-main-{item.data.uid}',
+                    label: item.title
                     }"
                 data="{bs-toggle:'collapse'}"
                 defaultScheme=""
@@ -93,7 +112,10 @@
             </f:spaceless></f:variable>
             <f:link.page
                 pageUid="{item.data.uid}"
-                aria="{current:'{f:if(condition:item.active,then:\'page\')}'}"
+                aria="{
+                current:'{f:if(condition:item.active,then:\'page\')}',
+                label: item.title
+                }"
                 class="{itemclass}"
             >
                 {item.title}
