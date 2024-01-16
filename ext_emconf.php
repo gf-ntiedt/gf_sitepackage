@@ -27,6 +27,6 @@ $EM_CONF[$_EXTKEY] = [
     'clearCacheOnLoad' => 1,
     'author' => 'Niels Tiedt',
     'author_email' => 'niels.tiedt@gedankenfolger.de',
-    'author_company' => 'Gedankenfolger',
+    'author_company' => 'Gedankenfolger GmbH',
     'version' => '12.0.8',
 ];
