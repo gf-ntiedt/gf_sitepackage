@@ -1,0 +1,39 @@
+.gf-columnizercolumns{
+    &.type-slidercontents{
+        position: relative;
+        .swiper{
+            .gf-ce{
+                height: 100%;
+                &:hover{
+                    background-color: $primary !important;
+                    .col-text{
+                        h1,h2,h3,h4,h5,h6,p{
+                            color: $light !important;
+                        }
+                        .btn{
+                            background-color: var(--bs-btn-hover-bg);
+                            &:hover{
+                                background-color: $info;
+                            }
+                        }
+                    }
+                }
+                .cols{
+                    height: 100%;
+                    .col-text{
+                        flex: 1 1 auto !important;
+                        .wrap-text{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: stretch;
+                            height: 100%;
+                            p{
+                                flex: 1 1 auto !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

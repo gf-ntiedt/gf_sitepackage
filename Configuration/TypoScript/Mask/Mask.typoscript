@@ -30,4 +30,14 @@ tt_content.mask_gf_google_maps{
     settings{
         apikey = {$gf_google_maps.apikey}
     }
+    dataProcessing{
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_mask_gf_addresses
+            where = ({#tx_mask_main} = 1)
+            orderBy = tx_mask_name
+            pidInList = 7
+            as = gfaddresses
+        }
+    }
 }

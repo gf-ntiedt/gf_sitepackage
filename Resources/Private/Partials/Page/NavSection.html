@@ -3,11 +3,11 @@
 
 
 <f:section name="Listgroup">
-    <div class="nav-section-group">
+    <div id="nav-section">
         <f:comment>
             <button class="btn btn-light">Sections</button>
         </f:comment>
-        <div id="nav-section" class="nav-section list-group">
+        <div id="nav-section-target" class="list-group">
             <f:for each="{navSection}" as="item" iteration="iterator">
                 <f:if condition="{item.data.colPos}==1">
                     <f:render section="Item" arguments="{item:item}" />

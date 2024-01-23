@@ -32,7 +32,7 @@
         <f:if condition="{image}">
             <f:render partial="GfSliderAssets/Script" arguments="{_all}" />
             
-            <div id="c{uid}" class="gf-ce gf-assets {f:if(condition:widemode,then:'widemode')} {widemodeClass} {widemodeClassBreakpoint} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+            <div id="c{uid}" class="gf-ce gf-slider-assets {f:if(condition:widemode,then:'widemode')} {widemodeClass} {widemodeClassBreakpoint} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
                 <div class="container-fluid {f:if(condition:'{colPos}==1',then:'px-0')}">
                     <f:if condition="{colPos}!=1">
                         <f:if condition="{header}">

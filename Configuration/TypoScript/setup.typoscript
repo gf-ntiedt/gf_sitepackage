@@ -105,14 +105,7 @@ page {
                 pidInList = 7
                 as = gfaddresses
             }
-            110 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-            110 {
-                if.isTrue.value = {$page.menu.section.enable}
-                table = tt_content
-                where = ({#sectionIndex} = 1)
-                orderBy = sorting
-                as = navSection
-            }
+            # 110 see Section menu enabled
             200 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
             200 {
                 as = site
@@ -209,6 +202,8 @@ page {
         gf_sitepackage_layout = EXT:gf_sitepackage/Resources/Public/Scss/layout.scss
         gf_sitepackage_layout.outputfile = EXT:gf_sitepackage/Resources/Public/Css/layout.css
         gf_sitepackage_layout.defer = 1
+#        gf_sitepackage_backend = EXT:gf_sitepackage/Resources/Public/Scss/backend.scss
+#        gf_sitepackage_backend.outputfile = EXT:gf_sitepackage/Resources/Public/Css/backend.css
     }
 
     includeJSLibs {
@@ -244,6 +239,23 @@ page {
 #        )
     }
 }
+
+## Section menu enabled
+[{$page.menu.section.enable} == 1]
+    page {
+        10{
+            dataProcessing {
+                110 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+                110 {
+                    table = tt_content
+                    where = ({#sectionIndex} = 1)
+                    orderBy = sorting
+                    as = navSection
+                }
+            }
+        }
+    }
+[end]
 
 
 ################

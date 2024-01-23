@@ -1,0 +1,149 @@
+
+.gf-ce{
+    &:not(.colpos-1){
+        padding-top: nth(map-values($spacers), 5);
+        padding-bottom: nth(map-values($spacers), 5);
+    }
+    &.gf-slider-assets{
+        position: relative;
+        &:not(.widemode){
+            .swiper{
+                .swiper-slide{
+                    &.swiper-slide-next,
+                    &.swiper-slide-active{
+                        .swiper-caption{
+                            transform: translateY(-100px);
+                        }
+                    }
+                }
+                .swiper-caption{
+                    display: block;
+                    position: absolute;
+                    bottom: -100px;
+                    left: 0;
+                    right: 0;
+                    padding: map-get($spacers, 3) map-get($spacers, 3)  0 map-get($spacers, 3);
+                    background-color: rgba($primary,0.85);
+                    transition: all 0.25s ease-in;
+                    *{
+                        color: $light;
+                    }
+                    h3{
+                        font-size: $h3-font-size;
+                        font-size: 2vw;
+                        line-height: $line-height-xs;
+                    }
+                    p{
+                        font-size: $font-size-base;
+                        font-size: 1dvw;
+                    }
+                }
+            }
+        }
+        &.widemode{
+            .swiper{
+                .swiper-caption{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: map-get($spacers, 3) map-get($spacers, 3);
+                    @include media-breakpoint-up(md) {
+                        padding: map-get($spacers, 9) map-get($spacers, 9);
+                    }
+                    *{
+                        color: $light;
+                    }
+                    h3{
+                        font-size: $font-size-base * 8;
+                        font-size: 5.85dvw;
+                        line-height: $line-height-xs;
+                        letter-spacing: .024em;
+                    }
+                    p{
+                        font-size: $font-size-base * 3.625;
+                        font-size: 2.65dvw;
+                        letter-spacing: .028em;
+                    }
+                }
+            }
+        }
+    }
+    .gf-imagetext{
+        position: relative;
+        .col-image,
+        .col-text{
+            //position: relative;
+        }
+        .col-text{
+            h1,h2,h3,h4,h5,h6,p{
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                word-break: break-all;
+                hyphens: auto;
+            }
+        }
+        &.imageorient-0,
+        &.imageorient-1,
+        &.imageorient-2,
+        &.imageorient-8,
+        &.imageorient-9,
+        &.imageorient-10{
+            .cols{
+                flex-direction: column !important;
+            }
+        }
+        /* Above */
+        &.imageorient-0,
+        &.imageorient-1,
+        &.imageorient-2,
+        &.imageorient-26{
+            .cols{
+                .col-image{
+                    order: 1;
+                }
+                .col-text{
+                    order: 2;
+                }
+            }
+        }
+        /* Below */
+        &.imageorient-8,
+        &.imageorient-9,
+        &.imageorient-10,
+        &.imageorient-25{
+            .cols{
+                .col-image{
+                    order: 2;
+                }
+                .col-text{
+                    order: 1;
+                }
+            }
+        }
+        /* Center */
+        &.imageorient-0,
+        &.imageorient-8{
+            .col-image{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        /* Right */
+        &.imageorient-1,
+        &.imageorient-9{
+            .col-image{
+                display: flex;
+                justify-content: right;
+            }
+        }
+        /* Left */
+        &.imageorient-2,
+        &.imageorient-10{
+            .col-image{
+                display: flex;
+                justify-content: left;
+            }
+        }
+    }
+}

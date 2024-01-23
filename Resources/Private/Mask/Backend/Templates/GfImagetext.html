@@ -2,6 +2,8 @@
 <f:alias map="{
     pid: data.pid,
     uid: data.uid,
+    tstamp: data.tstamp,
+    crdate: data.crdate,
     imageorient: data.imageorient,
     images: data.image,
     assets: data.assets,
@@ -27,12 +29,12 @@
         defaultBackgroundClass: settings.defaultBackgroundClass,
         defaultTextClass: settings.defaultTextClass,
 }">
-    <f:asset.css identifier="gf_imagetext_{pid}" href="EXT:gf_sitepackage/Resources/Public/Css/Backend/layout.css" />
+    <f:asset.css identifier="gf_sitepackage_{pid}" href="EXT:gf_sitepackage/Resources/Public/Css/backend.css" />
     
     <div id="c{uid}" class="gf-ce gf-imagetext imageorient-{imageorient} {f:if(condition:class_text_color,then:class_text_color,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)}">
         <div class="container-fluid">
             <div class="row">
-                <f:render partial="Toolbar" arguments="{pid:pid,uid:uid}" />
+                <f:render partial="Toolbar" arguments="{pid:pid,uid:uid,tstamp:tstamp,crdate:crdate}" />
             </div>
             <div class="row cols">
                 <f:if condition="{assets}">
@@ -68,7 +70,7 @@
                     <div class="col-sm-{grid_width_text} col-text">
                         <f:if condition="{header}">
                             <f:render partial="Header" arguments="{
-                            header: data.header,
+                            header: header,
                             layout: header_layout,
                             positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
                             default: settings.defaultHeaderType}" />

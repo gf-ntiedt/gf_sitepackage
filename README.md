@@ -253,8 +253,6 @@ This could be done at the top and bottom. </p>
     Todos:
 </h3>
     <ul>
-        <li>Backend views</li>
-        <li>SEO</li>
         <li>...</li>
     </ul>
 
