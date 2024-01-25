@@ -72,9 +72,6 @@
             <trans-unit id="constants.gf_sitepackage.settings.scrollspy">
                 <target>Scrollspy: Aktivieren</target>
             </trans-unit>
-            <trans-unit id="constants.gf_sitepackage.shortcutIcon">
-                <target>Favicon</target>
-            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.settings.basisTemplateId">
                 <target>UID der Wurzelseiten-Vorlage</target>
             </trans-unit>

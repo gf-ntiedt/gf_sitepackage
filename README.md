@@ -53,6 +53,9 @@
         <a href="#element_address">Element: Address</a>
     </li>
     <li>
+        <a href="#favicon">Favicon</a>
+    </li>
+    <li>
         <a href="#todos">Todos</a>
     </li>
     <li>
@@ -257,6 +260,12 @@ This could be done at the top and bottom. </p>
 <pre><code>
 {namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
 </code></pre>
+
+<h3 id="favicon">
+    Favicon:
+</h3>
+<p>Please have a look at setup.typoscript and site.manifest.<br>
+Your must copy the manifest file to correct location (fileadmin/templates/icons/) or adjust typoscript.</p>
 
 <h3 id="todos">
     Todos:
