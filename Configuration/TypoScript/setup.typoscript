@@ -235,8 +235,8 @@ page {
             wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon-32x32.png" sizes="32x32" type="image/png" />
             data = site:base
         }
-#        30 < .10
-#        30.wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon.svg" type="image/svg+xml" />
+        30 < .10
+        30.wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon.svg" type="image/svg+xml" />
         40 < .10
         40.wrap = <link rel="apple-touch-icon" href="|fileadmin/templates/icons/apple-touch-icon.png" type="image/png" />
         50 < .10
