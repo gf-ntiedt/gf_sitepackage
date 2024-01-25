@@ -242,12 +242,11 @@ page {
         50 < .10
         50.wrap = <link rel="manifest" href="|fileadmin/templates/icons/site.webmanifest" />
 
-#        100 = TEXT
-#        100.value(
-#            <link rel="preconnect" href="https://www.domain.de">
-#            <link rel="preconnect" href="https://shop.domain.de">
-#            <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
-#        )
+        100 = TEXT
+        100.value(
+                    <link rel="dns-prefetch" href="https://www.google.com">
+                    <link rel="dns-prefetch" href="https://maps.googleapis.com">
+        )
     }
 }
 
