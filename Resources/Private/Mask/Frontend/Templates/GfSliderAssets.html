@@ -27,7 +27,7 @@
     widemode: data.tx_mask_slider_widemode,
     widemodeClass: '{f:if(condition:data.tx_mask_slider_widemode,then:\'mx-n3\',else:\'px-3\')}',
     widemodeClassBreakpoint: '{f:if(condition:data.tx_mask_slider_widemode,then:\'mx-md-n9\',else:\'px-md-9\')}',
-    locallang: 'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'
+    locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
 }">
         <f:if condition="{image}">
             <f:render partial="GfSliderAssets/Script" arguments="{_all}" />

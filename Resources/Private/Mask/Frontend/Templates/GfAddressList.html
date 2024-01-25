@@ -1,4 +1,5 @@
 {namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+{_all -> f:debug()}
 <f:spaceless>
     <f:alias map="{
     pid: data.pid,
@@ -14,7 +15,7 @@
     defaultSpaceAfterType: settings.defaultSpaceAfterType,
     defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
     defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
-    gfaddresses: gfaddresses,
+    gfaddresses: data.tx_mask_gf_addresses_addresses_items,
 }">
         <div
             id="c{uid}"
@@ -40,19 +41,19 @@
 
 <f:section name="Card">
     <f:alias map="{
-        logo:       address.data.tx_mask_logo,
-        name:       address.data.tx_mask_name,
-        claim:      address.data.tx_mask_claim,
-        phone:      address.data.tx_mask_phone,
-        fax:        address.data.tx_mask_fax,
-        street:     address.data.tx_mask_street,
-        street_nr:  address.data.tx_mask_street_nr,
-        zip:        address.data.tx_mask_zip,
-        city:       address.data.tx_mask_city,
-        country:    address.data.tx_mask_country,
-        main:       address.data.tx_mask_main,
-        email:      address.data.tx_mask_email,
-        LL: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
+        logo:       address.tx_mask_logo,
+        name:       address.tx_mask_name,
+        claim:      address.tx_mask_claim,
+        phone:      address.tx_mask_phone,
+        fax:        address.tx_mask_fax,
+        street:     address.tx_mask_street,
+        street_nr:  address.tx_mask_street_nr,
+        zip:        address.tx_mask_zip,
+        city:       address.tx_mask_city,
+        country:    address.tx_mask_country,
+        main:       address.tx_mask_main,
+        email:      address.tx_mask_email,
+        locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
     }">
         <div class="col">
             <div class="card mb-3 bg-primary text-light">
@@ -75,16 +76,16 @@
                 <div class="list-group list-group-flush">
                     <gf:link.urlscheme
                         number="{phone}"
-                        aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
+                        aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
                         class="list-group-item list-group-item-action list-group-item-light" />
                     <gf:link.urlscheme
                         number="{fax}"
                         scheme="fax:"
-                        aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
+                        aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
                         class="list-group-item list-group-item-action list-group-item-light" />
                     <f:link.email
                         email="{email}"
-                        aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}"
+                        aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}"
                         class="list-group-item list-group-item-action list-group-item-light" />
                 </div>
             </div>

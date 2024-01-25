@@ -54,20 +54,41 @@
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main.description">
                 <source>used for logo and footer address</source>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_conf_max_zoom">
-                <source>Max zoom level of the map</source>
+            <trans-unit id="tx_mask_gf_google_maps_conf_zoom">
+                <source>Initial zoom level of the map</source>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins">
-                <source>Pins</source>
+            <trans-unit id="tx_mask_gf_google_maps_conf_zoom.description">
+                <source>Default: 12</source>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.newRecordLinkTitle">
-                <source>New pin</source>
+            <trans-unit id="tx_mask_gf_google_maps_conf_apitype">
+                <source>Api type</source>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_title">
-                <source>Title</source>
+            <trans-unit id="tx_mask_gf_google_maps_conf_apitype.embed">
+                <source>Eingebunden (iFrame)</source>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_text">
-                <source>Text</source>
+            <trans-unit id="tx_mask_gf_google_maps_conf_apitype.static">
+                <source>Statisch (Image)</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_maptype">
+                <source>Map type</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_maptype.roadmap">
+                <source>Roadmap</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_maptype.satellite">
+                <source>Satellite</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_customicon">
+                <source>Custom icon</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_customicon.description">
+                <source>Must be accessible from external. PNG, JPEG or GIF formats, though PNG is recommended. Up to 4096 pixels maximum size (64x64 for square images).</source>
+            </trans-unit>
+            <trans-unit id="gf_google_maps.youraddress">
+                <source>Your address</source>
+            </trans-unit>
+            <trans-unit id="gf_google_maps.submit">
+                <source>Calculate route</source>
             </trans-unit>
             <trans-unit id="tx_mask_gf_columnizer_contents">
                 <source>Columnizer Contents</source>
@@ -80,12 +101,6 @@
             </trans-unit>
             <trans-unit id="tab.pins">
                 <source>Pins</source>
-            </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tab.address">
-                <source>Address</source>
-            </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tab.communication">
-                <source>Communication</source>
             </trans-unit>
             <trans-unit id="tx_mask_grid_width_image">
                 <source>Gridbreite: Bild</source>

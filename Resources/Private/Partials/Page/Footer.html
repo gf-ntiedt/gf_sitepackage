@@ -11,7 +11,7 @@
         country:    gfaddresses.0.data.tx_mask_country,
         main:       gfaddresses.0.data.tx_mask_main,
         email:      gfaddresses.0.data.tx_mask_email,
-        LL: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
+        locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
 }">
     
     <footer class="py-5 bg-primary">
@@ -35,16 +35,16 @@
                         {zip} {city}<br>
                         <gf:link.urlscheme
                             number="{phone}"
-                            aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
+                            aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
                             class="" /><br>
                         <gf:link.urlscheme
                             number="{fax}"
                             scheme="fax:"
-                            aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
+                            aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
                             class="" /><br>
                         <f:link.email
                             email="{email}"
-                            aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}" />
+                            aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}" />
                     </address>
                     
                     <f:render partial="NavFooter" arguments="{navFooter:navFooter}" />

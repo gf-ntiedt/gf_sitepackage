@@ -20,7 +20,7 @@
                 defaultSpaceAfterType: settings.defaultSpaceAfterType,
                 defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
                 defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
-                LL: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
+                locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
             }">
                 <f:asset.css identifier="gf_sitepackage_{pid}" href="EXT:gf_sitepackage/Resources/Public/Css/backend.css" />
                 <div id="c{uid}" class="gf-ce gf-address">
@@ -43,16 +43,16 @@
                                                 {address.tx_mask_name}<br/>
                                                 <gf:link.urlscheme
                                                     number="{address.tx_mask_phone}"
-                                                    aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
+                                                    aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
                                                     class="" /><br>
                                                 <gf:link.urlscheme
                                                     number="{address.tx_mask_fax}"
                                                     scheme="fax:"
-                                                    aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
+                                                    aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
                                                     class="" /><br>
                                                 <f:link.email
                                                     email="{address.tx_mask_email}"
-                                                    aria="{label: '{f:translate(key:\'{LL.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}" />
+                                                    aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}" />
                                             </p>
                                         </div>
                                     </div>
@@ -65,49 +65,3 @@
         </f:if>
     </f:spaceless>
 </html>
-
-
-<f:section name="asd">
-    <f:if condition="{data.tx_mask_gf_addresses}">
-        <ul>
-            <f:for each="{data.tx_mask_gf_addresses}" as="data_item">
-                <li>
-                    <f:if condition="{data_item.tx_mask_name}">
-                        {data_item.tx_mask_name}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_claim}">
-                        {data_item.tx_mask_claim}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_logo}">
-                        <f:link.typolink parameter="{data_item.tx_mask_logo}"></f:link.typolink>
-                    </f:if>
-                    
-                    <f:if condition="{data_item.tx_mask_street}">
-                        {data_item.tx_mask_street}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_street_nr}">
-                        {data_item.tx_mask_street_nr}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_zip}">
-                        {data_item.tx_mask_zip}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_city}">
-                        {data_item.tx_mask_city}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_country}">
-                        {data_item.tx_mask_country}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_phone}">
-                        {data_item.tx_mask_phone}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_fax}">
-                        {data_item.tx_mask_fax}
-                    </f:if>
-                    <f:if condition="{data_item.tx_mask_email}">
-                        <f:link.email email="{data_item.tx_mask_email}"/>
-                    </f:if>
-                </li>
-            </f:for>
-        </ul>
-    </f:if>
-</f:section>

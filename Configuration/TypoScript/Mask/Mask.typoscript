@@ -12,16 +12,10 @@ lib.maskContentElement {
         defaultBackgroundClass = {$styles.content.defaultBackgroundClass}
         defaultTextClass = {$styles.content.defaultTextClass}
     }
-}
-
-tt_content.mask_gf_address_list{
-    dataProcessing{
-        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-        10 {
-            table = tx_mask_gf_addresses
-            orderBy = tx_mask_name
-            pidInList.field = pages
-            as = gfaddresses
+    dataProcessing {
+        5 = site-language
+        5 {
+            as = language
         }
     }
 }
@@ -29,15 +23,5 @@ tt_content.mask_gf_address_list{
 tt_content.mask_gf_google_maps{
     settings{
         apikey = {$gf_google_maps.apikey}
-    }
-    dataProcessing{
-        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-        10 {
-            table = tx_mask_gf_addresses
-            where = ({#tx_mask_main} = 1)
-            orderBy = tx_mask_name
-            pidInList = 7
-            as = gfaddresses
-        }
     }
 }

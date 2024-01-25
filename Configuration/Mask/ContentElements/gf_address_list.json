@@ -10,7 +10,7 @@
                     "columns": [
                         "header",
                         "header_layout",
-                        "pages"
+                        "tx_mask_gf_addresses_addresses"
                     ],
                     "columnsOverride": {
                         "header_layout": {
@@ -26,27 +26,6 @@
                             "fullKey": "header_layout",
                             "key": "header_layout",
                             "type": "select"
-                        },
-                        "pages": {
-                            "config": {
-                                "behaviour": {
-                                    "allowLanguageSynchronization": 1
-                                },
-                                "fieldControl": {
-                                    "addRecord": {
-                                        "disabled": 0
-                                    },
-                                    "editPopup": {
-                                        "disabled": 0
-                                    },
-                                    "listModule": {
-                                        "disabled": 0
-                                    }
-                                }
-                            },
-                            "fullKey": "pages",
-                            "key": "pages",
-                            "type": "group"
                         }
                     },
                     "description": "",
@@ -62,10 +41,17 @@
                     "labels": [
                         "",
                         "",
-                        ""
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_addresses"
                     ],
                     "shortLabel": "",
                     "sorting": 3
+                }
+            },
+            "sql": {
+                "tx_mask_gf_addresses_addresses": {
+                    "tt_content": {
+                        "tx_mask_gf_addresses_addresses": "varchar(255) DEFAULT '' NOT NULL"
+                    }
                 }
             },
             "tca": {
@@ -81,11 +67,24 @@
                     "key": "header_layout",
                     "type": "select"
                 },
-                "pages": {
-                    "coreField": 1,
-                    "fullKey": "pages",
-                    "key": "pages",
-                    "type": "group"
+                "tx_mask_gf_addresses_addresses": {
+                    "config": {
+                        "behaviour": {
+                            "allowLanguageSynchronization": 1
+                        },
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "foreign_table": "tx_mask_gf_addresses",
+                        "items": [],
+                        "renderType": "selectMultipleSideBySide",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_gf_addresses_addresses",
+                    "key": "gf_addresses_addresses",
+                    "type": "select"
                 }
             }
         }

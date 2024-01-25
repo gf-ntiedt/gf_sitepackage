@@ -54,20 +54,41 @@
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main.description">
                 <target>benutzt für Logo und Fussadresse</target>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_conf_max_zoom">
-                <target>Maximale Zoomstufe der Karte</target>
+            <trans-unit id="tx_mask_gf_google_maps_conf_zoom">
+                <target>Anfängliche Zoomstufe der Karte</target>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins">
-                <target>Pins</target>
+            <trans-unit id="tx_mask_gf_google_maps_conf_zoom.description">
+                <target>Standard: 12</target>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.newRecordLinkTitle">
-                <target>Neuer Pin</target>
+            <trans-unit id="tx_mask_gf_google_maps_conf_apitype">
+                <target>Api-Typ</target>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_title">
-                <target>Titel</target>
+            <trans-unit id="tx_mask_gf_google_maps_conf_apitype.embed">
+                <target>Api-Typ</target>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tx_mask_text">
-                <target>Text</target>
+            <trans-unit id="tx_mask_gf_google_maps_conf_apitype.static">
+                <target>Api-Typ</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_maptype">
+                <target>Kartentyp</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_maptype.roadmap">
+                <target>Straßenkarte</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_maptype.satellite">
+                <target>Satellit</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_customicon">
+                <target>Benutzerdefiniertes Symbol</target>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_customicon.description">
+                <target>Muss von extern zugänglich sein. PNG-, JPEG- oder GIF-Formate, wobei PNG empfohlen wird. Bis zu 4096 Pixel maximale Größe (64 x 64 für quadratische Bilder).</target>
+            </trans-unit>
+            <trans-unit id="gf_google_maps.youraddress">
+                <target>Ihre Adresse</target>
+            </trans-unit>
+            <trans-unit id="gf_google_maps.submit">
+                <target>Route berechnen</target>
             </trans-unit>
             <trans-unit id="tx_mask_gf_columnizer_contents">
                 <target>Columnizer Contents</target>
@@ -80,12 +101,6 @@
             </trans-unit>
             <trans-unit id="tab.pins">
                 <target>Pins</target>
-            </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tab.address">
-                <target>Adresse</target>
-            </trans-unit>
-            <trans-unit id="tx_mask_gf_google_maps_pins.tab.communication">
-                <target>Kommunikation</target>
             </trans-unit>
             <trans-unit id="tx_mask_grid_width_image">
                 <target>Grid width: Image</target>

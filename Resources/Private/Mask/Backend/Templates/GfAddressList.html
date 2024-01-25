@@ -3,7 +3,7 @@
     <f:alias map="{
     pid: data.pid,
     uid: data.uid,
-    pages_items: data.pages_items,
+    gf_addresses_addresses_items: data.tx_mask_gf_addresses_addresses_items,
     header: data.header,
     header_layout: data.header_layout,
     header_position: data.header_position,
@@ -15,7 +15,7 @@
     defaultSpaceAfterType: settings.defaultSpaceAfterType,
     defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
     defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
-    gfaddresses: gfaddresses,
+    gfaddresses: data.tx_mask_gf_addresses_addresses_items,
 }">
         <div
             id="c{uid}"
@@ -42,17 +42,16 @@
                         </div>
                     </div>
                 </f:if>
-                <f:if condition="{pages_items}">
+                <f:if condition="{gfaddresses}">
                     <div class="row card-group">
-                        <f:for each="{pages_items}" as="item" iteration="iterator">
-                            <f:if condition="{item.hidden}==0">
+                        <f:for each="{gfaddresses}" as="address" iteration="iterator">
+                            <f:if condition="{address.hidden}==0">
                                 <div class="card" aria-hidden="true">
                                     <div class="card-header p-0">
-                                        <f:render partial="Toolbar" arguments="{table:'tt_content',pid:item.pid,uid:item.uid,tstamp:item.tstamp,crdate:item.crdate,showGoToLink:1}" />
+                                        <f:render partial="Toolbar" arguments="{table:'tx_mask_gf_addresses',pid:address.pid,uid:address.uid,tstamp:address.tstamp,crdate:address.crdate,showEditLink:1}" />
                                     </div>
                                     <div class="card-body p-1 pb-3">
-                                        <h5 class="card-title">{item.description}</h5>
-                                        <p class="card-text">{item.title}</p>
+                                        <p class="card-text">{address.tx_mask_name}</p>
                                     </div>
                                 </div>
                             </f:if>
