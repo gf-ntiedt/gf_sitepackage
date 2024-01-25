@@ -113,6 +113,7 @@
                 <li>Pagination</li>
                 <li>Navigation</li>
                 <li>Scrollbar</li>
+                <li>Lowmode</li>
                 <li>Widemode</li>
                 <li>spaceBetween</li>
             </ul>
