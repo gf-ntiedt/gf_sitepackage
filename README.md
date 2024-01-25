@@ -117,7 +117,15 @@
                 <li>spaceBetween</li>
             </ul>
         </ul>
+        <li>Slider: Contents</li>
         <li>Addresslist (e.g. locations)</li>
+        <li>Google Maps</li>
+        <ul>
+            <li>Embed and static version</li>
+            <li>Zoom level</li>
+            <li>Map type</li>
+            <li>Custom marker icon</li>
+        </ul>
         <li>Powermail</li>
         <li>Container</li>
         <ul>
