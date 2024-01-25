@@ -297,6 +297,9 @@
             <trans-unit id="tx_mask_slider_widemode">
                 <source>Slider: Breiter Modus</source>
             </trans-unit>
+            <trans-unit id="tx_mask_slider_lowmode">
+                <source>Slider: Niedriger Modus</source>
+            </trans-unit>
             <trans-unit id="tab.image">
                 <target>Bild</target>
             </trans-unit>

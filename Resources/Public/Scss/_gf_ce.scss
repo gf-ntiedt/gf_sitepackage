@@ -41,16 +41,32 @@
             }
         }
         &.widemode{
+            &:not(.lowmode){
+                .swiper{
+                    .swiper-caption{
+                        padding: map-get($spacers, 3) map-get($spacers, 3);
+                        @include media-breakpoint-up(md) {
+                            padding: map-get($spacers, 9) map-get($spacers, 9);
+                        }
+                    }
+                }
+            }
+            &.lowmode{
+                .swiper{
+                    .swiper-caption{
+                        padding: map-get($spacers, 3) map-get($spacers, 3);
+                        @include media-breakpoint-up(md) {
+                            padding: $spacer * 3.375 map-get($spacers, 9);
+                        }
+                    }
+                }
+            }
             .swiper{
                 .swiper-caption{
                     display: block;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    padding: map-get($spacers, 3) map-get($spacers, 3);
-                    @include media-breakpoint-up(md) {
-                        padding: map-get($spacers, 9) map-get($spacers, 9);
-                    }
                     *{
                         color: $light;
                     }
