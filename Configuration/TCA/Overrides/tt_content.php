@@ -518,3 +518,9 @@ $GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 's
     '--linebreak--,space_inner_before_class, space_inner_after_class',
     'after:space_after_class'
 );
+
+
+/* Mask */
+$GLOBALS['TCA']['tt_content']['columns']['tx_mask_gf_google_maps_conf_apitype']['onChange'] = 'reload';
+$GLOBALS['TCA']['tt_content']['columns']['tx_mask_gf_google_maps_conf_customicon']['displayCond'] = 'FIELD:tx_mask_gf_google_maps_conf_apitype:=:static';
+$GLOBALS['TCA']['tt_content']['columns']['tx_mask_gf_google_maps_conf_enable_routing']['displayCond'] = 'FIELD:tx_mask_gf_google_maps_conf_apitype:=:static';

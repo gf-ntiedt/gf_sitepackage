@@ -84,6 +84,9 @@
             <trans-unit id="tx_mask_gf_google_maps_conf_customicon.description">
                 <source>Must be accessible from external. PNG, JPEG or GIF formats, though PNG is recommended. Up to 4096 pixels maximum size (64x64 for square images).</source>
             </trans-unit>
+            <trans-unit id="tx_mask_gf_google_maps_conf_enable_routing">
+                <source>Enable routing form</source>
+            </trans-unit>
             <trans-unit id="gf_google_maps.youraddress">
                 <source>Your address</source>
             </trans-unit>

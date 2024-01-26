@@ -125,10 +125,13 @@
         <li>Addresslist (e.g. locations)</li>
         <li>Google Maps</li>
         <ul>
-            <li>Embed and static version</li>
             <li>Zoom level</li>
             <li>Map type</li>
-            <li>Custom marker icon</li>
+            <li>Embed and static version</li>
+            <ul>
+                <li>Custom marker icon (static only)</li>
+                <li>Enable routing form (static only)</li>
+            </ul>
         </ul>
         <li>Powermail</li>
         <li>Container</li>

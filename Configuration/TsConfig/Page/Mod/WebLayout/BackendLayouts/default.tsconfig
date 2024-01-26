@@ -38,10 +38,6 @@ mod {
                                             CType = mask_gf_google_maps
                                         }
                                     }
-                                    2 {
-                                        name = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer.right
-                                        colPos = 12
-                                    }
                                 }
                             }
                         }

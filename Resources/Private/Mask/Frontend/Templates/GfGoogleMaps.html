@@ -12,6 +12,7 @@
             zoom: data.tx_mask_gf_google_maps_conf_zoom,
             maptype: data.tx_mask_gf_google_maps_conf_maptype,
             customicon: data.tx_mask_gf_google_maps_conf_customicon,
+            enable_routing: data.tx_mask_gf_google_maps_conf_enable_routing,
             space_before_class: data.space_before_class,
             space_after_class: data.space_after_class,
             space_inner_before_class: data.space_inner_before_class,
@@ -35,9 +36,26 @@
             locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
         }">
             <div id="c{uid}" class="gf-ce gf-google-maps colpos-{colPos} {f:if(condition:class_text_color,then:class_text_color,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
-                <f:if condition="{apitype}=='embed'">
-                    <f:then>
-                        <f:render section="Embed" arguments="{
+                <div class="{f:if(condition:'{colPos}==0',then:'container-fluid')} {f:if(condition:'{colPos}==1',then:'px-0')}">
+                    <f:if condition="{colPos}==0">
+                        <f:if condition="{header}">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <f:render partial="Header" arguments="{
+                                    header: header,
+                                    layout: header_layout,
+                                    positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                                    default: settings.defaultHeaderType}" />
+                                </div>
+                            </div>
+                        </f:if>
+                    </f:if>
+                    <div class="{f:if(condition:'{colPos}==0',then:'row')}">
+                        <div class="{f:if(condition:'{colPos}==0',then:'col-auto')}">
+                            <f:if condition="{apitype}=='embed'">
+                                <f:then>
+                                    <div id="c{uid}-ratio" class="ratio ratio-21x9">
+                                        <f:render section="Embed" arguments="{
                         uid:uid,
                         apikey:settings.apikey,
                         apiurl:'https://www.google.com/maps/embed/v1/search',
@@ -47,10 +65,11 @@
                         maptype:maptype,
                         locallang:locallang
                         }"
-                        />
-                    </f:then>
-                    <f:else>
-                        <f:render section="Static" arguments="{
+                                        />
+                                    </div>
+                                </f:then>
+                                <f:else>
+                                    <f:render section="Static" arguments="{
                         apikey:settings.apikey,
                         apiurl:'https://maps.googleapis.com/maps/api/staticmap',
                         query:'{name -> f:format.urlencode()}',
@@ -63,11 +82,15 @@
                         zoom:zoom,
                         maptype:maptype,
                         customicon:customicon,
+                        enable_routing:enable_routing,
                         locallang:locallang
                         }"
-                        />
-                    </f:else>
-                </f:if>
+                                    />
+                                </f:else>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
             </div>
         </f:alias>
     </f:spaceless>
@@ -82,57 +105,73 @@
             <img src="{apiurl}?zoom={zoom}&size=400x400&key={apikey}&maptype={maptype}&language={language}&markers=size:mid|color:red|{query}" />
         </f:else>
     </f:if>
-    <form name="search_route" method="get" action="https://maps.google.de/" target="_blank" accept-charset="UTF-8">
-        <input name="daddr" type="hidden" id="daddr" value="{name}, {street} {street_nr}, {zip} {city}">
-        <input name="hl" type="hidden" id="hl" value="{language}">
-        <div class="input-group mb-3">
-            <input name="saddr" type="text" id="saddr" placeholder="{f:translate(key:'{locallang.mask}:gf_google_maps.youraddress')}" aria-label="{f:translate(key:'{locallang.mask}:gf_google_maps.youraddress')}" class="form-control">
-            <input type="submit" name="Submit" value="{f:translate(key:'{locallang.mask}:gf_google_maps.submit')}" class="btn btn-primary">
-        </div>
-    </form>
+    <f:if condition="{enable_routing}">
+        <form name="search_route" method="get" action="https://maps.google.de/" target="_blank" accept-charset="UTF-8">
+            <input name="daddr" type="hidden" id="daddr" value="{name}, {street} {street_nr}, {zip} {city}">
+            <input name="hl" type="hidden" id="hl" value="{language}">
+            <div class="input-group mb-3">
+                <input name="saddr" type="text" id="saddr" placeholder="{f:translate(key:'{locallang.mask}:gf_google_maps.youraddress')}" aria-label="{f:translate(key:'{locallang.mask}:gf_google_maps.youraddress')}" class="form-control">
+                <input type="submit" name="Submit" value="{f:translate(key:'{locallang.mask}:gf_google_maps.submit')}" class="btn btn-primary">
+            </div>
+        </form>
+    </f:if>
 </f:section>
 
 <f:section name="Embed">
     <script>
-    let uid = '<f:format.raw>{uid}</f:format.raw>';
-    let apikey = '<f:format.raw>{apikey}</f:format.raw>';
-    let iframe = document.createElement('iframe');
-    let generatedUrl = new URL('<f:format.raw>{apiurl}</f:format.raw>');
-    let query = '<f:format.raw>{query}</f:format.raw>';
-    let language = '<f:format.raw>{language}</f:format.raw>';
-    let zoom = '<f:format.raw>{zoom}</f:format.raw>';
-    let maptype = '<f:format.raw>{maptype}</f:format.raw>';
-    let parameter = {};
 
-    if(apikey){
-        parameter['key'] = apikey;
-    }
+    buildIframe = function () {
+        let uid = '<f:format.raw>{uid}</f:format.raw>';
+        let apikey = '<f:format.raw>{apikey}</f:format.raw>';
+        let iframe = document.createElement('iframe');
+        let generatedUrl = new URL('<f:format.raw>{apiurl}</f:format.raw>');
+        let query = '<f:format.raw>{query}</f:format.raw>';
+        let language = '<f:format.raw>{language}</f:format.raw>';
+        let zoom = '<f:format.raw>{zoom}</f:format.raw>';
+        let maptype = '<f:format.raw>{maptype}</f:format.raw>';
+        let parameter = {};
 
-    if(query){
-        parameter['q'] = query;
-    }
+        if(apikey){
+            parameter['key'] = apikey;
+        }
 
-    if(language){
-        parameter['language'] = language;
-    }
+        if(query){
+            parameter['q'] = query;
+        }
 
-    if(zoom){
-        parameter['zoom'] = zoom;
-    }
+        if(language){
+            parameter['language'] = language;
+        }
 
-    if(maptype){
-        parameter['maptype'] = maptype;
-    }
+        if(zoom){
+            parameter['zoom'] = zoom;
+        }
 
-    const searchParams = new URLSearchParams( parameter );
-    generatedUrl.search = searchParams;
-    iframe.src = generatedUrl.toString();
-    iframe.setAttribute('width', '600');
-    iframe.setAttribute('height', '450');
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('loading', 'lazy');
-    iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-    document.getElementById('c' + uid).appendChild(iframe);
-    
+        if(maptype){
+            parameter['maptype'] = maptype;
+        }
+
+        const searchParams = new URLSearchParams( parameter );
+        generatedUrl.search = searchParams;
+        iframe.src = generatedUrl.toString();
+        iframe.setAttribute('width', '754');
+        iframe.setAttribute('height', '302');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        document.getElementById('c' + uid + '-ratio').appendChild(iframe);
+    };
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    buildIframe();
+                    observer.unobserve(entry.target);
+                }
+            })
+        }
+    )
+    observer.observe(document.getElementById("footer"))
 </script>
 </f:section>

@@ -15,7 +15,8 @@
                         "tx_mask_gf_google_maps_conf_apitype",
                         "tx_mask_gf_google_maps_conf_zoom",
                         "tx_mask_gf_google_maps_conf_maptype",
-                        "tx_mask_gf_google_maps_conf_customicon"
+                        "tx_mask_gf_google_maps_conf_customicon",
+                        "tx_mask_gf_google_maps_conf_enable_routing"
                     ],
                     "columnsOverride": {
                         "header_layout": {
@@ -45,7 +46,8 @@
                         "",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_zoom.description",
                         "",
-                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_customicon.description"
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_customicon.description",
+                        ""
                     ],
                     "icon": "",
                     "iconOverlay": "",
@@ -59,7 +61,8 @@
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_apitype",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_zoom",
                         "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_maptype",
-                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_customicon"
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_customicon",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_google_maps_conf_enable_routing"
                     ],
                     "shortLabel": "",
                     "sorting": 5
@@ -79,6 +82,11 @@
                 "tx_mask_gf_google_maps_conf_customicon": {
                     "tt_content": {
                         "tx_mask_gf_google_maps_conf_customicon": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_gf_google_maps_conf_enable_routing": {
+                    "tt_content": {
+                        "tx_mask_gf_google_maps_conf_enable_routing": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_gf_google_maps_conf_maptype": {
@@ -180,6 +188,17 @@
                     "fullKey": "tx_mask_gf_google_maps_conf_customicon",
                     "key": "gf_google_maps_conf_customicon",
                     "type": "link"
+                },
+                "tx_mask_gf_google_maps_conf_enable_routing": {
+                    "config": {
+                        "default": "0",
+                        "items": [],
+                        "renderType": "checkboxToggle",
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_gf_google_maps_conf_enable_routing",
+                    "key": "gf_google_maps_conf_enable_routing",
+                    "type": "check"
                 },
                 "tx_mask_gf_google_maps_conf_maptype": {
                     "config": {

@@ -14,10 +14,15 @@
         locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
 }">
     
-    <footer class="py-5 bg-primary">
+    <footer id="footer" class="py-5 bg-primary">
         <div class="container-fluid px-3 px-md-9">
             <div class="row justify-content-sm-end">
-                <div class="col-auto">
+                <div class="col-lg-12">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid:settings.rootpageId, colPos: '10'}" />
+                </div>
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-4">
                     <f:if condition="{logo}">
                         <f:image
                             src="{logo}"
@@ -28,7 +33,7 @@
                         />
                     </f:if>
                 </div>
-                <div class="col-auto">
+                <div class="col-lg-6">
                     <h6>{name}</h6>
                     <address>
                         {street} {street_nr}<br>
