@@ -27,6 +27,8 @@ styles {
         defaultButtonClass = btn-primary
         defaultTextClass =
         defaultBackgroundClass =
+        defaultOrientationHorizontal = justify-content-center
+        defaultOrientationVertical = align-items-center
     }
 }
 

@@ -9,19 +9,23 @@
     pid: data.pid,
     uid: data.uid,
     colPos: data.colPos,
-    gf_sitepackage_columnwidths: data.gf_sitepackage_columnwidths,
+    columnwidths: data.gf_sitepackage_columnwidths,
     space_before_class: data.space_before_class,
     space_after_class: data.space_after_class,
     space_inner_before_class: data.space_inner_before_class,
     space_inner_after_class: data.space_inner_after_class,
+    orientation_horizontal: data.gf_sitepackage_orientation_horizontal,
+    orientation_vertical: data.gf_sitepackage_orientation_vertical,
     defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
     defaultSpaceAfterType: settings.defaultSpaceAfterType,
     defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
     defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+    defaultOrientationHorizontal: settings.defaultOrientationHorizontal,
+    defaultOrientationVertical: settings.defaultOrientationVertical,
 }">
         <div id="c{uid}" class="gf-2cols colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
             <div class="container-fluid">
-                <div class="row justify-content-center align-items-center">
+                <div class="row {f:if(condition:orientation_horizontal,then:orientation_horizontal,else:defaultOrientationHorizontal)} {f:if(condition:orientation_vertical,then:orientation_vertical,else:defaultOrientationVertical)}">
                     <div class="col-sm-12 my-3">
                         <f:for each="{contentLeft}" as="record">
                             <f:format.raw>{record.renderedContent}</f:format.raw>

@@ -8,5 +8,7 @@ lib.contentElement {
         defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
         defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
         defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+        defaultOrientationHorizontal = {$styles.content.defaultOrientationHorizontal}
+        defaultOrientationVertical = {$styles.content.defaultOrientationVertical}
     }
 }

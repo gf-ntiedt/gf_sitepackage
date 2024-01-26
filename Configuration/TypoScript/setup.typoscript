@@ -122,6 +122,8 @@ page {
             defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
             defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
             defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+            defaultOrientationHorizontal = {$styles.content.defaultOrientationHorizontal}
+            defaultOrientationVertical = {$styles.content.defaultOrientationVertical}
         }
     }
 
@@ -230,11 +232,8 @@ page {
             wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon.ico" sizes="16x16" />
             data = site:base
         }
-        20 = TEXT
-        20{
-            wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon-32x32.png" sizes="32x32" type="image/png" />
-            data = site:base
-        }
+        20 < .10
+        20.wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon-32x32.png" sizes="32x32" type="image/png" />
         30 < .10
         30.wrap = <link rel="icon" href="|fileadmin/templates/icons/favicon.svg" type="image/svg+xml" />
         40 < .10

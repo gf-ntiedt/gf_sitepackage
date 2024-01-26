@@ -168,6 +168,210 @@
             <trans-unit id="tt_content.gf_sitepackage_type.slidercontents">
                 <target>Content-Slider (Swiper)</target>
             </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal">
+                <target>Horizontale Orientierung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_start">
+                <target>Anfang</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_end">
+                <target>Ende</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_center">
+                <target>Mitte</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_between">
+                <target>Dazwischen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_around">
+                <target>Rundherum</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_evenly">
+                <target>Gleichmäßig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_start">
+                <target>Anfang (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_end">
+                <target>Ende (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_center">
+                <target>Mitte (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_between">
+                <target>Dazwischen (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_around">
+                <target>Rundherum (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_evenly">
+                <target>Gleichmäßig (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_start">
+                <target>Anfang (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_end">
+                <target>Ende (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_center">
+                <target>Mitte (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_between">
+                <target>Dazwischen (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_around">
+                <target>Rundherum (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_evenly">
+                <target>Gleichmäßig (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_start">
+                <target>Anfang (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_end">
+                <target>Ende (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_center">
+                <target>Mitte (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_between">
+                <target>Dazwischen (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_around">
+                <target>Rundherum (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_evenly">
+                <target>Gleichmäßig (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_start">
+                <target>Anfang (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_end">
+                <target>Ende (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_center">
+                <target>Mitte (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_between">
+                <target>Dazwischen (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_around">
+                <target>Rundherum (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_evenly">
+                <target>Gleichmäßig (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_start">
+                <target>Anfang (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_end">
+                <target>Ende (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_center">
+                <target>Mitte (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_between">
+                <target>Dazwischen (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_around">
+                <target>Rundherum (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_evenly">
+                <target>Gleichmäßig (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical">
+                <target>Vertikale Orientierung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_start">
+                <target>Anfang</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_end">
+                <target>Ende</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_center">
+                <target>Mitte</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_baseline">
+                <target>Grundlinie</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_stretch">
+                <target>Gestreckt</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_start">
+                <target>Anfang (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_end">
+                <target>Ende (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_center">
+                <target>Mitte (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_baseline">
+                <target>Grundlinie (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_stretch">
+                <target>Gestreckt (> 576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_start">
+                <target>Anfang (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_end">
+                <target>Ende (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_center">
+                <target>Mitte (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_baseline">
+                <target>Grundlinie (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_stretch">
+                <target>Gestreckt (> 768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_start">
+                <target>Anfang (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_end">
+                <target>Ende (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_center">
+                <target>Mitte (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_baseline">
+                <target>Grundlinie (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_stretch">
+                <target>Gestreckt (> 992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_start">
+                <target>Anfang (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_end">
+                <target>Ende (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_center">
+                <target>Mitte (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_baseline">
+                <target>Grundlinie (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_stretch">
+                <target>Gestreckt (> 1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_start">
+                <target>Anfang (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_end">
+                <target>Ende (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_center">
+                <target>Mitte (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_baseline">
+                <target>Grundlinie (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_stretch">
+                <target>Gestreckt (> 1400px)</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

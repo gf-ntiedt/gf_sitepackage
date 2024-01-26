@@ -168,6 +168,210 @@
             <trans-unit id="tt_content.gf_sitepackage_type.slidercontents">
                 <source>Inhalts-Slider (Swiper)</source>
             </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal">
+                <source>Horizontal orientation</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_start">
+                <source>Start</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_end">
+                <source>End</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_center">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_between">
+                <source>Between</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_around">
+                <source>Around</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_evenly">
+                <source>Evenly</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_start">
+                <source>Start (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_end">
+                <source>End (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_center">
+                <source>Center (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_between">
+                <source>Between (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_around">
+                <source>Around (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_sm_evenly">
+                <source>Evenly (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_start">
+                <source>Start (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_end">
+                <source>End (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_center">
+                <source>Center (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_between">
+                <source>Between (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_around">
+                <source>Around (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_md_evenly">
+                <source>Evenly (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_start">
+                <source>Start (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_end">
+                <source>End (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_center">
+                <source>Center (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_between">
+                <source>Between (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_around">
+                <source>Around (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_lg_evenly">
+                <source>Evenly (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_start">
+                <source>Start (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_end">
+                <source>End (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_center">
+                <source>Center (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_between">
+                <source>Between (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_around">
+                <source>Around (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xl_evenly">
+                <source>Evenly (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_start">
+                <source>Start (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_end">
+                <source>End (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_center">
+                <source>Center (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_between">
+                <source>Between (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_around">
+                <source>Around (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_horizontal.justify_content_xxl_evenly">
+                <source>Evenly (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical">
+                <source>Vertical orientation</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_start">
+                <source>Start</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_end">
+                <source>End</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_center">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_baseline">
+                <source>Baseline</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_stretch">
+                <source>Stretch</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_start">
+                <source>Start (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_end">
+                <source>End (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_center">
+                <source>Center (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_baseline">
+                <source>Baseline (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_sm_stretch">
+                <source>Stretch (> 576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_start">
+                <source>Start (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_end">
+                <source>End (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_center">
+                <source>Center (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_baseline">
+                <source>Baseline (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_md_stretch">
+                <source>Stretch (> 768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_start">
+                <source>Start (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_end">
+                <source>End (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_center">
+                <source>Center (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_baseline">
+                <source>Baseline (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_lg_stretch">
+                <source>Stretch (> 992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_start">
+                <source>Start (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_end">
+                <source>End (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_center">
+                <source>Center (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_baseline">
+                <source>Baseline (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xl_stretch">
+                <source>Stretch (> 1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_start">
+                <source>Start (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_end">
+                <source>End (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_center">
+                <source>Center (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_baseline">
+                <source>Baseline (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_stretch">
+                <source>Stretch (> 1400px)</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
