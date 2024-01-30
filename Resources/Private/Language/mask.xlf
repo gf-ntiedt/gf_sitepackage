@@ -40,13 +40,13 @@
                 <source>Phone</source>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_fax">
-                <source>Fax</source>
+                <source>Telefax</source>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_email">
                 <source>E-Mail</source>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_addresses.tx_mask_web">
-                <source>Web</source>
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_internet">
+                <source>Internet</source>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main">
                 <source>Main address</source>
@@ -302,6 +302,15 @@
             </trans-unit>
             <trans-unit id="tx_mask_slider_lowmode">
                 <source>Slider: Lowmode</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_address_list_layout">
+                <source>Layout</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_address_list_layout.simple">
+                <source>Simple</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_address_list_layout.card">
+                <source>Card</source>
             </trans-unit>
             <trans-unit id="tab.media">
                 <source>Media</source>

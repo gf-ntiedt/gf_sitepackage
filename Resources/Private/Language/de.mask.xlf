@@ -40,12 +40,12 @@
                 <target>Telefon</target>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_fax">
-                <target>Fax</target>
+                <target>Telefax</target>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_email">
                 <target>E-Mail</target>
             </trans-unit>
-            <trans-unit id="tx_mask_gf_addresses.tx_mask_web">
+            <trans-unit id="tx_mask_gf_addresses.tx_mask_internet">
                 <target>Internet</target>
             </trans-unit>
             <trans-unit id="tx_mask_gf_addresses.tx_mask_main">
@@ -302,6 +302,15 @@
             </trans-unit>
             <trans-unit id="tx_mask_slider_lowmode">
                 <source>Slider: Niedriger Modus</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_address_list_layout">
+                <source>Darstellung</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_address_list_layout.simple">
+                <source>Einfach</source>
+            </trans-unit>
+            <trans-unit id="tx_mask_gf_address_list_layout.card">
+                <source>Karte</source>
             </trans-unit>
             <trans-unit id="tab.image">
                 <target>Bild</target>
