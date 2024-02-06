@@ -47,6 +47,14 @@ page {
             # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.section.enable
             enable = 0
         }
+        breadcrumb{
+            # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.breadcrumb.enable
+            enable = 1
+            levelnavigation{
+                # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.breadcrumb.levelnavigation.enable
+                enable = 1
+            }
+        }
         footer{
             # cat=gf_sitepackage/menu; type=string; label=LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:constants.gf_sitepackage.menu.footer.value
             value = 20
