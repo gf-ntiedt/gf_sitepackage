@@ -95,6 +95,11 @@
                         "tx_mask_fax": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
+                "tx_mask_internet": {
+                    "tx_mask_gf_addresses": {
+                        "tx_mask_internet": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_logo": {
                     "tx_mask_gf_addresses": {
                         "tx_mask_logo": "varchar(255) DEFAULT '' NOT NULL"
@@ -227,6 +232,24 @@
                     "key": "fax",
                     "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_addresses.tx_mask_fax",
                     "order": 12,
+                    "type": "string"
+                },
+                "tx_mask_internet": {
+                    "config": {
+                        "autocomplete": 1,
+                        "behaviour": {
+                            "allowLanguageSynchronization": 1
+                        },
+                        "eval": "domainname",
+                        "nullable": 0,
+                        "placeholder": "example.com",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_internet",
+                    "inlineParent": "tx_mask_gf_addresses",
+                    "key": "internet",
+                    "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_addresses.tx_mask_internet",
+                    "order": 14,
                     "type": "string"
                 },
                 "tx_mask_logo": {

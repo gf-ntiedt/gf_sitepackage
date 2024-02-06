@@ -10,7 +10,9 @@
                     "columns": [
                         "header",
                         "header_layout",
-                        "tx_mask_gf_addresses_addresses"
+                        "tx_mask_gf_addresses_addresses",
+                        "tx_mask_9b25f6bd238f48",
+                        "tx_mask_gf_address_list_layout"
                     ],
                     "columnsOverride": {
                         "header_layout": {
@@ -32,6 +34,8 @@
                     "descriptions": [
                         "",
                         "",
+                        "",
+                        "",
                         ""
                     ],
                     "icon": "",
@@ -41,13 +45,20 @@
                     "labels": [
                         "",
                         "",
-                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_addresses"
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_addresses",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tab.layout",
+                        "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_address_list_layout"
                     ],
                     "shortLabel": "",
                     "sorting": 3
                 }
             },
             "sql": {
+                "tx_mask_gf_address_list_layout": {
+                    "tt_content": {
+                        "tx_mask_gf_address_list_layout": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_gf_addresses_addresses": {
                     "tt_content": {
                         "tx_mask_gf_addresses_addresses": "varchar(255) DEFAULT '' NOT NULL"
@@ -65,6 +76,48 @@
                     "coreField": 1,
                     "fullKey": "header_layout",
                     "key": "header_layout",
+                    "type": "select"
+                },
+                "tx_mask_9b25f6bd238f48": {
+                    "config": {
+                        "type": "tab"
+                    },
+                    "fullKey": "tx_mask_9b25f6bd238f48",
+                    "key": "9b25f6bd238f48",
+                    "type": "tab"
+                },
+                "tx_mask_gf_address_list_layout": {
+                    "config": {
+                        "behaviour": {
+                            "allowLanguageSynchronization": 1
+                        },
+                        "default": "simple",
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_address_list_layout.simple",
+                                "value": "simple"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "LLL:EXT:gf_sitepackage\/Resources\/Private\/Language\/mask.xlf:tx_mask_gf_address_list_layout.card",
+                                "value": "card"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_gf_address_list_layout",
+                    "key": "gf_address_list_layout",
                     "type": "select"
                 },
                 "tx_mask_gf_addresses_addresses": {
