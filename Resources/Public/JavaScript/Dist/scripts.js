@@ -13,17 +13,19 @@ function smoothscroll(){
 };
 
 /* Nav-Section */
-(new IntersectionObserver(function(e,o){
-    if (e[0].intersectionRatio > 0){
-        document.documentElement.removeAttribute('class');
-        /* to top */
-        document.getElementById('to-top').classList.remove('show');
-    } else {
-        document.documentElement.setAttribute('class','attached');
-        /* to top */
-        document.getElementById('to-top').classList.add('show');
-    };
-})).observe(document.querySelector('#trigger'));
+if(page_menu_section_enable==1){
+    (new IntersectionObserver(function(e,o){
+        if (e[0].intersectionRatio > 0){
+            document.documentElement.removeAttribute('class');
+            /* to top */
+            document.getElementById('to-top').classList.remove('show');
+        } else {
+            document.documentElement.setAttribute('class','attached');
+            /* to top */
+            document.getElementById('to-top').classList.add('show');
+        };
+    })).observe(document.querySelector('#trigger'));
+}
 
 /* to top */
 const totop = document.getElementById("to-top");

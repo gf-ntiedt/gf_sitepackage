@@ -20,8 +20,10 @@ lib.maskContentElement {
     }
 }
 
-tt_content.mask_gf_google_maps{
-    settings{
-        apikey = {$gf_google_maps.apikey}
+tt_content{
+    mask_gf_google_maps{
+        settings{
+            apikey = {$gf_google_maps.apikey}
+        }
     }
 }
