@@ -18,6 +18,12 @@
             <trans-unit id="constants.gf_sitepackage.menu.section.enable">
                 <source>Section menu: Activate</source>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.enable">
+                <source>Breadcrumb menu: Activate</source>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.levelnavigation.enable">
+                <source>Breadcrumb menu: Activate levelbased navigation</source>
+            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.menu.footer.value">
                 <source>Footer menu: List of Page-UIDs</source>
             </trans-unit>

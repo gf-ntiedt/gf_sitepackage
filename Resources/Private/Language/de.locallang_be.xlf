@@ -18,6 +18,12 @@
             <trans-unit id="constants.gf_sitepackage.menu.section.enable">
                 <target>Sprungnavigation: Aktivieren</target>
             </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.enable">
+                <target>Brotkrumennavigation: Aktivieren</target>
+            </trans-unit>
+            <trans-unit id="constants.gf_sitepackage.menu.breadcrumb.levelnavigation.enable">
+                <target>Brotkrumennavigation: Ebenebasierte Navigation aktivieren</target>
+            </trans-unit>
             <trans-unit id="constants.gf_sitepackage.menu.footer.value">
                 <target>Footernavigation: Liste von Seiten-UIDs</target>
             </trans-unit>

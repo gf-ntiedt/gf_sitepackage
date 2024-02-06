@@ -27,106 +27,6 @@ page = PAGE
 page {
     typeNum = 0
 
-    10 = FLUIDTEMPLATE
-    10 {
-        # Template names will be generated automatically by converting the applied
-        # backend_layout, there is no explicit mapping necessary anymore.
-        #
-        # BackendLayout Key
-        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        #
-        # Backend Record
-        # uid: 1 -> 1.html
-        #
-        # Database Entry
-        # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        templateName = TEXT
-        templateName {
-            cObject = TEXT
-            cObject {
-                data = pagelayout
-                required = 1
-                case = uppercamelcase
-                split {
-                    token = pagets__
-                    cObjNum = 1
-                    1.current = 1
-                }
-            }
-            ifEmpty = Default
-        }
-        templateRootPaths {
-            0 = EXT:gf_sitepackage/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:gf_sitepackage/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:gf_sitepackage/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
-        dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-                references.fieldName = media
-            }
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 3
-                includeSpacer = 1
-                as = navMain
-            }
-            40 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
-            40 {
-                languages = auto
-                as = navLang
-            }
-            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            50 {
-                special = rootline
-                special.range =  0|5
-                as = navBreadcrumb
-            }
-            60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            60 {
-                special = directory
-                special.value = {$page.menu.footer.value}
-                as = navFooter
-            }
-            100 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-            100 {
-                table = tx_mask_gf_addresses
-                where = ({#tx_mask_main} = 1)
-                orderBy = tx_mask_name
-                pidInList = 7
-                as = gfaddresses
-            }
-            # 110 see Section menu enabled
-            200 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
-            200 {
-                as = site
-            }
-        }
-
-        settings{
-            rootpageId = {$page.settings.rootpageId}
-            pathPublic = EXT:gf_sitepackage/Resources/Public/
-            defaultHeaderType = {$styles.content.defaultHeaderType}
-            media.additionalConfig.api = 0
-            media.additionalConfig.no-cookie = 1
-            scrollspy = {$page.settings.scrollspy}
-            defaultSpaceBeforeType = {$styles.content.defaultSpaceBeforeType}
-            defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
-            defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
-            defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
-            defaultOrientationHorizontal = {$styles.content.defaultOrientationHorizontal}
-            defaultOrientationVertical = {$styles.content.defaultOrientationVertical}
-        }
-    }
-
     meta {
         viewport = {$page.meta.viewport}
         robots = {$page.meta.robots}
@@ -193,6 +93,11 @@ page {
         }
     }
 
+    jsInline {
+        10 = TEXT
+        10.stdWrap.dataWrap = let page_menu_section_enable = {$page.menu.section.enable};
+    }
+
     includeCSSLibs {
 
     }
@@ -247,6 +152,111 @@ page {
                     <link rel="dns-prefetch" href="https://maps.googleapis.com">
         )
     }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:gf_sitepackage/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:gf_sitepackage/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:gf_sitepackage/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = files
+            10 {
+                references.fieldName = media
+            }
+            20 = menu
+            20 {
+                levels = 3
+                includeSpacer = 1
+                as = navMain
+
+                titleField = nav_title // title
+                dataProcessing {
+                    # Before TYPO3 v12.1 you have to specify the fully-qualified class name of the processor
+                    # dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    # Since TYPO3 v12.1 one can also use the available alias
+                    10 = files
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+            40 = language-menu
+            40 {
+                languages = auto
+                as = navLang
+            }
+            60 = menu
+            60 {
+                special = directory
+                special.value = {$page.menu.footer.value}
+                as = navFooter
+            }
+            100 = database-query
+            100 {
+                table = tx_mask_gf_addresses
+                where = ({#tx_mask_main} = 1)
+                orderBy = tx_mask_name
+                pidInList = 7
+                as = gfaddresses
+            }
+            # 110 see Section menu enabled
+            200 = site
+            200 {
+                as = site
+            }
+        }
+
+        settings{
+            rootpageId = {$page.settings.rootpageId}
+            pathPublic = EXT:gf_sitepackage/Resources/Public/
+            defaultHeaderType = {$styles.content.defaultHeaderType}
+            media.additionalConfig.api = 0
+            media.additionalConfig.no-cookie = 1
+            scrollspy = {$page.settings.scrollspy}
+            defaultSpaceBeforeType = {$styles.content.defaultSpaceBeforeType}
+            defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
+            defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
+            defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+            defaultOrientationHorizontal = {$styles.content.defaultOrientationHorizontal}
+            defaultOrientationVertical = {$styles.content.defaultOrientationVertical}
+        }
+    }
 }
 
 ## Section menu enabled
@@ -254,12 +264,36 @@ page {
     page {
         10{
             dataProcessing {
-                110 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+                110 = database-query
                 110 {
                     table = tt_content
                     where = ({#sectionIndex} = 1)
                     orderBy = sorting
                     as = navSection
+                }
+            }
+        }
+    }
+[end]
+
+## Breadcrumb menu enabled
+[{$page.menu.breadcrumb.enable} == 1]
+    page {
+        10{
+            dataProcessing {
+                50 = menu
+                50 {
+                    special = rootline
+                    special.range =  0|5
+                    as = navBreadcrumb
+                    dataProcessing {
+                        10 = menu
+                        10 {
+                            special = directory
+                            special.value.field =  uid
+                            as = navSub
+                        }
+                    }
                 }
             }
         }
