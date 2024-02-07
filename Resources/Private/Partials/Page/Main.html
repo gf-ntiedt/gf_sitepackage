@@ -11,9 +11,11 @@
         <f:else>
             <div class="bg-body-tertiary px-3 px-md-9 py-0 rounded-2" tabindex="0">
                 <div id="trigger" class="position-absolute"></div>
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
-                <f:render partial="NavBreadcrumb" arguments="{_all}" />
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                <div id="content-main">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                    <f:render partial="NavBreadcrumb" arguments="{_all}" />
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                </div>
             </div>
         </f:else>
     </f:if>
