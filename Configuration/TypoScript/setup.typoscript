@@ -94,8 +94,6 @@ page {
     }
 
     jsInline {
-        10 = TEXT
-        10.stdWrap.dataWrap = let page_menu_section_enable = {$page.menu.section.enable};
     }
 
     includeCSSLibs {
