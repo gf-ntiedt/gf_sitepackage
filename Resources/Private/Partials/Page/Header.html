@@ -12,59 +12,41 @@
         <f:render partial="NavSection" arguments="{navSection:navSection}" />
     </f:if>
     
-    <div id="nav-main-cards" class="">
+    <div id="nav-x" class="position-relative">
         <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
             <f:if condition="!{navitemlvl1.spacer}">
                 <f:if condition="{navitemlvl1.children}">
-                    <div class="container-fluid level-2 collapse desktop bg-light" id="nav-main-{navitemlvl1.data.uid}">
+                    <div class="container-fluid level-2 collapse desktop " id="nav-main-{navitemlvl1.data.uid}">
                         <div class="row bg-light px-3 px-md-9 pt-5 pb-5">
                             <f:for each="{navitemlvl1.children}" as="navitemlvl2">
                                 <div class="col-sm-12 col-md-8 col-lg-6 col-xxl-4 mb-5">
                                     <div class="card" style="">
-                                        <f:link.page
-                                            pageUid="{navitemlvl2.data.uid}"
-                                            aria="{
-                current:'{f:if(condition:navitemlvl2.active,then:\'page\')}',
-                label: navitemlvl2.title
-                }"
-                                            class=""
-                                        >
-                                            <f:if condition="{navitemlvl2.files.0}">
-                                                <f:then>
-                                                    <f:image
-                                                        image="{navitemlvl2.files.0}"
-                                                        title="{navitemlvl2.title}"
-                                                        loading="lazy"
-                                                        class="card-img-top img-fluid"
-                                                    />
-                                                </f:then>
-                                                <f:else>
-                                                    <f:image
-                                                        src="/fileadmin/templates/images/DALLE2.png"
-                                                        title="{navitemlvl2.title}"
-                                                        loading="lazy"
-                                                        class="card-img-top img-fluid"
-                                                    />
-                                                </f:else>
-                                            </f:if>
-                                        </f:link.page>
+                                        <f:if condition="{navitemlvl2.files.0}">
+                                            <f:then>
+                                                <f:image
+                                                    image="{navitemlvl2.files.0}"
+                                                    title="{navitemlvl2.title}"
+                                                    loading="lazy"
+                                                    class="card-img-top img-fluid"
+                                                />
+                                            </f:then>
+                                            <f:else>
+                                                <f:image
+                                                    src="/fileadmin/templates/images/DALLE2.png"
+                                                    title="{navitemlvl2.title}"
+                                                    loading="lazy"
+                                                    class="card-img-top img-fluid"
+                                                />
+                                            </f:else>
+                                        </f:if>
                                         <div class="card-body">
-                                            <f:link.page
-                                                pageUid="{navitemlvl2.data.uid}"
-                                                aria="{
-                current:'{f:if(condition:navitemlvl2.active,then:\'page\')}',
-                label: navitemlvl2.title
-                }"
-                                                class=""
-                                            >
-                                                <h5 class="card-title">{navitemlvl2.title}</h5>
-                                                <f:if condition="{navitemlvl2.data.subtitle}">
-                                                    <h6 class="card-subtitle mb-2 text-muted">{navitemlvl2.data.subtitle}</h6>
-                                                </f:if>
-                                                <f:if condition="{navitemlvl2.data.description}">
-                                                    <p class="card-text">{navitemlvl2.data.description}</p>
-                                                </f:if>
-                                            </f:link.page>
+                                            <h5 class="card-title">{navitemlvl2.title}</h5>
+                                            <f:if condition="{navitemlvl2.data.subtitle}">
+                                                <h6 class="card-subtitle mb-2 text-muted">{navitemlvl2.data.subtitle}</h6>
+                                            </f:if>
+                                            <f:if condition="{navitemlvl2.data.description}">
+                                                <p class="card-text">{navitemlvl2.data.description}</p>
+                                            </f:if>
                                         </div>
                                         <f:if condition="{navitemlvl2.children}">
                                             <ul class="list-group list-group-flush">
@@ -93,31 +75,3 @@
     </div>
 </header>
 
-
-
-
-<f:section name="old">
-    
-    <div class="collapse z-1 justify-content-end level-2 desktop" id="nav-main-{navitemlvl1.data.uid}">
-        
-        <ul class="navbar-nav flex-column">
-            <f:for each="{navitemlvl1.children}" as="navitemlvl2">
-                <li class="nav-item position-relative">
-                    <f:render partial="NavMain" section="ItemLink" arguments="{item:navitemlvl2}" />
-                    
-                    <f:if condition="{navitemlvl2.children}">
-                        <div class="collapse justify-content-end level-3  show" id="nav-main-{navitemlvl2.data.uid}">
-                            <ul class="navbar-nav flex-column">
-                                <f:for each="{navitemlvl2.children}" as="navitemlvl3">
-                                    <li class="nav-item position-relative">
-                                        <f:render partial="NavMain" section="ItemLink" arguments="{item:navitemlvl3}" />
-                                    </li>
-                                </f:for>
-                            </ul>
-                        </div>
-                    </f:if>
-                </li>
-            </f:for>
-        </ul>
-    </div>
-</f:section>
