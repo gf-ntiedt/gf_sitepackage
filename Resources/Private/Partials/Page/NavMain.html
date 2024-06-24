@@ -12,6 +12,7 @@
         main:       gfaddresses.0.data.tx_mask_main,
         email:      gfaddresses.0.data.tx_mask_email
 }">
+    
     <nav class="navbar navbar-expand-lg flex-lg-nowrap px-3 px-md-9 py-5">
         <f:link.page
             pageUid="{settings.rootpageId}"
@@ -32,22 +33,23 @@
         <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse order-5 justify-content-end" id="nav-main">
+        <div class="collapse navbar-collapse order-5 justify-content-end level-1" id="nav-main">
             <ul class="navbar-nav">
                 <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
                     <f:if condition="!{navitemlvl1.spacer}">
-                        <li class="nav-item position-relative">
+                        <li class="nav-item position-relative {f:if(condition:navitemlvl1.hasSubpages,then:'hassubpages')}">
                             <f:render section="ItemLink" arguments="{item:navitemlvl1}" />
                             
                             <f:if condition="{navitemlvl1.children}">
                                 <div class="collapse z-1 justify-content-end level-2" id="nav-main-{navitemlvl1.data.uid}">
+                                    
                                     <ul class="navbar-nav flex-column">
                                         <f:for each="{navitemlvl1.children}" as="navitemlvl2">
                                             <li class="nav-item position-relative">
                                                 <f:render section="ItemLink" arguments="{item:navitemlvl2}" />
                                                 
                                                 <f:if condition="{navitemlvl2.children}">
-                                                    <div class="collapse justify-content-end level-3" id="nav-main-{navitemlvl2.data.uid}">
+                                                    <div class="collapse justify-content-end level-3  show" id="nav-main-{navitemlvl2.data.uid}">
                                                         <ul class="navbar-nav flex-column">
                                                             <f:for each="{navitemlvl2.children}" as="navitemlvl3">
                                                                 <li class="nav-item position-relative">
@@ -94,7 +96,7 @@
                     }"
                 data="{bs-toggle:'collapse'}"
                 defaultScheme=""
-                class="{itemclass} border-bottom border-3 pb-1"
+                class="{itemclass} pb-1"
             >
                 {item.title}
             </f:link.external>
