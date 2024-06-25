@@ -17,6 +17,15 @@ editor:
             - { name: "Button: Light", element: "a", attributes: { class: "btn btn-light" } }
             - { name: "Button: Dark", element: "a", attributes: { class: "btn btn-dark" } }
             - { name: "Button: Link", element: "a", attributes: { class: "btn btn-link" } }
+            - { name: "Font size 1", element: "p", attributes: { class: "fs-1" } }
+            - { name: "Font size 2", element: "p", attributes: { class: "fs-2" } }
+            - { name: "Font size 3", element: "p", attributes: { class: "fs-3" } }
+            - { name: "Font size 4", element: "p", attributes: { class: "fs-4" } }
+            - { name: "Font size 5", element: "p", attributes: { class: "fs-5" } }
+            - { name: "Line height 1", element: "p", attributes: { class: "lh-1" } }
+            - { name: "Line height small", element: "p", attributes: { class: "lh-sm" } }
+            - { name: "Line height base", element: "p", attributes: { class: "lh-base" } }
+            - { name: "Line height large", element: "p", attributes: { class: "lh-lg" } }
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }
@@ -33,9 +42,9 @@ editor:
         format_tags: "p;h1;h2;h3;h4;h5;h6;pre"
 
         justifyClasses:
-            - text-left
+            - text-start
             - text-center
-            - text-right
+            - text-end
             - text-justify
 
         extraPlugins:
