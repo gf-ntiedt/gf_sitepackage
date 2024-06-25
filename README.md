@@ -231,7 +231,7 @@ This could be done at the top and bottom. </p>
 </table>
 <h4>Usage with multiple addresses:</h4>
 <pre><code>
-&lt;f:for each="{gfaddresses}" as="address">
+&lt;f:for each="{addresses}" as="address">
     {address.data.tx_mask_name}
 &lt;/f:for>
 </code></pre>
