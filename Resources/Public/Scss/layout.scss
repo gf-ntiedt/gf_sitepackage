@@ -1,9 +1,24 @@
 @import "bootstrap";
+@import "mixins";
+@import "Fonts/Fonts";
 @import "gf_ce";
 @import "gf_columnizercolumns";
+@import "gf_2cols";
 @import "nav";
 @import "swiper";
 @import "powermail";
+@import "gedankenfolger_products";
+@import "gedankenfolger_magento";
+
+.border-radius-start-0{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+:root,
+[data-bs-theme="light"] {
+    --#{$prefix}font-open-sans: #{inspect($font-family-open-sans)};
+    --#{$prefix}body-font-family: #{inspect($font-family-base)};
+}
 
 .ce-headline-center{
     text-align: center;
@@ -15,34 +30,88 @@
     text-align: left;
 }
 
+.card{
+    --#{$prefix}card-bg: #{$card-bg};
+}
+
+.hide{
+    display: none;
+}
+
+.btn-link {
+    --#{$prefix}btn-font-weight: #{$font-weight-normal};
+    --#{$prefix}btn-color: var(--bs-body-color);
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-border-color: transparent;
+    --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
+    --#{$prefix}btn-hover-border-color: transparent;
+    --#{$prefix}btn-active-color: #{$btn-link-hover-color};
+    --#{$prefix}btn-active-border-color: transparent;
+    --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
+    --#{$prefix}btn-disabled-border-color: transparent;
+    --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
+    --#{$prefix}btn-focus-shadow-rgb: #{$btn-link-focus-shadow-rgb};
+
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: none;
+    }
+}
+
 html{
     &.attached {
-        header{
-            .navbar{
-                padding-top: 0 !important;
-                padding-bottom: 0 !important;
-                .navbar-brand{
-                    img{
-                        &.logo{
-                            width: 100px;
-                        }
+        .navbar{
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            .navbar-brand{
+                img{
+                    &.logo{
+                        width: 100px;
                     }
                 }
             }
         }
     }
-    header{
+    .navbar{
         transition: all 0.25s ease-in;
-        .navbar{
-            transition: all 0.25s ease-in;
-            .navbar-brand{
-                img{
+        .navbar-brand{
+            img{
+            }
+        }
+        #navbar-search{
+            input{
+                background: url(../Icons/icon_search.webp) right no-repeat; background-position-x: calc(100% - 10px);
+                &::placeholder{
+                    color: var(--bs-body-color);
                 }
             }
-            @include media-breakpoint-between(sm,lg) {
-                .navbar-text{
-                    flex: 1;
-                }
+        }
+        @include media-breakpoint-between(sm,lg) {
+            .navbar-text{
+                flex: 1;
+            }
+        }
+    }
+    .preface{
+        &.subpage{
+            position: relative;
+            background-color: var(--bs-primary);
+            background: url(../Images/Page/preface_subpage_dummy.jpg) no-repeat;
+            background-size: 100% auto;
+            background-position-x: right;
+
+            &:after{
+                position: absolute;
+                bottom: 0;
+                z-index: 10;
+                width: 100%;
+                height: 12px;
+                content: '';
+                background: url(../Images/Page/leiste_rest.jpg) no-repeat;
+                background-size: 100% auto;
+                background-position-y: bottom;
             }
         }
     }
@@ -59,6 +128,10 @@ img{
     bottom: 50px;
     z-index: $zindex-modal;
     @include caret(up);
+    &:after{
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+    }
     opacity: 0.0;
     transition: all 0.5s ease-in;
     &.show{
@@ -66,11 +139,16 @@ img{
     }
 }
 
+.bg-orange-img{
+    background-color: var(--bs-primary);
+    background: url(../Images/Page/bg_newsletter.jpg) no-repeat;
+    background-size: cover;
+}
+
 footer{
     *,
     a.nav-link{
-        color: $white;
-        font-size: 1rem;
+        //font-size: 0.875rem;
     }
     a{
         text-decoration: none;
@@ -78,15 +156,10 @@ footer{
             padding: 0;
         }
     }
-}
-
-.nav-link {
-    &:hover,
-    &:focus,
-    &.active,
-    &.show {
-        //font-size: var(--#{$prefix}navbar-hover-font-size);
-        font-weight: bold;
+    address{
+        a{
+            white-space: nowrap;
+        }
     }
 }
 //

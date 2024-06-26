@@ -8,14 +8,14 @@
 // scss-docs-start gray-color-variables
 $white:    #fff;
 $gray-100: #f8f9fa;
-$gray-200: #e9ecef;
+$gray-200: #f4f4f4;
 $gray-300: #dee2e6;
-$gray-400: #cecece;
-$gray-500: #999; //
-$gray-600: #6c757d;
+$gray-400: #ccc;
+$gray-500: #9a9a9a; //
+$gray-600: #666;
 $gray-700: #495057;
 $gray-800: #333; //
-$gray-900: #212529;
+$gray-900: #222;
 $black:    #000;
 // scss-docs-end gray-color-variables
 
@@ -298,14 +298,15 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       #3da4d7;
-$secondary:     $gray-600;
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
+$primary:       #ff6600;
+$secondary:     #e33cd1;
+$success:       #00b779;
+$info:          $gray-200;
+$warning:       #ffdd00;
 $danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
+$light:         #ffffff;
+$dark:          $gray-800;
+$tertiary:          #04b0bf;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,7 +318,8 @@ $theme-colors: (
         "warning":    $warning,
         "danger":     $danger,
         "light":      $light,
-        "dark":       $dark
+        "dark":       $dark,
+        "tertiary":         $tertiary,
 );
 // scss-docs-end theme-colors-map
 
@@ -415,11 +417,11 @@ $spacers: (
         3: $spacer,
         4: $spacer * 1.5,
         5: $spacer * 2.25,
-        6: $spacer * 4.5,
-        7: $spacer * 6,
-        8: $spacer * 7.5,
-        9: $spacer * 9,
-        10: $spacer * 10,
+        6: $spacer * 3.25,
+        7: $spacer * 4.25,
+        8: $spacer * 5.75,
+        9: $spacer * 7.25,
+        10: $spacer * 8.75,
 );
 // scss-docs-end spacer-variables-maps
 
@@ -443,10 +445,10 @@ $body-text-align:           null;
 $body-color:                $gray-900;
 $body-bg:                   $white;
 
-$body-secondary-color:      rgba($body-color, .75);
+$body-secondary-color:      rgba($body-bg, .75);
 $body-secondary-bg:         $gray-200;
 
-$body-tertiary-color:       rgba($body-color, .5);
+$body-tertiary-color:       rgba($body-bg, .5);
 $body-tertiary-bg:          $gray-100;
 
 $body-emphasis-color:       $black;
@@ -458,7 +460,7 @@ $body-emphasis-color:       $black;
 $link-color:                              $primary;
 $link-decoration:                         underline;
 $link-shade-percentage:                   20%;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
+$link-hover-color:                        $dark;
 $link-hover-decoration:                   null;
 
 $stretched-link-pseudo-element:           after;
@@ -477,7 +479,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0);
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem;
+$paragraph-margin-bottom:   $spacer * 2;
 
 
 // Grid breakpoints
@@ -610,9 +612,11 @@ $aspect-ratios: (
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-open-sans:      "Open Sans";
+$font-family-inter:          "Inter", sans-serif;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 // stylelint-enable value-keyword-case
-$font-family-base:            var(--#{$prefix}font-sans-serif);
+$font-family-base:            var(--#{$prefix}font-inter);
 $font-family-code:            var(--#{$prefix}font-monospace);
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
@@ -657,10 +661,10 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5;
+$headings-margin-bottom:      $spacer * 2;
 $headings-font-family:        null;
 $headings-font-style:         null;
-$headings-font-weight:        500;
+$headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.2;
 $headings-color:              inherit;
 // scss-docs-end headings-variables
@@ -840,7 +844,7 @@ $btn-font-size-lg:            $input-btn-font-size-lg;
 
 $btn-border-width:            $input-btn-border-width;
 
-$btn-font-weight:             $font-weight-normal;
+$btn-font-weight:             $font-weight-bold;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
 $btn-focus-width:             $input-btn-focus-width;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow;
@@ -853,9 +857,9 @@ $btn-link-disabled-color:     $gray-600;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%));
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius);
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm);
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg);
+$btn-border-radius:           var(--#{$prefix}border-radius-xl);
+$btn-border-radius-sm:        var(--#{$prefix}border-radius);
+$btn-border-radius-lg:        var(--#{$prefix}border-radius-xl);
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -1213,11 +1217,11 @@ $navbar-toggler-border-radius:      $btn-border-radius;
 $navbar-toggler-focus-width:        $btn-focus-width;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out;
 
-$navbar-light-color:                $white;
-$navbar-light-hover-color:          $white;
-$navbar-light-active-color:         $white;
+$navbar-light-color:                $dark;
+$navbar-light-hover-color:          $primary;
+$navbar-light-active-color:         $primary;
 $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3);
-$navbar-light-icon-color:           $white;
+$navbar-light-icon-color:           $dark;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15);
 $navbar-light-brand-color:          $navbar-light-active-color;
@@ -1351,18 +1355,18 @@ $card-spacer-x:                     $spacer;
 $card-title-spacer-y:               $spacer * .5;
 $card-title-color:                  null;
 $card-subtitle-color:               null;
-$card-border-width:                 var(--#{$prefix}border-width);
+$card-border-width:                 0;
 $card-border-color:                 var(--#{$prefix}border-color-translucent);
 $card-border-radius:                var(--#{$prefix}border-radius);
 $card-box-shadow:                   null;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
 $card-cap-padding-y:                $card-spacer-y * .5;
 $card-cap-padding-x:                $card-spacer-x;
-$card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03);
+$card-cap-bg:                       $body-bg;
 $card-cap-color:                    null;
 $card-height:                       null;
 $card-color:                        null;
-$card-bg:                           var(--#{$prefix}body-bg);
+$card-bg:                           rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
 $card-img-overlay-padding:          $spacer;
 $card-group-margin:                 $grid-gutter-width * .5;
 // scss-docs-end card-variables

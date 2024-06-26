@@ -1,5 +1,4 @@
 .swiper{
-    position: static !important;
     .swiper-slide{
         height: auto;
         .swiper-slide-img{
@@ -24,9 +23,6 @@
     .swiper-button-next{
     }
     .swiper-pagination{
-        position: relative !important;
-        left: unset !important;
-        bottom: 32px !important;
         transition: unset !important;
         .swiper-pagination-bullet{
             width: 13px;
@@ -44,5 +40,11 @@
         width: 100% !important;
     }
     .swiper-caption{
+    }
+}
+
+.gedankenfolger_sliderassets{
+    &.widemode{
+
     }
 }

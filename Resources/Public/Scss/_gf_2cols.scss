@@ -1,0 +1,9 @@
+.gf-2cols{
+    .row{
+        &.align-items-stretch{
+            > div > div{
+                height: 100%;
+            }
+        }
+    }
+}

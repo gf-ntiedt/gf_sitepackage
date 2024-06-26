@@ -1,0 +1,24 @@
+.gedankenfolger-magento{
+    &.gedankenfolger-magento-slider{
+        .swiper{
+            .card{
+                .card-img{
+                    object-fit: contain;
+                }
+            }
+            .swiper-pagination{
+                top: 0;
+                bottom: auto;
+                .swiper-pagination-bullet{
+                    width: 8px;
+                    height: 8px;
+                    margin: 0 2px;
+                    background-color: var(--bs-black);
+                    &.swiper-pagination-bullet-active{
+                        background-color: var(--bs-primary);
+                    }
+                }
+            }
+        }
+    }
+}

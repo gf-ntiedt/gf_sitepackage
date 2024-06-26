@@ -1,17 +1,19 @@
 
 .gf-ce{
-    &:not(.colpos-1){
-        padding-top: nth(map-values($spacers), 5);
-        padding-bottom: nth(map-values($spacers), 5);
-    }
-    &.gf-slider-assets{
+    &.gedankenfolger_sliderassets{
         position: relative;
         &:not(.widemode){
             .swiper{
                 .swiper-slide{
-                    &.swiper-slide-next,
                     &.swiper-slide-active{
                         .swiper-caption{
+                            opacity: .5;
+                            transform: translateY(-100px);
+                        }
+                    }
+                    &.swiper-slide-next{
+                        .swiper-caption{
+                            opacity: 1;
                             transform: translateY(-100px);
                         }
                     }
@@ -46,10 +48,19 @@
             &:not(.lowmode){
                 .swiper{
                     .swiper-caption{
-                        padding: map-get($spacers, 3) map-get($spacers, 3);
+                        padding: map-get($spacers, 5) map-get($spacers, 5);
+                        @include media-breakpoint-up(xsm) {
+                            padding: map-get($spacers, 7) map-get($spacers, 7);
+                        }
                         @include media-breakpoint-up(md) {
                             padding: map-get($spacers, 9) map-get($spacers, 9);
                         }
+                    }
+                    .swiper-button-prev{
+                        left: 0px;
+                    }
+                    .swiper-button-next{
+                        right: 0px;
                     }
                 }
             }
@@ -67,40 +78,107 @@
                 .swiper-caption{
                     display: block;
                     position: absolute;
-                    top: 0;
+                    bottom: 0;
                     left: 0;
-                    *{
+                    *:not(.btn){
                         color: $light;
                     }
                     h3{
-                        font-size: $font-size-base * 8;
-                        font-size: 5.85dvw;
+                        margin-bottom:  map-get($spacers, 3);
+                        font-size: 11dvw;
+                        @include media-breakpoint-up(md) {
+                            font-size: 5.85dvw;
+                        }
                         min-font-size: var(--bs-body-font-size);
                         line-height: $line-height-xs;
                         letter-spacing: .024em;
                     }
                     p{
-                        font-size: $font-size-base * 3.625;
-                        font-size: 2.65dvw;
+                        font-size: 4dvw;
+                        @include media-breakpoint-up(md) {
+                            font-size: 2.65dvw;
+                        }
                         min-font-size: var(--bs-body-font-size);
                         letter-spacing: .028em;
                     }
                 }
+                .swiper-pagination{
+                    bottom: map-get($spacers, 2);
+                    padding: 0 map-get($spacers, 5);
+                    @include media-breakpoint-up(xsm) {
+                        bottom: map-get($spacers, 4);
+                        padding: 0 map-get($spacers, 7);
+                    }
+                    @include media-breakpoint-up(md) {
+                        bottom: map-get($spacers, 7);
+                        padding: 0 map-get($spacers, 9);
+                    }
+                    text-align: left;
+                    .swiper-pagination-bullet{
+                        width: 8px;
+                        height: 8px;
+                        margin: 0 2px;
+                        &.swiper-pagination-bullet-active{
+                            background-color: var(--bs-warning);
+                        }
+                    }
+                }
+            }
+        }
+        &.colpos-1{
+            .swiper{
+                &:after{
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 10;
+                    width: 100%;
+                    height: 12px;
+                    content: '';
+                    background: url(../Images/Page/leiste_start.jpg) no-repeat;
+                    background-size: 100% auto;
+                    background-position-y: bottom;
+                }
+            }
+            &.widemode{
+                &.lowmode{
+                    .swiper{
+                        &:after{
+                            background: url(../Images/Page/leiste_rest.jpg) no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        &:not(.colpos-1){
+            padding-top: nth(map-values($spacers), 5);
+            padding-bottom: nth(map-values($spacers), 5);
+
+            .swiper{
+                .swiper-pagination{
+                    position: relative !important;
+                    left: unset !important;
+                    bottom: 32px !important;
+                }
             }
         }
     }
-    .gf-imagetext{
+    &.gedankenfolger_imagetext{
         position: relative;
         .col-image,
         .col-text{
             //position: relative;
         }
         .col-text{
-            h1,h2,h3,h4,h5,h6,p{
+            h1,h2,h3,h4,h5,h6{
                 word-wrap: break-word;
                 overflow-wrap: break-word;
-                word-break: break-all;
+                word-break: break-word;
                 hyphens: auto;
+            }
+            a{
+                &.btn{
+
+                }
             }
         }
         &.imageorient-0,
@@ -163,6 +241,16 @@
             .col-image{
                 display: flex;
                 justify-content: left;
+            }
+        }
+
+        &.colpos-301{
+            &.layout-grid{
+                &.imageorient-0{
+                    a{
+                        width: 100%;
+                    }
+                }
             }
         }
     }
