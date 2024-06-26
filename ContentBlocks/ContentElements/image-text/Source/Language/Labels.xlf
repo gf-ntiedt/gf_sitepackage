@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-02-29T15:33:01+00:00" product-name="gedankenfolger/image-text">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Image/Text</source>
+			</trans-unit>
+			<trans-unit id="linkwrapall" resname="linkwrapall">
+				<source>Link wraps hole element. Otherwise generate single button.</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_media" resname="tabs.tab_media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="layout.label" resname="layout.label">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="layout.items.grid.label" resname="layout.items.grid.label">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="layout.items.card.label" resname="layout.items.card.label">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="layout.items.cardimageoverlay.label" resname="layout.items.cardimageoverlay.label">
+				<source>Card (Image overlay)</source>
+			</trans-unit>
+			<trans-unit id="layout.items.cardimageoverlaycenteredhalfappendedbutton.label" resname="layout.items.cardimageoverlaycenteredhalfappendedbutton.label">
+				<source>Card (Image overlay with centered half appended button)</source>
+			</trans-unit>
+			<trans-unit id="layout.items.cardimageoverlaycenteredindentedchildtextbutton.label" resname="layout.items.cardimageoverlaycenteredindentedchildtextbutton.label">
+				<source>Card (Image overlay with centered indented child text and button)</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_grid.label" resname="palettes.palette_grid.label">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="grid_width_image.label" resname="grid_width_image.label">
+				<source>Image width (Columns)</source>
+			</trans-unit>
+			<trans-unit id="grid_width_image.description" resname="grid_width_image.description">
+				<source>24 = 100% | 12 = 50%</source>
+			</trans-unit>
+			<trans-unit id="grid_width_text.label" resname="grid_width_text.label">
+				<source>Text width (Columns)</source>
+			</trans-unit>
+			<trans-unit id="grid_width_text.description" resname="grid_width_text.description">
+				<source>24 = 100% | 12 = 50%</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_color.label" resname="palettes.palette_color.label">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="class_button.label" resname="class_button.label">
+				<source>Button: Class</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.label" resname="class_button.items.label">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-primary.label" resname="class_button.items.btn-primary.label">
+				<source>Primary (Orange)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-secondary.label" resname="class_button.items.btn-secondary.label">
+				<source>Secondary (Purple)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-success.label" resname="class_button.items.btn-success.label">
+				<source>Success (Green)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-danger.label" resname="class_button.items.btn-danger.label">
+				<source>Danger (Red)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-warning.label" resname="class_button.items.btn-warning.label">
+				<source>Warning (Yellow)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-info.label" resname="class_button.items.btn-info.label">
+				<source>Info (Grey)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-light.label" resname="class_button.items.btn-light.label">
+				<source>Light (White)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-dark.label" resname="class_button.items.btn-dark.label">
+				<source>Dark (Dark grey)</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.btn-link.label" resname="class_button.items.btn-link.label">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="class_button.items.label" resname="class_button.items.label">
+				<source>Base</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.label" resname="class_text_color.label">
+				<source>Text: Color class</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.label" resname="class_text_color.items.label">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-primary.label" resname="class_text_color.items.text-primary.label">
+				<source>Primary (Orange)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-secondary.label" resname="class_text_color.items.text-secondary.label">
+				<source>Secondary (Purple)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-success.label" resname="class_text_color.items.text-success.label">
+				<source>Success (Green)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-danger.label" resname="class_text_color.items.text-danger.label">
+				<source>Danger (Red)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-warning.label" resname="class_text_color.items.text-warning.label">
+				<source>Warning (Yellow)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-info.label" resname="class_text_color.items.text-info.label">
+				<source>Info (Grey)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-light.label" resname="class_text_color.items.text-light.label">
+				<source>Light (White)</source>
+			</trans-unit>
+			<trans-unit id="class_text_color.items.text-dark.label" resname="class_text_color.items.text-dark.label">
+				<source>Dark (Dark grey)</source>
+			</trans-unit>
+			<trans-unit id="class_background.label" resname="class_background.label">
+				<source>Background: Class</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.label" resname="class_background.items.label">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-primary.label" resname="class_background.items.bg-primary.label">
+				<source>Primary (Orange)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-secondary.label" resname="class_background.items.bg-secondary.label">
+				<source>Secondary (Purple)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-success.label" resname="class_background.items.bg-success.label">
+				<source>Success (Green)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-danger.label" resname="class_background.items.bg-danger.label">
+				<source>Danger (Red)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-warning.label" resname="class_background.items.bg-warning.label">
+				<source>Warning (Yellow)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-info.label" resname="class_background.items.bg-info.label">
+				<source>Info (Grey)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-light.label" resname="class_background.items.bg-light.label">
+				<source>Light (White)</source>
+			</trans-unit>
+			<trans-unit id="class_background.items.bg-dark.label" resname="class_background.items.bg-dark.label">
+				<source>Dark (Dark grey)</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.label" resname="class_text_padding_x.label">
+				<source>X-Axis</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.label" resname="class_text_padding_x.items.label">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-0.label" resname="class_text_padding_x.items.px-0.label">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-1.label" resname="class_text_padding_x.items.px-1.label">
+				<source>1</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-2.label" resname="class_text_padding_x.items.px-2.label">
+				<source>2</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-3.label" resname="class_text_padding_x.items.px-3.label">
+				<source>3</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-4.label" resname="class_text_padding_x.items.px-4.label">
+				<source>4</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-5.label" resname="class_text_padding_x.items.px-5.label">
+				<source>5</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-6.label" resname="class_text_padding_x.items.px-6.label">
+				<source>6</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-7.label" resname="class_text_padding_x.items.px-7.label">
+				<source>7</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-8.label" resname="class_text_padding_x.items.px-8.label">
+				<source>8</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-9.label" resname="class_text_padding_x.items.px-9.label">
+				<source>9</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_text_padding.label" resname="palettes.palette_text_padding.label">
+				<source>Text-Padding</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.label" resname="class_text_padding_y.label">
+				<source>Y-Axis</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.label" resname="class_text_padding_y.items.label">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-0.label" resname="class_text_padding_y.items.py-0.label">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-1.label" resname="class_text_padding_y.items.py-1.label">
+				<source>1</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-2.label" resname="class_text_padding_y.items.py-2.label">
+				<source>2</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-3.label" resname="class_text_padding_y.items.py-3.label">
+				<source>3</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-4.label" resname="class_text_padding_y.items.py-4.label">
+				<source>4</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-5.label" resname="class_text_padding_y.items.py-5.label">
+				<source>5</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-6.label" resname="class_text_padding_y.items.py-6.label">
+				<source>6</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-7.label" resname="class_text_padding_y.items.py-7.label">
+				<source>7</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-8.label" resname="class_text_padding_y.items.py-8.label">
+				<source>8</source>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-9.label" resname="class_text_padding_y.items.py-9.label">
+				<source>9</source>
+			</trans-unit>
+			<trans-unit id="creationDate.format" resname="creationDate.format">
+				<source>m/d/Y - H:i:s</source>
+			</trans-unit>
+			<trans-unit id="updateDate.format" resname="updateDate.format">
+				<source>m/d/Y - H:i:s</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

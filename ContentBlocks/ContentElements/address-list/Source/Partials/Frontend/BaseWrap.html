@@ -1,0 +1,21 @@
+<f:alias map="{
+        pid: data.pid,
+        uid: data.uid,
+        cType: data.CType,
+        colPos: data._raw.colPos,
+        space_before_class: data.space_before_class,
+        space_after_class: data.space_after_class,
+        space_inner_before_class: data.space_inner_before_class,
+        space_inner_after_class: data.space_inner_after_class,
+        gf_sitepackage_container: data.gf_sitepackage_container,
+        defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+        defaultSpaceAfterType: settings.defaultSpaceAfterType,
+        defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+        defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+    }">
+  <div id="c{uid}" class="{cType} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+    <div class="{f:if(condition:gf_sitepackage_container,then:'container-fluid',else:'container')}">
+      {content -> f:format.raw()}
+    </div>
+  </div>
+</f:alias>

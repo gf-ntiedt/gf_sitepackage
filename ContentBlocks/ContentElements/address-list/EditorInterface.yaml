@@ -1,0 +1,32 @@
+name: gedankenfolger/address-list
+title: Gedankenfolger Address List
+group: common
+prefixFields: true
+prefixType: full
+fields:
+  -
+    identifier: header
+    useExistingField: true
+  -
+    identifier: header_layout
+    useExistingField: true
+  -
+    identifier: addresses
+    type: Select
+    label: Addresses
+    renderType: selectMultipleSideBySide
+    foreign_table: tx_gedankenfolger_address
+  -
+    identifier: gedankenfolger/Appearance
+    type: Basic
+  -
+    identifier: layout
+    type: Select
+    label: Layout
+    renderType: selectSingle
+    default: 'simple'
+    items:
+      - label: 'Simple'
+        value: simple
+      - label: 'Card'
+        value: card

@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" target-language="de" date="2024-02-08T12:46:22+00:00" product-name="gedankenfolger/image-text">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+            	<target>Gedankenfolger Bild/Text</target>
+            </trans-unit>
+			<trans-unit id="linkwrapall" resname="linkwrapall">
+				<target>Link umschließt gesamtes Element. Andernfalls generiere einzelne Schaltfläche.</target>
+			</trans-unit>
+            <trans-unit id="tabs.tab_media" resname="tabs.tab_media">
+            	<target>Medien</target>
+            </trans-unit>
+            <trans-unit id="layout.label" resname="layout.label">
+            	<target>Layout</target>
+            </trans-unit>
+            <trans-unit id="layout.items.grid.label" resname="layout.items.grid.label">
+            	<target>Raster</target>
+            </trans-unit>
+            <trans-unit id="layout.items.card.label" resname="layout.items.card.label">
+            	<target>Karte</target>
+            </trans-unit>
+            <trans-unit id="layout.items.cardimageoverlay.label" resname="layout.items.cardimageoverlay.label">
+            	<target>Karte (Bildüberlagerung)</target>
+            </trans-unit>
+            <trans-unit id="layout.items.cardimageoverlaycenteredhalfappendedbutton.label" resname="layout.items.cardimageoverlaycenteredhalfappendedbutton.label">
+            	<target>Karte (Bildüberlagerung mit zentriertem halb angefügtem Knopf)</target>
+            </trans-unit>
+			<trans-unit id="layout.items.cardimageoverlaycenteredindentedchildtextbutton.label" resname="layout.items.cardimageoverlaycenteredindentedchildtextbutton.label">
+            	<target>Karte (Bildüberlagerung mit zentriertem, einrücktem Text und Knopf)</target>
+            </trans-unit>
+            <trans-unit id="palettes.palette_grid.label" resname="palettes.palette_grid.label">
+            	<target>Raster</target>
+            </trans-unit>
+            <trans-unit id="grid_width_image.label" resname="grid_width_image.label">
+            	<target>Rasterbreite_Bild (Spalten)</target>
+            </trans-unit>
+            <trans-unit id="grid_width_text.label" resname="grid_width_text.label">
+            	<target>Rasterbreite_Text (Spalten)</target>
+            </trans-unit>
+            <trans-unit id="palettes.palette_color.label" resname="palettes.palette_color.label">
+            	<target>Farbe</target>
+            </trans-unit>
+            <trans-unit id="class_button.label" resname="class_button.label">
+            	<target>Klasse_Knopf</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.label" resname="class_button.items.label">
+            	<target>Standard</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-primary.label" resname="class_button.items.btn-primary.label">
+            	<target>Primär (Orange)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-secondary.label" resname="class_button.items.btn-secondary.label">
+            	<target>Sekundär (Lila)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-success.label" resname="class_button.items.btn-success.label">
+            	<target>Erfolg (Grün)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-danger.label" resname="class_button.items.btn-danger.label">
+            	<target>Gefahr (Rot)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-warning.label" resname="class_button.items.btn-warning.label">
+            	<target>Warnung (Gelb)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-info.label" resname="class_button.items.btn-info.label">
+            	<target>Info (Grau)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-light.label" resname="class_button.items.btn-light.label">
+            	<target>Leicht (Weiß)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-dark.label" resname="class_button.items.btn-dark.label">
+            	<target>Dunkel (Dunkelgrau)</target>
+            </trans-unit>
+            <trans-unit id="class_button.items.btn-link.label" resname="class_button.items.btn-link.label">
+            	<target>Link</target>
+            </trans-unit>
+			<trans-unit id="class_button.items.label" resname="class_button.items.label">
+				<target>Basis</target>
+			</trans-unit>
+            <trans-unit id="class_text_color.label" resname="class_text_color.label">
+            	<target>Klasse_Textfarbe</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.label" resname="class_text_color.items.label">
+            	<target>Standard</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-primary.label" resname="class_text_color.items.text-primary.label">
+            	<target>Primär (Orange)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-secondary.label" resname="class_text_color.items.text-secondary.label">
+            	<target>Sekundär (Lila)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-success.label" resname="class_text_color.items.text-success.label">
+            	<target>Erfolg (Grün)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-danger.label" resname="class_text_color.items.text-danger.label">
+            	<target>Gefahr (Rot)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-warning.label" resname="class_text_color.items.text-warning.label">
+            	<target>Warnung (Gelb)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-info.label" resname="class_text_color.items.text-info.label">
+            	<target>Info (Grau)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-light.label" resname="class_text_color.items.text-light.label">
+            	<target>Leicht (Weiß)</target>
+            </trans-unit>
+            <trans-unit id="class_text_color.items.text-dark.label" resname="class_text_color.items.text-dark.label">
+            	<target>Dunkel (Dunkelgrau)</target>
+            </trans-unit>
+            <trans-unit id="class_background.label" resname="class_background.label">
+            	<target>Klasse_Hintergrund</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.label" resname="class_background.items.label">
+            	<target>Standard</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-primary.label" resname="class_background.items.bg-primary.label">
+            	<target>Primär (Orange)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-secondary.label" resname="class_background.items.bg-secondary.label">
+            	<target>Sekundär (Lila)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-success.label" resname="class_background.items.bg-success.label">
+            	<target>Erfolg (Grün)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-danger.label" resname="class_background.items.bg-danger.label">
+            	<target>Gefahr (Rot)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-warning.label" resname="class_background.items.bg-warning.label">
+            	<target>Warnung (Gelb)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-info.label" resname="class_background.items.bg-info.label">
+            	<target>Info (Grau)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-light.label" resname="class_background.items.bg-light.label">
+            	<target>Leicht (Weiß)</target>
+            </trans-unit>
+            <trans-unit id="class_background.items.bg-dark.label" resname="class_background.items.bg-dark.label">
+            	<target>Dunkel (Dunkelgrau)</target>
+            </trans-unit>
+            <trans-unit id="class_text_padding_x.label" resname="class_text_padding_x.label">
+            	<target>X-Achse</target>
+            </trans-unit>
+            <trans-unit id="class_text_padding_x.items.label" resname="class_text_padding_x.items.label">
+            	<target>Standard</target>
+            </trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-0.label" resname="class_text_padding_x.items.px-0.label">
+				<target>None</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-1.label" resname="class_text_padding_x.items.px-1.label">
+				<target>1</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-2.label" resname="class_text_padding_x.items.px-2.label">
+				<target>2</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-3.label" resname="class_text_padding_x.items.px-3.label">
+				<target>3</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-4.label" resname="class_text_padding_x.items.px-4.label">
+				<target>4</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-5.label" resname="class_text_padding_x.items.px-5.label">
+				<target>5</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-6.label" resname="class_text_padding_x.items.px-6.label">
+				<target>6</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-7.label" resname="class_text_padding_x.items.px-7.label">
+				<target>7</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-8.label" resname="class_text_padding_x.items.px-8.label">
+				<target>8</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_x.items.px-9.label" resname="class_text_padding_x.items.px-9.label">
+				<target>9</target>
+			</trans-unit>
+			<trans-unit id="palettes.palette_text_padding.label" resname="palettes.palette_text_padding.label">
+				<target>Text-Innenabstand</target>
+			</trans-unit>
+            <trans-unit id="class_text_padding_y.label" resname="class_text_padding_y.label">
+            	<target>Y-Achse</target>
+            </trans-unit>
+            <trans-unit id="class_text_padding_y.items.label" resname="class_text_padding_y.items.label">
+            	<target>Standard</target>
+            </trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-0.label" resname="class_text_padding_y.items.py-0.label">
+				<target>None</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-1.label" resname="class_text_padding_y.items.py-1.label">
+				<target>1</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-2.label" resname="class_text_padding_y.items.py-2.label">
+				<target>2</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-3.label" resname="class_text_padding_y.items.py-3.label">
+				<target>3</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-4.label" resname="class_text_padding_y.items.py-4.label">
+				<target>4</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-5.label" resname="class_text_padding_y.items.py-5.label">
+				<target>5</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-6.label" resname="class_text_padding_y.items.py-6.label">
+				<target>6</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-7.label" resname="class_text_padding_y.items.py-7.label">
+				<target>7</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-8.label" resname="class_text_padding_y.items.py-8.label">
+				<target>8</target>
+			</trans-unit>
+			<trans-unit id="class_text_padding_y.items.py-9.label" resname="class_text_padding_y.items.py-9.label">
+				<target>9</target>
+			</trans-unit>
+            <trans-unit id="creationDate.format" resname="creationDate.format">
+            	<target>TT.MM.JJJJ - HH:MM:SS</target>
+            </trans-unit>
+            <trans-unit id="updateDate.format" resname="updateDate.format">
+            	<target>TT.MM.JJJJ - HH:MM:SS</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

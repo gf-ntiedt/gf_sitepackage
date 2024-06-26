@@ -1,0 +1,130 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{items}">
+        <f:if condition="!{fieldlist}">
+            <f:variable name="fieldlist" value="{0:'header'}" />
+        </f:if>
+        
+        <f:for each="{items}" as="item">
+            <div class="row justify-content-between g-2 pb-2">
+                <f:if condition="{imagefield}">
+                    <f:if condition="{imagefield}=='self'">
+                        <f:then>
+                            <div class="col-md-2">
+                                <f:image
+                                    image="{item}"
+                                    width="240"
+                                    absolute="1"
+                                    loading="lazy"
+                                    title="{f:if(condition:'{item.title}',then:'{item.title}')}"
+                                    class="img-fluid w-100"
+                                />
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{item.{imagefield}} && {item.{imagefield}.0}">
+                                <div class="col-md-2">
+                                    <f:image
+                                        image="{item.{imagefield}.0}"
+                                        width="240"
+                                        absolute="1"
+                                        loading="lazy"
+                                        title="{f:if(condition:'{item.{imagefield}.0.title}',then:'{item.{imagefield}.0.title}')}"
+                                        class="img-fluid w-100"
+                                    />
+                                </div>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:if>
+                <f:if condition="{imagefilefield}">
+                    <f:if condition="{item.{imagefilefield}}">
+                        <div class="col-md-2">
+                            <f:image
+                                src="{item.{imagefilefield}}"
+                                treatIdAsReference="1"
+                                width="240"
+                                absolute="1"
+                                loading="lazy"
+                                class="img-fluid w-100"
+                            />
+                        </div>
+                    </f:if>
+                </f:if>
+                <f:for each="{fieldlist}" as="field">
+                    <div class="col-md" data-field="{field}">
+                        {item.{field} -> f:format.stripTags() -> f:format.raw() -> f:format.crop(maxCharacters:40)}
+                    </div>
+                </f:for>
+                <div class="col-md-auto">
+                    <f:if condition="{imagefield}">
+                        <f:if condition="{imagefield}=='self'">
+                            <f:then>
+                                <f:render section="EditLink" arguments="{
+                                        uid:data.uid,
+                                        ppid:ppid,
+                                        table:table,
+                                        fields:'assets'
+                                    }" />
+                            </f:then>
+                            <f:else>
+                                <f:render section="EditLink" arguments="{
+                                        uid:item.uid,
+                                        ppid:ppid,
+                                        table:table
+                                    }" />
+                            </f:else>
+                        </f:if>
+                    </f:if>
+                </div>
+            </div>
+        </f:for>
+        <hr />
+        <div class="row g-2 pb-2">
+            <div class="col">
+                <button class="btn btn-default btn-borderlessx" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{data.CType}_{data.uid}_info" aria-expanded="false" aria-controls="collapse_{data.CType}_{data.uid}_info">
+                    <core:icon identifier="actions-info" size="small" />
+                </button>
+            </div>
+        </div>
+        <div id="collapse_{data.CType}_{data.uid}_info" class="collapse row g-2 pb-2">
+            <div class="col">
+                <div class="hstack gap-3">
+                    <small class="col-4">PID:</small>
+                    <small class="">{data.pid}</small>
+                </div>
+                <div class="hstack gap-3">
+                    <small class="col-4">UID:</small>
+                    <small class="">{data.uid}</small>
+                </div>
+                <div class="hstack gap-3">
+                    <small class="col-4">Created:</small>
+                    <small class=""><f:format.date format="{cb:translate(key: 'creationDate.format')}">{data.creationDate}</f:format.date></small>
+                </div>
+                <div class="hstack gap-3">
+                    <small class="col-4">Last updated:</small>
+                    <small class=""><f:format.date format="{cb:translate(key: 'updateDate.format')}">{data.updateDate}</f:format.date></small>
+                </div>
+            </div>
+        </div>
+    </f:if>
+    
+    <f:section name="EditLink">
+        <be:link.editRecord
+            uid="{uid}"
+            table="{table}"
+            fields="{fields}"
+            returnUrl="{f:be.uri(route:'web_layout',parameters:'{id: ppid}')}"
+            title="Edit"
+            class="{f:if(condition:class,then:class,else:'btn btn-default btn-borderless')}"
+        >
+            <f:if condition="{content}">
+                <f:then>
+                    {content -> f:format.raw()}
+                </f:then>
+                <f:else>
+                    <core:icon identifier="actions-open" />
+                </f:else>
+            </f:if>
+        </be:link.editRecord>
+    </f:section>
+</html>

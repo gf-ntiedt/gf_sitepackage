@@ -1,0 +1,144 @@
+name: gedankenfolger/magento
+title: Gedankenfolger Magento
+description: ''
+group: common
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Links
+fields:
+  -
+    identifier: TYPO3/Header
+    type: Basic
+    useExistingField: true
+  -
+    identifier: header_link
+    useExistingField: true
+  -
+    identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: gf_sitepackage
+  -
+    identifier: tab_connection
+    label: Connection
+    type: Tab
+  -
+    identifier: connection
+    label: Connection
+    type: Select
+    renderType: selectMultipleSideBySide
+    minitems: 1
+    maxitems: 1
+    required: true
+    foreign_table: tx_gedankenfolger_magentoconnection
+    foreign_table_where: 'AND {#tx_gedankenfolger_magentoconnection}.{#pid} = ###PAGE_TSCONFIG_ID### ORDER BY host'
+    size: 5
+    autoSizeMax: 10
+    fieldControl:
+      editPopup:
+        disabled: false
+        options:
+          windowOpenParameters: 'height=300,width=500,status=0,menubar=0,scrollbars=1'
+      addRecord:
+        disabled: false
+      listModule:
+        disabled: false
+  -
+    identifier: tab_filter
+    label: Filter
+    type: Tab
+  -
+    identifier: conditiontype
+    label: Condition type
+    type: Select
+    renderType: selectSingle
+    default: AND
+    items:
+      - label: 'And'
+        value: AND
+      - label: 'Or'
+        value: OR
+  -
+    identifier: filter
+    label: Filter
+    type: Select
+    renderType: selectMultipleSideBySide
+    items:
+    foreign_table: tx_gedankenfolger_magentofilter
+    foreign_table_where: 'AND {#tx_gedankenfolger_magentofilter}.{#pid} = ###PAGE_TSCONFIG_ID### ORDER BY title'
+    size: 5
+    autoSizeMax: 10
+    fieldControl:
+      editPopup:
+        disabled: false
+        options:
+          windowOpenParameters: 'height=300,width=500,status=0,menubar=0,scrollbars=1'
+      addRecord:
+        disabled: false
+      listModule:
+        disabled: false
+  -
+    identifier: gedankenfolger/Appearance
+    type: Basic
+  -
+    identifier: layout
+    label: Layout
+    type: Select
+    renderType: selectSingle
+    onChange: reload
+    default: 'list'
+    items:
+      - label: 'Default (List)'
+        value: list
+      - label: 'Card'
+        value: card
+      - label: 'Navigation (Only on categories)'
+        value: navigation
+      - label: 'Slider'
+        value: slider
+  -
+    identifier: max
+    label: Max. number of products
+    type: Number
+    default: 12
+    autocomplete: true
+  -
+    identifier: currentpage
+    label: Current page of products
+    type: Number
+    default: 1
+    autocomplete: true
+    required: true
+  -
+    identifier: palette_order
+    label: Order
+    type: Palette
+    fields:
+      -
+        identifier: orderrandom
+        label: Random order
+        type: Checkbox
+        renderType: checkboxToggle
+        default: 1
+      -
+        type: Linebreak
+      -
+        identifier: orderby
+        label: Order by field
+        type: Text
+        autocomplete: true
+        placeholder: created_at
+      -
+        type: Linebreak
+      -
+        identifier: orderdirection
+        label: Order direction
+        type: Select
+        renderType: selectSingle
+        default: ASC
+        items:
+          - label: 'Ascending'
+            value: ASC
+          - label: 'Descending'
+            value: DESC

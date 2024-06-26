@@ -1,0 +1,63 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:alias map="{
+        layout:data.layout
+    }">
+        <div id="c{data.uid}" class="gedankenfolger-magento gedankenfolger-magento-{layout} row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4">
+            <f:for each="{magentoApiData.items}" as="product">
+                <f:alias map="{
+                    id:                     product.id,
+                    ordernumber:            product.sku,
+                    name:                   product.name,
+                    price:                  product.price,
+                    created_at:             product.created_at,
+                    updated_at:             product.updated_at,
+                    media_gallery_entries:  product.media_gallery_entries,
+                    custom_attributes:      product.custom_attributes,
+                    short_description:      '{product.custom_attributes -> v:iterator.filter(propertyName: \'attribute_code\', filter: \'short_description\')}',
+                    is_action:              '{product.custom_attributes -> v:iterator.filter(propertyName: \'attribute_code\', filter: \'is_action\')}',
+                    is_new:                 '{product.custom_attributes -> v:iterator.filter(propertyName: \'attribute_code\', filter: \'is_new\')}'
+                }">
+                    <div class="col">
+                        <div id="c{data.uid}-{id}" class="card h-100">
+                            <f:if condition="{is_new.0.value}=='1' || {is_action.0.value}=='1'">
+                                <div class="card-header">
+                                    <f:if condition="{is_new.0.value}=='1'">
+                                        <span class="badge text-bg-tertiary"><cb:translate key="fe.product.isnew" name="gedankenfolger/magento" /></span>
+                                    </f:if>
+                                    <f:if condition="{is_action.0.value}=='1'">
+                                        <span class="badge text-bg-tertiary"><cb:translate key="fe.product.isaction" name="gedankenfolger/magento" /></span>
+                                    </f:if>
+                                </div>
+                            </f:if>
+                            <f:if condition="{media_gallery_entries} && {media_gallery_entries.0} && {media_gallery_entries.0.media_type} == 'image'">
+                                <f:then>
+                                    <image src="{connection.host}/media/catalog/product{media_gallery_entries.0.file}" loading="lazy" class="card-img img-fluid rounded-0" style="height: 200px;" />
+                                </f:then>
+                                <f:else>
+                                    <image src="{connection.host}/media/catalog/product/placeholder/default/Kein_Abbildung_vorhanden.jpg" loading="lazy" class="card-img img-fluid rounded-0" style="height: 200px;" />
+                                </f:else>
+                            </f:if>
+                            <div class="card-body">
+                                <h5 class="card-title">{name}</h5>
+                                <f:if condition="{short_description.0.value}">
+                                    <f:format.html>{short_description.0.value}</f:format.html>
+                                </f:if>
+                            </div>
+                            <div class="card-footer">
+                                <f:if condition="{language.twoLetterIsoCode}=='de' || {language.twoLetterIsoCode}=='fr'">
+                                    <h5 class="text-end text-primary price">
+                                        {price -> f:format.currency(decimalSeparator: ',',thousandsSeparator: '.', currencySign: '€')}
+                                    </h5>
+                                </f:if>
+                                <f:link.external uri="{connection.host}catalog/product/view/id/{id}" target="_blank" class="btn btn-primary float-end"><cb:translate key="fe.product.link" name="gedankenfolger/magento" /></f:link.external>
+                            </div>
+                        </div>
+                    </div>
+                </f:alias>
+            </f:for>
+        </div>
+    </f:alias>
+</html>

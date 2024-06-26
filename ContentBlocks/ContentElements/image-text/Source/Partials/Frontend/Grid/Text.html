@@ -1,0 +1,19 @@
+<f:if condition="{header} || {bodytext} || {header_link}">
+    <div class="col-sm-{grid_width_text} col-text">
+        <div class="wrap-text {f:if(condition:class_text_padding_x,then:class_text_padding_x,else:defaultTextXPaddingClass)} {f:if(condition:class_text_padding_y,then:class_text_padding_y,else:defaultTextYPaddingClass)}">
+            <f:if condition="{header}">
+                <f:render partial="Frontend/Header" arguments="{
+                            header: header,
+                            layout: header_layout,
+                            positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                            default: settings.defaultHeaderType}" />
+            </f:if>
+            <f:if condition="{bodytext}">
+                {bodytext -> f:format.html()}
+            </f:if>
+            <f:if condition="!{linkwrapall}">
+                <f:render partial="Frontend/Link" arguments="{_all}" />
+            </f:if>
+        </div>
+    </div>
+</f:if>

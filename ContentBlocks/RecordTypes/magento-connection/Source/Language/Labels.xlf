@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-03-28T20:26:49+00:00" product-name="gedankenfolger/magento-connection">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Magento-Connection</source>
+			</trans-unit>
+			<trans-unit id="host.label" resname="host.label">
+				<source>Host</source>
+			</trans-unit>
+			<trans-unit id="code.label" resname="code.label">
+				<source>Store code</source>
+			</trans-unit>
+			<trans-unit id="version.label" resname="version.label">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="endpoint.label" resname="endpoint.label">
+				<source>Endpoint</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_credentials" resname="tabs.tab_credentials">
+				<source>Credentials</source>
+			</trans-unit>
+			<trans-unit id="username.label" resname="username.label">
+				<source>Username</source>
+			</trans-unit>
+			<trans-unit id="password.label" resname="password.label">
+				<source>Password</source>
+			</trans-unit>
+			<trans-unit id="certificate.label" resname="certificate.label">
+				<source>Certificate (PEM)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

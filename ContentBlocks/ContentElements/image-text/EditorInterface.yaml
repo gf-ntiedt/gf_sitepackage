@@ -1,0 +1,244 @@
+name: gedankenfolger/image-text
+title: Gedankenfolger Image/Text
+description: ''
+group: common
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Links
+fields:
+  -
+    identifier: TYPO3/Header
+    type: Basic
+    useExistingField: true
+  -
+    identifier: header_link
+    useExistingField: true
+  -
+    identifier: linkwrapall
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Link wraps hole element. Otherwise generate single button.'
+    default: '0'
+  -
+    identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: gf_sitepackage
+    displayCond:
+      AND:
+        - 'FIELD:layout:!=:cardimageoverlaycenteredhalfappendedbutton'
+  -
+    identifier: tab_media
+    type: Tab
+  -
+    identifier: assets
+    useExistingField: true
+  -
+    identifier: imagewidth
+    useExistingField: true
+  -
+    identifier: imageheight
+    useExistingField: true
+  -
+    identifier: gedankenfolger/Appearance
+    type: Basic
+  -
+    identifier: layout
+    type: Select
+    label: Layout
+    renderType: selectSingle
+    onChange: reload
+    default: 'grid'
+    items:
+      - label: 'Grid'
+        value: grid
+      - label: 'Card'
+        value: card
+      - label: 'Card (Image overlay)'
+        value: cardimageoverlay
+      - label: 'Card (Image overlay with centered half appended button)'
+        value: cardimageoverlaycenteredhalfappendedbutton
+      - label: 'Card (Image overlay with centered indented child text and button)'
+        value: cardimageoverlaycenteredindentedchildtextbutton
+  -
+    identifier: palette_grid
+    type: Palette
+    label: Grid
+    fields:
+      -
+        identifier: grid_width_image
+        type: Number
+        label: Image width
+        description: ""
+        default: 12
+        autocomplete: true
+        range:
+          lower: 1
+          upper: 24
+        displayCond:
+          AND:
+            - 'FIELD:layout:!IN:cardimageoverlay,cardimageoverlaycenteredhalfappendedbutton,cardimageoverlaycenteredindentedchildtextbutton'
+      -
+        identifier: grid_width_text
+        type: Number
+        label: Text width
+        description: ""
+        default: 12
+        autocomplete: true
+        range:
+          lower: 1
+          upper: 24
+        displayCond:
+          AND:
+            - 'FIELD:layout:!IN:cardimageoverlay,cardimageoverlaycenteredhalfappendedbutton,cardimageoverlaycenteredindentedchildtextbutton'
+  -
+    identifier: palette_color
+    type: Palette
+    label: Color
+    fields:
+      -
+        identifier: class_button
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Default'
+            value:
+          - label: 'Primary (Orange)'
+            value: btn-primary
+          - label: 'Secondary (Purple)'
+            value: btn-secondary
+          - label: 'Success (Green)'
+            value: btn-success
+          - label: 'Danger (Red)'
+            value: btn-danger
+          - label: 'Warning (Yellow)'
+            value: btn-warning
+          - label: 'Info (Grey)'
+            value: btn-info
+          - label: 'Light (White)'
+            value: btn-light
+          - label: 'Dark (Dark grey)'
+            value: btn-dark
+          - label: 'Link'
+            value: btn-link
+      -
+        identifier: class_text_color
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Default'
+            value:
+          - label: 'Primary (Orange)'
+            value: text-primary
+          - label: 'Secondary (Purple)'
+            value: text-secondary
+          - label: 'Success (Green)'
+            value: text-success
+          - label: 'Danger (Red)'
+            value: text-danger
+          - label: 'Warning (Yellow)'
+            value: text-warning
+          - label: 'Info (Grey)'
+            value: text-info
+          - label: 'Light (White)'
+            value: text-light
+          - label: 'Dark (Dark grey)'
+            value: text-dark
+        displayCond:
+          AND:
+            - 'FIELD:layout:!=:cardimageoverlaycenteredhalfappendedbutton'
+      -
+        identifier: class_background
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Default'
+            value:
+          - label: 'Primary (Orange)'
+            value: bg-primary
+          - label: 'Secondary (Purple)'
+            value: bg-secondary
+          - label: 'Success (Green)'
+            value: bg-success
+          - label: 'Danger (Red)'
+            value: bg-danger
+          - label: 'Warning (Yellow)'
+            value: bg-warning
+          - label: 'Info (Grey)'
+            value: bg-info
+          - label: 'Light (White)'
+            value: bg-light
+          - label: 'Dark (Dark grey)'
+            value: bg-dark
+  -
+    identifier: imageorient
+    useExistingField: true
+    displayCond:
+      AND:
+        - 'FIELD:layout:!IN:cardimageoverlay,cardimageoverlaycenteredhalfappendedbutton'
+  -
+    identifier: palette_text_padding
+    type: Palette
+    label: Text-Padding
+    fields:
+      -
+        identifier: class_text_padding_x
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Default'
+            value:
+          - label: 'None'
+            value: px-0
+          - label: '1'
+            value: px-1
+          - label: '2'
+            value: px-2
+          - label: '3'
+            value: px-3
+          - label: '4'
+            value: px-4
+          - label: '5'
+            value: px-5
+          - label: '6'
+            value: px-6
+          - label: '7'
+            value: px-7
+          - label: '8'
+            value: px-8
+          - label: '9'
+            value: px-9
+        displayCond:
+          AND:
+            - 'FIELD:layout:!=:cardimageoverlaycenteredhalfappendedbutton'
+      -
+        identifier: class_text_padding_y
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Default'
+            value:
+          - label: 'None'
+            value: py-0
+          - label: '1'
+            value: py-1
+          - label: '2'
+            value: py-2
+          - label: '3'
+            value: py-3
+          - label: '4'
+            value: py-4
+          - label: '5'
+            value: py-5
+          - label: '6'
+            value: py-6
+          - label: '7'
+            value: py-7
+          - label: '8'
+            value: py-8
+          - label: '9'
+            value: py-9
+        displayCond:
+          AND:
+            - 'FIELD:layout:!=:cardimageoverlaycenteredhalfappendedbutton'

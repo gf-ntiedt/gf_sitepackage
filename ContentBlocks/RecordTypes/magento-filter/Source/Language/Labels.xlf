@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-03-28T20:26:49+00:00" product-name="gedankenfolger/magento-filter">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Magento-Filter</source>
+			</trans-unit>
+			<trans-unit id="title.label" resname="title.label">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="fieldname.label" resname="fieldname.label">
+				<source>Fieldname</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.label" resname="conditiontype.label">
+				<source>Condition type</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.eq.label" resname="conditiontype.items.eq.label">
+				<source>Eq</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.finset.label" resname="conditiontype.items.finset.label">
+				<source>Finset</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.from.label" resname="conditiontype.items.from.label">
+				<source>From</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.gt.label" resname="conditiontype.items.gt.label">
+				<source>Gt</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.gteq.label" resname="conditiontype.items.gteq.label">
+				<source>Gteq</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.in.label" resname="conditiontype.items.in.label">
+				<source>In</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.like.label" resname="conditiontype.items.like.label">
+				<source>Like</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.lt.label" resname="conditiontype.items.lt.label">
+				<source>Lt</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.lteq.label" resname="conditiontype.items.lteq.label">
+				<source>Lteq</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.moreq.label" resname="conditiontype.items.moreq.label">
+				<source>Moreq</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.neq.label" resname="conditiontype.items.neq.label">
+				<source>Neq</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.nfinset.label" resname="conditiontype.items.nfinset.label">
+				<source>Nfinset</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.nin.label" resname="conditiontype.items.nin.label">
+				<source>Nin</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.nlike.label" resname="conditiontype.items.nlike.label">
+				<source>Nlike</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.notnull.label" resname="conditiontype.items.notnull.label">
+				<source>Notnull</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.label" resname="conditiontype.items.label">
+				<source>Null</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.to.label" resname="conditiontype.items.to.label">
+				<source>To</source>
+			</trans-unit>
+			<trans-unit id="fieldvalue.label" resname="fieldvalue.label">
+				<source>Fieldvalue</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

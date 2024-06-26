@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-06-06T15:53:16+00:00" product-name="gedankenfolger/simple-records">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Simple-Records</source>
+			</trans-unit>
+			<trans-unit id="preheader.label" resname="preheader.label">
+				<source>Pre-Title</source>
+			</trans-unit>
+			<trans-unit id="title.label" resname="title.label">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="bodytext.label" resname="bodytext.label">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="url.label" resname="url.label">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="media.label" resname="media.label">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="categories.label" resname="categories.label">
+				<source>Category</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

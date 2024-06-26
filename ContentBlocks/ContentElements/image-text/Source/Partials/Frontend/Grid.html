@@ -1,0 +1,62 @@
+<f:alias map="{
+        pid: data.pid,
+        uid: data.uid,
+        cType: data.CType,
+        colPos: data._raw.colPos,
+        imageorient: data.imageorient,
+        images: data.image,
+        assets: data.assets,
+        imagewidth: data.imagewidth,
+        imageheight: data.imageheight,
+        layout: '{data.layout -> f:format.case(mode:\'capital\')}',
+        header: data.header,
+        header_layout: data.header_layout,
+        header_position: data.header_position,
+        bodytext: data.bodytext,
+        header_link: data.header_link,
+        linkwrapall: data.linkwrapall,
+        class_button: data.class_button,
+        class_text_color: data.class_text_color,
+        class_text_padding_x: data.class_text_padding_x,
+        class_text_padding_y: data.class_text_padding_y,
+        class_background: data.class_background,
+        grid_width_image: data.grid_width_image,
+        grid_width_text: data.grid_width_text,
+        space_before_class: data.space_before_class,
+        space_after_class: data.space_after_class,
+        space_inner_before_class: data.space_inner_before_class,
+        space_inner_after_class: data.space_inner_after_class,
+        gf_sitepackage_container: data.gf_sitepackage_container,
+        defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+        defaultSpaceAfterType: settings.defaultSpaceAfterType,
+        defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+        defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+        defaultButtonClass: settings.defaultButtonClass,
+        defaultBackgroundClass: settings.defaultBackgroundClass,
+        defaultTextClass: settings.defaultTextClass,
+        defaultTextXPaddingClass: settings.defaultTextXPaddingClass,
+        defaultTextYPaddingClass: settings.defaultTextYPaddingClass,
+        class_button_full: 'btn {f:if(condition:data.class_button,then:data.class_button,else:settings.defaultButtonClass)} stretched-link rounded-start border-radius-start-0',
+    }">
+  <div id="c{uid}" class="gf-ce {cType}
+        colpos-{colPos} imageorient-{imageorient} layout-{layout->f:format.case(mode:'lower')} {f:if(condition:class_text_color,then:class_text_color,else:defaultTextClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+    <div class="{f:if(condition:gf_sitepackage_container,then:'container-fluid',else:'container')}">
+      <f:if condition="{linkwrapall}">
+        <f:then>
+          <f:render partial="Frontend/Link" arguments="{_all}" contentAs="content">
+            <div class="row cols">
+              <f:render partial="Frontend/{layout}/Image" arguments="{_all}" />
+              <f:render partial="Frontend/{layout}/Text" arguments="{_all}" />
+            </div>
+          </f:render>
+        </f:then>
+        <f:else>
+          <div class="row cols">
+            <f:render partial="Frontend/{layout}/Image" arguments="{_all}" />
+            <f:render partial="Frontend/{layout}/Text" arguments="{_all}" />
+          </div>
+        </f:else>
+      </f:if>
+    </div>
+  </div>
+</f:alias>

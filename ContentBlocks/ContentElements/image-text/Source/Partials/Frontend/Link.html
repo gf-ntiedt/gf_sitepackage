@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{header_link}">
+        <f:variable name="parts" value="" />
+        <f:variable name="Link"><f:spaceless>
+            <f:link.typolink
+                parameter="{header_link}"
+            >
+                {typoLinkParts -> f:variable(name:'parts')}
+            </f:link.typolink>
+        </f:spaceless></f:variable>
+        
+        <f:if condition="{parts.title}">
+            <f:then>
+                <f:link.typolink
+                    parameter="{header_link}"
+                    class="{class_button_full}"
+                    additionalAttributes="{aria-label:parts.title}"
+                >
+                    <f:if condition="{content}">
+                        <f:then>
+                            {content -> f:format.raw()}
+                        </f:then>
+                        <f:else>
+                            {parts.title}
+                        </f:else>
+                    </f:if>
+                </f:link.typolink>
+            </f:then>
+            <f:else>
+                <f:link.typolink
+                    parameter="{header_link}"
+                    class="{class_button_full}"
+                    additionalAttributes="{aria-label:'{f:translate(extensionName:\'GfSitepackage\',key:\'fe.weitereinfos\')}'}"
+                >
+                    <f:if condition="{content}">
+                        <f:then>
+                            {content -> f:format.raw()}
+                        </f:then>
+                        <f:else>
+                            {f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}
+                        </f:else>
+                    </f:if>
+                </f:link.typolink>
+            </f:else>
+        </f:if>
+    </f:if>
+</html>

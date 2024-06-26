@@ -1,0 +1,30 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="TYPO3\CMS\Backend\ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <cb:asset.css identifier="content-block-gedankenfolger-gedankenfolger/magento-be" file="EditorPreview.css"/>
+    
+    <div id="{data.CType}_{data.uid}" class="{data.CType} container-fluid mb-3">
+        <div class="row justify-content-between g-2 border-top pt-1 pb-2">
+            <div class="col-md-2">
+                <strong><cb:translate key="layout.label" />:</strong>
+            </div>
+            <div class="col">
+                <cb:translate key="layout.items.{data.layout}.label" />
+            </div>
+        </div>
+        <div class="row border-top pt-2 pb-2">
+            <div class="col">
+                <strong><cb:translate key="tabs.tab_connection" />:</strong>
+            </div>
+        </div>
+        <f:render partial="Backend/Lister" arguments="{data:data,ppid:data.pid,items:data.connection,table:'tx_gedankenfolger_magentoconnection',fieldlist:'{0:\'host\',1:\'code\',2:\'version\',3:\'endpoint\'}'}" />
+        <div class="row border-top pt-2 pb-2">
+            <div class="col">
+                <strong><cb:translate key="tabs.tab_filter" />:</strong>
+            </div>
+        </div>
+        <f:render partial="Backend/Lister" arguments="{data:data,ppid:data.pid,items:data.filter,table:'tx_gedankenfolger_magentofilter',fieldlist:'{0:\'title\',1:\'fieldname\',2:\'conditiontype\',3:\'fieldvalue\'}'}" />
+    </div>
+</html>

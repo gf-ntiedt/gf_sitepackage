@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" target-language="de" date="2024-03-28T20:26:49+00:00" product-name="gedankenfolger/magento">
+		<header/>
+		<body>
+            <trans-unit id="fe.product.link">
+                <target>zum Produkt</target>
+            </trans-unit>
+            <trans-unit id="fe.product.isnew">
+                <target>Neuheit</target>
+            </trans-unit>
+            <trans-unit id="fe.product.isaction">
+                <target>Topseller</target>
+            </trans-unit>
+            <trans-unit id="fe.product.ordernumber">
+                <target>Bestellnummer</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

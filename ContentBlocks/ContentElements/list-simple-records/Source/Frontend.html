@@ -1,0 +1,100 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:gf="http://typo3.org/ns/Gedankenfolger/GfSitepackage/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+    <f:spaceless>
+        <f:alias map="{
+    pid: data.pid,
+    uid: data.uid,
+    cType: data.CType,
+    colPos: data._raw.colPos,
+    header: data.header,
+    lllWeitereinfos:'{f:translate(extensionName:\'GfSitepackage\',key:\'fe.weitereinfos\')}'
+}">
+            <f:if condition="{simple_records}">
+                <f:asset.css identifier="swiper-css" href="{settings.pathPublic}Css/Swiper/swiper-bundle.min.css" />
+                <f:asset.script identifier="swiper-lib" src="{settings.pathPublic}JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
+                
+                <div id="c{uid}" class="gf-ce {cType} colpos-{colPos} bg-info">
+                    <div class="container-fluid">
+                        <f:if condition="{colPos}!=1">
+                            <f:if condition="{header}">
+                                <div class="row g-5">
+                                    <div class="col-auto">
+                                        <f:render partial="Frontend/Header" arguments="{
+                                    header: header,
+                                    layout: header_layout,
+                                    positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                                    default: settings.defaultHeaderType}" />
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:if>
+                        
+                        <gf:swiper
+                            uid="{cType}"
+                            pagination="1"
+                            navigation="0"
+                            scrollbar="0"
+                            slidesPerView="1"
+                            spaceBetween="0"
+                            speed="300"
+                            delay="0"
+                            pauseOnMouseEnter="1"
+                            initialSlide="1"
+                            loop="1"
+                            a11y="{prevSlideMessage:'{cb:translate(key:\'fe.slider.prev\')}',nextSlideMessage:'{cb:translate(key:\'fe.slider.next\')}'}"
+                            lazy="1"
+                        >
+                            <f:for each="{simple_records}" as="record" iteration="iterator">
+                                <div class="swiper-slide">
+                                    <div class="row g-5">
+                                        <div class="col-12">
+                                            <f:if condition="{record.media.0}">
+                                                <f:image
+                                                    image="{record.media.0}"
+                                                    absolute="1"
+                                                    loading="lazy"
+                                                    class="img-fluid" />
+                                            </f:if>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="swiper-caption pt-5 pb-5">
+                                                <f:if condition="{record.data.preheader}">
+                                                    <h6>{record.data.preheader}</h6>
+                                                </f:if>
+                                                <f:if condition="{record.data.title}">
+                                                    <h2><strong>{record.data.title}</strong></h2>
+                                                </f:if>
+                                                <f:if condition="{record.data.bodytext}">
+                                                    {record.data.bodytext -> f:format.html()}
+                                                </f:if>
+                                                <f:if condition="{record.data.url}">
+                                                    <f:link.typolink
+                                                        parameter="{record.data.url}"
+                                                        class="btn  btn-primary"
+                                                        additionalAttributes="{aria-label:lllWeitereinfos}"
+                                                    >
+                                                        <f:if condition="{typoLinkParts.title}">
+                                                            <f:then>
+                                                                {typoLinkParts.title}
+                                                            </f:then>
+                                                            <f:else>
+                                                                {lllWeitereinfos}
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:link.typolink>
+                                                </f:if>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                            </f:for>
+                        </gf:swiper>
+                    </div>
+                </div>
+            
+            </f:if>
+        </f:alias>
+    </f:spaceless>
+</html>

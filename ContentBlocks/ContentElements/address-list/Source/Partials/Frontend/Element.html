@@ -1,0 +1,18 @@
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+
+<f:render partial="Frontend/Layout/{layout -> f:format.case(mode:'capital')}" arguments="{
+    logo:       address.logo,
+    name:       address.name,
+    claim:      address.claim,
+    phone:      address.phone,
+    fax:        address.fax,
+    street:     address.street,
+    street_nr:  address.street_nr,
+    zip:        address.zip,
+    city:       address.city,
+    country:    address.country,
+    main:       address.main,
+    email:      address.email,
+    internet:   address.internet,
+    locallang: {contentblocks:'LLL:EXT:gf_sitepackage/ContentBlocks/RecordTypes/address/Source/Language/Labels.xlf'}
+}" />

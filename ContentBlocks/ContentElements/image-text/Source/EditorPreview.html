@@ -1,0 +1,77 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="TYPO3\CMS\Backend\ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <cb:asset.css identifier="content-block-gedankenfolger-gedankenfolger/image-text-be" file="EditorPreview.css"/>
+    <div id="{data.CType}_{data.uid}" class="{data.CType} container-fluid mb-3">
+        <div class="row">
+            
+            <f:if condition="{data.assets}">
+                <div class="col-md-4 col-lg-3">
+                    <f:for each="{data.assets}" as="file">
+                        <f:switch expression="{file.originalFile.properties.type}">
+                            <f:case value="2">
+                                <figure class="figure position-relative">
+                                    <f:image
+                                        image="{file}"
+                                        width="560"
+                                        absolute="1"
+                                        loading="lazy"
+                                        title="{file.title}"
+                                        alt="{file.alternative}"
+                                        class="img-fluid"
+                                    />
+                                    <f:if condition="{file.description}">
+                                        <figcaption class="figure-caption">{file.description}</figcaption>
+                                    </f:if>
+                                    <div class="btn-group">
+                                        <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                                        data:data,
+                                        fields:'assets'
+                                    }" />
+                                        <f:render partial="Backend/Lister" section="ViewLink" arguments="{
+                                        data:data,
+                                        fields:'assets'
+                                    }" />
+                                    </div>
+                                </figure>
+                            </f:case>
+                            <f:case value="4">
+                                <figure class="figure w-100 position-relative">
+                                    <div class="ratio ratio-16x9">
+                                        <f:media
+                                            class="img-fluid" file="{file}"
+                                            width="560"
+                                            alt="{file.alternative}"
+                                            title="{file.title}"
+                                            additionalAttributes="{loading:'lazy'}"
+                                            additionalConfig="{settings.media.additionalConfig}"
+                                        />
+                                    </div>
+                                    <f:if condition="{file.description}">
+                                        <figcaption class="figure-caption position-relative d-inline-block">{file.description}</figcaption>
+                                    </f:if>
+                                    <div class="btn-group">
+                                        <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                                        data:data,
+                                        fields:'assets'
+                                    }" />
+                                        <f:render partial="Backend/Lister" section="ViewLink" arguments="{
+                                        data:data,
+                                        fields:'assets'
+                                    }" />
+                                    </div>
+                                </figure>
+                            </f:case>
+                        </f:switch>
+                    </f:for>
+                </div>
+            </f:if>
+            
+            <div class="{f:if(condition:data.assets,then:'col-md-8 col-lg-9',else:'col')}">
+                <f:render partial="Backend/Lister" section="Lister" arguments="{_all}" />
+            </div>
+        </div>
+    </div>
+</html>

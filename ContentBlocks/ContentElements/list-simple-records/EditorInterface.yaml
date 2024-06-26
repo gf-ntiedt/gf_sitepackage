@@ -1,0 +1,34 @@
+name: gedankenfolger/list-simple-records
+title: 'Gedankenfolger List: Simple-Records'
+description: ''
+group: common
+prefixFields: true
+prefixType: full
+fields:
+  -
+    identifier: header
+    useExistingField: true
+  -
+    identifier: categories
+    type: Select
+    renderType: selectSingle
+    label: Filter by Category
+    maxitems: 1
+    items:
+      - label: 'Please select'
+        value: ''
+      - label: 'Tanken'
+        value: 10
+      - label: 'Pumpen'
+        value: 20
+      - label: 'Gefahrstoff'
+        value: 30
+      - label: 'Behälter'
+        value: 40
+      - label: 'Winterdienst'
+        value: 50
+  -
+    identifier: storage_folder
+    type: Relation
+    label: Storage folder
+    allowed: 'pages'

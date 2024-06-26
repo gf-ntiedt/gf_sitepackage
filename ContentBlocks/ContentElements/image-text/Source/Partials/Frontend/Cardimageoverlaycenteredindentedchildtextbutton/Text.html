@@ -1,0 +1,31 @@
+<f:if condition="{header} || {bodytext} || {header_link}">
+    <div class="card-body d-flex flex-column justify-content-between align-items-start card-img-overlay col-sm-24 col-md-18 col-lg-16 col-xl-12 {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)} mx-auto">
+        <div class="{f:if(condition:class_text_padding_x,then:class_text_padding_x,else:defaultTextXPaddingClass)} {f:if(condition:class_text_padding_y,then:class_text_padding_y,else:defaultTextYPaddingClass)} {f:if(condition:class_background,then:class_background,else:defaultBackgroundClass)}">
+            <f:if condition="{header}">
+                <f:render partial="Frontend/Header" arguments="{
+                            header: header,
+                            layout: header_layout,
+                            positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                            additionalClass: 'card-title',
+                            default: settings.defaultHeaderType}" />
+            </f:if>
+            <f:if condition="{bodytext}">
+                {bodytext -> f:format.html()}
+            </f:if>
+            <f:if condition="!{linkwrapall}">
+                <div class="{f:render(section:'textPositionClass',arguments:'{header_position:header_position}')}">
+                    <f:render partial="Frontend/Link" arguments="{_all}" />
+                </div>
+            </f:if>
+        </div>
+    </div>
+</f:if>
+
+
+<f:section name="textPositionClass">
+    <f:switch expression="{header_position}">
+        <f:case value="left">text-start</f:case>
+        <f:case value="right">text-end</f:case>
+        <f:defaultCase>text-{header_position}</f:defaultCase>
+    </f:switch>
+</f:section>

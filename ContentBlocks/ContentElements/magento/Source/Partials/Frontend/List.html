@@ -1,0 +1,31 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:alias map="{
+        uid:data.uid,
+        layout:data.layout,
+    }">
+        <ul id="gedankenfolger-magento-{layout}-{uid}" class="gedankenfolger-magento gedankenfolger-magento-{layout}">
+            <f:for each="{magentoApiData.items}" as="product">
+                <f:alias map="{
+                    uid:                    product.id,
+                    ordernumber:            product.sku,
+                    name:                   product.name,
+                    price:                  product.price,
+                    created_at:             product.created_at,
+                    updated_at:             product.updated_at,
+                    media_gallery_entries:  product.media_gallery_entries,
+                    custom_attributes:      product.custom_attributes,
+                    short_description:      '{product.custom_attributes -> v:iterator.filter(propertyName: \'attribute_code\', filter: \'short_description\')}',
+                    is_action:              '{product.custom_attributes -> v:iterator.filter(propertyName: \'attribute_code\', filter: \'is_action\')}',
+                    is_new:                 '{product.custom_attributes -> v:iterator.filter(propertyName: \'attribute_code\', filter: \'is_new\')}'
+                }">
+                    <li>
+                        {name}
+                    </li>
+                </f:alias>
+            </f:for>
+        </ul>
+    </f:alias>
+</html>

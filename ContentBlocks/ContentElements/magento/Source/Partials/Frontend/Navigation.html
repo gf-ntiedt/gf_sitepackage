@@ -1,0 +1,27 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:alias map="{
+        uid:data.uid,
+        layout:data.layout,
+    }">
+        <ul id="nav-produkte" class="gedankenfolger-magento gedankenfolger-magento-{layout} nav flex-column">
+            <f:for each="{magentoApiData.children_data}" as="category">
+                <f:alias map="{
+                    id:                    category.id,
+                    parent_id:            category.parent_id,
+                    name:                   category.name
+                }">
+                    <f:if condition="{id}<10">
+                        <li class="nav-item">
+                            <f:link.external uri="{connection.host}/{name -> f:format.case(mode:'lower') -> f:cObject(typoscriptObjectPath:'lib.formatCatPage') -> f:format.stripTags()}.html?cat={id}" target="_blank" class="nav-link">
+                                {name}
+                            </f:link.external>
+                        </li>
+                    </f:if>
+                </f:alias>
+            </f:for>
+        </ul>
+    </f:alias>
+</html>

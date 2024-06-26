@@ -1,0 +1,11 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="TYPO3\CMS\Backend\ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <cb:asset.css identifier="content-block-gedankenfolger-gedankenfolger/address-list-be" file="EditorPreview.css"/>
+    
+    <div id="{data.CType}_{data.uid}" class="{data.CType} container-fluid mb-3">
+        <f:render partial="Backend/Lister" arguments="{data:data,ppid:data.pid,items:data.addresses,table:'tx_gedankenfolger_address',fieldlist:'{0:\'name\',1:\'street\',2:\'zip\'}',imagefilefield:'logo'}" />
+    </div>
+</html>

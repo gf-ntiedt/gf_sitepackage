@@ -1,0 +1,30 @@
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+
+<f:spaceless>
+    <f:if condition="{data.addresses}">
+        <f:render partial="Frontend/BaseWrap" arguments="{settings:settings,data:data}" contentAs="content">
+            <f:render section="{data.layout -> f:format.case(mode:'capital')}" arguments="{addresses:data.addresses,layout:data.layout}" />
+        </f:render>
+    </f:if>
+</f:spaceless>
+
+<f:section name="JsCss">
+    <cb:asset.css identifier="content-block-css-gedankenfolger-gedankenfolger/address-list" file="Frontend.css"/>
+    <cb:asset.script identifier="content-block-js-gedankenfolger-gedankenfolger/address-list" file="Frontend.js"/>
+</f:section>
+
+<f:section name="Simple">
+    <div class="row">
+        <f:for each="{addresses}" as="address">
+            <f:render partial="Frontend/Element" arguments="{address:address,layout:layout}" />
+        </f:for>
+    </div>
+</f:section>
+
+<f:section name="Card">
+    <div class="row row-cols-1 row-cols-xsm-2 row-cols-sm-3 row-cols-md-4 g-4 cols">
+        <f:for each="{addresses}" as="address">
+            <f:render partial="Frontend/Element" arguments="{address:address,layout:layout}" />
+        </f:for>
+    </div>
+</f:section>

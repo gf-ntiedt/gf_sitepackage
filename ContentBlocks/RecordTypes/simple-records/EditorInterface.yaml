@@ -1,0 +1,49 @@
+name: gedankenfolger/simple-records
+table: tx_gedankenfolger_simplerecords
+title: Gedankenfolger Simple-Records
+prefixFields: false
+labelField: title
+fields:
+  -
+    identifier: preheader
+    type: Text
+    label: Pre-Title
+  -
+    identifier: title
+    type: Text
+    label: Title
+  -
+    identifier: bodytext
+    type: Textarea
+    label: Text
+    enableRichtext: true
+  -
+    identifier: url
+    type: Link
+    label: Link
+    autocomplete: true
+  -
+    identifier: media
+    type: File
+    label: Image
+    allowed: common-media-types
+    maxitems: 1
+  -
+    identifier: categories
+    type: Select
+    renderType: selectSingle
+    label: Category
+    maxitems: 1
+    items:
+      - label: 'Please select'
+        value: ''
+      - label: 'Tanken'
+        value: 10
+      - label: 'Pumpen'
+        value: 20
+      - label: 'Gefahrstoff'
+        value: 30
+      - label: 'Behälter'
+        value: 40
+      - label: 'Winterdienst'
+        value: 50

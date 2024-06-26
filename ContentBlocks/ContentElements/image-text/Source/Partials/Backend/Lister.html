@@ -1,0 +1,159 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:gfb="http://typo3.org/ns/Gedankenfolger/GfSitepackage/ViewHelpers/Backend"
+    data-namespace-typo3-fluid="true"
+>
+    
+    <f:section name="Lister">
+        <f:if condition="{data.bodytext}">
+            <div class="row">
+                <div class="col-auto">
+                    <p>{data.bodytext -> f:format.stripTags()}</p>
+                </div>
+            </div>
+        </f:if>
+        <div class="vstack">
+            <div class="hstack gap-3">
+                <div class="w-100">
+                    <hr />
+                </div>
+            </div>
+            <div class="hstack gap-3">
+                <div class="me-auto">
+                    <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{data.CType}_{data.uid}_info" aria-expanded="false" aria-controls="collapse_{data.CType}_{data.uid}_info" title="Info">
+                        <core:icon identifier="actions-info" size="small" />
+                    </button>
+                </div>
+                <div class="">
+                    <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{data.CType}_{data.uid}_more" aria-expanded="false" aria-controls="collapse_{data.CType}_{data.uid}_more" title="More">
+                        <core:icon identifier="actions-chevron-down" size="small" />
+                    </button>
+                </div>
+            </div>
+            <div id="collapse_{data.CType}_{data.uid}_info" class="collapse hstack gap-3">
+                <div class="w-100">
+                    <div class="hstack gap-3">
+                        <small class="col-4">PID:</small>
+                        <small class="">{data.pid}</small>
+                    </div>
+                    <div class="hstack gap-3">
+                        <small class="col-4">UID:</small>
+                        <small class="">{data.uid}</small>
+                    </div>
+                    <div class="hstack gap-3">
+                        <small class="col-4">Created:</small>
+                        <small class=""><f:format.date format="{cb:translate(key: 'creationDate.format')}">{data.creationDate}</f:format.date></small>
+                    </div>
+                    <div class="hstack gap-3">
+                        <small class="col-4">Last updated:</small>
+                        <small class=""><f:format.date format="{cb:translate(key: 'updateDate.format')}">{data.updateDate}</f:format.date></small>
+                    </div>
+                </div>
+            </div>
+            <div id="collapse_{data.CType}_{data.uid}_more" class="collapse hstack gap-3">
+                <div class="w-100">
+                    <div class="hstack gap-3">
+                        <small class="col-4">{cb:translate(key: 'layout.label')}:</small>
+                        <small class="">
+                            <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                        data:data,
+                        fields:'layout'
+                    }" />
+                        </small>
+                        <small class="" title="{cb:translate(key: 'layout.items.{data.layout}.label')}">{cb:translate(key: 'layout.items.{data.layout}.label') -> f:format.crop(maxCharacters:28)}</small>
+                    </div>
+                    <f:if condition="{data.header_link}">
+                        <div class="hstack gap-3">
+                            <small class="col-4">{f:translate(key: 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link')}:</small>
+                            <small class="">
+                                <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                        data:data,
+                        fields:'header_link'
+                    }" />
+                            </small>
+                            <small class=""><f:link.typolink parameter="{data.header_link}" target="_blank" absolute="1" class="btn btn-default btn-borderless"><core:icon identifier="actions-eye-link" size="small" /></f:link.typolink></small>
+                        </div>
+                    </f:if>
+                    <div class="hstack gap-3">
+                        <small class="col-4">
+                            <f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imagewidth" />:
+                        </small>
+                        <small class="">
+                            <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                        data:data,
+                        fields:'imagewidth'
+                    }" />
+                        </small>
+                        <small>{data.imagewidth}</small>
+                    </div>
+                    <div class="hstack gap-3">
+                        <small class="col-4">
+                            <f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageheight" />:
+                        </small>
+                        <small class="">
+                            <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                        data:data,
+                        fields:'imageheight'
+                    }" />
+                        </small>
+                        <small>{data.imageheight}</small>
+                    </div>
+                    <div class="hstack gap-3">
+                        <small class="col-4">
+                            <f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient" />:
+                        </small>
+                        <small class="">
+                            <f:render partial="Backend/Lister" section="EditLink" arguments="{
+                        data:data,
+                        fields:'imageorient'
+                    }" />
+                        </small>
+                        <small>
+                            <f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.{data.imageorient}" />
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div id="test" class="hstack gap-3 d-none">
+                <div class="w-100">
+                    <gfb:tableList
+                        record="{data}"
+                        fieldList="layout,header_link,imagewidth"
+                        lllList="LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.view.layout,LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link,LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imagewidth"
+                        class="hstack gap-3"
+                    ></gfb:tableList>
+                </div>
+            </div>
+        </div>
+    </f:section>
+    
+    <f:section name="ViewLink">
+        <f:switch expression="{fields}">
+            <f:case value="assets">
+                <f:link.typolink parameter="{f:uri.image(image: data.assets.0)}" target="_blank" absolute="1" class="{f:if(condition:class,then:class,else:'btn btn-default btn-borderless')}">
+                    <core:icon identifier="actions-eye-link" size="small" />
+                </f:link.typolink>
+            </f:case>
+        </f:switch>
+    </f:section>
+    
+    <f:section name="EditLink">
+        <be:link.editRecord
+            uid="{data.uid}"
+            table="{data.tableName}"
+            fields="{fields}"
+            returnUrl="{f:be.uri(route:'web_layout',parameters:'{id: data.pid}')}"
+            title="Edit"
+            class="{f:if(condition:class,then:class,else:'btn btn-default btn-borderless')}"
+        >
+            <f:if condition="{content}">
+                <f:then>
+                    {content -> f:format.raw()}
+                </f:then>
+                <f:else>
+                    <core:icon identifier="actions-open" />
+                </f:else>
+            </f:if>
+        </be:link.editRecord>
+    </f:section>
+</html>

@@ -1,0 +1,112 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:gf="http://typo3.org/ns/Gedankenfolger/GfSitepackage/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:asset.css identifier="swiper-css" href="{settings.pathPublic}Css/Swiper/swiper-bundle.min.css" />
+    <f:asset.script identifier="swiper-lib" src="{settings.pathPublic}JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
+    
+    <f:alias map="{
+        layout:data.layout,
+        space_before_class: data.space_before_class,
+        space_after_class: data.space_after_class,
+        space_inner_before_class: data.space_inner_before_class,
+        space_inner_after_class: data.space_inner_after_class,
+        gf_sitepackage_container: data.gf_sitepackage_container,
+        defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+        defaultSpaceAfterType: settings.defaultSpaceAfterType,
+        defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+        defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+    }">
+        <div id="c{data.uid}" class="gedankenfolger-magento gedankenfolger-magento-{layout} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)} {f:if(condition:gf_sitepackage_container,then:'container-fluid',else:'container')} ">
+            <gf:tag class="gf-products-products-text">
+                <f:if condition="{data.header}">
+                    <h2 class="text-center">{data.header}</h2>
+                </f:if>
+            </gf:tag>
+            <div class="gedankenfolger-magento-items">
+                <gf:swiper
+                    uid="c{data.uid}_swiper"
+                    navigation="1"
+                    pagination="1"
+                    slidesPerView="1"
+                    spaceBetween="10"
+                    delay="0"
+                    lazy="1"
+                    class="swiper pt-7"
+                    breakpoints="{
+            0: {
+            slidesPerView: 1,
+            spaceBetween: 60
+            },
+            480: {
+            slidesPerView: 1,
+            spaceBetween: 60
+            },
+            568: {
+            slidesPerView: 2,
+            spaceBetween: 60
+            },
+            1024: {
+            slidesPerView: 3,
+            spaceBetween: 60
+            },
+            1200: {
+            slidesPerView: 4,
+            spaceBetween: 60
+            }
+        }"
+                >
+                    <f:for each="{magentoApiData.items}" as="product">
+                        <f:alias map="{
+                uid:                    product.id,
+                ordernumber:            product.sku,
+                name:                   product.name,
+                price:                   product.price,
+                created_at:             product.created_at,
+                updated_at:             product.updated_at,
+                media_gallery_entries:  product.media_gallery_entries,
+                custom_attributes:      product.custom_attributes}">
+                            
+                            <f:variable name="short_description" value="{product.custom_attributes -> v:iterator.filter(propertyName: 'attribute_code', filter: 'short_description')}"></f:variable>
+                            <f:variable name="is_action" value="{product.custom_attributes -> v:iterator.filter(propertyName: 'attribute_code', filter: 'is_action')}"></f:variable>
+                            <f:variable name="is_new" value="{product.custom_attributes -> v:iterator.filter(propertyName: 'attribute_code', filter: 'is_new')}"></f:variable>
+                            
+                            <div class="gf-products-products-product swiper-slide">
+                                <div class="card h-100 border-0">
+                                    <f:if condition="{media_gallery_entries} && {media_gallery_entries.0} && {media_gallery_entries.0.media_type} == 'image'">
+                                        <f:then>
+                                            <image src="{connection.host}/media/catalog/product{media_gallery_entries.0.file}" loading="lazy" class="card-img img-fluid rounded-0" style="height: 200px;" />
+                                        </f:then>
+                                        <f:else>
+                                            <image src="{connection.host}/media/catalog/product/placeholder/default/Kein_Abbildung_vorhanden.jpg" loading="lazy" class="card-img img-fluid rounded-0" style="height: 200px;" />
+                                        </f:else>
+                                    </f:if>
+                                    <div class="card-body p-0 pt-4">
+                                        <p class="card-subtitle mb-4"><small class=""><cb:translate key="fe.product.ordernumber" name="gedankenfolger/magento" />: {ordernumber}</small></p>
+                                        
+                                        <h5 class="card-title mb-4">{name}</h5>
+                                        
+                                        <f:if condition="{short_description.0.value}">
+                                            <f:format.html>{short_description.0.value}</f:format.html>
+                                        </f:if>
+                                    
+                                    </div>
+                                    <div class="card-footer p-0 pt-3 border-0">
+                                        <f:if condition="{language.twoLetterIsoCode}=='de' || {language.twoLetterIsoCode}=='fr'">
+                                            <h5 class="text-end text-primary price">
+                                                {price -> f:format.currency(decimalSeparator: ',',thousandsSeparator: '.', currencySign: '€')}
+                                            </h5>
+                                        </f:if>
+                                        <hr/>
+                                        <f:link.external uri="{connection.host}catalog/product/view/id/{uid}" target="_blank" class="btn btn-primary float-end"><cb:translate key="fe.product.link" name="gedankenfolger/magento" /></f:link.external>
+                                    </div>
+                                </div>
+                            </div>
+                        </f:alias>
+                    </f:for>
+                </gf:swiper>
+            </div>
+        </div>
+    </f:alias>
+</html>

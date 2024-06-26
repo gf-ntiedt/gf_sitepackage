@@ -1,0 +1,50 @@
+<div class="col">
+    <div class="card mb-3 text-bg-light">
+        <div class="card-header">
+            <f:if condition="{logo}">
+                <f:image
+                    src="{logo}"
+                    treatIdAsReference="1"
+                    absolute="1"
+                    title="{name}"
+                    loading="lazy"
+                    class="card-img-top img-fluid mt-3"
+                />
+            </f:if>
+        </div>
+        <div class="card-body">
+            <f:if condition="{name}">
+                <h5 class="card-title">{name}</h5>
+            </f:if>
+            <p class="card-text">
+                <f:if condition="{street} && {street_nr}">
+                    {street} {street_nr}<br>
+                </f:if>
+                <f:if condition="{zip} && {city}">
+                    {zip} {city}<br>
+                </f:if>
+            </p>
+        </div>
+        <div class="list-group list-group-flush">
+            <f:if condition="{phone}">
+                <gf:link.urlscheme
+                    number="{phone}"
+                    aria="{label: '{f:translate(key:\'{locallang.contentblocks}:phone.label\')}'}"
+                    class="list-group-item list-group-item-action list-group-item-light" />
+            </f:if>
+            <f:if condition="{fax}">
+                <gf:link.urlscheme
+                    number="{fax}"
+                    scheme="fax:"
+                    aria="{label: '{f:translate(key:\'{locallang.contentblocks}:fax.label\')}'}"
+                    class="list-group-item list-group-item-action list-group-item-light" />
+            </f:if>
+            <f:if condition="{email}">
+                <f:link.email
+                    email="{email}"
+                    aria="{label: '{f:translate(key:\'{locallang.contentblocks}:email.label\')}'}"
+                    class="list-group-item list-group-item-action list-group-item-light" />
+            </f:if>
+        </div>
+    </div>
+</div>

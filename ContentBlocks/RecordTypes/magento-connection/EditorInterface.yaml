@@ -1,0 +1,67 @@
+name: gedankenfolger/magento-connection
+table: tx_gedankenfolger_magentoconnection
+title: Gedankenfolger Magento-Connection
+prefixFields: false
+labelField:
+  - host
+  - code
+  - endpoint
+fields:
+  -
+    identifier: host
+    label: 'Host'
+    type: Text
+    autocomplete: true
+    placeholder: 'https://shop.domain.de'
+    required: true
+    eval: 'domainname,nospace,trim'
+  -
+    identifier: code
+    label: 'Store code'
+    type: Text
+    autocomplete: true
+    placeholder: 'default | all | store_en'
+    required: true
+    eval: 'lower,nospace,trim,alphanum_x'
+  -
+    identifier: version
+    label: 'Version'
+    type: Text
+    autocomplete: true
+    placeholder: 'V1'
+    default: 'V1'
+    required: true
+    eval: 'nospace,trim,alphanum'
+  -
+    identifier: endpoint
+    label: 'Endpoint'
+    type: Text
+    autocomplete: true
+    placeholder: 'products'
+    required: true
+    eval: 'nospace,trim,alphanum'
+  -
+    identifier: tab_credentials
+    label: Credentials
+    type: Tab
+  -
+    identifier: username
+    label: 'Username'
+    type: Text
+    autocomplete: true
+    required: true
+    eval: 'nospace,trim,alphanum_x'
+  -
+    identifier: password
+    label: 'Password'
+    type: Password
+    required: true
+    hashed: true
+  -
+    identifier: certificate
+    label: 'Certificate (PEM)'
+    type: Text
+    placeholder: 'EXT:gf_sitepackage/Configuration/Magento/sni-cloudflaressl-com.pem'
+    autocomplete: true
+    required: true
+    eval: 'nospace,trim'

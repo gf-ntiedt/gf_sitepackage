@@ -1,0 +1,12 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="TYPO3\CMS\Backend\ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <cb:asset.css identifier="content-block-gedankenfolger-gedankenfolger/slider-assets-be" file="EditorPreview.css"/>
+    
+    <div id="{data.CType}_{data.uid}" class="{data.CType} container-fluid mb-3">
+        <f:render partial="Backend/Lister" arguments="{data:data,ppid:data.pid,items:data.assets,table:'tt_content',fieldlist:'{0:\'title\',1:\'description\'}',imagefield:'self'}" />
+    </div>
+    
+</html>

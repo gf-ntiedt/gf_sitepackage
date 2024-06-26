@@ -1,0 +1,87 @@
+name: gedankenfolger/magento-filter
+table: tx_gedankenfolger_magentofilter
+title: Gedankenfolger Magento-Filter
+prefixFields: false
+labelField: title
+fallbackLabelFields:
+  - fieldname
+  - conditiontype
+  - fieldvalue
+fields:
+  -
+    identifier: title
+    label: Title
+    type: Text
+  -
+    identifier: fieldname
+    label: Fieldname
+    type: Text
+    autocomplete: true
+    placeholder: created_at
+    required: true
+    eval: 'lower,nospace,trim,alphanum_x'
+  -
+    identifier: conditiontype
+    label: Condition type
+    type: Select
+    renderType: selectSingle
+    default: 'eq'
+    items:
+      - label: 'Eq'
+        description: 'Fieldvalue'
+        value: eq
+      - label: 'Finset'
+        description: 'Equals'
+        value: finset
+      - label: 'From'
+        description: 'A value within a set of values'
+        value: from
+      - label: 'Gt'
+        description: 'The beginning of a range. Must be used with to.'
+        value: gt
+      - label: 'Gteq'
+        description: 'Greater than'
+        value: gteq
+      - label: 'In'
+        description: 'Greater than or equal'
+        value: in
+      - label: 'Like'
+        description: 'In. The value can contain a comma-separated list of values.'
+        value: like
+      - label: 'Lt'
+        description: 'Like. The value can contain the SQL wildcard characters when like is specified.'
+        value: lt
+      - label: 'Lteq'
+        description: 'Less than'
+        value: lteq
+      - label: 'Moreq'
+        description: 'Less than or equal'
+        value: moreq
+      - label: 'Neq'
+        description: 'More or equal'
+        value: neq
+      - label: 'Nfinset'
+        description: 'Not equal'
+        value: nfinset
+      - label: 'Nin'
+        description: 'A value that is not within a set of values.'
+        value: nin
+      - label: 'Nlike'
+        description: 'Not in. The value can contain a comma-separated list of values.'
+        value: nlike
+      - label: 'Notnull'
+        description: 'Not like'
+        value: notnull
+      - label: 'Null'
+        description: 'Not null'
+        value: null
+      - label: 'To'
+        description: 'Null'
+        value: to
+  -
+    identifier: fieldvalue
+    label: Fieldvalue
+    type: Text
+    autocomplete: true
+    placeholder: '1'
+    required: true

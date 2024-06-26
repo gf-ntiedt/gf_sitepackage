@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-03-28T20:26:49+00:00" product-name="gedankenfolger/magento">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Magento</source>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="layout.label" resname="layout.label">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="layout.items.list.label" resname="layout.items.list.label">
+				<source>Default (List)</source>
+			</trans-unit>
+			<trans-unit id="layout.items.card.label" resname="layout.items.card.label">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="layout.items.navigation.label" resname="layout.items.navigation.label">
+				<source>Navigation (Only on categories)</source>
+			</trans-unit>
+			<trans-unit id="layout.items.slider.label" resname="layout.items.slider.label">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="max.label" resname="max.label">
+				<source>Max. number of products</source>
+			</trans-unit>
+			<trans-unit id="currentpage.label" resname="currentpage.label">
+				<source>Current page of products</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_order.label" resname="palettes.palette_order.label">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="orderrandom.label" resname="orderrandom.label">
+				<source>Random order</source>
+			</trans-unit>
+			<trans-unit id="orderby.label" resname="orderby.label">
+				<source>Order by field</source>
+			</trans-unit>
+			<trans-unit id="orderdirection.label" resname="orderdirection.label">
+				<source>Order direction</source>
+			</trans-unit>
+			<trans-unit id="orderdirection.items.ASC.label" resname="orderdirection.items.ASC.label">
+				<source>Ascending</source>
+			</trans-unit>
+			<trans-unit id="orderdirection.items.DESC.label" resname="orderdirection.items.DESC.label">
+				<source>Descending</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_connection" resname="tabs.tab_connection">
+				<source>Connection</source>
+			</trans-unit>
+			<trans-unit id="connection.label" resname="connection.label">
+				<source>Connection</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_filter" resname="tabs.tab_filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.label" resname="conditiontype.label">
+				<source>Condition type</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.AND.label" resname="conditiontype.items.AND.label">
+				<source>And</source>
+			</trans-unit>
+			<trans-unit id="conditiontype.items.OR.label" resname="conditiontype.items.OR.label">
+				<source>Or</source>
+			</trans-unit>
+			<trans-unit id="filter.label" resname="filter.label">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="filter.items.is_action eq 1.label" resname="filter.items.is_action eq 1.label">
+				<source>Topseller (Quick)</source>
+			</trans-unit>
+			<trans-unit id="filter.items.is_new eq 1.label" resname="filter.items.is_new eq 1.label">
+				<source>Latest (Quick)</source>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_filter.label" resname="palettes.palette_filter.label">
+				<source>Filter</source>
+			</trans-unit>
+            <trans-unit id="fe.product.link">
+                <source>Go to product</source>
+            </trans-unit>
+            <trans-unit id="fe.product.isnew">
+                <source>Novelty</source>
+            </trans-unit>
+            <trans-unit id="fe.product.isaction">
+                <source>Topseller</source>
+            </trans-unit>
+            <trans-unit id="fe.product.ordernumber">
+                <source>Order number</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

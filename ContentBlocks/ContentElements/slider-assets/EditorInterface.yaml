@@ -1,0 +1,103 @@
+name: gedankenfolger/slider-assets
+title: Gedankenfolger Slider-Assets
+description: ''
+group: common
+prefixFields: true
+prefixType: full
+fields:
+  -
+    identifier: TYPO3/Header
+    type: Basic
+    useExistingField: true
+  -
+    identifier: tab_media
+    type: Tab
+    label: Assets
+  -
+    identifier: assets
+    useExistingField: true
+  -
+    identifier: tab_settings
+    type: Tab
+    label: Settings
+  -
+    identifier: slider_speed
+    type: Number
+    label: 'Slider: Duration of transition between slides (in ms)'
+    default: '300'
+    required: true
+  -
+    identifier: slider_slidesperview
+    type: Number
+    label: 'Slider: Number of slides per view (slides visible at the same time on sliders container).'
+    default: '1'
+    required: true
+    range:
+      lower: '1'
+      upper: '10'
+  -
+    identifier: slider_autoplay_delay
+    type: Number
+    label: 'Slider: Autoplay: Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled'
+    placeholder: '6000'
+  -
+    identifier: slider_autoplay_pauseonmouseenter
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Autoplay: When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.'
+  -
+    identifier: slider_loop
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Enable continuous loop mode'
+  -
+    identifier: slider_initialslide
+    type: Number
+    label: 'Slider: Index number of initial slide.'
+    default: '0'
+    autocomplete: true
+    range:
+      lower: '0'
+  -
+    identifier: tab_layout
+    type: Tab
+    label: Layout
+  -
+    identifier: slider_navigation
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Navigation'
+  -
+    identifier: slider_scrollbar
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Scrollbar'
+  -
+    identifier: slider_pagination
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Pagination'
+  -
+    identifier: slider_widemode
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Widemode'
+    default: '0'
+  -
+    identifier: slider_lowmode
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'Slider: Lowmode'
+    default: '0'
+  -
+    identifier: slider_spacebetween
+    type: Number
+    label: 'Slider: Distance between slides in px.'
+    default: '0'
+    autocomplete: true
+    range:
+      lower: '0'
+      upper: '100'
+  -
+    identifier: gedankenfolger/Appearance
+    type: Basic

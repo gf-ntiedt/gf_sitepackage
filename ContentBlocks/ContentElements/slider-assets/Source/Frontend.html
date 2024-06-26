@@ -1,0 +1,121 @@
+<f:spaceless>
+    <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:gf="http://typo3.org/ns/Gedankenfolger/GfSitepackage/ViewHelpers"
+        data-namespace-typo3-fluid="true">
+        <f:alias map="{
+    pid: data.pid,
+    uid: data.uid,
+    cType: data.CType,
+    colPos: data._raw.colPos,
+    header: data.header,
+    header_layout: data.header_layout,
+    assets: data.assets,
+    space_before_class: data.space_before_class,
+    space_after_class: data.space_after_class,
+    space_inner_before_class: data.space_inner_before_class,
+    space_inner_after_class: data.space_inner_after_class,
+    gf_sitepackage_container: data.gf_sitepackage_container,
+    defaultSpaceBeforeType: settings.defaultSpaceBeforeType,
+    defaultSpaceAfterType: settings.defaultSpaceAfterType,
+    defaultSpaceInnerBeforeType: settings.defaultSpaceInnerBeforeType,
+    defaultSpaceInnerAfterType: settings.defaultSpaceInnerAfterType,
+    defaultButtonClass: settings.defaultButtonClass,
+    defaultBackgroundClass: settings.defaultBackgroundClass,
+    defaultTextClass: settings.defaultTextClass,
+    navigation: data.slider_navigation,
+    pagination: data.slider_pagination,
+    scrollbar: data.slider_scrollbar,
+    slidesperview: data.slider_slidesperview,
+    spacebetween: data.slider_spacebetween,
+    speed: data.slider_speed,
+    autoplay_delay: data.slider_autoplay_delay,
+    autoplay_pauseonmouseenter: data.slider_autoplay_pauseonmouseenter,
+    slider_loop: data.slider_loop,
+    slider_initialslide: data.slider_initialslide,
+    lowmode: data.slider_lowmode,
+    widemode: data.slider_widemode,
+    widemodeClass: '{f:if(condition:data.slider_widemode,then:\'mx-n3\',else:\'px-3\')}',
+    widemodeClassBreakpoint: '{f:if(condition:data.slider_widemode,then:\'mx-md-n9\',else:\'px-md-9\')}',
+    lllWeitereinfos:'{f:translate(extensionName:\'GfSitepackage\',key:\'fe.weitereinfos\')}'
+}">
+            <f:if condition="{assets}">
+                <f:asset.css identifier="swiper-css" href="{settings.pathPublic}Css/Swiper/swiper-bundle.min.css" />
+                <f:asset.script identifier="swiper-lib" src="{settings.pathPublic}JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
+                
+                <div id="c{uid}" class="gf-ce {cType} {f:if(condition:lowmode,then:'lowmode')} {f:if(condition:widemode,then:'widemode')} {widemodeClass} {widemodeClassBreakpoint} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+                    <div class="{f:if(condition:gf_sitepackage_container,then:'container-fluid',else:'container')}  {f:if(condition:'{colPos}==1',then:'px-0')}">
+                        <f:if condition="{colPos}!=1">
+                            <f:if condition="{header}">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <f:render partial="Frontend/Header" arguments="{
+                                    header: header,
+                                    layout: header_layout,
+                                    positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                                    default: settings.defaultHeaderType}" />
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:if>
+                        
+                        <gf:swiper
+                            uid="c{uid}_swiper"
+                            pagination="{pagination}"
+                            navigation="{navigation}"
+                            scrollbar="{scrollbar}"
+                            slidesPerView="{slidesperview}"
+                            spaceBetween="{spacebetween}"
+                            speed="{speed}"
+                            delay="{autoplay_delay}"
+                            pauseOnMouseEnter="{autoplay_pauseonmouseenter}"
+                            initialSlide="{slider_initialslide}"
+                            loop="{slider_loop}"
+                            a11y="{prevSlideMessage:'{cb:translate(key:\'fe.slider.prev\')}',nextSlideMessage:'{cb:translate(key:\'fe.slider.next\')}'}"
+                            lazy="1"
+                        >
+                            <f:for each="{assets}" as="file" iteration="iterator">
+                                <f:if condition="{file.properties.hidden}==0">
+                                    <div class="swiper-slide">
+                                        <f:image
+                                            image="{file}"
+                                            absolute="1"
+                                            loading="lazy"
+                                            class="{f:if(condition: '{colPos}==1',else:'img-fluid')}" />
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                        <f:if condition="{file.description} || {file.title}">
+                                            <div class="swiper-caption">
+                                                <f:if condition="{file.title}">
+                                                    <h3><strong>{file.title -> f:format.case(mode:'upper')}</strong></h3>
+                                                </f:if>
+                                                <f:if condition="{file.description}">
+                                                    <p>{file.description}</p>
+                                                </f:if>
+                                                <f:if condition="{file.link}">
+                                                    <f:link.typolink
+                                                        parameter="{file.link}"
+                                                        class="btn {f:if(condition:class_button,then:class_button,else:defaultButtonClass)} "
+                                                        additionalAttributes="{aria-label:lllWeitereinfos}"
+                                                    >
+                                                        <f:if condition="{typoLinkParts.title}">
+                                                            <f:then>
+                                                                {typoLinkParts.title}
+                                                            </f:then>
+                                                            <f:else>
+                                                                {lllWeitereinfos}
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:link.typolink>
+                                                </f:if>
+                                            </div>
+                                        </f:if>
+                                    </div>
+                                </f:if>
+                            </f:for>
+                        </gf:swiper>
+                    </div>
+                </div>
+                
+            </f:if>
+        </f:alias>
+    </html>
+</f:spaceless>

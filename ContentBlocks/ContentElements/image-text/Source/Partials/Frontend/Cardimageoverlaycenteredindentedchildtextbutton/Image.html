@@ -1,0 +1,46 @@
+<f:if condition="{assets}">
+    <f:variable name="classimage"><f:switch expression="{imageorient}">
+        <f:case value="2">card-img-top w-100 d-block</f:case>
+        <f:case value="10">card-img-bottom w-100 d-block</f:case>
+        <f:defaultCase>img-fluid</f:defaultCase>
+    </f:switch></f:variable>
+    <div class="col-md-{grid_width_image} {classimage}">
+        <f:for each="{assets}" as="file">
+            <f:switch expression="{file.originalFile.properties.type}">
+                <f:case value="2">
+                    <figure class="figure mb-0">
+                        <f:image
+                            image="{file}"
+                            width="{imagewidth}"
+                            height="{imageheight}"
+                            loading="lazy"
+                            absolute="1"
+                            title="{file.title}"
+                            alt="{file.alternative}"
+                            class="figure-img img-fluid mb-0" />
+                        <f:if condition="{file.description}">
+                            <figcaption class="figure-caption">{file.description}</figcaption>
+                        </f:if>
+                    </figure>
+                </f:case>
+                <f:case value="4">
+                    <figure class="figure w-100 mb-0">
+                        <div class="ratio ratio-16x9">
+                            <f:media
+                                class="figure-img img-fluid mb-0" file="{file}"
+                                width="{f:if(condition:imagewidth,then:imagewidth,else:560)}"
+                                height="{f:if(condition:imageheight,then:imageheight,else:315)}"
+                                alt="{file.alternative}"
+                                title="{file.title}"
+                                additionalAttributes="{loading:'lazy'}"
+                                additionalConfig="{settings.media.additionalConfig}" />
+                        </div>
+                        <f:if condition="{file.description}">
+                            <figcaption class="figure-caption position-relative d-inline-block">{file.description}</figcaption>
+                        </f:if>
+                    </figure>
+                </f:case>
+            </f:switch>
+        </f:for>
+    </div>
+</f:if>

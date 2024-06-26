@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-02-28T08:41:32+00:00" product-name="gedankenfolger/slider-assets">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Slider-Assets</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_media" resname="tabs.tab_media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_settings" resname="tabs.tab_settings">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="slider_speed.label" resname="slider_speed.label">
+				<source>Slider: Duration of transition between slides (in ms)</source>
+			</trans-unit>
+			<trans-unit id="slider_slidesperview.label" resname="slider_slidesperview.label">
+				<source>Slider: Number of slides per view (slides visible at the same time on sliders container).</source>
+			</trans-unit>
+			<trans-unit id="slider_autoplay_delay.label" resname="slider_autoplay_delay.label">
+				<source>Slider: Autoplay: Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled</source>
+			</trans-unit>
+			<trans-unit id="slider_autoplay_pauseonmouseenter.label" resname="slider_autoplay_pauseonmouseenter.label">
+				<source>Slider: Autoplay: When enabled autoplay will be paused on pointer (mouse) enter over Swiper container.</source>
+			</trans-unit>
+			<trans-unit id="slider_loop.label" resname="slider_loop.label">
+				<source>Slider: Enable continuous loop mode</source>
+			</trans-unit>
+			<trans-unit id="slider_initialslide.label" resname="slider_initialslide.label">
+				<source>Slider: Index number of initial slide.</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_layout" resname="tabs.tab_layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="slider_navigation.label" resname="slider_navigation.label">
+				<source>Slider: Navigation</source>
+			</trans-unit>
+			<trans-unit id="slider_scrollbar.label" resname="slider_scrollbar.label">
+				<source>Slider: Scrollbar</source>
+			</trans-unit>
+			<trans-unit id="slider_pagination.label" resname="slider_pagination.label">
+				<source>Slider: Pagination</source>
+			</trans-unit>
+			<trans-unit id="slider_widemode.label" resname="slider_widemode.label">
+				<source>Slider: Widemode</source>
+			</trans-unit>
+			<trans-unit id="slider_lowmode.label" resname="slider_lowmode.label">
+				<source>Slider: Lowmode</source>
+			</trans-unit>
+			<trans-unit id="slider_spacebetween.label" resname="slider_spacebetween.label">
+				<source>Slider: Distance between slides in px.</source>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="fe.slider.prev" resname="fe.slider.prev">
+				<source>Previous</source>
+			</trans-unit>
+			<trans-unit id="fe.slider.next" resname="fe.slider.next">
+				<source>Next</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

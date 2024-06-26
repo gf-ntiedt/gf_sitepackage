@@ -1,0 +1,41 @@
+<div class="col">
+    <p>
+        <f:if condition="{name}">
+            <strong>{name}</strong><br>
+        </f:if>
+        <f:if condition="{street} && {street_nr}">
+            {street} {street_nr}<br>
+        </f:if>
+        <f:if condition="{zip} && {city}">
+            {zip} {city}<br>
+        </f:if>
+        <f:if condition="{phone}">
+            {f:translate(key:'{locallang.contentblocks}:phone.label')}:
+            <gf:link.urlscheme
+                number="{phone}"
+                aria="{label: '{f:translate(key:\'{locallang.contentblocks}:phone.label\')}'}"
+                class="" /><br>
+        </f:if>
+        <f:if condition="{fax}">
+            {f:translate(key:'{locallang.contentblocks}:fax.label')}:
+            <gf:link.urlscheme
+                number="{fax}"
+                scheme="fax:"
+                aria="{label: '{f:translate(key:\'{locallang.contentblocks}:fax.label\')}'}"
+                class="" />
+        </f:if>
+    </p>
+    <p>
+        <f:if condition="{email}">
+            {f:translate(key:'{locallang.contentblocks}:email.label')}:
+            <f:link.email
+                email="{email}"
+                aria="{label: '{f:translate(key:\'{locallang.contentblocks}:email.label\')}'}"
+                class="" /><br>
+        </f:if>
+        <f:if condition="{internet}">
+            {f:translate(key:'{locallang.contentblocks}:internet.label')}:
+            <f:link.external uri="{internet}" target="_blank">{internet}</f:link.external>
+        </f:if>
+    </p>
+</div>

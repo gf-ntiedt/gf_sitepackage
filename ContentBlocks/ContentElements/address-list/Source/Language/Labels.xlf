@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-02-28T08:41:32+00:00" product-name="address-list">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Gedankenfolger Address List</source>
+			</trans-unit>
+			<trans-unit id="addresses.label" resname="addresses.label">
+				<source>Addresses</source>
+			</trans-unit>
+			<trans-unit id="layout.label" resname="layout.label">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="layout.items.simple.label" resname="layout.items.simple.label">
+				<source>Simple</source>
+			</trans-unit>
+			<trans-unit id="layout.items.card.label" resname="layout.items.card.label">
+				<source>Card</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
