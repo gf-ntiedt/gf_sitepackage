@@ -9,6 +9,12 @@
             <trans-unit id="constants.gf_sitepackage.settings.rootpageId">
                 <source>Rootpage-ID</source>
             </trans-unit>
+            <trans-unit id="pages.palette_additional">
+                <source>Additional</source>
+            </trans-unit>
+            <trans-unit id="pages.gf_sitepackage_link">
+                <source>Link</source>
+            </trans-unit>
             <trans-unit id="tt_content.gf_2cols">
                 <source>2 Columns</source>
             </trans-unit>
@@ -97,7 +103,7 @@
                 <source>23/1</source>
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_columnwidths">
-                <source>Grid width</source>
+                <source>Column count</source>
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_breakpoint">
                 <source>Breakpoint</source>
@@ -164,6 +170,9 @@
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_type">
                 <source>Type</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_type.cardgroup">
+                <source>Gruppe aus Karten</source>
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_type.slidercontents">
                 <source>Inhalts-Slider (Swiper)</source>
@@ -371,6 +380,24 @@
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_stretch">
                 <source>Stretch (> 1400px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container">
+                <source>Container</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.description">
+                <source>Select "off" for responsive, fixed-width container or "on" for full width container, spanning the entire width of the viewport.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.label">
+                <source>Fluid</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.labelChecked">
+                <source>On</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.labelUnchecked">
+                <source>Off</source>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_layout">
+                <source>Layout</source>
             </trans-unit>
         </body>
     </file>

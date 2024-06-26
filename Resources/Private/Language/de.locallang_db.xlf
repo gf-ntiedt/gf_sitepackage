@@ -97,7 +97,7 @@
                 <target>23/1</target>
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_columnwidths">
-                <target>Rasterbreite</target>
+                <target>Spaltenanzahl</target>
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_breakpoint">
                 <target>Haltepunkt</target>
@@ -164,6 +164,9 @@
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_type">
                 <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_type.cardgroup">
+                <target>Group of cards</target>
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_type.slidercontents">
                 <target>Content-Slider (Swiper)</target>
@@ -371,6 +374,24 @@
             </trans-unit>
             <trans-unit id="tt_content.gf_sitepackage_orientation_vertical.align_items_xxl_stretch">
                 <target>Gestreckt (> 1400px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container">
+                <target>Container</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.description">
+                <target>Wählen Sie "Aus" für einen reaktionsfähigen Container mit fester Breite oder "Ein" für einen Container in voller Breite, der sich über die gesamte Breite des Ansichtsfensters erstreckt.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.label">
+                <target>Fluid</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.labelChecked">
+                <target>An</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_container.labelUnchecked">
+                <target>Aus</target>
+            </trans-unit>
+            <trans-unit id="tt_content.gf_sitepackage_layout">
+                <target>Darstellung</target>
             </trans-unit>
         </body>
     </file>

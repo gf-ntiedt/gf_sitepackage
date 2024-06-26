@@ -39,6 +39,15 @@ lib.dynamicContent {
             data = DB:pages:{register:pageUid}:content_from_pid
             data.insertData = 1
         }
+        slide.cObject = TEXT
+        slide.cObject {
+            field = slide
+            ifEmpty = 0
+        }
+        cType.cObject = TEXT
+        cType.cObject {
+            field = cType
+        }
         wrap.cObject = TEXT
         wrap.cObject {
             field = wrap
@@ -52,9 +61,16 @@ lib.dynamicContent {
             orderBy = sorting
             where = {#colPos}={register:colPos}
             where.insertData = 1
+            where.override = ({#colPos}={register:colPos} AND {#CType}='{register:cType}')
+            where.override{
+                if.isTrue.field = cType
+                insertData = 1
+            }
             pidInList.data = register:pageUid
             pidInList.override.data = register:contentFromPid
         }
+        slide = {register:slide}
+        slide.insertData = 1
         stdWrap {
             dataWrap = {register:wrap}
             required = 1

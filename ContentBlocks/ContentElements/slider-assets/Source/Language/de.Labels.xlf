@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" target-language="de" date="2024-02-28T08:41:32+00:00" product-name="gedankenfolger/slider-assets">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<target>Gedankenfolger Slider-Assets</target>
+			</trans-unit>
+			<trans-unit id="tabs.tab_media" resname="tabs.tab_media">
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tabs.tab_settings" resname="tabs.tab_settings">
+				<target>Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="slider_speed.label" resname="slider_speed.label">
+				<target>Slider: Dauer des Übergangs zwischen Folien (in ms)</target>
+			</trans-unit>
+			<trans-unit id="slider_slidesperview.label" resname="slider_slidesperview.label">
+				<target>Slider: Anzahl der Folien pro Ansicht (Folien, die gleichzeitig im Slider-Container sichtbar sind).</target>
+			</trans-unit>
+			<trans-unit id="slider_autoplay_delay.label" resname="slider_autoplay_delay.label">
+				<target>Slider: Autoplay: Verzögerung zwischen den Übergängen (in ms). Wenn dieser Parameter nicht angegeben ist, wird das automatische Abspielen deaktiviert</target>
+			</trans-unit>
+			<trans-unit id="slider_autoplay_pauseonmouseenter.label" resname="slider_autoplay_pauseonmouseenter.label">
+				<target>Slider: Autoplay: Wenn aktiviert, wird das automatische Abspielen pausiert, wenn der Zeiger (Maus) den Swiper-Container betritt.</target>
+			</trans-unit>
+			<trans-unit id="slider_loop.label" resname="slider_loop.label">
+				<target>Slider: Kontinuierlichen Schleifenmodus aktivieren</target>
+			</trans-unit>
+			<trans-unit id="slider_initialslide.label" resname="slider_initialslide.label">
+				<target>Slider: Indexnummer der Anfangsfolie.</target>
+			</trans-unit>
+			<trans-unit id="tabs.tab_layout" resname="tabs.tab_layout">
+				<target>Layout</target>
+			</trans-unit>
+			<trans-unit id="slider_navigation.label" resname="slider_navigation.label">
+				<target>Slider: Navigation</target>
+			</trans-unit>
+			<trans-unit id="slider_scrollbar.label" resname="slider_scrollbar.label">
+				<target>Slider: Bildlaufleiste</target>
+			</trans-unit>
+			<trans-unit id="slider_pagination.label" resname="slider_pagination.label">
+				<target>Slider: Seitennummerierung</target>
+			</trans-unit>
+			<trans-unit id="slider_widemode.label" resname="slider_widemode.label">
+				<target>Slider: Breitmodus</target>
+			</trans-unit>
+			<trans-unit id="slider_lowmode.label" resname="slider_lowmode.label">
+				<target>Slider: Niedrigmodus</target>
+			</trans-unit>
+			<trans-unit id="slider_spacebetween.label" resname="slider_spacebetween.label">
+				<target>Slider: Abstand zwischen den Folien in px.</target>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<target></target>
+			</trans-unit>
+			<trans-unit id="fe.slider.prev" resname="fe.slider.prev">
+				<target>Zurück</target>
+			</trans-unit>
+			<trans-unit id="fe.slider.next" resname="fe.slider.next">
+				<target>Weiter</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

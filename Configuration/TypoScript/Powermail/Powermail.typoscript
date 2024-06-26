@@ -18,6 +18,7 @@ plugin.tx_powermail {
         layoutRootPaths {
             0 = EXT:powermail/Resources/Private/Layouts/
             1 = {$plugin.tx_powermail.view.layoutRootPath}
+            2 = EXT:gf_sitepackage/Resources/Private/Powermail/Layouts/
         }
     }
 }

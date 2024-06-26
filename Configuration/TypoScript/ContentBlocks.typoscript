@@ -1,0 +1,123 @@
+lib.contentBlock {
+    settings{
+        pathPublic = EXT:gf_sitepackage/Resources/Public/
+        defaultHeaderType = {$styles.content.defaultHeaderType}
+        defaultSpaceBeforeType = {$styles.content.defaultSpaceBeforeType}
+        defaultSpaceAfterType = {$styles.content.defaultSpaceAfterType}
+        defaultSpaceInnerBeforeType = {$styles.content.defaultSpaceInnerBeforeType}
+        defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
+        defaultButtonClass = {$styles.content.defaultButtonClass}
+        defaultBackgroundClass = {$styles.content.defaultBackgroundClass}
+        defaultTextClass = {$styles.content.defaultTextClass}
+        defaultTextXPaddingClass = {$styles.content.defaultTextXPaddingClass}
+        defaultTextYPaddingClass = {$styles.content.defaultTextYPaddingClass}
+    }
+    dataProcessing {
+        5 = site-language
+        5 {
+            as = language
+        }
+    }
+    view{
+        partialRootPaths {
+            100 = EXT:gf_sitepackage/Resources/Private/Partials/ContentElements/
+        }
+    }
+}
+
+tt_content{
+    gedankenfolger_magento{
+        dataProcessing {
+            100 = database-query
+            100 {
+                table = tx_gedankenfolger_magentoconnection
+                #                    where = ({#main} = 1)
+                uidInList.field = gedankenfolger_magento_connection
+                orderBy = sorting
+                pidInList = 56
+                as = connection
+            }
+            110 = database-query
+            110 {
+                table = tx_gedankenfolger_magentofilter
+                #            where = ({#uid} = 1)
+                pidInList = 25
+                uidInList.field = gedankenfolger_magento_filter
+                orderBy = sorting
+                as = filter
+            }
+            120 = Gedankenfolger\GfSitepackage\DataProcessing\MagentoApiProcessor
+            120 {
+                as = magentoApiData
+                #            max.field = tx_gedankenfolgerproducts_gf_products_max
+                #            max.ifEmpty = 12
+                #            currentpage.field = tx_gedankenfolgerproducts_gf_products_currentpage
+                #            currentpage.ifEmpty = 1
+                #            orderrandom.field = tx_gedankenfolgerproducts_gf_products_orderrandom
+                #            orderrandom.ifEmpty = 1
+                #            orderby.field = tx_gedankenfolgerproducts_gf_products_orderby
+                #            orderby.ifEmpty = created_at
+                #            orderdirection.field = tx_gedankenfolgerproducts_gf_products_orderdirection
+                #            orderdirection.ifEmpty = ASC
+
+
+                #            connection.field = tx_gedankenfolgerproducts_gf_products_connection
+                #            conditiontype.field = tx_gedankenfolgerproducts_gf_products_conditiontype
+
+                #            cacheIdentifier = 'unique_cache_identifier_for_this_element'
+                #            cacheLifetime = 3600
+                #            apiUrl = 'https://your-magento-site.com'
+                #            apiVersion = 'V1'
+                #            apiEndpoint = 'products'
+                #            cafile = '/path/to/your/cacert.pem'
+                #            username = 'yourUsername'
+                #            password = 'yourPassword'
+                #            searchCriteria {
+                #                field1 = 'value1'
+                #                field2 = 'value2'
+                #            }
+                #
+            }
+        }
+    }
+    gedankenfolger_listsimplerecords{
+        dataProcessing {
+            100 = database-query
+            100 {
+                table = tx_gedankenfolger_simplerecords
+                pidInList.field = gedankenfolger_listsimplerecords_storage_folder
+                where.if{
+                    isTrue.field = gedankenfolger_listsimplerecords_categories
+                }
+                where.wrap = ({#categories} = '|')
+                where.data = field:gedankenfolger_listsimplerecords_categories
+#                orderBy = sorting
+                as = simple_records
+                dataProcessing {
+                    10 = files
+                    10 {
+                        references.fieldName = media
+                        as = media
+                    }
+                }
+            }
+        }
+    }
+}
+
+[request && traverse(request.getQueryParams(), 'listsimplerecords_categories') > 0]
+    tt_content{
+        gedankenfolger_listsimplerecords{
+            dataProcessing {
+                100 {
+                    where{
+                        if >
+                        wrap = ({#categories} = '|')
+                        data = gp:listsimplerecords_categories
+                        intval = 1
+                    }
+                }
+            }
+        }
+    }
+[end]

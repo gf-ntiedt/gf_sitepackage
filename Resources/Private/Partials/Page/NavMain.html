@@ -1,77 +1,160 @@
-<f:alias map="{
-        logo:       gfaddresses.0.data.tx_mask_logo,
-        name:       gfaddresses.0.data.tx_mask_name,
-        claim:      gfaddresses.0.data.tx_mask_claim,
-        phone:      gfaddresses.0.data.tx_mask_phone,
-        fax:        gfaddresses.0.data.tx_mask_fax,
-        street:     gfaddresses.0.data.tx_mask_street,
-        street_nr:  gfaddresses.0.data.tx_mask_street_nr,
-        zip:        gfaddresses.0.data.tx_mask_zip,
-        city:       gfaddresses.0.data.tx_mask_city,
-        country:    gfaddresses.0.data.tx_mask_country,
-        main:       gfaddresses.0.data.tx_mask_main,
-        email:      gfaddresses.0.data.tx_mask_email
-}">
-    
-    <nav class="navbar navbar-expand-lg flex-lg-nowrap px-3 px-md-9 py-5">
-        <f:link.page
-            pageUid="{settings.rootpageId}"
-            aria="{label: '{name}'}"
-            class="navbar-brand order-1"
-        >
-            <f:if condition="{logo}">
-                <f:image
-                    src="{logo}"
-                    treatIdAsReference="1"
-                    title="{name}"
-                    loading="lazy"
-                    class="logo img-fluid me-2"
-                />
-            </f:if>
-        </f:link.page>
-        <span class="navbar-text order-4 order-sm-2">{claim -> f:format.nl2br()}</span>
-        <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse order-5 justify-content-end level-1" id="nav-main">
-            <ul class="navbar-nav">
-                <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
-                    <f:if condition="!{navitemlvl1.spacer}">
-                        <li class="nav-item position-relative {f:if(condition:navitemlvl1.hasSubpages,then:'hassubpages')}">
-                            <f:render section="ItemLink" arguments="{item:navitemlvl1}" />
-                            
-                            <f:if condition="{navitemlvl1.children}">
-                                <div class="collapse z-1 justify-content-end level-2" id="nav-main-{navitemlvl1.data.uid}">
-                                    
-                                    <ul class="navbar-nav flex-column">
-                                        <f:for each="{navitemlvl1.children}" as="navitemlvl2">
-                                            <li class="nav-item position-relative">
-                                                <f:render section="ItemLink" arguments="{item:navitemlvl2}" />
-                                                
+
+<div class="collapse navbar-collapse level-1" id="navbar-nav-main">
+    <ul class="navbar-nav mx-auto level-1">
+        <f:for each="{navMain}" as="navitemlvl1" iteration="iterator">
+            <f:if condition="!{navitemlvl1.spacer}">
+                <li class="nav-item {f:if(condition:navitemlvl1.hasSubpages,then:'hassubpages')}">
+                    <f:render section="ItemLink" arguments="{item:navitemlvl1,level:1}" />
+                    
+                    <f:if condition="{navitemlvl1.children}">
+                        <div class="collapse justify-content-end level-2" id="nav-main-{navitemlvl1.data.uid}" data-bs-parent="#navbar-nav-main">
+                            <div class="row">
+                                <div class="col-lg-11">
+                                    <f:if condition="{navitemlvl1.files.0}">
+                                        <f:then>
+                                            <f:image
+                                                image="{navitemlvl1.files.0}"
+                                                absolute="1"
+                                                title="{navitemlvl1.title}"
+                                                loading="lazy"
+                                                class="card-img-top img-fluid"
+                                            />
+                                        </f:then>
+                                        <f:else>
+                                            <f:image
+                                                src="EXT:gf_sitepackage/Resources/Public/Images/Page/Dummy.png"
+                                                title="{navitemlvl1.title}"
+                                                loading="lazy"
+                                                absolute="1"
+                                                class="card-img-top img-fluid"
+                                            />
+                                        </f:else>
+                                    </f:if>
+                                </div>
+                                <div class="col-lg-13 py-lg-5 ">
+                                    <div class="row wrapper">
+                                        <div class="col-lg-10 px-lg-4">
+                                            <ul class="navbar-nav flex-column level-2">
+                                                <f:for each="{navitemlvl1.children}" as="navitemlvl2">
+                                                    <li class="nav-item position-relative {f:if(condition:navitemlvl1.hasSubpages,then:'hassubpages')}">
+                                                        <f:render section="ItemLinkLvl2" arguments="{item:navitemlvl2,level:2}" />
+                                                    </li>
+                                                </f:for>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-10 ps-lg-4 pe-lg-6">
+                                            <f:if condition="{navitemlvl1.files.1}">
+                                                <f:render section="ImgInfo" arguments="{navitemlvl1:navitemlvl1}" />
+                                            </f:if>
+                                            <f:for each="{navitemlvl1.children}" as="navitemlvl2">
                                                 <f:if condition="{navitemlvl2.children}">
-                                                    <div class="collapse justify-content-end level-3  show" id="nav-main-{navitemlvl2.data.uid}">
-                                                        <ul class="navbar-nav flex-column">
+                                                    <div class="collapse justify-content-end level-3" id="nav-main-{navitemlvl2.data.uid}" data-bs-parent="#navbar-nav-main">
+                                                        <ul class="navbar-nav flex-column level-3">
                                                             <f:for each="{navitemlvl2.children}" as="navitemlvl3">
                                                                 <li class="nav-item position-relative">
-                                                                    <f:render section="ItemLink" arguments="{item:navitemlvl3}" />
+                                                                    <f:render section="ItemLink" arguments="{item:navitemlvl3,level:3}" />
                                                                 </li>
                                                             </f:for>
                                                         </ul>
+                                                        
+                                                        
+                                                        <f:if condition="{navitemlvl2.data.gf_sitepackage_link}">
+                                                            <f:link.typolink
+                                                                parameter="{navitemlvl2.data.gf_sitepackage_link}"
+                                                                class="btn btn-warning rounded-start border-radius-start-0 my-lg-5"
+                                                            ><f:if condition="{typoLinkParts.title}" then="{typoLinkParts.title}" else="{f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}"></f:if> </f:link.typolink>
+                                                        </f:if>
                                                     </div>
                                                 </f:if>
-                                            </li>
-                                        </f:for>
-                                    </ul>
+                                            </f:for>
+                                            <f:if condition="{navitemlvl1.data.gf_sitepackage_link}">
+                                                <f:link.typolink
+                                                    parameter="{navitemlvl1.data.gf_sitepackage_link}"
+                                                    class="btn btn-warning rounded-start border-radius-start-0 my-lg-5"
+                                                ><f:if condition="{typoLinkParts.title}" then="{typoLinkParts.title}" else="{f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}"></f:if> </f:link.typolink>
+                                            </f:if>
+                                        </div>
+                                    </div>
                                 </div>
-                            </f:if>
-                        </li>
+                            </div>
+                            <f:image
+                                src="EXT:gf_sitepackage/Resources/Public/Images/Page/leiste_start.jpg"
+                                absolute="1"
+                                loading="lazy"
+                                class="position-absolute bottom-0 img-fluid img-streifen"
+                            />
+                        </div>
                     </f:if>
-                </f:for>
-            </ul>
-        </div>
-    </nav>
-</f:alias>
+                </li>
+            </f:if>
+        </f:for>
+    </ul>
+</div>
 
+<f:asset.script identifier="navbar-nav-main" src="{settings.pathPublic}JavaScript/Dist/NavBar.js" defer="1" type="text/javascript" />
+
+<f:section name="ImageLeft">
+    <f:if condition="{item.files.0}">
+        <f:then>
+            <f:image
+                image="{item.files.0}"
+                absolute="1"
+                title="{item.title}"
+                loading="lazy"
+                class="card-img-top img-fluid"
+            />
+        </f:then>
+        <f:else>
+            <f:image
+                src="EXT:gf_sitepackage/Resources/Public/Images/Page/Dummy.png"
+                title="{item.title}"
+                loading="lazy"
+                absolute="1"
+                class="card-img-top img-fluid"
+            />
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="ItemLinkLvl2">
+    <f:if condition="{item.children}">
+        <f:then>
+            <f:variable name="itemclass"><f:spaceless>
+                <f:if condition="{class}">
+                    <f:then>
+                        {class}
+                    </f:then>
+                    <f:else>
+                        nav-link{f:if(condition:item.active,then:' active')}
+                    </f:else>
+                </f:if>
+            </f:spaceless></f:variable>
+            <button data-target="nav-main-{item.data.uid}" aria-current="{f:if(condition:item.active,then:'page')}" aria-label="{item.title}" class="{itemclass} pb-1 level-{level}"><strong>{item.title}</strong></button>
+        </f:then>
+        <f:else>
+            <f:variable name="itemclass"><f:spaceless>
+                <f:if condition="{class}">
+                    <f:then>
+                        {class}
+                    </f:then>
+                    <f:else>
+                        nav-link{f:if(condition:item.active,then:' active')}
+                    </f:else>
+                </f:if>
+            </f:spaceless></f:variable>
+            <f:link.page
+                pageUid="{item.data.uid}"
+                aria="{
+                current:'{f:if(condition:item.active,then:\'page\')}',
+                label: item.title
+                }"
+                class="{itemclass} level-{level}"
+            >
+                {item.title}
+            </f:link.page>
+        </f:else>
+    </f:if>
+</f:section>
 
 <f:section name="ItemLink">
     <f:if condition="{item.children}">
@@ -79,10 +162,10 @@
             <f:variable name="itemclass"><f:spaceless>
                 <f:if condition="{class}">
                     <f:then>
-                        {class} dropdown-toggle
+                        {class}
                     </f:then>
                     <f:else>
-                        nav-link{f:if(condition:item.active,then:' active')} dropdown-toggle
+                        nav-link{f:if(condition:item.active,then:' active')}
                     </f:else>
                 </f:if>
             </f:spaceless></f:variable>
@@ -94,9 +177,9 @@
                     controls:'nav-main-{item.data.uid}',
                     label: item.title
                     }"
-                data="{bs-toggle:'collapse'}"
+                data="{bs-toggle:'collapse', bs-auto-close:'outside'}"
                 defaultScheme=""
-                class="{itemclass} pb-1"
+                class="{itemclass} pb-1 level-{level}"
             >
                 {item.title}
             </f:link.external>
@@ -118,7 +201,7 @@
                 current:'{f:if(condition:item.active,then:\'page\')}',
                 label: item.title
                 }"
-                class="{itemclass}"
+                class="{itemclass} level-{level}"
             >
                 {item.title}
             </f:link.page>
@@ -126,5 +209,30 @@
     </f:if>
 </f:section>
 
-<f:comment>
-</f:comment>
+<f:section name="ImgInfo">
+    <div class="card bg-info">
+        <f:if condition="{navitemlvl1.files.1.title}">
+            <div class="card-header bg-info p-0">
+                <h6 class="mb-4">{navitemlvl1.files.1.title}</h6>
+            </div>
+        </f:if>
+        <f:image
+            image="{navitemlvl1.files.1}"
+            absolute="1"
+            title="{f:if(condition:navitemlvl1.files.1.title,then:navitemlvl1.files.1.title,else:navitemlvl1.title)}"
+            loading="lazy"
+            class="card-img-top img-fluid img_info mb-4"
+        />
+        <div class="card-body p-0">
+            <f:if condition="{navitemlvl1.files.1.description}">
+                <p class="mb-4">{navitemlvl1.files.1.description}</p>
+            </f:if>
+            <f:if condition="{navitemlvl1.files.1.link}">
+                <f:link.typolink
+                    parameter="{navitemlvl1.files.1.link}"
+                    class="stretched-link"
+                ><f:if condition="{typoLinkParts.title}" then="{typoLinkParts.title}" else="{f:translate(extensionName:'GfSitepackage',key:'fe.weitereinfos')}"></f:if></f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+</f:section>

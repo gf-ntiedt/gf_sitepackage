@@ -1,0 +1,19 @@
+<f:section name="Subpage">
+    <div class="preface subpage mx-n3 mx-md-n9 colpos-1 pt-0 pb-0 bg-primary">
+        <div class="container-fluid px-3 px-md-9 pt-5 pb-5">
+            <div class="text-light">
+                <f:if condition="{data.seo_title}">
+                    <f:then>
+                        <h1 class="mb-2">{data.seo_title}</h1>
+                    </f:then>
+                    <f:else>
+                        <h1 class="mb-2">{data.title}</h1>
+                    </f:else>
+                </f:if>
+                <f:if condition="{data.subtitle}">
+                    <h2 class="mb-2 fs-4 fw-normal">{data.subtitle}</h2>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</f:section>

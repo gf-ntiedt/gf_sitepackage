@@ -22,7 +22,7 @@ tt_content.gf-columnizercontents {
     dataProcessing {
         200 = B13\Container\DataProcessing\ContainerProcessor
         200 {
-            colPos = 100
+            colPos = 301
             as = content
         }
     }

@@ -7,3 +7,5 @@ composer.lock
 .env
 config
 .idea
+.bak.
+/Configuration/Magento/sni-cloudflaressl-com.pem

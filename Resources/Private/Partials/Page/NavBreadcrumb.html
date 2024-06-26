@@ -1,23 +1,22 @@
 <f:if condition="{navBreadcrumb}">
-    <nav id="nav-breadcrumb" class="nav bg-body-tertiary px-1 py-0" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item pretext">
-                {f:translate(extensionName:'gf_sitepackage',key:'fe.navBreadcrumb')}
-            </li>
-            <f:for each="{navBreadcrumb}" as="item" iteration="iterator">
-                <f:if condition="{item.active}">
-                    <f:if condition="{item.current}">
-                        <f:then>
-                            <f:render section="ItemActive" arguments="{item:item,iterator:iterator}" />
-                        </f:then>
-                        <f:else>
-                            <f:render section="Item" arguments="{item:item,iterator:iterator}" />
-                        </f:else>
+    <f:if condition="{data.pid}!==0">
+        <nav id="nav-breadcrumb" class="nav px-1 py-0" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <f:for each="{navBreadcrumb}" as="item" iteration="iterator">
+                    <f:if condition="{item.active}">
+                        <f:if condition="{item.current}">
+                            <f:then>
+                                <f:render section="ItemActive" arguments="{item:item,iterator:iterator}" />
+                            </f:then>
+                            <f:else>
+                                <f:render section="Item" arguments="{item:item,iterator:iterator}" />
+                            </f:else>
+                        </f:if>
                     </f:if>
-                </f:if>
-            </f:for>
-        </ol>
-    </nav>
+                </f:for>
+            </ol>
+        </nav>
+    </f:if>
 </f:if>
 
 <f:section name="Submenu">
@@ -37,21 +36,48 @@
 </f:section>
 
 <f:section name="Item">
-    <li class="breadcrumb-item breadcrumb-item-{item.data.uid} {f:if(condition:iterator.isFirst,then:'breadcrumb-item-first')}">
-        <div class="dropdown">
-            <f:link.page
-                pageUid="{item.data.uid}"
-                aria="{label: item.title}"
-                class=""
-            >
-                
-                {item.title}
-            </f:link.page>
-            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            </button>
-            <f:render section="Submenu" arguments="{puid:item.data.uid,navSub:item.navSub}" />
-        </div>
-    </li>
+    <f:if condition="{item.data.pid}==0">
+        <f:then>
+            <li class="breadcrumb-item breadcrumb-item-{item.data.uid} {f:if(condition:iterator.isFirst,then:'breadcrumb-item-first')}">
+                <div class="dropdown">
+                    <f:link.page
+                        pageUid="{item.data.uid}"
+                        aria="{label: item.title}"
+                        class=""
+                    >
+                        <f:image
+                            src="EXT:gf_sitepackage/Resources/Public/Icons/Page/home.svg"
+                            width="17"
+                            title=""
+                            loading="lazy"
+                            absolute="1"
+                            class=""
+                        />
+                    </f:link.page>
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                    <f:render section="Submenu" arguments="{puid:item.data.uid,navSub:item.navSub}" />
+                </div>
+            </li>
+        </f:then>
+        <f:else>
+            <li class="breadcrumb-item breadcrumb-item-{item.data.uid} {f:if(condition:iterator.isFirst,then:'breadcrumb-item-first')}">
+                <div class="dropdown">
+                    <f:link.page
+                        pageUid="{item.data.uid}"
+                        aria="{label: item.title}"
+                        class=""
+                    >
+                        
+                        {item.title}
+                    </f:link.page>
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                    <f:render section="Submenu" arguments="{puid:item.data.uid,navSub:item.navSub}" />
+                </div>
+            </li>
+        </f:else>
+    </f:if>
 </f:section>
 
 <f:section name="ItemActive">

@@ -5,3 +5,43 @@ lib.inlineSvg {
     width.field = width
     height.field = height
 }
+
+lib.calc = TEXT
+lib.calc {
+    current = 1
+    prioriCalc = 1
+}
+
+lib.formatCatPage = TEXT
+lib.formatCatPage{
+    current = 1
+    replacement{
+        #        10{
+        #            search = ä
+        #            replace = ae
+        #        }
+        #        14{
+        #            search = ö
+        #            replace = oe
+        #        }
+        #        18{
+        #            search = ü
+        #            replace = ue
+        #        }
+        22{
+            search = ß
+            replace = ss
+        }
+    }
+}
+
+lib.slashToLinebreak = TEXT
+lib.slashToLinebreak{
+    current = 1
+    replacement{
+        10{
+            search =|
+            replace = <br>
+        }
+    }
+}

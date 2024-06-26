@@ -1,7 +1,7 @@
 <f:spaceless>
     <div id="container_main" class="">
-        <f:render partial="Header" arguments="{settings:settings,data:data,navMain:navMain,navLang:navLang,navSection:navSection,gfaddresses:gfaddresses}" />
-        <f:render partial="Main" arguments="{navBreadcrumb:navBreadcrumb}" />
-        <f:render partial="Footer" arguments="{gfaddresses:gfaddresses,navFooter:navFooter}" />
+        <f:render partial="Header" arguments="{_all}" />
+        <f:render partial="Main" arguments="{data:data,navBreadcrumb:navBreadcrumb}" />
+        <f:render partial="Footer" arguments="{addresses:addresses,navService:navService,navUnternehmen:navUnternehmen}" />
     </div>
 </f:spaceless>

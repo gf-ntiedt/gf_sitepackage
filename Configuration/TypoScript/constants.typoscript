@@ -24,11 +24,15 @@ styles {
         defaultSpaceAfterType =
         defaultSpaceInnerBeforeType = pt-5
         defaultSpaceInnerAfterType = pb-5
-        defaultButtonClass = btn-primary
+        defaultButtonClass = btn-warning
         defaultTextClass =
         defaultBackgroundClass =
         defaultOrientationHorizontal = justify-content-center
         defaultOrientationVertical = align-items-center
+        defaultOrientationVertical = align-items-center
+        defaultOrientationVertical = align-items-center
+        defaultTextXPaddingClass = px-3
+        defaultTextYPaddingClass = py-3
     }
 }
 
@@ -97,6 +101,6 @@ config {
     removeDefaultJS = 0
     admPanel = 1
     prefixLocalAnchors = all
-#    headerComment = build by sitepackagebuilder.com
+    headerComment =
     sendCacheHeaders = 1
 }

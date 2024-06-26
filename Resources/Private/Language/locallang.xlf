@@ -51,9 +51,6 @@
             <trans-unit id="nav.main.close">
                 <target>Close menu</target>
             </trans-unit>
-            <trans-unit id="tx_mask_karriere.detail.linktext">
-                <target>Back to</target>
-            </trans-unit>
             <trans-unit id="nav_sticky.link_eletter">
                 <source>Newsletter subscription</source>
             </trans-unit>
@@ -120,6 +117,27 @@
             <trans-unit id="fe.navLang.short.5">
                 <source>SV</source>
             </trans-unit>
+            <trans-unit id="fe.topinnovator">
+                <source>CEMO receives TOP 100 seal</source>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.contact">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.legal">
+                <source>Legal</source>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.service">
+                <source>Service</source>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.products">
+                <source>Products</source>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.company">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="fe.footer.likefollow">
+                <source>Like, follow &amp; comment</source>
+            </trans-unit>
             <trans-unit id="space_class_none">
                 <source>None</source>
             </trans-unit>
@@ -135,6 +153,24 @@
             <trans-unit id="space_inner_after_class">
                 <source>Padding Bottom</source>
             </trans-unit>
+            <trans-unit id="frame_class.0">
+                <source>Fluid</source>
+            </trans-unit>
+            <trans-unit id="gf_sitepackage_layout.powermail_pi1.grey">
+                <source>Grey</source>
+            </trans-unit>
+            <trans-unit id="gf_sitepackage_layout.powermail_pi1.orange_bg_image">
+                <source>Orange background image (e.g. e-letter)</source>
+            </trans-unit>
+            <trans-unit id="gf_sitepackage_layout.gf_2cols.grey">
+                <source>Grey</source>
+            </trans-unit>
+			<trans-unit id="fe.slider.prev">
+				<source>Previous</source>
+			</trans-unit>
+			<trans-unit id="fe.slider.next">
+				<source>Next</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

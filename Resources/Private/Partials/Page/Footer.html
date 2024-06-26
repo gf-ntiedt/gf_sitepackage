@@ -1,63 +1,259 @@
 <f:alias map="{
-        logo:       gfaddresses.0.data.tx_mask_logo,
-        name:       gfaddresses.0.data.tx_mask_name,
-        claim:      gfaddresses.0.data.tx_mask_claim,
-        phone:      gfaddresses.0.data.tx_mask_phone,
-        fax:        gfaddresses.0.data.tx_mask_fax,
-        street:     gfaddresses.0.data.tx_mask_street,
-        street_nr:  gfaddresses.0.data.tx_mask_street_nr,
-        zip:        gfaddresses.0.data.tx_mask_zip,
-        city:       gfaddresses.0.data.tx_mask_city,
-        country:    gfaddresses.0.data.tx_mask_country,
-        main:       gfaddresses.0.data.tx_mask_main,
-        email:      gfaddresses.0.data.tx_mask_email,
-        locallang: {mask:'LLL:EXT:gf_sitepackage/Resources/Private/Language/mask.xlf'}
+        logo:       addresses.0.data.logo,
+        name:       addresses.0.data.name,
+        claim:      addresses.0.data.claim,
+        phone:      addresses.0.data.phone,
+        fax:        addresses.0.data.fax,
+        street:     addresses.0.data.street,
+        street_nr:  addresses.0.data.street_nr,
+        zip:        addresses.0.data.zip,
+        city:       addresses.0.data.city,
+        country:    addresses.0.data.country,
+        main:       addresses.0.data.main,
+        email:      addresses.0.data.email,
+        text:      addresses.0.data.text,
+        locallang: {gfsitepackage:'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf',address:'LLL:EXT:gf_sitepackage/ContentBlocks/RecordTypes/address/Source/Language/Labels.xlf'}
 }">
     
-    <footer id="footer" class="py-5 bg-primary">
-        <div class="container-fluid px-3 px-md-9">
-            <div class="row justify-content-sm-end">
-                <div class="col-lg-12 pb-5 pb-lg-0">
-                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid:settings.rootpageId, colPos: '10'}" />
+    <footer class="bg-info">
+        <div class="container py-7">
+            <div class="row justify-content-between align-items-center flex-grow-1 ">
+                <f:if condition="{logo}">
+                    <div class="col-sm-auto">
+                        <f:render partial="Logo" section="Footer" arguments="{
+                        settings:settings,
+                        logo: logo,
+                        name:       '{f:if(condition: \'name\',then:name,else: \'\')}'
+                    }" />
+                    </div>
+                
+                </f:if>
+                <f:if condition="{claim}">
+                    <div class="col-sm-auto text-end">
+                    <span class="fs-5 fw-bold">{claim}</span>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+        <div class="container pb-7">
+            <div class="row flex-row justify-content-between">
+                <div class="col-xsm-12 col-md-6 mb-5 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <f:translate key="{locallang.gfsitepackage}:fe.footer.column.contact" />
+                    </h6>
+                    <address>
+                        <f:if condition="{name}">
+                            {name}<br>
+                        </f:if>
+                        <f:if condition="{street} && {street_nr}">
+                            {street} {street_nr}<br>
+                        </f:if>
+                        <f:if condition="{zip} && {city}">
+                            {zip} {city}<br>
+                        </f:if>
+                        <f:if condition="{country}">
+                            {country}<br>
+                        </f:if>
+                        <br>
+                        <f:if condition="{phone}">
+                            <f:variable name="label"><f:translate key="{locallang.address}:phone.label" /></f:variable>
+                            {label}:
+                            <gf:link.urlscheme
+                                number="{phone}"
+                                aria="{label: label}"
+                                class="" /><br>
+                        </f:if>
+                        <f:if condition="{email}">
+                            <f:variable name="label"><f:translate key="{locallang.address}:email.label" /></f:variable>
+                            <f:link.email
+                                email="{email}"
+                                aria="{label: label}" />
+                        </f:if>
+                    </address>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-xsm-12 col-md-6 mb-5 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <f:translate key="{locallang.gfsitepackage}:fe.footer.column.legal" />
+                    </h6>
+                    {text -> f:format.html()}
                 </div>
-                <div class="col-lg-4">
-                    <f:if condition="{logo}">
-                        <f:image
-                            src="{logo}"
-                            treatIdAsReference="1"
-                            title="{name}"
-                            loading="lazy"
-                            class="logo img-fluid me-2 mb-3"
-                        />
+                <div class="col-xsm-8 col-md-4 mb-5 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <f:translate key="{locallang.gfsitepackage}:fe.footer.column.service" />
+                    </h6>
+                    <f:if condition="{navService}">
+                        <ul id="nav-service" class="nav flex-column">
+                            <f:for each="{navService}" as="item">
+                                <li class="nav-item">
+                                    <f:link.page
+                                        pageUid="{item.data.uid}"
+                                        aria="{
+                current:'{f:if(condition:item.active,then:\'page\')}',
+                label: item.title
+                }"
+                                        class="nav-link"
+                                    >
+                                        {item.title}
+                                    </f:link.page>
+                                </li>
+                            </f:for>
+                        </ul>
                     </f:if>
                 </div>
-                <div class="col-lg-6">
-                    <h6>{name}</h6>
-                    <address>
-                        {street} {street_nr}<br>
-                        {zip} {city}<br>
-                        <gf:link.urlscheme
-                            number="{phone}"
-                            aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_phone\')}'}"
-                            class="" /><br>
-                        <gf:link.urlscheme
-                            number="{fax}"
-                            scheme="fax:"
-                            aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_fax\')}'}"
-                            class="" /><br>
-                        <f:link.email
-                            email="{email}"
-                            aria="{label: '{f:translate(key:\'{locallang.mask}:tx_mask_gf_addresses.tx_mask_email\')}'}" />
-                    </address>
-                    
-                    <f:render partial="NavFooter" arguments="{navFooter:navFooter}" />
-                    
-                    <p>© {f:format.date(date:'now',format:'Y')} {name}</p>
+                <div class="col-xsm-8 col-md-4 mb-5 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <f:translate key="{locallang.gfsitepackage}:fe.footer.column.products" />
+                    </h6>
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '20',slide:'-1'}" />
+                </div>
+                <div class="col-xsm-8 col-md-4 mb-5 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <f:translate key="{locallang.gfsitepackage}:fe.footer.column.company" />
+                    </h6>
+                    <f:if condition="{navUnternehmen}">
+                        <ul id="nav-unternehmen" class="nav flex-column">
+                            <f:for each="{navUnternehmen}" as="item">
+                                <li class="nav-item">
+                                    <f:link.page
+                                        pageUid="{item.data.uid}"
+                                        aria="{
+                current:'{f:if(condition:item.active,then:\'page\')}',
+                label: item.title
+                }"
+                                        class="nav-link"
+                                    >
+                                        {item.title}
+                                    </f:link.page>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-7">
+            <div class="row justify-content-center align-items-center flex-grow-1">
+                <div class="col-sm-auto">
+                    <f:link.page
+                        pageUid="1"
+                        aria="{label: '{f:translate(key: \'{locallang.gfsitepackage}:fe.topinnovator\')}'}"
+                        id=""
+                    >
+                        <f:image
+                            src="fileadmin/assets/top_innovator_2023.jpg"
+                            treatIdAsReference="1"
+                            absolute="1"
+                            title="{f:translate(key: '{locallang.gfsitepackage}:fe.topinnovator')}"
+                            loading="lazy"
+                            class="img-fluid me-2"
+                        />
+                    </f:link.page>
+                </div>
+                <div class="col-sm-auto">
+                    <f:link.page
+                        pageUid="1"
+                        aria="{label: '{f:translate(key: \'{locallang.gfsitepackage}:fe.topinnovator\')}'}"
+                        id=""
+                        class="img-fluid"
+                    >
+                        <f:image
+                            src="fileadmin/assets/top_innovator_2023.jpg"
+                            treatIdAsReference="1"
+                            absolute="1"
+                            title="{f:translate(key: '{locallang.gfsitepackage}:fe.topinnovator')}"
+                            loading="lazy"
+                            class="img-fluid me-2"
+                        />
+                    </f:link.page>
+                </div>
+                <div class="col-sm-auto">
+                    <f:link.page
+                        pageUid="1"
+                        aria="{label: '{f:translate(key: \'{locallang.gfsitepackage}:fe.topinnovator\')}'}"
+                        id=""
+                        class="img-fluid"
+                    >
+                        <f:image
+                            src="fileadmin/assets/top_innovator_2023.jpg"
+                            treatIdAsReference="1"
+                            absolute="1"
+                            title="{f:translate(key: '{locallang.gfsitepackage}:fe.topinnovator')}"
+                            loading="lazy"
+                            class="img-fluid me-2"
+                        />
+                    </f:link.page>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center py-7 row-3 bg-primary">
+                <div class="col-auto">
+                    <h6 class="fs-5 fw-bold text-white">
+                        <f:translate key="{locallang.gfsitepackage}:fe.footer.likefollow" />
+                    </h6>
+                </div>
+                <div class="col-auto">
+                    <ul class="nav nav-justified" id="nav-social-2">
+                        <li class="nav-item px-1">
+                            <f:link.external
+                                uri="https://www.facebook.com/cemo.gmbh/"
+                                aria="{label: 'Facebook'}"
+                                rel="noreferrer"
+                                class="nav-link"
+                            >
+                                <f:image
+                                    src="{settings.pathPublic}Icons/Page/Facebook.svg"
+                                    width="46"
+                                    height="46"
+                                    absolute="1"
+                                ></f:image>
+                            </f:link.external>
+                        </li>
+                        <li class="nav-item px-1">
+                            <f:link.external
+                                uri="https://www.linkedin.com/company/cemo-safe-storage"
+                                aria="{label: 'Linkedin'}"
+                                rel="noreferrer"
+                                class="nav-link"
+                            >
+                                <f:image
+                                    src="{settings.pathPublic}Icons/Page/LinkedIn.svg"
+                                    width="46"
+                                    height="46"
+                                    absolute="1"
+                                ></f:image>
+                            </f:link.external>
+                        </li>
+                        <li class="nav-item px-1">
+                            <f:link.external
+                                uri="https://www.youtube.com/channel/UC6xWkMlNvuOlchYAUehQ-ug"
+                                aria="{label: 'YouTube'}"
+                                rel="noreferrer"
+                                class="nav-link"
+                            >
+                                <f:image
+                                    src="{settings.pathPublic}Icons/Page/YouTube.svg"
+                                    width="46"
+                                    height="46"
+                                    absolute="1"
+                                ></f:image>
+                            </f:link.external>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center row-4 bg-dark pt-3 pb-1">
+                <div class="col-auto">
+                    <p class="fs-6 fw-light text-white">
+                        <strong>
+                            <span>© {f:format.date(date:'now',format:'Y')} {f:if(condition: name,then:name)} | {f:translate(key: '{locallang.gfsitepackage}:fe.rightsreserved')}</span>
+                        </strong>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
-    <button id="to-top" class="to-top btn btn-primary shadow-sm rounded-circle" aria-label="{f:translate(extensionName:'gf_sitepackage',key:'totop')}"></button>
+    <button id="to-top" class="to-top btn btn-warning shadow-sm rounded-circle" aria-label="{f:translate(extensionName:'gf_sitepackage',key:'totop')}"></button>
 </f:alias>

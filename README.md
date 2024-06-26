@@ -11,9 +11,6 @@
         <a href="https://typo3.org/" target="_blank">TYPO3</a>
     </li>
     <li>
-        <a href="https://extensions.typo3.org/extension/mask" target="_blank">WEBprofil - Gernot Ploiner e.U.</a>
-    </li>
-    <li>
         <a href="https://extensions.typo3.org/extension/save" target="_blank">Armin Vieweg</a>
     </li>
     <li>
@@ -70,7 +67,6 @@
     <li>t3/save</li>
     <li>ichhabrecht/content-defender</li>
     <li>fluidtypo3/vhs</li>
-    <li>mask/mask</li>
     <li>b13/container</li>
     <li>wapplersystems/ws-scss</li>
 </ul>
@@ -193,49 +189,49 @@ This could be done at the top and bottom. </p>
 <h4>Available fields:</h4>
 <table>
     <tr>
-        <td>tx_mask_logo</td>
+        <td>logo</td>
     </tr>
     <tr>
-        <td>tx_mask_name</td>
+        <td>name</td>
     </tr>
     <tr>
-        <td>tx_mask_claim</td>
+        <td>claim</td>
     </tr>
     <tr>
-        <td>tx_mask_phone</td>
+        <td>phone</td>
     </tr>
     <tr>
-        <td>tx_mask_fax</td>
+        <td>fax</td>
     </tr>
     <tr>
-        <td>tx_mask_street</td>
+        <td>street</td>
     </tr>
     <tr>
-        <td>tx_mask_street_nr</td>
+        <td>street_nr</td>
     </tr>
     <tr>
-        <td>tx_mask_zip</td>
+        <td>zip</td>
     </tr>
     <tr>
-        <td>tx_mask_city</td>
+        <td>city</td>
     </tr>
     <tr>
-        <td>tx_mask_country</td>
+        <td>country</td>
     </tr>
     <tr>
-        <td>tx_mask_main</td>
+        <td>main</td>
     </tr>
     <tr>
-        <td>tx_mask_email</td>
+        <td>email</td>
     </tr>
 </table>
 <h4>Usage with multiple addresses:</h4>
 <pre><code>
 &lt;f:for each="{addresses}" as="address">
-    {address.data.tx_mask_name}
+    {address.data.name}
 &lt;/f:for>
 </code></pre>
-<p>If you use tx_mask_phone or tx_mask_fax there is a neat <a href="viewhelper">small viewhelper</a> which perform the work for you.
+<p>If you use phone or fax there is a neat <a href="viewhelper">small viewhelper</a> which perform the work for you.
 
 <h3 id="viewhelper">
     Viewhelper:

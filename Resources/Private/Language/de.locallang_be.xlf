@@ -39,8 +39,14 @@
             <trans-unit id="backend_layout.column.sticky">
                 <target>Sticky-Navigation</target>
             </trans-unit>
+            <trans-unit id="backend_layout.column.ausbildung">
+                <target>Ausbildung</target>
+            </trans-unit>
             <trans-unit id="backend_layout.column.normal">
                 <target>Normal</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer_produkte">
+                <target>Footer: Produkte</target>
             </trans-unit>
             <trans-unit id="backend_layout.column.footer.left">
                 <target>Fuss: Linke Spalte</target>

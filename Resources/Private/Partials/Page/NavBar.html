@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-light navbar-shrink py-3 navbar-light header content" id="navbar">
+    <div class="container-fluid px-3 px-md-9">
+        <f:render partial="Logo" section="Header" arguments="{
+            settings:settings,
+            logo: addresses.0.data.logo,
+            name:       '{f:if(condition: \'addresses.0.data.name\',then:addresses.0.data.name,else: \'\')}'
+        }" />
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbar-nav-main">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form id="navbar-search" class="ms-2 mb-2 mb-md-0">
+            <div class="input-group">
+                <input id="search" class="form-floating border-info rounded rounded-5 form-control " type="text" placeholder="{f:translate(key:'{locallang.gfsitepackage}:fe.search')}" name="search">
+                <button class="btn" type="button"></button>
+            </div>
+        </form>
+        <f:render partial="NavMain" arguments="{_all}" />
+        <f:render partial="NavBarNavRight" arguments="{_all}" />
+    </div>
+</nav>

@@ -265,6 +265,11 @@ $temporaryColumn = [
                     24,
                     ''
                 ],
+                [
+                    'Auto',
+                    'auto',
+                    ''
+                ],
             ],
             'default' => 6,
             'fieldWizard' => [
@@ -357,7 +362,7 @@ $temporaryColumn = [
                 ],
             ],
         ],
-        'displayCond' => 'FIELD:gf_sitepackage_type:!=:SliderContents',
+        'displayCond' => 'FIELD:gf_sitepackage_type:=:',
     ],
     'gf_sitepackage_gutter_y' => [
         'exclude' => 0,
@@ -401,7 +406,7 @@ $temporaryColumn = [
                 ],
             ],
         ],
-        'displayCond' => 'FIELD:gf_sitepackage_type:!=:SliderContents',
+        'displayCond' => 'FIELD:gf_sitepackage_type:=:',
     ],
     'gf_sitepackage_type' => [
         'exclude' => 0,
@@ -411,6 +416,11 @@ $temporaryColumn = [
             'type' => 'select',
             'items' =>[
                 ['LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value', ''],
+                [
+                    'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_type.cardgroup',
+                    'CardGroup',
+                    ''
+                ],
                 [
                     'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_type.slidercontents',
                     'SliderContents',
@@ -423,6 +433,7 @@ $temporaryColumn = [
                 ],
             ],
         ],
+        'onChange' => 'reload'
     ],
     'gf_sitepackage_orientation_horizontal' => [
         'exclude' => 0,
@@ -806,9 +817,12 @@ $temporaryColumn = [
         )
     )
 );
-$GLOBALS['TCA']['tt_content']['types']['gf-2cols']['showitem'] = 'sys_language_uid,CType,header,colPos,
+$GLOBALS['TCA']['tt_content']['types']['gf-2cols']['showitem'] = 'sys_language_uid,CType,header,header_layout,colPos,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-    --palette--;;frames,sectionIndex,gf_sitepackage_columnwidth,gf_sitepackage_breakpoint,gf_sitepackage_orientation_horizontal,gf_sitepackage_orientation_vertical';
+    --palette--;;frames,sectionIndex,gf_sitepackage_columnwidth,gf_sitepackage_breakpoint,gf_sitepackage_orientation_horizontal,gf_sitepackage_orientation_vertical,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+        --palette--;;hidden,
+        --palette--;;access,';
 
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
@@ -819,18 +833,18 @@ $GLOBALS['TCA']['tt_content']['types']['gf-2cols']['showitem'] = 'sys_language_u
         '', // description
         [
             [
-                ['name' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_columnizercontents.content', 'colPos' => 100],
+                ['name' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_columnizercontents.content', 'colPos' => 301],
             ]
         ] // grid configuration
     )
     )
-        ->setBackendTemplate('EXT:gf_sitepackage/Resources/Private/Templates/Preview/Columnizercontents.html')
-        ->setGridTemplate('EXT:gf_sitepackage/Resources/Private/Templates/Preview/ColumnizercontentsGrid.html')
-        ->addGridPartialPath('EXT:gf_sitepackage/Resources/Private/Partials/Preview/')
 );
-$GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 'sys_language_uid,CType,header,colPos,
+$GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 'sys_language_uid,CType,header,header_layout,colPos,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-    --palette--;;frames,sectionIndex,gf_sitepackage_columnwidths,gf_sitepackage_type,gf_sitepackage_gutter_x';
+    --palette--;;frames,sectionIndex,gf_sitepackage_type,gf_sitepackage_columnwidths,gf_sitepackage_orientation_horizontal,gf_sitepackage_orientation_vertical,gf_sitepackage_gutter_x,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+        --palette--;;hidden,
+        --palette--;;access,';
 
 
 
@@ -847,11 +861,15 @@ $GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 's
                 'items' => [
                     ['LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value', ''],
                     ['LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf:space_class_none', 'pt-0'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_small', 'pt-1'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_small', 'pt-2'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_medium', 'pt-3'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large', 'pt-4'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large', 'pt-5'],
+                    ['1', 'pt-1'],
+                    ['2', 'pt-2'],
+                    ['3', 'pt-3'],
+                    ['4', 'pt-4'],
+                    ['5', 'pt-5'],
+                    ['6', 'pt-6'],
+                    ['7', 'pt-7'],
+                    ['8', 'pt-8'],
+                    ['9', 'pt-9'],
                 ],
                 'default' => '',
             ],
@@ -865,26 +883,54 @@ $GLOBALS['TCA']['tt_content']['types']['gf-columnizercontents']['showitem'] = 's
                 'items' => [
                     ['LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value', ''],
                     ['LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf:space_class_none', 'pb-0'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_small', 'pb-1'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_small', 'pb-2'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_medium', 'pb-3'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large', 'pb-4'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large', 'pb-5'],
+                    ['1', 'pb-1'],
+                    ['2', 'pb-2'],
+                    ['3', 'pb-3'],
+                    ['4', 'pb-4'],
+                    ['5', 'pb-5'],
+                    ['6', 'pb-6'],
+                    ['7', 'pb-7'],
+                    ['8', 'pb-8'],
+                    ['9', 'pb-9'],
                 ],
                 'default' => '',
             ],
+        ],
+        'gf_sitepackage_layout' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_layout',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value', ''],
+                ],
+                'default' => '',
+            ],
+        ],
+        'gf_sitepackage_container' => [
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        'label' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_container.label',
+                        'labelChecked' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_container.labelChecked',
+                        'labelUnchecked' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_container.labelUnchecked',
+                    ],
+                ]
+            ],
+            'exclude' => '1',
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_container',
+            'description' => 'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_db.xlf:tt_content.gf_sitepackage_container.description',
         ],
     ]
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'frames',
-    '--linebreak--,space_inner_before_class, space_inner_after_class',
+    '--linebreak--,space_inner_before_class, space_inner_after_class,
+    --linebreak--,gf_sitepackage_container,--linebreak--,gf_sitepackage_layout',
     'after:space_after_class'
 );
-
-
-/* Mask */
-$GLOBALS['TCA']['tt_content']['columns']['tx_mask_gf_google_maps_conf_apitype']['onChange'] = 'reload';
-$GLOBALS['TCA']['tt_content']['columns']['tx_mask_gf_google_maps_conf_customicon']['displayCond'] = 'FIELD:tx_mask_gf_google_maps_conf_apitype:=:static';
-$GLOBALS['TCA']['tt_content']['columns']['tx_mask_gf_google_maps_conf_enable_routing']['displayCond'] = 'FIELD:tx_mask_gf_google_maps_conf_apitype:=:static';

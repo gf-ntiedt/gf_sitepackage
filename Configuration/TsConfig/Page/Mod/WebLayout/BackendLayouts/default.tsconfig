@@ -9,7 +9,7 @@ mod {
                 config {
                     backend_layout {
                         colCount = 2
-                        rowCount = 3
+                        rowCount = 4
                         rows {
                             1 {
                                 columns {
@@ -32,10 +32,23 @@ mod {
                             3 {
                                 columns {
                                     1 {
-                                        name = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer.left
+                                        name = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:backend_layout.column.ausbildung
                                         colPos = 10
+                                        colspan = 2
                                         allowed {
-                                            CType = mask_gf_google_maps
+                                            CType = gedankenfolger_imagetext
+                                        }
+                                    }
+                                }
+                            }
+                            4 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_produkte
+                                        colPos = 20
+                                        colspan = 2
+                                        allowed {
+                                            CType = gedankenfolger_magento
                                         }
                                     }
                                 }

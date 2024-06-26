@@ -1,0 +1,25 @@
+{namespace gf=Gedankenfolger\GfSitepackage\ViewHelpers}
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <div id="c{uid}" class="gf-columnizercolumns type-iconbar colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)} {layout} overflow-x-hidden mx-5">
+        <f:if condition="{header}">
+            <div class="row">
+                <div class="col">
+                    <f:render partial="Columnizercontents/Header" arguments="{
+                            header: header,
+                            layout: header_layout,
+                            positionClass: '{f:if(condition: header_position, then: \'ce-headline-{header_position}\')}',
+                            additionalClass: 'mb-3',
+                            default: settings.defaultHeaderType}" />
+                </div>
+            </div>
+        </f:if>
+        <div class="row row-cols-xsm-{f:cObject(typoscriptObjectPath:'lib.calc',data:'{gf_sitepackage_columnwidths}-3')} row-cols-md-{f:cObject(typoscriptObjectPath:'lib.calc',data:'{gf_sitepackage_columnwidths}-2')} row-cols-lg-{f:cObject(typoscriptObjectPath:'lib.calc',data:'{gf_sitepackage_columnwidths}-1')} row-cols-xl-{gf_sitepackage_columnwidths} {gf_sitepackage_gutter_x} {gf_sitepackage_gutter_y} {f:if(condition:orientation_horizontal,then:orientation_horizontal,else:defaultOrientationHorizontal)} {f:if(condition:orientation_vertical,then:orientation_vertical,else:defaultOrientationVertical)} ">
+            <f:for each="{content}" as="record">
+                <f:format.raw>{record.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
+    </div>
+</html>

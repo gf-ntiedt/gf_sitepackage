@@ -1,0 +1,53 @@
+<f:spaceless>
+    <div id="container_main" class="">
+        <f:switch expression="{htmlpath}">
+            <f:defaultCase>
+                <f:render partial="NavBar" arguments="{settings:settings,data:data,navMain:navMain,navLang:navLang,navSection:navSection,addresses:addresses,locallang: {gfsitepackage:'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf'}}" />
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0', cType: 'powermail_pi1'}" />
+                <f:render partial="Footer" arguments="{addresses:addresses,navFooter:navFooter}" />
+            </f:defaultCase>
+            <f:case value="navbar">
+                <f:render partial="NavBar" arguments="{settings:settings,data:data,navMain:navMain,navLang:navLang,navSection:navSection,addresses:addresses,locallang: {gfsitepackage:'LLL:EXT:gf_sitepackage/Resources/Private/Language/locallang.xlf'}}" />
+            </f:case>
+            <f:case value="navbar_logo">
+                <f:render partial="Logo" section="Header" arguments="{
+            settings:settings,
+            logo: addresses.0.data.logo,
+            name:       '{f:if(condition: \'addresses.0.data.name\',then:addresses.0.data.name,else: \'\')}'
+        }" />
+            </f:case>
+            <f:case value="navbar_toggler">
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbar-nav-main">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </f:case>
+            <f:case value="navbar_search">
+                <form id="navbar-search" class="ms-2 mb-2 mb-md-0">
+                    <div class="input-group">
+                        <input id="search" class="form-floating border-info rounded rounded-5 form-control " type="text" placeholder="{f:translate(key:'{locallang.gfsitepackage}:fe.search')}">
+                        <button class="btn" type="button"></button>
+                    </div>
+                </form>
+            </f:case>
+            <f:case value="navbar_navmain">
+                <f:render partial="NavMain" arguments="{_all}" />
+            </f:case>
+            <f:case value="navbar_navlang">
+                <f:render partial="NavLang" section="Header" arguments="{settings:settings,navLang:navLang}" />
+            </f:case>
+            <f:case value="navflying">
+                <f:render partial="NavFlying" arguments="{_all}" />
+            </f:case>
+            <f:case value="form">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0', cType: 'powermail_pi1'}" />
+            </f:case>
+            <f:case value="footer">
+                <f:render partial="Footer" arguments="{addresses:addresses,navFooter:navFooter}" />
+            </f:case>
+            <f:case value="simplerecords">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0', cType: 'gedankenfolger_listsimplerecords', pageUid:'177'}" />
+            </f:case>
+        </f:switch>
+    </div>
+</f:spaceless>

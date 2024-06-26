@@ -48,9 +48,6 @@
             <trans-unit id="nav.main.close">
                 <target>Menü schließen</target>
             </trans-unit>
-            <trans-unit id="tx_mask_karriere.detail.linktext">
-                <target>Zurück zu</target>
-            </trans-unit>
             <trans-unit id="nav_sticky.link_eletter">
                 <target>Newsletter-Anmeldung</target>
             </trans-unit>
@@ -81,6 +78,27 @@
             <trans-unit id="fe.navLang">
                 <target>Sprache</target>
             </trans-unit>
+            <trans-unit id="fe.topinnovator">
+                <target>CEMO erhält TOP 100-Siegel</target>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.contact">
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.legal">
+                <target>Rechtliches</target>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.service">
+                <target>Service</target>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.products">
+                <target>Produkte</target>
+            </trans-unit>
+            <trans-unit id="fe.footer.column.company">
+                <target>Unternehmen</target>
+            </trans-unit>
+            <trans-unit id="fe.footer.likefollow">
+                <target>Like, follow &amp; comment</target>
+            </trans-unit>
             <trans-unit id="space_class_none">
                 <target>Kein</target>
             </trans-unit>
@@ -96,6 +114,21 @@
             <trans-unit id="space_inner_after_class">
                 <target>Innenabstand unten</target>
             </trans-unit>
+            <trans-unit id="frame_class.0">
+                <target>Fluid</target>
+            </trans-unit>
+            <trans-unit id="gf_sitepackage_layout.powermail_pi1.grey">
+                <target>Grau</target>
+            </trans-unit>
+            <trans-unit id="gf_sitepackage_layout.powermail_pi1.orange_bg_image">
+                <target>Orangenes Hintergrundbild (z.b. Newsletter)</target>
+            </trans-unit>
+			<trans-unit id="fe.slider.prev">
+				<target>Zurück</target>
+			</trans-unit>
+			<trans-unit id="fe.slider.next">
+				<target>Vor</target>
+			</trans-unit>
         </body>
     </file>
 </xliff>

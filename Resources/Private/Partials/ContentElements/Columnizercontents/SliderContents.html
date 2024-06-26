@@ -1,67 +1,42 @@
 <f:asset.css identifier="swiper-css" href="{settings.pathPublic}Css/Swiper/swiper-bundle.min.css" />
 <f:asset.script identifier="swiper-lib" src="{settings.pathPublic}JavaScript/Dist/Swiper/swiper-bundle.min.js" defer="1" type="text/javascript" />
 
-<f:asset.script identifier="swiper-call" defer="1" type="text/javascript">
-    function initSwiper<f:format.raw>c{uid}</f:format.raw>(){
-    const swiper =new Swiper("<f:format.raw>#c{uid}-swiper</f:format.raw>", {
-    a11y: {
-    prevSlideMessage: '<f:translate key="{locallang.mask}:fe.slider.prev" />',
-    nextSlideMessage: '<f:translate key="{locallang.mask}:fe.slider.next" />',
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
+<div id="c{uid}" class="gf-columnizercolumns type-{f:if(condition:gf_sitepackage_type,then:gf_sitepackage_type) -> f:format.case(mode:'lower')} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)} {layout}">
     
-    // Navigation arrows
-    navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-    },
-    
-    // And if we need scrollbar
-    scrollbar: {
-    el: '.swiper-scrollbar',
-    },
-    
-    breakpoints: {
-    0: {
-    slidesPerView: 1,
-    spaceBetween: 15,
-    },
-    480: {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    },
-    568: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    },
-    1024: {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    },
-    1200: {
-    slidesPerView: 4,
-    spaceBetween: 48,
-    },
-    },
-    });
-    }
-    window.addEventListener('DOMContentLoaded', initSwiper<f:format.raw>c{uid}</f:format.raw>);
-</f:asset.script>
-
-<div id="c{uid}" class="gf-columnizercolumns type-{f:if(condition:gf_sitepackage_type,then:gf_sitepackage_type) -> f:format.case(mode:'lower')} colpos-{colPos} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
-    <div id="c{uid}-swiper" class="swiper">
-        <div class="swiper-wrapper">
-            <f:for each="{content}" as="record" iteration="iterator">
-                <div class="swiper-slide">
-                    <f:format.raw>{record.renderedContent}</f:format.raw>
-                </div>
-            </f:for>
-        </div>
-        
-        <div class="swiper-button-prev ms-n3 ms-md-n9"></div>
-        <div class="swiper-button-next me-n3 me-md-n9"></div>
-        
-        <div class="swiper-scrollbar"></div>
-    </div>
+    <gf:swiper
+        uid="c{uid}_swiper"
+        navigation="1"
+        scrollbar="1"
+        slidesPerView="1"
+        spaceBetween="10"
+        breakpoints="{
+            0: {
+            slidesPerView: 1,
+            spaceBetween: 15
+            },
+            480: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            568: {
+            slidesPerView: 2,
+            spaceBetween: 20
+            },
+            1024: {
+            slidesPerView: 3,
+            spaceBetween: 20
+            },
+            1200: {
+            slidesPerView: 4,
+            spaceBetween: 48
+            }
+        }"
+        a11y="{prevSlideMessage:'{f:translate(key:\'{locallang.gf}:fe.slider.prev\')}',nextSlideMessage:'{f:translate(key:\'{locallang.gf}:fe.slider.next\')}'}"
+    >
+        <f:for each="{content}" as="record" iteration="iterator">
+            <div class="swiper-slide">
+                <f:format.raw>{record.renderedContent}</f:format.raw>
+            </div>
+        </f:for>
+    </gf:swiper>
 </div>

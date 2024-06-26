@@ -1,0 +1,38 @@
+<f:section name="Header">
+    <f:link.page
+        pageUid="{settings.rootpageId}"
+        aria="{label: '{name}'}"
+        id="navbar-logo"
+        class="navbar-brand"
+    >
+        <f:if condition="{logo}">
+            <f:image
+                src="{logo}"
+                treatIdAsReference="1"
+                absolute="1"
+                title="{name}"
+                loading="lazy"
+                class="img-fluid me-2"
+            />
+        </f:if>
+    </f:link.page>
+</f:section>
+
+<f:section name="Footer">
+    <f:link.page
+        pageUid="{settings.rootpageId}"
+        aria="{label: '{name}'}"
+        id="footer-logo"
+    >
+        <f:if condition="{logo}">
+            <f:image
+                src="{logo}"
+                treatIdAsReference="1"
+                absolute="1"
+                title="{name}"
+                loading="lazy"
+                class="img-fluid"
+            />
+        </f:if>
+    </f:link.page>
+</f:section>

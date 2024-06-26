@@ -13,7 +13,7 @@ namespace Gedankenfolger\GfSitepackage\ViewHelpers\Link;
  *
  * The TYPO3 project - inspiring people to share!
  *
- * Version 0.0.1
+ * Version 12.3.1
  */
 
 use TYPO3\CMS\Core\Utility\DebugUtility;

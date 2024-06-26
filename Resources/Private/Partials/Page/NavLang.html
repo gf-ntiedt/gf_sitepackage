@@ -1,32 +1,45 @@
 
 <f:section name="Header">
     <f:if condition="{navLang}">
-        <div id="nav-lang" class="nav dropdown justify-content-end">
+        <ul id="nav-lang" class="nav dropdown justify-content-end">
             <f:for each="{navLang}" as="navitem" iteration="iterator">
-                <f:if condition="{navitem.active}">
-                    <button class="btn text-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{f:translate(extensionName:'gf_sitepackage',key:'fe.navLang')}">
-                        <f:cObject typoscriptObjectPath="lib.inlineSvg" data="{src: '{settings.pathPublic}Icons/Navlang/nav_lang.svg',width: 25, height: 25}" />
-                        {navitem.twoLetterIsoCode -> f:format.case(mode:'upper')}
+                <f:if condition="{navitem.active} && {navitem.available}">
+                    <button class="btn nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:\'upper\')})">
+                        <f:image
+                            src="{settings.pathPublic}Icons/Page/Sprachwechsel_{navitem.twoLetterIsoCode -> f:format.case(mode:'upper')}.svg"
+                            treatIdAsReference="1"
+                            absolute="1"
+                            width="24"
+                            loading="lazy"
+                            class="img-fluid"
+                        />
                     </button>
                 </f:if>
             </f:for>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="min-width:175px;">
                 <f:for each="{navLang}" as="navitem" iteration="iterator">
-                    <f:if condition="!{navitem.active}">
-                        <li>
+                    <li class="">
+                        <f:if condition="!{navitem.active} && {navitem.available}">
                             <f:link.page
                                 language="{navitem.languageId}"
                                 absolute="1"
                                 aria="{label: '{navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:\'upper\')})'}"
                                 class="dropdown-item"
                             >
-                                {navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:'upper')})
+                                <f:image
+                                    src="{settings.pathPublic}Icons/Page/Sprachwechsel_{navitem.twoLetterIsoCode -> f:format.case(mode:'upper')}.svg"
+                                    treatIdAsReference="1"
+                                    absolute="1"
+                                    width="24"
+                                    loading="lazy"
+                                    class="img-fluid"
+                                /> <span> {navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:'upper')})</span>
                             </f:link.page>
-                        </li>
-                    </f:if>
+                        </f:if>
+                    </li>
                 </f:for>
             </ul>
-        </div>
+        </ul>
     </f:if>
 </f:section>
 
@@ -34,4 +47,20 @@
 </f:section>
 
 <f:comment>
+    <ul class="dropdown-menu">
+        <f:for each="{navLang}" as="navitem" iteration="iterator">
+            <f:if condition="!{navitem.active}">
+                <li>
+                    <f:link.page
+                        language="{navitem.languageId}"
+                        absolute="1"
+                        aria="{label: '{navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:\'upper\')})'}"
+                        class="dropdown-item"
+                    >
+                        {navitem.navigationTitle} ({navitem.twoLetterIsoCode -> f:format.case(mode:'upper')})
+                    </f:link.page>
+                </li>
+            </f:if>
+        </f:for>
+    </ul>
 </f:comment>

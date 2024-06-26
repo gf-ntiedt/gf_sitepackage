@@ -10,5 +10,7 @@ lib.contentElement {
         defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
         defaultOrientationHorizontal = {$styles.content.defaultOrientationHorizontal}
         defaultOrientationVertical = {$styles.content.defaultOrientationVertical}
+        defaultTextXPaddingClass = {$styles.content.defaultTextXPaddingClass}
+        defaultTextYPaddingClass = {$styles.content.defaultTextYPaddingClass}
     }
 }

@@ -10,13 +10,14 @@
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Helper/Other.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Helper/ParseFunc.typoscript">
 
 
 ####################
 #### EXTENSIONS ####
 ####################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/container.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Mask/Mask.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/ContentBlocks.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gf_sitepackage/Configuration/TypoScript/Powermail/Powermail.typoscript">
 
 
@@ -26,7 +27,6 @@
 page = PAGE
 page {
     typeNum = 0
-
     meta {
         viewport = {$page.meta.viewport}
         robots = {$page.meta.robots}
@@ -101,8 +101,8 @@ page {
     }
 
     includeCSS {
-        #        rte = EXT:gf_sitepackage/Resources/Public/Scss/rte.scss
-        #        rte.outputfile = EXT:gf_sitepackage/Resources/Public/Css/rte.css
+#                rte = EXT:gf_sitepackage/Resources/Public/Scss/rte.scss
+#                rte.outputfile = EXT:gf_sitepackage/Resources/Public/Css/rte.css
         gf_sitepackage_layout = EXT:gf_sitepackage/Resources/Public/Scss/layout.scss
         gf_sitepackage_layout.outputfile = EXT:gf_sitepackage/Resources/Public/Css/layout.css
         gf_sitepackage_layout.defer = 1
@@ -126,6 +126,12 @@ page {
         bootstrap = EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/Bootstrap/bootstrap.bundle.min.js
         bootstrap.disableCompression = 1
         bootstrap.defer = 1
+        jquery = EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/jquery-3.7.1.min.js
+        jquery.defer = 1
+        gedankenfolger_products = EXT:gedankenfolger_products/Resources/Public/JavaScript/gedankenfolger_products.js
+        gedankenfolger_products.defer = 1
+        lazyloadbg = EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/lazyloadbg.js
+        lazyloadbg.defer = 1
         gf_sitepackage_scripts = EXT:gf_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
         gf_sitepackage_scripts.defer = 1
     }
@@ -222,16 +228,22 @@ page {
             60 = menu
             60 {
                 special = directory
-                special.value = {$page.menu.footer.value}
-                as = navFooter
+                special.value = 6
+                as = navService
+            }
+            62 = menu
+            62 {
+                special = directory
+                special.value = 7
+                as = navUnternehmen
             }
             100 = database-query
             100 {
-                table = tx_mask_gf_addresses
-                where = ({#tx_mask_main} = 1)
-                orderBy = tx_mask_name
-                pidInList = 7
-                as = gfaddresses
+                table = tx_gedankenfolger_address
+                where = ({#main} = 1)
+                orderBy = name
+                pidInList = 2
+                as = addresses
             }
             # 110 see Section menu enabled
             200 = site
@@ -253,9 +265,21 @@ page {
             defaultSpaceInnerAfterType = {$styles.content.defaultSpaceInnerAfterType}
             defaultOrientationHorizontal = {$styles.content.defaultOrientationHorizontal}
             defaultOrientationVertical = {$styles.content.defaultOrientationVertical}
+            defaultTextXPaddingClass = {$styles.content.defaultTextXPaddingClass}
+            defaultTextYPaddingClass = {$styles.content.defaultTextYPaddingClass}
         }
     }
 }
+
+[request && traverse(request.getQueryParams(), 'newnav') > 0]
+    page {
+        10{
+            settings{
+                newnav = 1
+            }
+        }
+    }
+[END]
 
 ## Section menu enabled
 [{$page.menu.section.enable} == 1]
@@ -307,13 +331,14 @@ config {
     no_cache = {$config.no_cache}
     uniqueLinkVars = 1
     pageTitleFirst = 1
-    linkVars = L
+    linkVars = L,tx_powermail_pi1,jsonpath,listsimplerecords_categories,newnav
     prefixLocalAnchors = {$config.prefixLocalAnchors}
     renderCharset = utf-8
     metaCharset = utf-8
     doctype = html5
     removeDefaultJS = {$config.removeDefaultJS}
     inlineStyle2TempFile = 1
+    forceAbsoluteUrls = 1
     admPanel = {$config.admPanel}
     debug = 0
     cache_period = 86400
@@ -335,6 +360,11 @@ config {
     concatenateJs = 0
     concatenateCss = 0
 }
+[site("rootPageId") == 1]
+    page.bodyTagAdd = class="rootpage"
+[else]
+    page.bodyTagAdd = class="subpage"
+[end]
 
 [backend.user.isAdmin]
     config{
@@ -346,3 +376,98 @@ config {
         contentObjectExceptionHandler = 0
     }
 [global]
+
+
+
+pageiframe < page
+pageiframe{
+    typeNum = 44
+    config {
+        linkVars = L,tx_powermail_pi1,jsonpath,htmlpath,listsimplerecords_categories
+        no_cache = 1
+    }
+    10 {
+        templateName >
+        templateName = Iframe
+        dataProcessing{
+            10 >
+        }
+        variables{
+            htmlpath = TEXT
+            htmlpath{
+                data = GP:htmlpath
+                stripHtml = 1
+                ifEmpty = All
+            }
+        }
+    }
+}
+pageiframeraw < page
+pageiframeraw{
+    typeNum = 45
+    meta >
+    includeCSS >
+    includeJS >
+    includeJSFooter >
+    headerData >
+    removeDefaultJS = 1
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+        linkVars = L,tx_powermail_pi1,jsonpath,htmlpath,listsimplerecords_categories
+    }
+    10 {
+        templateName >
+        templateName = Iframe
+        dataProcessing{
+            10 >
+        }
+        variables{
+            htmlpath = TEXT
+            htmlpath{
+                data = GP:htmlpath
+                stripHtml = 1
+                ifEmpty = All
+            }
+        }
+    }
+}
+
+pagejson < page
+pagejson{
+    typeNum = 46
+    meta >
+    includeCSS >
+    includeJS >
+    includeJSFooter >
+    headerData >
+    removeDefaultJS = 1
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders.10.header = Content-type:application/json
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+        linkVars = L,tx_powermail_pi1,jsonpath,htmlpath,listsimplerecords_categories
+    }
+    10 {
+        templateName >
+        templateName = Json
+        dataProcessing{
+            10 >
+        }
+        variables{
+            jsonpath = TEXT
+            jsonpath{
+                data = GP:jsonpath
+                stripHtml = 1
+                #                case = uppercamelcase
+                ifEmpty = Default
+            }
+        }
+    }
+}

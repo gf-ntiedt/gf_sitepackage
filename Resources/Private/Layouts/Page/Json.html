@@ -1,0 +1,10 @@
+<f:spaceless>
+    <f:if condition="{jsonpath}=='Default'">
+        <f:then>
+            {_all -> f:format.json() -> f:format.htmlentitiesDecode()}
+        </f:then>
+        <f:else>
+            {{jsonpath} -> f:format.json() -> f:format.htmlentitiesDecode()}
+        </f:else>
+    </f:if>
+</f:spaceless>

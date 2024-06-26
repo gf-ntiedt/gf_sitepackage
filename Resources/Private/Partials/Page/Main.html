@@ -1,20 +1,41 @@
 <main id="main">
+    <f:render partial="NavFlying" arguments="{_all}" />
     <f:if condition="{settings.scrollspy}">
         <f:then>
-            <div data-bs-spy="scroll" data-bs-target="#nav-section-target" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -50% 0px" class="scrollspy bg-body-tertiary px-9 py-0 rounded-2" tabindex="0">
+            <div data-bs-spy="scroll" data-bs-target="#nav-section-target" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -50% 0px" class="scrollspy px-9 py-0" tabindex="0">
                 <div id="trigger" class="position-absolute"></div>
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                <f:if condition="{data.pid}==0">
+                    <f:then>
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                    </f:then>
+                    <f:else>
+                        <f:render partial="Preface" section="Subpage" arguments="{_all}" />
+                    </f:else>
+                </f:if>
                 <f:render partial="NavBreadcrumb" arguments="{_all}" />
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                <div class="container-fluid px-0">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                </div>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '10'}" />
             </div>
         </f:then>
         <f:else>
-            <div class="bg-body-tertiary px-3 px-md-9 py-0 rounded-2" tabindex="0">
+            <div class="px-3 px-md-9 py-0" tabindex="0">
                 <div id="trigger" class="position-absolute"></div>
-                <div id="content-main">
-                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                <div id="content-main" class="pb-5">
+                    <f:if condition="{data.pid}==0">
+                        <f:then>
+                            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                        </f:then>
+                        <f:else>
+                            <f:render partial="Preface" section="Subpage" arguments="{_all}" />
+                        </f:else>
+                    </f:if>
                     <f:render partial="NavBreadcrumb" arguments="{_all}" />
-                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                    <div class="container-fluid px-0">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                    </div>
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '10'}" />
                 </div>
             </div>
         </f:else>
