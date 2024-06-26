@@ -1,0 +1,18 @@
+<f:spaceless>
+	<f:alias map="{
+    uid: ttContentData.uid,
+    gf_sitepackage_layout: ttContentData.gf_sitepackage_layout,
+    space_before_class: ttContentData.space_before_class,
+    space_after_class: ttContentData.space_after_class,
+    space_inner_before_class: ttContentData.space_inner_before_class,
+    space_inner_after_class: ttContentData.space_inner_after_class,
+    defaultSpaceBeforeType: '',
+    defaultSpaceAfterType: '',
+    defaultSpaceInnerBeforeType: 'pt-5',
+    defaultSpaceInnerAfterType: 'pb-5',
+}">
+		<div id="c{uid}" class="tx-powermail {gf_sitepackage_layout} {f:if(condition:'{gf_sitepackage_layout}==\'bg-orange-img\'',then:'mx-n3 mx-md-n9 px-3 px-md-9')} {f:if(condition:space_before_class,then:space_before_class,else:defaultSpaceBeforeType)} {f:if(condition:space_after_class,then:space_after_class,else:defaultSpaceAfterType)} {f:if(condition:space_inner_before_class,then:space_inner_before_class,else:defaultSpaceInnerBeforeType)} {f:if(condition:space_inner_after_class,then:space_inner_after_class,else:defaultSpaceInnerAfterType)}">
+			<f:render section="main" />
+		</div>
+	</f:alias>
+</f:spaceless>
